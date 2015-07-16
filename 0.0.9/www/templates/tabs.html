@@ -1,0 +1,39 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive tabs-top tabs-striped">
+
+      <!-- Dashboard Tab -->
+      <ion-tab title="Saturday" icon-off="ion-ios-calendar-outline" icon-on="ion-ios-calendar" href="#/tab/sat">
+        <ion-nav-view name="tab-sat"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Chats Tab -->
+      <ion-tab title="Sunday" icon-off="ion-ios-calendar-outline" icon-on="ion-ios-calendar" href="#/tab/sun">
+        <ion-nav-view name="tab-sun"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Account Tab -->
+      <ion-tab title="Monday" icon-off="ion-ios-calendar-outline" icon-on="ion-ios-calendar" href="#/tab/mon">
+        <ion-nav-view name="tab-mon"></ion-nav-view>
+      </ion-tab>
+    </ion-tabs>
+  </ion-slide>
+
+  <ion-slide>
+    <div class="box ">
+      <h1 class="item item-divider">
+        Parking
+      </h1>
+      <h1 class="item item-divider">
+        Parking
+      </h1>
+      <img src="./img/lot.jpg" class="test-lot" />
+    </div>
+  </ion-slide>
+</ion-slide-box>
