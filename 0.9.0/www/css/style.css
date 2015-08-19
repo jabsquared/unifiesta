@@ -1,14 +1,10 @@
 /* Header */
 
-#logo-img {
+.logo-img {
   clear:both;
   width: fixed;
-  /*max-width: 20px;*/
   height: 27px;
   margin-top: 9px;
-  margin: 0 auto;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
 }
 
 p {

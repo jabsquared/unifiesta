@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<ion-view name="events-view">
-  <ion-header-bar class="bar-light">
+<ion-view name="events-view" title="Events">
+  <ion-nav-buttons side="left">
     <button class="button button-icon icon ion-navicon"></button>
-    <img alt="Univision" href="#/schedule" id="logo-img" src="./img/logo.png" />
+  </ion-nav-buttons>
 
+  <ion-nav-title>
+    <img alt="Univision" href="#/schedule" class="logo-img" src="./img/logo.png" />
+  </ion-nav-title>
+
+  <ion-nav-buttons side="right">
     <button class="button button-icon icon ion-map" ng-click="goToMaps()"></button>
-  </ion-header-bar>
+  </ion-nav-buttons>
 
   <ion-content style="background-image: url('./img/needle.png')">
-    <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete" style="background-color:rgba(0, 0, 0, 0.5)">
+    <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
       <!-- <ion-item class="item item-icon-left item-icon-right" ng-repeat="event in events">
         <i class="icon button button-positive badge event-time" ng-click="schedule({{event}})">
           <p>
@@ -35,17 +40,18 @@
         </div>
       </ion-item> -->
       <ion-item class="list card" ng-repeat="event in events" style="background-color:rgba(0,0,0,0.1)">
-        <div class="item item-avatar" style="background-color:rgba(0,0,0,0)">
-          <img src="http://img2.wikia.nocookie.net/__cb20121230150432/logopedia/images/8/8b/Univision_3D.jpg">
-          <h2>{{eventn.name}}</h2>
-          <p>{{event.desc | limitTo : 135 : 0}}</p>
-        </div>
-
-        <div class="item item-image" style="background-color:rgba(0,0,0,0)">
+        <a class="event-link" href="#/event/{{event.id}}">
+          <div class="item item-avatar" style="background-color:rgba(0,0,0,0)">
+            <img src="http://img2.wikia.nocookie.net/__cb20121230150432/logopedia/images/8/8b/Univision_3D.jpg">
+            <h2>{{eventn.name}}</h2>
+            <p>{{event.desc | limitTo : 135 : 0}}</p>
+          </div>
+        </a>
+        <!-- <div class="item item-image" style="background-color:rgba(0,0,0,0)">
           <img src="http://www.raisingthevolume.com/wp-content/uploads/2013/01/univision_featured_web_image.png">
-        </div>
+        </div> -->
 
-        <a class="item item-icon-left assertive" ng-href="schedule({{event}})" style="background-color:rgba(0,0,0,0)">
+        <a class="item item-icon-left assertive" ng-click="schedule({{event}})" style="background-color:rgba(0,0,0,0)">
           <i class="icon ion-music-note"></i> Start listening
         </a>
       </ion-item>
