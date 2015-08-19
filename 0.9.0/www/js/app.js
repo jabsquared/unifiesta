@@ -36,14 +36,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
   // setup state for login page
-    .state('schedule', {
-    url: '/schedule',
-    templateUrl: 'templates/schedule.html',
+    .state('events', {
+    url: '/events',
+    templateUrl: 'templates/events.html',
     controller: 'EventsCtrl'
   })
 
   .state('event', {
-    url: '/event/:id',
+    url: '/events/:id',
     templateUrl: 'templates/event.html',
     controller: 'EventCtrl'
   })
@@ -55,5 +55,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/schedule');
+  $urlRouterProvider.otherwise('/events');
 });

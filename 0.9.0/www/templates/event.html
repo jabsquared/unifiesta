@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <ion-view name="event">
   <ion-nav-title>
-    <img alt="Univision" href="#/schedule" class="logo-img" src="./img/logo.png" />
+    <img alt="Univision" href="#/schedule" class="logo-img" src="img/logo.png" />
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
     <button class="button button-icon icon ion-android-alarm-clock" ng-click="schedule({{event}})"></button>
   </ion-nav-buttons>
 
-  <ion-content style="background-image: url('./img/needle.png')">
-    <h2 class="event-title">{{event.name}}</h2>
+  <ion-content style="background-image: url('./img/event-bg.png')">
+    <h2 class="event-title">
+      {{event.name}}
+    </h2>
     <p class="event-description">
       {{event.desc}}
     </p>
   </ion-content>
+
 </ion-view>
