@@ -136,3 +136,6 @@ p {
 .event-description {
   margin: 1.3em 1em;
 }
+.hellobrook .list .card {
+  background-color: transparent;
+  }
