@@ -9,32 +9,29 @@
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-map" ng-click="goToMaps()"></button>
+    <button class="button button-icon icon ion-android-map" ng-click="goToMaps()"></button>
   </ion-nav-buttons>
 
   <ion-content>
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
       <ion-item class="list card" ng-repeat="event in events">
 
-        <div class="row" style="border-bottom: 1px solid black">
-          <a class="item item-avatar assertive" ng-click="schedule({{event}})">
-            <!-- <a ng-click="schedule({{event}})" style="background-color:rgba(0,0,0,0)"> -->
-            <i class="icon ion-ios-stopwatch"></i>
-
-            <div>
+        <a ng-click="schedule({{event}})">
+          <div class="row" style="border-bottom: 1px solid black;">
+            <div class="item item-avatar">
+              <i class="icon ion-android-stopwatch"></i>
               <p>{{event.start | date:'HH:mm a'}}</p>
             </div>
-          </a>
-
-        </div>
+          </div>
+        </a>
 
         <a class="event-link" href="#/events/{{event.id}}">
           <div class="item item-avatar">
+
             <img src="img/event-logo.png">
             <h2 class="">{{event.name}}</h2>
             <p class="">{{event.desc | limitTo : 135 : 0}}</p>
           </div>
-
         </a>
 
 

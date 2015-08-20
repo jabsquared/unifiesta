@@ -79,6 +79,8 @@ $dark:                            #444 !default;
   max-height: 40px;
   width: 100%;
   border-radius: 4px; }
+.events a div.item {
+  border-bottom: 1px solid black; }
 .events .event-link {
   color: inherit;
   text-decoration: none; }
