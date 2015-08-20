@@ -16,7 +16,7 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 /* Header */
-.logo-img {
+.logo {
   clear: both;
   width: fixed;
   height: 27px;
@@ -110,6 +110,8 @@ p {
   margin-bottom: .4em;
   width: 100%; }
 
+.events ion-content {
+  background-image: url('/img/needle.png'); }
 .events .item-avatar i:first-child, .events .item-avatar .item-img {
   position: absolute;
   top: 15px;
@@ -119,19 +121,23 @@ p {
   max-height: 40px;
   width: 100%;
   border-radius: 4px; }
-
-/* event link styling */
-.event-link {
+.events .event-link {
   color: inherit;
   text-decoration: none; }
+.events .item {
+  background-color: transparent; }
 
-/* single event page styling */
-.event-title {
-  padding-top: .4em;
-  text-align: center; }
-
-.event-description {
-  margin: 1.3em 1em; }
+.event {
+  /* event link styling */
+  /* single event page styling */ }
+  .event .event-link {
+    color: inherit;
+    text-decoration: none; }
+  .event .event-title {
+    padding-top: 0.4em;
+    text-align: center; }
+  .event .event-description {
+    margin: 1.3em 1em; }
 
 /*!
   Ionicons, v2.0.1
