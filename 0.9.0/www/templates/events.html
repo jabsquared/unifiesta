@@ -16,19 +16,15 @@
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
         <ion-item class="list card" ng-repeat="event in events">
 
-          <a class="item item-avatar assertive" ng-click="schedule({{event}})">
-
+          <a class="item item-avatar" ng-click="schedule({{event}})">
             <div class="row" style="background-color: #fff; border-bottom: 1px solid black">
-              <!-- <a ng-click="schedule({{event}})" style="background-color:rgba(0,0,0,0)"> -->
               <div class="col col-20 col-center">
-                <i class="icon ion-android-alarm-clock" ng-click="schedule({{event}})" style="font-size: 30px"></i>
+                <i class="icon ion-android-alarm-clock" style="font-size: 30px"></i>
               </div>
-
               <div class="col col-center">
                 <p style="font-size: 20px; overflow: visible">{{event.start | date:'HH:mm a'}}</p>
               </div>
             </div>
-
           </a>
 
           <div class="row" style="background-color: #fff">
