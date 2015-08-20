@@ -1,4 +1,12 @@
 {
-  "name": "events",
-  "app_id": "124b6f25"
+  "name": "unifiesta",
+  "app_id": "124b6f25",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }
