@@ -17,20 +17,21 @@
       <ion-item class="list card" ng-repeat="event in events">
 
         <a ng-click="schedule({{event}})">
-          <div class="row" style="border-bottom: 1px solid black;">
+          <div class="row" style="border-bottom: 2.7px solid white;">
             <div class="item item-avatar">
               <i class="icon ion-android-stopwatch"></i>
-              <p>{{event.start | date:'HH:mm a'}}</p>
+              <h2>{{event.start | date:'HH:mm a'}}</h2>
             </div>
           </div>
         </a>
 
         <a class="event-link" href="#/events/{{event.id}}">
           <div class="item item-avatar">
-
             <img src="img/event-logo.png">
-            <h2 class="">{{event.name}}</h2>
-            <p class="">{{event.desc | limitTo : 135 : 0}}</p>
+            <h2>{{event.name}}</h2>
+            <p>
+              {{event.desc | limitTo : 135 : 0}}
+            </p>
           </div>
         </a>
 
