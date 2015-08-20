@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<ion-view name="events" title="Events">
+<ion-view name="events" class="events" title="Events">
   <ion-nav-buttons side="left">
     <button class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
 
   <ion-nav-title>
-    <img alt="Univision" href="#/events" class="logo-img" src="img/logo.png" />
+    <univision-logo></univision-logo>
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
     <button class="button button-icon icon ion-map" ng-click="goToMaps()"></button>
   </ion-nav-buttons>
 
-  <ion-content style="background-image: url('./img/needle.png')">
+  <ion-content>
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
+BOGDAN
       <section class="events">
         <ion-item class="list card" ng-repeat="event in events" style="background-color:rgba(1,1,1,0.1)">
           <a ng-click="schedule({{event}}">
@@ -50,6 +51,55 @@
 
         </ion-item>
       </section>
+=======
+      <!-- <ion-item class="item item-icon-left item-icon-right" ng-repeat="event in events">
+        <i class="icon button button-positive badge event-time" ng-click="schedule({{event}})">
+          <p>
+            {{event.start | date:'h:mm'}}
+            <br>
+            {{event.start | date:'a' | lowercase}}
+          </p>
+        </i>
+        <div class="event-body" ng-style="{'height' : (30 + 2 * (Math.floor((event.end - event.start)/1000/60)))+'px'}">
+          <a class="event-link" href="#/event/{{event.id}}">
+            <span class="event-name">
+              {{event.name}}
+              <span class="item-note event-desc">
+                <p>
+                  {{event.desc | limitTo : 135 : 0}}
+
+                </p>
+              </span>
+            </span>
+          </a>
+          <ion-option-button class="button-positive item-icon-right" ng-click="schedule({{event}})">
+            <i class="ion-android-alarm-clock alarm-slider"></i>
+          </ion-option-button>
+        </div>
+      </ion-item> -->
+      <ion-item class="list card" ng-repeat="event in events">
+
+        <a class="event-link" href="#/events/{{event.id}}">
+          <div class="item item-avatar">
+            <img src="img/event-logo.png">
+
+            <h2 class="">{{event.name}}</h2>
+            <p class="">{{event.desc | limitTo : 135 : 0}}</p>
+          </div>
+        </a>
+        <!-- <div class="item item-image">
+            <img src="http://www.raisingthevolume.com/wp-content/uploads/2013/01/univision_featured_web_image.png">
+          </div> -->
+
+        <a class="item item-avatar assertive" ng-click="schedule({{event}})">
+          <i class="icon ion-music-note"></i>
+          <p>
+            Start listening
+          </p>
+        </a>
+
+      </ion-item>
+259ebe24e342f523c0048e6d5966a5b65e9ca382
     </ion-list>
   </ion-content>
 </ion-view>

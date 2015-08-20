@@ -1,34 +1,14 @@
 /* Header */
 
-.logo-img {
+.logo {
   clear: both;
   width: fixed;
   height: 27px;
   margin-top: 9px;
 }
 
-p {
-  padding: 0;
-  margin: 0;
-}
-
-
-/* Set padding for text in each event item */
-
 
 /* Set min height event item */
-
-.item-thumbnail-left, .item-thumbnail-left .item-content {
-  padding-left: 10px;
-  min-height: 20px;
-  width: 100%;
-}
-
-.ion-music-note {
-  font-size: 2em;
-  float: left;
-  margin-right: 0.3em;
-}
 
 .alarm-slider {
   font-size: 2.4em;
@@ -70,38 +50,6 @@ p {
   margin: 0 auto;
   line-height: 18px;
 }
-
-.event-name {
-  height: 100%;
-  clear: both;
-  font-weight: 700;
-  display: block;
-  margin-left: 1.8em;
-}
-
-.event-desc {
-  margin-top: 0.2em;
-  font-weight: 500;
-  float: left;
-  min-width: 13em;
-  max-width: 40em;
-  height: 100%;
-  margin-bottom: .9em;
-}
-
-.event-desc p {
-  padding-top: 0.6em;
-  white-space: normal;
-  color: gray;
-  overflow: hidden;
-}
-
-.event-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
 
 /* Popup button styling */
 
