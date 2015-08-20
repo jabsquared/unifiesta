@@ -10,6 +10,7 @@ app.run(function($ionicPlatform, $rootScope, $timeout) {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     //ios8 permission handler
+
     if (device.platform === "iOS") {
       window.plugin.notification.local.promptForPermission();
     }

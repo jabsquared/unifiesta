@@ -1,14 +1,7 @@
 .event {
-  .event-list {
-
+  ion-content {
+    background-image: url('/img/event-bg.png');
   }
-
-  /* event link styling */
-  .event-link {
-    color: inherit;
-    text-decoration: none;
-  }
-
 
   /* single event page styling */
   .event-title {
