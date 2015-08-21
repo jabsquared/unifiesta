@@ -173,6 +173,16 @@ app.controller('MapsCtrl', function($scope, $state, $stateParams, event_data) {
         focus: true,
         draggable: false,
         message: "Hi there!",
+        icon: {
+          color: 'red'
+        }
+      },
+      m2: {
+        lat: 47.307263,
+        lng: -122.231312,
+        focus: true,
+        draggable: false,
+        message: "Hi there!",
         icon: {}
       }
     },
@@ -181,8 +191,14 @@ app.controller('MapsCtrl', function($scope, $state, $stateParams, event_data) {
         enable: ['dragend']
           //logic: 'emit'
       }
+    },
+    extraMarkerIcon: {
+      type: 'extraMarker',
+      icon: 'fa-star',
+      markerColor: '#f00',
+      prefix: 'fa',
+      shape: 'circle'
     }
-
   });
 
   $scope.$on("leafletDirectiveMarker.dragend", function(event, args) {
