@@ -72,4 +72,5 @@ app.controller('BoothMapCrtl', function($scope, $state, $stateParams, event_data
     $scope.markers.m1.lat = args.model.lat;
     $scope.markers.m1.lng = args.model.lng;
   });
+
 });
