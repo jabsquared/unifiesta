@@ -8,20 +8,8 @@
 
   <ion-content>
     <!-- <a href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic" ,target="_blank">Click here for map</a> -->
-    <leaflet ng-if="!findMe" center="auburn" event-broadcast="events" height="480px" markers="markers" width="100vw">
+    <leaflet center="auburn" event-broadcast="events" height="480px" markers="markers" width="100vw">
     </leaflet>
-    <leaflet ng-if="findMe" center="center" event-broadcast="events" height="480px" markers="markers" width="100vw">
-    </leaflet>
-
-    <li class="item item-toggle">
-     Find me
-     <label class="toggle toggle-positive">
-       <input type="checkbox" ng-click="toggleGeoLocation()">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-     </label>
-  </li>
 
   </ion-content>
 </ion-view>

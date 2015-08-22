@@ -20,7 +20,7 @@ app.controller('BoothMapCrtl', function($scope, $state, $stateParams, event_data
       mainStage: {
         lat: 47.307492,
         lng: -122.230582,
-        focus: true,
+        focus: false,
         draggable: false,
         message: "Main Stage!",
         icon: {
@@ -46,7 +46,7 @@ app.controller('BoothMapCrtl', function($scope, $state, $stateParams, event_data
         lng: -122.229776,
         focus: false,
         draggable: false,
-        message: "<div ng-include src=\"'../templates/jabsquared.html'\"></div>",
+        message: "<div ng-include src=\"'../templates/booths/jabsquared.html'\"></div>",
         icon: {
           type: 'extraMarker',
           icon: 'fa-star',
