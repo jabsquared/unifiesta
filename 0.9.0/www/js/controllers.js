@@ -159,6 +159,12 @@ app.controller('EventCtrl', function($scope, $state, $stateParams, $ionicPopup, 
 
 app.controller('MapsCtrl', function($scope, $state, $stateParams, event_data) {
 
+  $scope.findMe = false;
+
+  $scope.toggleGeoLocation = function () {
+    $scope.findMe = !$scope.findMe;
+  };
+
   angular.extend($scope, {
     auburn: {
       lat: 47.307492,
@@ -166,24 +172,47 @@ app.controller('MapsCtrl', function($scope, $state, $stateParams, event_data) {
       zoom: 17,
       bounceAtZoomLimits: true
     },
+    center: {
+      autoDiscover: true
+    },
     markers: {
-      m1: {
+      mainStage: {
         lat: 47.307492,
         lng: -122.230582,
         focus: true,
         draggable: false,
-        message: "Hi there!",
+        message: "Main Stage!",
         icon: {
-          color: 'red'
+          type: 'extraMarker',
+          icon: 'fa-home',
+          markerColor: '#f00',
+          prefix: 'fa',
+          shape: 'circle'
         }
       },
-      m2: {
+      p1: {
         lat: 47.307263,
         lng: -122.231312,
-        focus: true,
+        focus: false,
         draggable: false,
-        message: "Hi there!",
-        icon: {}
+        message: "Parking Lot!",
+        icon: {
+          // Add custom parking icon or text
+        }
+      },
+      b1: {
+        lat: 47.307367,
+        lng: -122.229776,
+        focus: false,
+        draggable: false,
+        message: "<div ng-include src=\"'../templates/jabsquared.html'\"></div>",
+        icon: {
+          type: 'extraMarker',
+          icon: 'fa-star',
+          markerColor: 'green',
+          prefix: 'fa',
+          shape: 'circle'
+        }
       }
     },
     events: {
@@ -192,12 +221,8 @@ app.controller('MapsCtrl', function($scope, $state, $stateParams, event_data) {
           //logic: 'emit'
       }
     },
-    extraMarkerIcon: {
-      type: 'extraMarker',
-      icon: 'fa-star',
-      markerColor: '#f00',
-      prefix: 'fa',
-      shape: 'circle'
+    controls: {
+      scale: false
     }
   });
 
