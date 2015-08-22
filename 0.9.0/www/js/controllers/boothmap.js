@@ -1,9 +1,35 @@
-app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data) {
+app.controller('BoothMapCtrl', function($scope, $state, $stateParams, $cordovaGeolocation, event_data) {
+
   console.log('inside boothmp controller');
+
+  var watchOptions = {
+    frequency : 1000,
+    timeout : 3000,
+    enableHighAccuracy: false // may cause errors if true
+  };
+
+  // Feilds
   $scope.findMe = false;
+  var watch;
+  var lat;
+  var long;
 
   $scope.toggleGeoLocation = function() {
     $scope.findMe = !$scope.findMe;
+    if ($scope.findMe) {
+      watch = $cordovaGeolocation.watchPosition(watchOptions);
+      watch.then(
+        null,
+        function(err) {
+          // error
+        },
+        function(position) {
+          console.log(position.coords.latitude);
+          console.log(position.coords.longitude);
+      });
+    }else{
+      watch.clearWatch();
+    }
   };
 
   angular.extend($scope, {
@@ -54,7 +80,15 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
           prefix: 'fa',
           shape: 'circle'
         }
-      }
+      },
+      user: {
+        lat: lat,
+        lng: long,
+        focus: false,
+        draggable: false,
+        message: "User!",
+        icon: {}
+      },
     },
     events: {
       markers: {
