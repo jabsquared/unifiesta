@@ -1,5 +1,5 @@
-app.controller('BoothMapCrtl', function($scope, $state, $stateParams, event_data) {
-
+app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data) {
+  console.log('inside boothmp controller');
   $scope.findMe = false;
 
   $scope.toggleGeoLocation = function() {

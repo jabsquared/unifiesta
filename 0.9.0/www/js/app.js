@@ -25,7 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('boothmap', {
     url: '/boothmap',
     templateUrl: 'templates/boothmap.html',
-    controller: 'BoothMapCrtl'
+    controller: 'BoothMapCtrl'
   })
 
   .state('pnp', {
