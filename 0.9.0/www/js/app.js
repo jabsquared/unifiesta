@@ -5,12 +5,55 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive']);
 
-app.run(function($ionicPlatform, $rootScope, $timeout) {
+
+app.config(function($stateProvider, $urlRouterProvider) {
+
+  $stateProvider
+  // setup state for login page
+    .state('events', {
+    url: '/events',
+    templateUrl: 'templates/events.html',
+    controller: 'EventsCtrl'
+  })
+
+  .state('event', {
+    url: '/events/:id',
+    templateUrl: 'templates/event.html',
+    controller: 'EventCtrl'
+  })
+
+  .state('boothmap', {
+    url: '/boothmap',
+    templateUrl: 'templates/boothmap.html',
+    controller: 'BoothMapCrtl'
+  })
+
+  .state('pnp', {
+    url: '/pnp',
+    templateUrl: 'templates/pnp.html',
+    controller: 'PnPCtrl'
+  })
+
+  .state('sponsors', {
+    url: '/sponsors',
+    templateUrl: 'templates/sponsors.html',
+    controller: 'SponsorsCtrl'
+  })
+  ;
+
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/events');
+});
+
+app.run(function($ionicPlatform, $rootScope, $state, $timeout) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     //ios8 permission handler
-
+    $rootScope.go = function(path) {
+      console.log('go',path);
+      $state.go(path);
+    };
     if (device.platform === "iOS") {
       window.plugin.notification.local.promptForPermission();
     }
@@ -31,30 +74,4 @@ app.run(function($ionicPlatform, $rootScope, $timeout) {
       });
     };
   });
-});
-
-app.config(function($stateProvider, $urlRouterProvider) {
-
-  $stateProvider
-  // setup state for login page
-    .state('events', {
-    url: '/events',
-    templateUrl: 'templates/events.html',
-    controller: 'EventsCtrl'
-  })
-
-  .state('event', {
-    url: '/events/:id',
-    templateUrl: 'templates/event.html',
-    controller: 'EventCtrl'
-  })
-
-  .state('maps', {
-    url: '/maps',
-    templateUrl: 'templates/maps.html',
-    controller: 'MapsCtrl'
-  });
-
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/events');
 });

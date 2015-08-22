@@ -17,8 +17,7 @@ $dark:                            #444 !default;
 */
 @font-face {
   font-family: 'blair_med';
-  src: url(/font/blair_itc_medium1.tff);
-  font-size: 2em; }
+  src: url(/font/blair_itc_medium1.tff); }
 
 @font-face {
   font-family: 'blair_bold';
@@ -7780,6 +7779,7 @@ a.button {
   color: RGBA(254, 252, 252, 255); }
 .events .item p {
   font-family: 'blair_bold';
+  font-size: 0.72em;
   color: RGBA(225, 225, 225, 255); }
 
 .event {

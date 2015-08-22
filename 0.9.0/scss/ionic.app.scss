@@ -21,7 +21,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @font-face {
   font-family: 'blair_med';
   src: url(/font/blair_itc_medium1.tff);
-  font-size: 2em;
 }
 
 @font-face {
@@ -36,6 +35,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "global.scss";
 @import "events.scss";
 @import "event.scss";
-@import "parkingNparade.scss";
+@import "pnp.scss";
 @import "boothmap.scss";
 @import "sponsor.scss";

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<ion-view name="events" class="events" title="Events">
+<ion-view name="events" class="events">
   <ion-nav-buttons side="left">
-    <button class="button button-icon icon ion-location" ng-click="goToBooth">
+    <button class="button button-icon icon ion-location" ng-click="go('boothmap')">
     </button>
   </ion-nav-buttons>
 
@@ -10,10 +10,10 @@
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-map" ng-click="goToMaps()"></button>
+    <button class="button button-icon icon ion-map" ng-click="go('pnp')"></button>
   </ion-nav-buttons>
 
-  <ion-content>
+  <ion-content class="has-header has-footer">
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
       <ion-item class="list card" ng-repeat="event in events">
         <div>
@@ -30,9 +30,9 @@
 
           <a href="#/events/{{event.id}}">
             <div class="item">
-              <h2>{{event.name}}</h2>
+              <h2>{{event.name | limitTo : 27 : 0}}</h2>
               <p>
-                {{event.desc | limitTo : 135 : 0}}
+                {{event.desc | limitTo : 27 : 0}}
               </p>
             </div>
           </a>
@@ -50,4 +50,22 @@
       </ion-item>
     </ion-list>
   </ion-content>
+
+  <ion-footer-bar>
+    <ion-slide-box
+      does-continue="true"
+      auto-play="true"
+      show-pager="false"
+      slide-interval="1" >
+      <ion-slide>
+        blue
+      </ion-slide>
+      <ion-slide>
+        <div class="box yellow"><h1>YELLOW</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box pink"><h1>PINK</h1></div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-footer-bar>
 </ion-view>
