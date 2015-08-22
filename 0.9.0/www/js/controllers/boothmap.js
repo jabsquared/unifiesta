@@ -109,7 +109,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
         lng: -122.229776,
         focus: false,
         draggable: false,
-        message: "<div ng-include src=\"'../templates/booths/jabsquared.html'\"></div>",
+        message: "<div ng-include src=\"'../../templates/booths/jabsquared.html'\"></div>",
         icon: {
           type: 'extraMarker',
           icon: 'fa-diamond',
@@ -123,7 +123,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
         lng: null,
         focus: false,
         icon: {
-          iconUrl: '../img/location.png',
+          iconUrl: '../../img/location.png',
         }
       },
     },
