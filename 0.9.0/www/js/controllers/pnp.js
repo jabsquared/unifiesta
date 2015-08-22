@@ -1,6 +1,9 @@
 app.controller('PnPCtrl', function($scope, $state, $stateParams, event_data) {
 
   angular.extend($scope, {
+    tiles: {
+      url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    },
     auburn: {
       lat: 47.307492,
       lng: -122.230582,
