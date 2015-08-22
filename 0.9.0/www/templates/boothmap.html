@@ -5,27 +5,18 @@
     <i class="icon ion-location"></i> Booth Detail
   </ion-nav-title>
 
+  <ion-nav-buttons side="right">
+    <button ng-style="iconColor" class="button button-icon icon ion-ios-navigate-outline" ng-click="toggleGeoLocation()">
+    </button>
+  </ion-nav-buttons>
+
   <ion-content animation="slide-right-left" scroll="false">
     <!-- <a href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic" ,target="_blank">Click here for map</a> -->
     <div data-tap-disabled="true">
-      <leaflet ng-if="!findMe" tiles="tiles" center="auburn" event-broadcast="events" height="480px" markers="markers" width="100vw">
+      <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="480px" markers="markers" width="100vw">
       </leaflet>
-
-      <leaflet ng-if="findMe" tiles="tiles" center="center" event-broadcast="events" height="480px" markers="markers" width="100vw">
-      </leaflet>
-
     </div>
-
-    <li class="item item-toggle">
-     Find me
-     <label class="toggle toggle-positive">
-       <input type="checkbox" ng-click="toggleGeoLocation()">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-     </label>
-  </li>
-
-
+  <!-- <h4>Longitude: {{long}}</h4>
+  <h4>Laditude: {{lat}}</h4> -->
   </ion-content>
 </ion-view>
