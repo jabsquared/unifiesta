@@ -7752,7 +7752,7 @@ a.button {
   width: 100%; }
 
 .events ion-content {
-  background-image: url(/img/needle.png); }
+  background-image: url(../img/needle.png); }
 .events a > div.row {
   border-bottom: 9px solid white; }
 .events .item-avatar i:first-child, .events .item-avatar .item-img {
