@@ -7752,7 +7752,8 @@ a.button {
   width: 100%; }
 
 .events ion-content {
-  background-image: url(/img/needle.png); }
+  background: url(../img/bg/needle_test.png) no-repeat center center fixed;
+  background-color: RGBA(212, 178, 54, 255); }
 .events a > div.row {
   border-bottom: 9px solid white; }
 .events .item-avatar i:first-child, .events .item-avatar .item-img {
