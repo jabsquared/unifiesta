@@ -1,34 +1,65 @@
-app.controller('BoothMapCtrl', function($scope, $state, $stateParams, $cordovaGeolocation, event_data) {
+app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data) {
+
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+  function onDeviceReady() {
+    console.log("navigator.geolocation works well");
+  }
 
   console.log('inside boothmp controller');
 
   var watchOptions = {
-    frequency : 1000,
-    timeout : 3000,
+    frequency: 1000,
+    timeout: 3000,
     enableHighAccuracy: false // may cause errors if true
   };
 
   // Feilds
   $scope.findMe = false;
-  var watch;
-  var lat;
-  var long;
+  $scope.long = 0;
+  $scope.lat = 0;
+  var watchID;
+
+  // onSuccess Callback
+  // This method accepts a Position object, which contains the
+  // current GPS coordinates
+  //
+  var onSuccess = function(position) {
+    $scope.long = position.coords.longitude;
+    $scope.lat = position.coords.latitude;
+    $scope.markers.user = {
+      lat: $scope.lat,
+      long: $scope.long,
+      focus: false,
+      draggable: false,
+      message: "User!",
+      icon: {}
+    };
+    $ionicPopup.alert({
+      title: 'Success!',
+      template: 'Your location has been recorded.'
+    });
+  };
+
+  // onError Callback receives a PositionError object
+  //
+  function onError(error) {
+    alert('code: ' + error.code + '\n' +
+      'message: ' + error.message + '\n');
+  }
 
   $scope.toggleGeoLocation = function() {
     $scope.findMe = !$scope.findMe;
     if ($scope.findMe) {
-      watch = $cordovaGeolocation.watchPosition(watchOptions);
-      watch.then(
-        null,
-        function(err) {
-          // error
-        },
-        function(position) {
-          console.log(position.coords.latitude);
-          console.log(position.coords.longitude);
+      console.log('About to get location');
+      watchID = navigator.geolocation.watchPosition(onSuccess, onError, {
+        enableHighAccuracy: false
       });
-    }else{
-      watch.clearWatch();
+    } else {
+      console.log('Clearing watchID');
+      if (watchID !== null || watchID !== undefined) {
+        navigator.geolocation.clearWatch(watchID);
+      }
     }
   };
 
@@ -81,14 +112,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, $cordovaGe
           shape: 'circle'
         }
       },
-      user: {
-        lat: lat,
-        lng: long,
-        focus: false,
-        draggable: false,
-        message: "User!",
-        icon: {}
-      },
+      user: {},
     },
     events: {
       markers: {
