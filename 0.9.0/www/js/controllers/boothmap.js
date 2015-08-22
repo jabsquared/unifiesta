@@ -6,7 +6,12 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
     console.log("navigator.geolocation works well");
   }
 
-  console.log('inside boothmp controller');
+  // Feilds
+  $scope.findMe = false;
+  $scope.long = 0;
+  $scope.lat = 0;
+  $scope.iconColor = {color: 'black'};
+  var watchID;
 
   var watchOptions = {
     frequency: 1000,
@@ -14,31 +19,20 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
     enableHighAccuracy: false // may cause errors if true
   };
 
-  // Feilds
-  $scope.findMe = false;
-  $scope.long = 0;
-  $scope.lat = 0;
-  var watchID;
-
   // onSuccess Callback
   // This method accepts a Position object, which contains the
   // current GPS coordinates
   //
   var onSuccess = function(position) {
-    $scope.long = position.coords.longitude;
     $scope.lat = position.coords.latitude;
-    $scope.markers.user = {
-      lat: $scope.lat,
-      long: $scope.long,
-      focus: false,
-      draggable: false,
-      message: "User!",
-      icon: {}
-    };
-    $ionicPopup.alert({
-      title: 'Success!',
-      template: 'Your location has been recorded.'
-    });
+    $scope.long = position.coords.longitude;
+    $scope.markers.user.lat = $scope.lat;
+    $scope.markers.user.lng = $scope.long;
+    $scope.markers.user.focus = true;
+    // $ionicPopup.alert({
+    //   title: 'Success!',
+    //   template: 'Your location has been recorded.'
+    // });
   };
 
   // onError Callback receives a PositionError object
@@ -52,13 +46,18 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
     $scope.findMe = !$scope.findMe;
     if ($scope.findMe) {
       console.log('About to get location');
+        $scope.iconColor = {color: '#387EF5'};
       watchID = navigator.geolocation.watchPosition(onSuccess, onError, {
         enableHighAccuracy: false
       });
     } else {
       console.log('Clearing watchID');
+        $scope.iconColor = {color: 'black'};
       if (watchID !== null || watchID !== undefined) {
         navigator.geolocation.clearWatch(watchID);
+        $scope.markers.user.lat = null;
+        $scope.markers.user.lng = null;
+        $scope.markers.user.focus = false;
       }
     }
   };
@@ -82,7 +81,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
         message: "Main Stage!",
         icon: {
           type: 'extraMarker',
-          icon: 'fa-home',
+          icon: 'fa-music',
           markerColor: '#f00',
           prefix: 'fa',
           shape: 'circle'
@@ -95,7 +94,11 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
         draggable: false,
         message: "Parking Lot!",
         icon: {
-          // Add custom parking icon or text
+          type: 'extraMarker',
+          icon: 'fa-car',
+          markerColor: 'blue',
+          prefix: 'fa',
+          shape: 'circle'
         }
       },
       b1: {
@@ -106,13 +109,20 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
         message: "<div ng-include src=\"'../templates/booths/jabsquared.html'\"></div>",
         icon: {
           type: 'extraMarker',
-          icon: 'fa-star',
+          icon: 'fa-diamond',
           markerColor: 'green',
           prefix: 'fa',
           shape: 'circle'
         }
       },
-      user: {},
+      user: {
+        lat: null,
+        lng: null,
+        focus: false,
+        icon: {
+          iconUrl: '../img/location.png',
+        }
+      },
     },
     events: {
       markers: {
