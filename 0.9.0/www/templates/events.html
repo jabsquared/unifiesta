@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <ion-view name="events" class="events" title="Events">
   <ion-nav-buttons side="left">
-    <button class="button button-icon icon ion-navicon"></button>
+    <button class="button button-icon icon ion-location" ng-click="goToBooth">
+    </button>
   </ion-nav-buttons>
 
   <ion-nav-title>
@@ -9,43 +10,43 @@
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-android-map" ng-click="goToMaps()"></button>
+    <button class="button button-icon icon ion-map" ng-click="goToMaps()"></button>
   </ion-nav-buttons>
 
   <ion-content>
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
       <ion-item class="list card" ng-repeat="event in events">
+        <div>
 
-        <a ng-click="schedule({{event}})">
-          <div class="row" >
+          <a ng-click="schedule({{event}})">
             <div class="item item-avatar">
-              <i class="icon ion-android-stopwatch"></i>
-              <h2>{{event.start | date:'HH:mm a'}}</h2>
+              <i class="icon ion-android-time"></i>
+              <h2>Start : {{event.start | date:'HH:mm a'}}</h2>
+              <p>
+                End: {{event.end | date:'HH:mm a'}}
+              </p>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <a class="event-link" href="#/events/{{event.id}}">
-          <div class="item item-avatar">
-            <img src="img/event-logo.png">
-            <h2>{{event.name}}</h2>
-            <p>
-              {{event.desc | limitTo : 135 : 0}}
-            </p>
-          </div>
-        </a>
-
-
-
-        <!-- <div class="row responsive-sm">
-            <div class="col">
-              <a class="item" ng-click="schedule({{event}})" style="background-color:rgba(0,0,0,0)">
-                <i class="icon ion-android-alarm-clock" ng-click="schedule({{event}})"></i>
-                <h2>{{event.start}}</h2>
-              </a>
+          <a href="#/events/{{event.id}}">
+            <div class="item">
+              <h2>{{event.name}}</h2>
+              <p>
+                {{event.desc | limitTo : 135 : 0}}
+              </p>
             </div>
-          </div> -->
+          </a>
 
+                  <!-- <div class="row responsive-sm">
+                      <div class="col">
+                        <a class="item" ng-click="schedule({{event}})" style="background-color:rgba(0,0,0,0)">
+                          <i class="icon ion-android-alarm-clock" ng-click="schedule({{event}})"></i>
+                          <h2>{{event.start}}</h2>
+                        </a>
+                      </div>
+                    </div> -->
+
+        </div>
       </ion-item>
     </ion-list>
   </ion-content>

@@ -24,91 +24,6 @@ $dark:                            #444 !default;
   font-family: 'blair_bold';
   src: url(/font/blair_itc_bold1.ttf); }
 
-/* Header */
-.logo {
-  clear: both;
-  width: fixed;
-  height: 27px;
-  margin-top: 9px; }
-
-/* Set min height event item */
-.alarm-slider {
-  font-size: 2.4em;
-  margin: 0 auto;
-  font-weight: 800;
-  text-align: center; }
-
-.item-icon-left .icon {
-  left: 0px; }
-
-.item-complex .item-content, .item-radio .item-content {
-  padding: 10px 49px 10px 16px; }
-
-/*.item {
-  height: 60px;
-}*/
-.event-time {
-  width: 81px;
-  border-radius: 0px;
-  display: block;
-  float: left; }
-
-.event-time p {
-  color: #fff;
-  font-size: 0.45em;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 18px; }
-
-/* Popup button styling */
-.oneline .popup {
-  width: 70%; }
-
-.oneline .popup-body {
-  text-align: center; }
-
-.oneline .popup .popup-buttons {
-  display: inline-block; }
-
-.oneline .popup .popup-buttons .button {
-  margin-bottom: .4em;
-  width: 100%; }
-
-.events ion-content {
-  background-image: url(/img/needle.png); }
-.events .item-avatar i:first-child, .events .item-avatar .item-img {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  font-size: 36px;
-  max-width: 40px;
-  max-height: 40px;
-  width: 100%;
-  border-radius: 4px; }
-.events .event-link {
-  color: inherit;
-  text-decoration: none; }
-.events .item {
-  color: RGBA(254, 252, 252, 255);
-  background-color: RGBA(183, 39, 12, 255);
-  border-color: RGBA(183, 39, 12, 255); }
-.events .item h2 {
-  font-family: 'blair_bold';
-  color: RGBA(254, 252, 252, 255); }
-.events .item p {
-  font-family: 'blair_med';
-  color: RGBA(225, 225, 225, 255); }
-
-.event {
-  /* single event page styling */ }
-  .event ion-content {
-    background-image: url(/img/event-bg.png); }
-  .event .event-title {
-    padding-top: 0.4em;
-    text-align: center; }
-  .event .event-description {
-    margin: 1.3em 1em; }
-
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -7786,3 +7701,93 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+/* Header */
+.logo {
+  clear: both;
+  width: fixed;
+  height: 27px;
+  margin-top: 9px; }
+
+/* Set min height event item */
+.alarm-slider {
+  font-size: 2.4em;
+  margin: 0 auto;
+  font-weight: 800;
+  text-align: center; }
+
+.item-icon-left .icon {
+  left: 0px; }
+
+.item-complex .item-content, .item-radio .item-content {
+  padding: 10px 49px 10px 16px; }
+
+/*.item {
+  height: 60px;
+}*/
+.event-time {
+  width: 81px;
+  border-radius: 0px;
+  display: block;
+  float: left; }
+
+.event-time p {
+  color: #fff;
+  font-size: 0.45em;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 18px; }
+
+/* Popup button styling */
+.oneline .popup {
+  width: 70%; }
+
+.oneline .popup-body {
+  text-align: center; }
+
+.oneline .popup .popup-buttons {
+  display: inline-block; }
+
+.oneline .popup .popup-buttons .button {
+  margin-bottom: .4em;
+  width: 100%; }
+
+.events ion-content {
+  background-image: url(/img/needle.png); }
+.events a > div.row {
+  border-bottom: 9px solid white; }
+.events .item-avatar i:first-child, .events .item-avatar .item-img {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 36px;
+  max-width: 40px;
+  max-height: 40px;
+  width: 100%;
+  border-radius: 4px; }
+.events a {
+  color: inherit;
+  text-decoration: none; }
+.events ion-item {
+  color: RGBA(254, 252, 252, 255);
+  border-color: RGBA(183, 39, 12, 255); }
+.events .item {
+  background-color: rgba(183, 39, 12, 0.63);
+  padding-right: 0;
+  color: RGBA(254, 252, 252, 255); }
+.events .item h2 {
+  font-family: 'blair_bold';
+  color: RGBA(254, 252, 252, 255); }
+.events .item p {
+  font-family: 'blair_bold';
+  color: RGBA(225, 225, 225, 255); }
+
+.event {
+  /* single event page styling */ }
+  .event ion-content {
+    background-image: url(/img/event-bg.png); }
+  .event .event-title {
+    padding-top: 0.4em;
+    text-align: center; }
+  .event .event-description {
+    margin: 1.3em 1em; }

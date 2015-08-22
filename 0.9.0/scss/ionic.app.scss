@@ -29,6 +29,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   src: url(/font/blair_itc_bold1.ttf);
 }
 
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
 // Include our styles
 @import "global.scss";
 @import "events.scss";
@@ -36,6 +39,3 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "parkingNparade.scss";
 @import "boothmap.scss";
 @import "sponsor.scss";
-
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
