@@ -39,4 +39,8 @@
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
+  <allow-navigation href="http://*.openstreetmap.org/*" />
+  <allow-intent href="http://*.openstreetmap.org/*" />
+  <access origin="http://*.openstreetmap.org/" />
+  <access origin="https://*.openstreetmap.org/" />
 </widget>

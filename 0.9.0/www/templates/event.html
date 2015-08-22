@@ -2,11 +2,13 @@
 <ion-view name="event" class="event" title="{{event.name}}">
 
   <ion-nav-title>
-    <univision-logo></univision-logo>
+    <i class="icon ion-play"></i>
+    {{event.start | date:'HH:mm a'}}
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-android-alarm-clock" ng-click="schedule({{event}})"></button>
+    <button class="button button-icon icon ion-android-time" ng-click="schedule({{event}})">
+    </button>
   </ion-nav-buttons>
 
   <ion-content>
