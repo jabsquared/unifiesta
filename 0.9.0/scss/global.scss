@@ -1,5 +1,6 @@
 /* Header */
 
+
 .logo {
   clear: both;
   width: fixed;
@@ -7,6 +8,9 @@
   margin-top: 9px;
 }
 
+ion-header-bar {
+  // background-color: rgba(183,39,12,0.54) !important;
+}
 
 /* Set min height event item */
 
@@ -17,9 +21,9 @@
   text-align: center;
 }
 
-.half {
-  color: gray;
-}
+// .half {
+//   color: gray;
+// }
 
 .item-icon-left .icon {
   left: 0px;

@@ -1,6 +1,10 @@
 .events {
   ion-content {
-    background-image: url('/img/needle.png');
+    background-image: url(/img/needle.png);
+  }
+
+  a > div.row {
+    border-bottom: 9px solid white;
   }
 
   .item-avatar {
@@ -17,16 +21,31 @@
     }
   }
 
-  a div.item{
-    border-bottom: 1px solid black;
-  }
-
-  .event-link {
+  a {
     color: inherit;
     text-decoration: none;
   }
 
-  .item {
-    background-color: rgba(0,0,0,0);
+  ion-item {
+    color: RGBA(254,252,252,255);
+    // background-color: RGBA(183,39,12,255);
+    border-color: RGBA(183,39,12,255);
+  }
+
+  .item{
+    background-color: rgba(183,39,12,0.63);
+    padding-right: 0;
+    color: RGBA(254,252,252,255);
+  }
+
+  .item h2 {
+    font-family: 'blair_bold';
+    color: RGBA(254,252,252,255);
+    // margin-bottom: 2px;
+  }
+
+ .item p {
+    font-family: 'blair_bold';
+    color: RGBA(225,225,225,255);
   }
 }

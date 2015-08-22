@@ -18,11 +18,24 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
+@font-face {
+  font-family: 'blair_med';
+  src: url(/font/blair_itc_medium1.tff);
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: 'blair_bold';
+  src: url(/font/blair_itc_bold1.ttf);
+}
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
 // Include our styles
 @import "global.scss";
 @import "events.scss";
 @import "event.scss";
-@import "maps.scss";
-
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
+@import "parkingNparade.scss";
+@import "boothmap.scss";
+@import "sponsor.scss";
