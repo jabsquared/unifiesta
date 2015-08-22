@@ -5,12 +5,16 @@
     <i class="icon ion-location"></i> Booth Detail
   </ion-nav-title>
 
-  <ion-content animation="slide-right-left">
+  <ion-content animation="slide-right-left" scroll="false">
     <!-- <a href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic" ,target="_blank">Click here for map</a> -->
-    <leaflet ng-if="!findMe" center="auburn" event-broadcast="events" height="480px" markers="markers" width="100vw">
-    </leaflet>
-    <leaflet ng-if="findMe" center="center" event-broadcast="events" height="480px" markers="markers" width="100vw">
-    </leaflet>
+    <div data-tap-disabled="true">
+      <leaflet ng-if="!findMe" center="auburn" event-broadcast="events" height="480px" markers="markers" width="100vw">
+      </leaflet>
+
+      <leaflet ng-if="findMe" center="center" event-broadcast="events" height="480px" markers="markers" width="100vw">
+      </leaflet>
+
+    </div>
 
     <li class="item item-toggle">
      Find me

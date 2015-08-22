@@ -5,7 +5,6 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive']);
 
-
 app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -45,15 +44,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/events');
 });
 
-app.run(function($ionicPlatform, $rootScope, $state, $timeout) {
+app.run(function($ionicPlatform, $timeout) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     //ios8 permission handler
-    $rootScope.go = function(path) {
-      console.log('go',path);
-      $state.go(path);
-    };
     if (device.platform === "iOS") {
       window.plugin.notification.local.promptForPermission();
     }

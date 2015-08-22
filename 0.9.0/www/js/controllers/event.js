@@ -1,10 +1,6 @@
 app.controller('EventCtrl', function($scope, $state, $stateParams, $ionicPopup, event_data) {
   $scope.event = event_data.get($stateParams.id);
 
-  $scope.goToSchedule = function() {
-    $state.go('schedule');
-  };
-
   $scope.schedule = function(single_event) {
     // convert date string back into date object
     // date_obj = new Date(date_obj);

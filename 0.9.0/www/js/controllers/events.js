@@ -7,6 +7,11 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
 
   //Local Notification Shit
 
+
+  $scope.go = function(path) {
+    $state.go(path);
+  };
+
   $scope.schedule = function(single_event) {
     // convert date string back into date object
     // date_obj = new Date(date_obj);
