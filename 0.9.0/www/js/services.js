@@ -1,5 +1,5 @@
 app.factory('event_data', function() {
-  console.log('in service!');
+  console.log('Service Called: Event Data');
   var events = [{
       id: 1,
       name: "Zumba con Gaby",

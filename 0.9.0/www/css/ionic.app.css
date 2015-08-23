@@ -17,11 +17,11 @@ $dark:                            #444 !default;
 */
 @font-face {
   font-family: 'blair_med';
-  src: url(/font/blair_itc_medium1.tff); }
+  src: url(../font/blair_itc_medium1.tff); }
 
 @font-face {
   font-family: 'blair_bold';
-  src: url(/font/blair_itc_bold1.ttf); }
+  src: url(../font/blair_itc_bold1.ttf); }
 
 /*!
   Ionicons, v2.0.1
@@ -7705,8 +7705,8 @@ a.button {
 .logo {
   clear: both;
   width: fixed;
-  height: 27px;
-  margin-top: 9px; }
+  height: 36px;
+  margin-top: 4.5px; }
 
 /* Set min height event item */
 .alarm-slider {
@@ -7792,3 +7792,50 @@ a.button {
     text-align: center; }
   .event .event-description {
     margin: 1.3em 1em; }
+
+/* Container DIV - automatically generated */
+.simply-scroll-container {
+  position: relative; }
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip {
+  position: relative;
+  overflow: hidden; }
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.simply-scroll-list li {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.simply-scroll-list li img {
+  border: block;
+  display: block; }
+
+/* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+/* Container DIV */
+.simply-scroll {
+  width: 40px;
+  height: 200px;
+  margin-bottom: 1em; }
+
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {
+  width: 100vw;
+  height: 200px; }
+
+/* Explicitly set height/width of each list item */
+.simply-scroll .simply-scroll-list li {
+  float: left;
+  /* Horizontal scroll only */
+  width: 45px;
+  height: 45px; }

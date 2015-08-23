@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <ion-view title="Sponsors">
-	<ion-content>
-    Content Here
+
+	<ul id="scroller">
+		<li ng-repeat="s in sps">
+			<img src="{{s}}" height="36px">
+		</li>
+	</ul>
+
+	<ion-content class="has-header">
+
   </ion-content>
 </ion-view>
