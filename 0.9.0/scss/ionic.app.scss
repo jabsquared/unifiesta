@@ -20,12 +20,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 @font-face {
   font-family: 'blair_med';
-  src: url(/font/blair_itc_medium1.tff);
+  src: url(../font/blair_itc_medium1.tff);
 }
 
 @font-face {
   font-family: 'blair_bold';
-  src: url(/font/blair_itc_bold1.ttf);
+  src: url(../font/blair_itc_bold1.ttf);
 }
 
 // Include all of Ionic
@@ -38,3 +38,4 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "pnp.scss";
 @import "boothmap.scss";
 @import "sponsor.scss";
+@import "sponsors.scss";

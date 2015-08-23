@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.events836305" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Unifiesta</name>
-  <description>&#xD;
-        An app for Univision Seattle Event.&#xD;
+  <description>
+        Schedule app for Univision Seattle Event.
     </description>
-  <author email="jab2@tuta.io" href="jab2@tuta.io">&#xD;
-      jabSquared team&#xD;
+  <author email="jab2@tuta.io" href="jab2@tuta.io">
+      jabSquared team
     </author>
   <content src="index.html"/>
   <access origin="*"/>

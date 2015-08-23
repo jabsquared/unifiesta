@@ -45,7 +45,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.run(function($ionicPlatform, $timeout) {
+
   $ionicPlatform.ready(function() {
+    $("#scroller").simplyScroll({
+      pauseOnHover : false,
+      pauseOnTouch : false
+    });
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     //ios8 permission handler

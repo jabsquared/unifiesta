@@ -17,11 +17,11 @@ $dark:                            #444 !default;
 */
 @font-face {
   font-family: 'blair_med';
-  src: url(/font/blair_itc_medium1.tff); }
+  src: url(../font/blair_itc_medium1.tff); }
 
 @font-face {
   font-family: 'blair_bold';
-  src: url(/font/blair_itc_bold1.ttf); }
+  src: url(../font/blair_itc_bold1.ttf); }
 
 /*!
   Ionicons, v2.0.1
@@ -7705,37 +7705,8 @@ a.button {
 .logo {
   clear: both;
   width: fixed;
-  height: 27px;
-  margin-top: 9px; }
-
-/* Set min height event item */
-.alarm-slider {
-  font-size: 2.4em;
-  margin: 0 auto;
-  font-weight: 800;
-  text-align: center; }
-
-.item-icon-left .icon {
-  left: 0px; }
-
-.item-complex .item-content, .item-radio .item-content {
-  padding: 10px 49px 10px 16px; }
-
-/*.item {
-  height: 60px;
-}*/
-.event-time {
-  width: 81px;
-  border-radius: 0px;
-  display: block;
-  float: left; }
-
-.event-time p {
-  color: #fff;
-  font-size: 0.45em;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 18px; }
+  height: 36px;
+  margin-top: 4.5px; }
 
 /* Popup button styling */
 .oneline .popup {
@@ -7750,6 +7721,9 @@ a.button {
 .oneline .popup .popup-buttons .button {
   margin-bottom: .4em;
   width: 100%; }
+
+ion-content {
+  background-color: RGBA(212, 178, 54, 255); }
 
 .events ion-content {
   background: url(../img/bg/needle_test.png) no-repeat center center fixed;
@@ -7792,3 +7766,51 @@ a.button {
     text-align: center; }
   .event .event-description {
     margin: 1.3em 1em; }
+
+.boothmap {
+  /* single event page styling */ }
+  .boothmap .event-title {
+    padding-top: 0.4em;
+    text-align: center; }
+  .boothmap .event-description {
+    margin: 1.3em 1em; }
+
+/* Container DIV - automatically generated */
+.simply-scroll-container {
+  position: relative; }
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip {
+  position: relative;
+  overflow: hidden; }
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.simply-scroll-list li {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.simply-scroll-list li img {
+  border: block;
+  display: block; }
+
+/* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+/* Container DIV */
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {
+  width: 100vw; }
+
+/* Explicitly set height/width of each list item */
+.simply-scroll .simply-scroll-list li {
+  float: left;
+  /* Horizontal scroll only */
+  height: inherit; }

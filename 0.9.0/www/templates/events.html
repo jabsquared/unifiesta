@@ -13,7 +13,7 @@
     <button class="button button-icon icon ion-map" ng-click="go('pnp')"></button>
   </ion-nav-buttons>
 
-  <ion-content class="has-header has-footer">
+  <ion-content class="has-header has-footer" has-bouncing="true">
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
       <ion-item class="list card" ng-repeat="event in events">
         <div>
@@ -36,22 +36,8 @@
               </p>
             </div>
           </a>
-
-                  <!-- <div class="row responsive-sm">
-                      <div class="col">
-                        <a class="item" ng-click="schedule({{event}})" style="background-color:rgba(0,0,0,0)">
-                          <i class="icon ion-android-alarm-clock" ng-click="schedule({{event}})"></i>
-                          <h2>{{event.start}}</h2>
-                        </a>
-                      </div>
-                    </div> -->
-
         </div>
       </ion-item>
     </ion-list>
   </ion-content>
-
-  <ion-footer-bar>
-
-  </ion-footer-bar>
 </ion-view>

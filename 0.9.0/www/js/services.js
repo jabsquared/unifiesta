@@ -1,5 +1,5 @@
 app.factory('event_data', function() {
-  console.log('in service!');
+  console.log('SERV: Event Data');
   var events = [{
       id: 1,
       name: "Zumba con Gaby",
@@ -406,12 +406,8 @@ app.factory('event_data', function() {
       events.splice(events.indexOf(event), 1);
     },
     get: function(id) {
-      for (var i = 0; i < events.length; i++) {
-        if (events[i].id === parseInt(id)) {
-          return events[i];
-        }
-      }
-      return null;
+      return events[+id];
+      // return null;
     }
   };
 });

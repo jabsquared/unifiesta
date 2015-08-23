@@ -5,11 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']);
 
 app.config(function($ionicConfigProvider){
   $ionicConfigProvider.tabs.position("top");
-})
+});
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,6 +23,10 @@ app.run(function($ionicPlatform) {
       //StatusBar.styleLightContent();
       StatusBar.styleDefault();
     }
+  });
+  $("#scroller").simplyScroll({
+    pauseOnHover : false,
+    pauseOnTouch : false
   });
 })
 

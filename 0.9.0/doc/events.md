@@ -1,5 +1,6 @@
 + Current event issues:
-  |---> Log event into another tab, and delete past event.
+  |---> Log event into another history tab
+   \---> Delete past event.
 
   |---> Using a focus function to zoom in current event.
 
