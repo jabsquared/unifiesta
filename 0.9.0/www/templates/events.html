@@ -2,8 +2,9 @@
 <ion-view name="events" class="events">
   <ion-nav-buttons side="left">
     <a nav-direction="back" ng-href="#/boothmap">
-      <button class="button button-icon icon ion-disc button-clear">
-       ) Booth
+      <button class="button button-clear">
+        <!-- button-icon icon ion-disc  -->
+        Booth
       </button>
     </a>
   </ion-nav-buttons>
@@ -13,9 +14,12 @@
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
-    <button class="button icon-right button-icon icon ion-ios-navigate button-clear" ng-click="go('pnp')">
-      Parking (
-    </button>
+    <a nav-direction="forward" ng-href="#/pnp">
+      <button class="button button-clear">
+        <!-- icon-right button-icon icon ion-ios-navigate -->
+        Parking
+      </button>
+    </a>
   </ion-nav-buttons>
 
   <ion-content class="has-header has-footer" header-shrink has-bouncing="true">
