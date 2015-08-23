@@ -61,18 +61,16 @@
 </head>
 
 <body ng-app="starter">
-  <ion-nav-bar class="bar-light" align-title="center">
-    <ion-nav-back-button class="button icon-left button-clear">
-      <i class="ion-chevron-left"></i>
-    </ion-nav-back-button>
+  <ion-nav-bar class="bar-energized" align-title="center">
+
   </ion-nav-bar>
 
   <ion-nav-view>
   </ion-nav-view>
 
 
-  <ion-footer-bar ng-controller="SponsorsCtrl">
-    <a href="#/sponsors" ng-click="toggle()">
+  <ion-footer-bar ng-controller="SponsorsCtrl" class="sponsors">
+    <a href="#/sponsors"  ng-click="toggle()">
       <ul id="scroller">
         <li ng-repeat="s in sps">
           <img src="{{s}}" height="36px">
