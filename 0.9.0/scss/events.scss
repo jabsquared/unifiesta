@@ -34,14 +34,23 @@ ion-item {
     color: RGBA(254,252,252,255);
 
     // background-color: RGBA(183,39,12,255);
-    border-color: RGBA(183,39,12,255);
+    // border-color: RGBA(183,39,12,255);
+    border-color: transparent;
   }
 
 .item {
-    background-color: rgba(183,39,12,0.63);
+    background-color: rgba(183,39,12,0.9);
     padding-right: 0;
     color: RGBA(254,252,252,255);
   }
+
+.list {
+  background-color: transparent;
+}
+
+.card {
+  background-color: transparent;
+}
 
 .item h2 {
     font-family: 'blair_bold';
