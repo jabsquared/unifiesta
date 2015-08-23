@@ -1,52 +1,60 @@
-/* Container DIV - automatically generated */
-.simply-scroll-container {
-	position: relative;
-}
+.sponsors {
+  /* Container DIV - automatically generated */
+  .simply-scroll-container {
+    position: relative;
+  }
 
-/* Clip DIV - automatically generated */
-.simply-scroll-clip {
-	position: relative;
-	overflow: hidden;
-}
 
-/* UL/OL/DIV - the element that simplyScroll is inited on
+  /* Clip DIV - automatically generated */
+  .simply-scroll-clip {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+  /* UL/OL/DIV - the element that simplyScroll is inited on
 Class name automatically added to element */
-.simply-scroll-list {
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+  .simply-scroll-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
 .simply-scroll-list li {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 
 .simply-scroll-list li img {
-	border: block;
-	display: block;
-}
+    border: block;
+    display: block;
+  }
 
-/* Custom class modifications - adds to / overrides above
+
+  /* Custom class modifications - adds to / overrides above
 
 .simply-scroll is default base class */
+  /* Container DIV */
+  .simply-scroll {
 
-/* Container DIV */
-.simply-scroll {
-	// width: inherit;
-	// height: 200px;
-}
+    // width: inherit;
+    // height: 200px;
+  }
 
-/* Clip DIV */
-.simply-scroll .simply-scroll-clip {
-	width: 100vw;
-}
 
-/* Explicitly set height/width of each list item */
-.simply-scroll .simply-scroll-list li {
-	float: left; /* Horizontal scroll only */
-	// width: 45px;
-	height: inherit;
+  /* Clip DIV */
+  .simply-scroll .simply-scroll-clip {
+    width: 100vw;
+  }
+
+
+  /* Explicitly set height/width of each list item */
+  .simply-scroll .simply-scroll-list li {
+    float: left;
+    /* Horizontal scroll only */
+    // width: 45px;
+    height: inherit;
+  }
 }

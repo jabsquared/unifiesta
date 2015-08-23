@@ -8,10 +8,10 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
 
   // Feilds
   $scope.findMe = false;
-  $scope.long = 0;
   $scope.lat = 0;
+  $scope.long = 0;
   $scope.iconColor = {
-    color: 'black'
+    color: '#DDDDDDFF'
   };
   var watchID;
 
@@ -59,7 +59,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
     } else {
       console.log('Clearing watchID');
       $scope.iconColor = {
-        color: 'black'
+        color: '#DDDDDDFF'
       };
       // if (watchID !== null || watchID !== undefined) {
       navigator.geolocation.clearWatch(watchID);
@@ -127,8 +127,9 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
         }
       },
       user: {
-        lat: 0,
-        lng: 0,
+        lat: $scope.lat,
+        lng: $scope.long,
+        message: "You are here!",
         icon: {
           iconUrl: '/img/location.png'
         }
