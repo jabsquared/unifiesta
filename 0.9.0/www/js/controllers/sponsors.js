@@ -3,7 +3,7 @@ app.controller('SponsorsCtrl', function($scope, $state) {
 
   $scope.sps = [];
   for (var i = 0; i < 9; ++i) {
-    $scope.sps[i] = '/img/sps/s' + -~i + '.jpg';
+    $scope.sps[i] = 'img/sps/s' + -~i + '.jpg';
   }
   $scope.toggle = function() {
 

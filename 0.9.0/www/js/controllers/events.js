@@ -84,7 +84,7 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
       text: single_event.name + ' starts in ' + minutes + ' minutes.',
       at: newDate,
       sound: null,
-      icon: 'file://img/logo.png',
+      icon: 'file://img/main/logo.png',
       smallIcon: 'file://img/small.png',
       led: 'FBA50A',
       badge: 1
