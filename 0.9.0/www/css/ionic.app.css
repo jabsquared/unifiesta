@@ -7706,6 +7706,8 @@ a.button {
   clear: both;
   width: fixed;
   height: 36px;
+  width: 36vw;
+  max-width: 135px;
   margin-top: 4.5px; }
 
 /* Popup button styling */
