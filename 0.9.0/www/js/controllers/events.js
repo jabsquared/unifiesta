@@ -62,9 +62,8 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
     console.log("entered add function");
 
     // create var for current time
-    var now = new Date().getTime();
-    var sec = 5;
-    var _5SecondsFromNow = new Date(now + sec * 1000);
+    // var now = new Date().getTime();
+    // var _5SecondsFromNow = new Date(now + sec * 1000);
 
     var newDate = subtractMinutes(single_event.start, minutes);
 
@@ -83,7 +82,7 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
       id: single_event.id,
       title: 'Event Reminder',
       text: single_event.name + ' starts in ' + minutes + ' minutes.',
-      at: _5SecondsFromNow,
+      at: newDate,
       sound: null,
       icon: 'file://img/logo.png',
       smallIcon: 'file://img/small.png',
