@@ -1,12 +1,12 @@
 app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, event_data) {
-  console.log("in controller");
+
+  console.log("CTRL: Events");
 
   $scope.events = event_data.all();
   $scope.shouldShowDelete = false;
   $scope.listCanSwipe = true;
 
   //Local Notification Shit
-
 
   $scope.go = function(path) {
     $state.go(path);

@@ -12,49 +12,6 @@ ion-header-bar {
   // background-color: rgba(183,39,12,0.54) !important;
 }
 
-/* Set min height event item */
-
-.alarm-slider {
-  font-size: 2.4em;
-  margin: 0 auto;
-  font-weight: 800;
-  text-align: center;
-}
-
-// .half {
-//   color: gray;
-// }
-
-.item-icon-left .icon {
-  left: 0px;
-}
-
-.item-complex .item-content, .item-radio .item-content {
-  padding: 10px 49px 10px 16px;
-}
-
-
-/*.item {
-  height: 60px;
-}*/
-
-.event-time {
-  width: 81px;
-  border-radius: 0px;
-  display: block;
-  float: left;
-}
-
-.event-time i {}
-
-.event-time p {
-  color: #fff;
-  font-size: 0.45em;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 18px;
-}
-
 /* Popup button styling */
 
 .oneline .popup {
@@ -74,6 +31,6 @@ ion-header-bar {
   width: 100%;
 }
 
-.sponsor-strip {
-
+ion-content {
+  background-color:RGBA(212,178,54,255);
 }

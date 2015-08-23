@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<ion-view name="boothmap" title="Booth">
+<ion-view name="boothmap" title="Booth Map" class="boothmap">
   <ion-nav-title>
     <i class="icon ion-location"></i> Booth Detail
   </ion-nav-title>
@@ -10,11 +10,14 @@
     </button>
   </ion-nav-buttons>
 
-  <ion-content class="has-header has-footer" scroll="false">
+  <ion-content class="has-header has-footer" scroll="false" has-bouncing="false">
     <!-- <a href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic" ,target="_blank">Click here for map</a> -->
     <div data-tap-disabled="true">
-      <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="480px" markers="markers" width="100vw">
+      <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" markers="markers" width="100vw" height="54vh">
       </leaflet>
+    </div>
+    <div class="">
+
     </div>
   <!-- <h4>Longitude: {{long}}</h4>
   <h4>Laditude: {{lat}}</h4> -->

@@ -127,8 +127,8 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
         }
       },
       user: {
-        lat: null,
-        lng: null,
+        lat: 0,
+        lng: 0,
         icon: {
           iconUrl: '/img/location.png'
         }

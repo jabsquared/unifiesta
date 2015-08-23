@@ -7708,35 +7708,6 @@ a.button {
   height: 36px;
   margin-top: 4.5px; }
 
-/* Set min height event item */
-.alarm-slider {
-  font-size: 2.4em;
-  margin: 0 auto;
-  font-weight: 800;
-  text-align: center; }
-
-.item-icon-left .icon {
-  left: 0px; }
-
-.item-complex .item-content, .item-radio .item-content {
-  padding: 10px 49px 10px 16px; }
-
-/*.item {
-  height: 60px;
-}*/
-.event-time {
-  width: 81px;
-  border-radius: 0px;
-  display: block;
-  float: left; }
-
-.event-time p {
-  color: #fff;
-  font-size: 0.45em;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 18px; }
-
 /* Popup button styling */
 .oneline .popup {
   width: 70%; }
@@ -7750,6 +7721,9 @@ a.button {
 .oneline .popup .popup-buttons .button {
   margin-bottom: .4em;
   width: 100%; }
+
+ion-content {
+  background-color: RGBA(212, 178, 54, 255); }
 
 .events ion-content {
   background: url(../img/bg/needle_test.png) no-repeat center center fixed;
@@ -7793,6 +7767,14 @@ a.button {
   .event .event-description {
     margin: 1.3em 1em; }
 
+.boothmap {
+  /* single event page styling */ }
+  .boothmap .event-title {
+    padding-top: 0.4em;
+    text-align: center; }
+  .boothmap .event-description {
+    margin: 1.3em 1em; }
+
 /* Container DIV - automatically generated */
 .simply-scroll-container {
   position: relative; }
@@ -7823,19 +7805,12 @@ Class name automatically added to element */
 
 .simply-scroll is default base class */
 /* Container DIV */
-.simply-scroll {
-  width: 40px;
-  height: 200px;
-  margin-bottom: 1em; }
-
 /* Clip DIV */
 .simply-scroll .simply-scroll-clip {
-  width: 100vw;
-  height: 200px; }
+  width: 100vw; }
 
 /* Explicitly set height/width of each list item */
 .simply-scroll .simply-scroll-list li {
   float: left;
   /* Horizontal scroll only */
-  width: 45px;
-  height: 45px; }
+  height: inherit; }

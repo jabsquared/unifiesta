@@ -44,8 +44,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/events');
 });
 
-app.run(function($ionicPlatform, $timeout, $rootScope) {
-  $rootScope.showFooter = true;
+app.run(function($ionicPlatform, $timeout) {
 
   $ionicPlatform.ready(function() {
     $("#scroller").simplyScroll({
