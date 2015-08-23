@@ -20,16 +20,16 @@ app.run(function($ionicPlatform, $rootScope, $timeout) {
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
-    window.plugin.notification.local.onadd = function(id, state, json) {
-      var notification = {
-        id: id,
-        state: state,
-        json: json
-      };
-      $timeout(function() {
-        $rootScope.$broadcast("$cordovaLocalNotification:added", notification);
-      });
-    };
+    // window.plugin.notification.local.onadd = function(id, state, json) {
+    //   var notification = {
+    //     id: id,
+    //     state: state,
+    //     json: json
+    //   };
+    //   $timeout(function() {
+    //     $rootScope.$broadcast("$cordovaLocalNotification:added", notification);
+    //   });
+    // };
   });
 });
 
