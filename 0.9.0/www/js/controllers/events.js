@@ -26,7 +26,7 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
         onTap: function(e) {
           // Returning a value will cause the promise to resolve with the given value.
           add(5, single_event);
-          return 5;
+          return 10;
         }
       }, {
         text: '10 minutes',
@@ -99,6 +99,13 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
 
   $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
     alert("Added a notification");
+  });
+
+  //ios8 permission handler
+  $ionicPlatform.ready(function() {
+    if (device.platform === "iOS") {
+      window.plugin.notification.local.promptForPermission();
+    }
   });
 
 });
