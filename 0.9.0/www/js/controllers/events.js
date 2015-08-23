@@ -1,4 +1,4 @@
-app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, event_data) {
+app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, $ionicPlatform, event_data) {
 
   console.log("CTRL: Events");
 
@@ -99,13 +99,6 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
 
   $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
     alert("Added a notification");
-  });
-
-  //ios8 permission handler
-  $ionicPlatform.ready(function() {
-    if (device.platform === "iOS") {
-      window.plugin.notification.local.promptForPermission();
-    }
   });
 
 });

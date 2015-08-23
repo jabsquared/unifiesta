@@ -53,6 +53,11 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     //ios8 permission handler
+    $ionicPlatform.ready(function() {
+      if (device.platform === "iOS") {
+        window.plugin.notification.local.promptForPermission();
+      }
+    });
 
     if (typeof(device) !== 'undefined') {
       //mode code here give a hard coded value,
