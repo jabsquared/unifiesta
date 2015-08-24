@@ -46,6 +46,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
 
   $ionicPlatform.ready(function() {
+
     $("#scroller").simplyScroll({
       pauseOnHover: false,
       pauseOnTouch: false
@@ -53,23 +54,19 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     //ios8 permission handler
-    $ionicPlatform.ready(function() {
-      if (device.platform === "iOS") {
-        window.plugin.notification.local.promptForPermission();
-      }
-    });
+    if (window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
 
-    if (typeof(device) !== 'undefined') {
+    if (window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+
       //mode code here give a hard coded value,
       if (device.platform === "iOS") {
         window.plugin.notification.local.promptForPermission();
       }
-      if (window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      }
-      if (window.StatusBar) {
-        StatusBar.styleDefault();
-      }
+
       window.plugin.notification.local.onadd = function(id, state, json) {
         var notification = {
           id: id,
@@ -80,6 +77,7 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
           $rootScope.$broadcast("$cordovaLocalNotification:added", notification);
         });
       };
-    }
+
+
   });
 });
