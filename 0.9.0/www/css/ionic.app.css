@@ -7727,11 +7727,17 @@ a.button {
 ion-content {
   background-color: RGBA(212, 178, 54, 255); }
 
+.map .leaflet-container {
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px;
+  -webkit-box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9);
+  box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9); }
+
 .events ion-content {
-  background: url(../img/bg/needle_test.png) no-repeat center center fixed;
+  background: url("../img/bg/needle_test.png") no-repeat center center fixed;
   background-color: RGBA(212, 178, 54, 255); }
-.events a > div.row {
-  border-bottom: 9px solid white; }
 .events .item-avatar i:first-child, .events .item-avatar .item-img {
   position: absolute;
   top: 16px;
@@ -7762,6 +7768,8 @@ ion-content {
   font-family: 'blair_bold';
   font-size: 0.72em;
   color: RGBA(225, 225, 225, 255); }
+.events .card {
+  margin-bottom: 1.8px !important; }
 
 .event {
   /* single event page styling */ }
@@ -7773,13 +7781,11 @@ ion-content {
   .event .event-description {
     margin: 1.3em 1em; }
 
-.boothmap {
-  /* single event page styling */ }
-  .boothmap .event-title {
-    padding-top: 0.4em;
-    text-align: center; }
-  .boothmap .event-description {
-    margin: 1.3em 1em; }
+.pnp .map {
+  height: 54vh; }
+
+.boothmap .map {
+  height: 54vh; }
 
 .sponsors {
   /* Container DIV - automatically generated */

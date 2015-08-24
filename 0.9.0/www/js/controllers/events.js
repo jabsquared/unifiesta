@@ -75,7 +75,8 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
 
     function subtractMinutes(date_obj, minutes) {
       new_date_obj = new Date();
-      return new Date(new_date_obj.getTime() + minutes * 5000);
+      return new Date(new_date_obj.getTime() + minutes * 1000);
+      // return new Date(new_date_obj.getTime() + minutes * 6000);
     }
 
     $cordovaLocalNotification.schedule({

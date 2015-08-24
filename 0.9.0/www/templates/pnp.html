@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<ion-view name="pnp" title="PnP">
+<ion-view name="pnp" title="PnP" class="pnp">
   <ion-nav-buttons side="left">
     <a nav-direction="back" ng-href="#/events">
       <button class="button icon-left button-clear ion-ios-arrow-left">
@@ -13,10 +13,11 @@
     <i class="icon ion-map"></i> Parking and Parade
   </ion-nav-title>
 
-  <ion-content class="has-header has-footer" has-bouncing="false">
-
-    <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="480px" markers="markers" width="100vw">
-    </leaflet>
+  <ion-content class="has-header has-footer" has-bouncing="false" padding="true">
+    <div class="map">
+      <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="100%" markers="markers" width="100%">
+      </leaflet>
+    </div>
 
   </ion-content>
 </ion-view>

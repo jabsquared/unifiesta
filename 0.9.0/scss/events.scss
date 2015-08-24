@@ -1,14 +1,11 @@
 .events {
   ion-content {
-    background: url(../img/bg/needle_test.png) no-repeat center center fixed;
-    background-color:RGBA(212,178,54,255);
+    background: url("../img/bg/needle_test.png") no-repeat center center fixed;
+    background-color: RGBA(212,178,54,255);
+
     // -webkit-background-size: cover;
     // -moz-background-size: cover;
     // background-size: cover;
-  }
-
-a > div.row {
-    border-bottom: 9px solid white;
   }
 
 .item-avatar {
@@ -45,12 +42,12 @@ ion-item {
   }
 
 .list {
-  background-color: transparent;
-}
+    background-color: transparent;
+  }
 
 .card {
-  background-color: transparent;
-}
+    background-color: transparent;
+  }
 
 .item h2 {
     font-family: 'blair_bold';
@@ -63,5 +60,9 @@ ion-item {
     font-family: 'blair_bold';
     font-size: 0.72em;
     color: RGBA(225,225,225,255);
+  }
+
+.card {
+    margin-bottom: 1.8px !important;
   }
 }

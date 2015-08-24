@@ -20,12 +20,14 @@
   </ion-nav-buttons>
 
 
-  <ion-content class="has-header has-footer" scroll="false" has-bouncing="false">
+  <ion-content class="has-header has-footer" scroll="false" has-bouncing="false" padding="true">
     <!-- <a href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic" ,target="_blank">Click here for map</a> -->
-    <div data-tap-disabled="true">
-      <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" markers="markers" width="100vw" height="54vh">
+    <div class="map" data-tap-disabled="true">
+      <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" markers="markers" width="100%" height="100%">
       </leaflet>
     </div>
+
+
     <div class="">
 
     </div>
