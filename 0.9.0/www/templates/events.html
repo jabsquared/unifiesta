@@ -24,8 +24,8 @@
 
   <ion-content class="has-header has-footer" header-shrink has-bouncing="true">
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
-      <ion-item class="list card" ng-repeat="event in events">
-        <div>
+      <ion-item class="list" collection-repeat="event in events">
+        <div class="card">
 
           <a ng-click="schedule({{event}})">
             <div class="item item-avatar">

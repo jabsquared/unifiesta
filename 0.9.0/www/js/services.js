@@ -406,7 +406,7 @@ app.factory('event_data', function() {
       events.splice(events.indexOf(event), 1);
     },
     get: function(id) {
-      return events[+id];
+      return events[+(~-id)];
       // return null;
     }
   };
