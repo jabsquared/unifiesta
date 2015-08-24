@@ -62,6 +62,7 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
       StatusBar.styleDefault();
     }
 
+    if (typeof(device) !== 'undefined') {
       //mode code here give a hard coded value,
       if (device.platform === "iOS") {
         window.plugin.notification.local.promptForPermission();
@@ -77,7 +78,7 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
           $rootScope.$broadcast("$cordovaLocalNotification:added", notification);
         });
       };
-
+    }
 
   });
 });
