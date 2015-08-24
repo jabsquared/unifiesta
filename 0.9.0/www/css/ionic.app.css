@@ -7769,7 +7769,7 @@ ion-content {
   font-size: 0.72em;
   color: RGBA(225, 225, 225, 255); }
 .events .card {
-  margin-bottom: 1.8px !important; }
+  margin-bottom: 0.9px !important; }
 
 .event {
   /* single event page styling */ }
