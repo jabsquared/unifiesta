@@ -13,6 +13,8 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
   $scope.iconColor = {
     color: '#DDDDDDFF'
   };
+  $scope.focus = false;
+
   var watchID;
 
   var watchOptions = {
@@ -37,6 +39,8 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
     //   title: 'Success!',
     //   template: 'Your location has been recorded.'
     // });
+
+    // $scope.markers.user.focus = true;
   };
 
   // onError Callback receives a PositionError object
@@ -56,6 +60,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
       watchID = navigator.geolocation.watchPosition(onSuccess, onError, {
         enableHighAccuracy: false
       });
+      $scope.markers.user.focus = true;
     } else {
       console.log('Clearing watchID');
       $scope.iconColor = {
@@ -63,8 +68,8 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
       };
       // if (watchID !== null || watchID !== undefined) {
       navigator.geolocation.clearWatch(watchID);
-      $scope.markers.user.lat = null;
-      $scope.markers.user.lng = null;
+      $scope.markers.user.lat = 0;
+      $scope.markers.user.lng = 0;
       $scope.markers.user.focus = false;
       // }
     }

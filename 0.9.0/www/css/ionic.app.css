@@ -7736,7 +7736,7 @@ ion-content {
   box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9); }
 
 .events ion-content {
-  background: url("../img/bg/needle_test.png") no-repeat center center fixed;
+  background: url("../img/bg/rsn.png") no-repeat center center fixed;
   background-color: RGBA(212, 178, 54, 255); }
 .events .item-avatar i:first-child, .events .item-avatar .item-img {
   position: absolute;
@@ -7787,37 +7787,3 @@ ion-content {
 .boothmap .map {
   height: 54vh; }
 
-.sponsors {
-  /* Container DIV - automatically generated */
-  /* Clip DIV - automatically generated */
-  /* UL/OL/DIV - the element that simplyScroll is inited on
-Class name automatically added to element */
-  /* Custom class modifications - adds to / overrides above
-
-.simply-scroll is default base class */
-  /* Container DIV */
-  /* Clip DIV */
-  /* Explicitly set height/width of each list item */ }
-  .sponsors .simply-scroll-container {
-    position: relative; }
-  .sponsors .simply-scroll-clip {
-    position: relative;
-    overflow: hidden; }
-  .sponsors .simply-scroll-list {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  .sponsors .simply-scroll-list li {
-    padding: 0;
-    margin: 0;
-    list-style: none; }
-  .sponsors .simply-scroll-list li img {
-    border: block;
-    display: block; }
-  .sponsors .simply-scroll .simply-scroll-clip {
-    width: 100vw; }
-  .sponsors .simply-scroll .simply-scroll-list li {
-    float: left;
-    /* Horizontal scroll only */
-    height: inherit; }
