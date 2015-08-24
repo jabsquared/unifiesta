@@ -21,26 +21,73 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
     enableHighAccuracy: false // may cause errors if true
   };
 
+  $scope.markers = [
+      {
+        lat: 47.307492,
+        lng: -122.230582,
+        focus: false,
+        draggable: false,
+        message: "Main Stage!",
+        icon: {
+          type: 'extraMarker',
+          icon: 'fa-music',
+          markerColor: '#f00',
+          prefix: 'fa',
+          shape: 'circle'
+        }
+      },
+      {
+        lat: 47.307263,
+        lng: -122.231312,
+        focus: false,
+        draggable: false,
+        message: "Parking Lot!",
+        icon: {
+          type: 'extraMarker',
+          icon: 'fa-car',
+          markerColor: 'blue',
+          prefix: 'fa',
+          shape: 'circle'
+        }
+      },
+      {
+        lat: 47.307367,
+        lng: -122.229776,
+        focus: false,
+        draggable: false,
+        message: "<div ng-include src=\"'/templates/booths/jabsquared.html'\"></div>",
+        icon: {
+          type: 'extraMarker',
+          icon: 'fa-diamond',
+          markerColor: 'green',
+          prefix: 'fa',
+          shape: 'circle'
+        }
+      }
+  ];
+
   // onSuccess Callback
   // This method accepts a Position object, which contains the
   // current GPS coordinates
-  //
   var onSuccess = function(position) {
     console.log('rending location!');
     $scope.lat = position.coords.latitude;
     $scope.long = position.coords.longitude;
-    $scope.markers.user.lat = $scope.lat;
-    $scope.markers.user.lng = $scope.long;
-    console.log('marker lat: ' + $scope.markers.user.lat);
-    console.log('marker long: ' + $scope.markers.user.lng);
-    // $ionicPopup.alert({
-    //   title: 'Success!',
-    //   template: 'Your location has been recorded.'
-    // });
+    console.log('marker lat: ' + $scope.lat);
+    console.log('marker long: ' + $scope.long);
+    $scope.markers.push({
+      lat: $scope.lat,
+      lng: $scope.long,
+      focus: true,
+      // TODO: Fix auto focus. Only works with message.
+      // message: 'Your Location!',
+      icon: {
+        iconUrl: '/img/location.png'
+      }
+    });
   };
 
   // onError Callback receives a PositionError object
-  //
   function onError(error) {
     alert('code: ' + error.code + '\n' +
       'message: ' + error.message + '\n');
@@ -61,12 +108,9 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
       $scope.iconColor = {
         color: '#DDDDDDFF'
       };
-      // if (watchID !== null || watchID !== undefined) {
       navigator.geolocation.clearWatch(watchID);
-      $scope.markers.user.lat = null;
-      $scope.markers.user.lng = null;
-      $scope.markers.user.focus = false;
-      // }
+      // TODO: Fix bug. Marker shows after being popped.
+      $scope.markers.pop();
     }
   };
 
@@ -82,58 +126,6 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
     },
     center: {
       autoDiscover: true
-    },
-    markers: {
-      mainStage: {
-        lat: 47.307492,
-        lng: -122.230582,
-        focus: false,
-        draggable: false,
-        message: "Main Stage!",
-        icon: {
-          type: 'extraMarker',
-          icon: 'fa-music',
-          markerColor: '#f00',
-          prefix: 'fa',
-          shape: 'circle'
-        }
-      },
-      p1: {
-        lat: 47.307263,
-        lng: -122.231312,
-        focus: false,
-        draggable: false,
-        message: "Parking Lot!",
-        icon: {
-          type: 'extraMarker',
-          icon: 'fa-car',
-          markerColor: 'blue',
-          prefix: 'fa',
-          shape: 'circle'
-        }
-      },
-      b1: {
-        lat: 47.307367,
-        lng: -122.229776,
-        focus: false,
-        draggable: false,
-        message: "<div ng-include src=\"'/templates/booths/jabsquared.html'\"></div>",
-        icon: {
-          type: 'extraMarker',
-          icon: 'fa-diamond',
-          markerColor: 'green',
-          prefix: 'fa',
-          shape: 'circle'
-        }
-      },
-      user: {
-        lat: $scope.lat,
-        lng: $scope.long,
-        message: "You are here!",
-        icon: {
-          iconUrl: '/img/location.png'
-        }
-      },
     },
     events: {
       markers: {

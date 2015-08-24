@@ -17,35 +17,35 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
     // date_obj = new Date(date_obj);
     // prompt user for reminder options
     var alarmPopup = $ionicPopup.show({
-      title: "Set Reminder",
+      title: '<font size="5" color="black">Set Reminder</font>',
       // template: "",
       cssClass: 'oneline',
       buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
-        text: '5 minutes',
-        type: 'button-calm',
+        text: '<font size="5" color="white">5 minutes</font>',
+        type: 'button-energized',
         onTap: function(e) {
           // Returning a value will cause the promise to resolve with the given value.
           add(5, single_event);
           return 10;
         }
       }, {
-        text: '10 minutes',
-        type: 'button-positive',
+        text: '<font size="5" color="white">10 minutes</font>',
+        type: 'button-energized',
         onTap: function(e) {
           // Returning a value will cause the promise to resolve with the given value.
           add(10, single_event);
           return 15;
         }
       }, {
-        text: '15 minutes',
-        type: 'button-royal',
+        text: '<font size="5" color="white">15 minutes</font>',
+        type: 'button-energized',
         onTap: function(e) {
           // Returning a value will cause the promise to resolve with the given value.
           add(15, single_event);
           return 30;
         }
       }, {
-        text: 'Cancel',
+        text: '<font size="4" color="white">Cancel</font>',
         type: 'button-assertive',
         cssClass: 'oneline',
         onTap: function(e) {
