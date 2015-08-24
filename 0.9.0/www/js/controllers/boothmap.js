@@ -81,10 +81,13 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
       focus: true,
       // TODO: Fix auto focus. Only works with message.
       // message: 'Your Location!',
+      draggable: false,
       icon: {
         iconUrl: '/img/location.png'
       }
     });
+    $scope.auburn.lat = $scope.lat;
+    $scope.auburn.lng = $scope.long;
   };
 
   // onError Callback receives a PositionError object
@@ -111,6 +114,8 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
       navigator.geolocation.clearWatch(watchID);
       // TODO: Fix bug. Marker shows after being popped.
       $scope.markers.pop();
+      $scope.auburn.lat = 47.307492;
+      $scope.auburn.lng = -122.230582;
     }
   };
 
