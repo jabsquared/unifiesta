@@ -17,14 +17,23 @@
 				</div>
 			</div>
 			<div class="col col-25" ng-if="$index + 1 < sps.length">
+				<div class="box">
 
-				<img ng-src="{{sps[$index + 1].src}}" width="100%" />
+					<img ng-src="{{sps[$index + 1].src}}" width="100%" />
+				</div>
 			</div>
 			<div class="col col-25" ng-if="$index + 2 < sps.length">
-				<img ng-src="{{sps[$index + 2].src}}" width="100%" />
+				<div class="box">
+					<img ng-src="{{sps[$index + 2].src}}" width="100%" />
+				</div>
 			</div>
+
 			<div class="col col-25" ng-if="$index + 3 < sps.length">
-				<img ng-src="{{sps[$index + 3].src}}" width="100%" />
+				<div class="box">
+
+					<img ng-src="{{sps[$index + 3].src}}" width="100%" />
+
+				</div>
 			</div>
 		</div>
 
