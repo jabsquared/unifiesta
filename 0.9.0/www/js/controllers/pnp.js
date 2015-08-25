@@ -1,4 +1,4 @@
-app.controller('PnPCtrl', function($scope, $state, $stateParams, event_data) {
+app.controller('PnPCtrl', function($scope, $state, $stateParams) {
 
   angular.extend($scope, {
     tiles: {

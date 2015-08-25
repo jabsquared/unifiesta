@@ -29,12 +29,12 @@
 
   <!-- leaflet -->
   <script src="lib/leaflet/dist/leaflet.js"></script>
-
   <script src="lib/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
-
   <script src="lib/angular-leaflet-directive/dist/angular-leaflet-directive_dev_mapped.js"></script>
-
   <script src="lib/Leaflet.extra-markers/src/leaflet.extra-markers.js"></script>
+
+  <!-- deckgrid -->
+  <script src="lib/angular-deckgrid/angular-deckgrid.js" ></script>
 
   <!-- main with ready -->
   <script src="js/app.js"></script>
@@ -68,9 +68,9 @@
         show-pager="false"
         does-continue="true"
         auto-play="true"
-        slide-interval="2700">
+        slide-interval="3600">
         <ion-slide ng-repeat="s in sps">
-          <img ng-src="{{s}}" alt="Sps{{$index}}"/>
+          <img ng-src="{{s.src}}" alt="Sps{{$index}}"/>
         </ion-slide>
       </ion-slide-box>
 

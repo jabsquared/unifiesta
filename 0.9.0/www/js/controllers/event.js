@@ -1,5 +1,5 @@
-app.controller('EventCtrl', function($scope, $state, $cordovaLocalNotification, $stateParams, $ionicPopup, event_data) {
-  $scope.event = event_data.get($stateParams.id);
+app.controller('EventCtrl', function($scope, $state, $cordovaLocalNotification, $stateParams, $ionicPopup, eventData) {
+  $scope.event = eventData.get($stateParams.id);
   $scope.schedule = function(single_event) {
     // convert date string back into date object
     // date_obj = new Date(date_obj);

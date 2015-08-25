@@ -1,4 +1,4 @@
-app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data) {
+app.controller('BoothMapCtrl', function($scope, $state, $stateParams) {
 
   document.addEventListener("deviceready", onDeviceReady, false);
 

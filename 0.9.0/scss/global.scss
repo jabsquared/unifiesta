@@ -1,5 +1,12 @@
 /* Header */
 
+* {
+  font-family: 'blair_med';
+}
+
+.bold {
+  font-family: 'blair_bold';
+}
 
 .logo {
   clear: both;
@@ -30,7 +37,7 @@
 }
 
 ion-content {
-  background-color:RGBA(212,178,54,255);
+  background-color:rgba(212,178,54,1);
 }
 
 .card {

@@ -1,5 +1,22 @@
-app.factory('event_data', function() {
+app.factory('sponsorData',function () {
+  console.log('SERV: Sponsor Data');
+  var sps = [{}];
+  for (var i = 0; i < 9; ++i) {
+    sps[i] = {
+      id: 'p'+i,
+      src: 'img/sps/s' + -~i + '.jpg',
+    };
+  }
+  return {
+    all : function () {
+      return sps;
+    }
+  };
+});
+
+app.factory('eventData', function() {
   console.log('SERV: Event Data');
+
   var events = [{
       id: 1,
       name: "Zumba con Gaby",

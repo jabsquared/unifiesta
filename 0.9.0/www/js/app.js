@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive']);
+var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive', 'akoenig.deckgrid']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -11,31 +11,31 @@ app.config(function($stateProvider, $urlRouterProvider) {
   // setup state for login page
     .state('events', {
     url: '/events',
-    templateUrl: 'templates/events.html',
+    templateUrl: 'templates/eventx/events.html',
     controller: 'EventsCtrl'
   })
 
   .state('event', {
     url: '/events/:id',
-    templateUrl: 'templates/event.html',
+    templateUrl: 'templates/eventx/event.html',
     controller: 'EventCtrl'
   })
 
   .state('boothmap', {
     url: '/boothmap',
-    templateUrl: 'templates/boothmap.html',
+    templateUrl: 'templates/mapx/boothmap.html',
     controller: 'BoothMapCtrl'
   })
 
   .state('pnp', {
     url: '/pnp',
-    templateUrl: 'templates/pnp.html',
+    templateUrl: 'templates/mapx/pnp.html',
     controller: 'PnPCtrl'
   })
 
   .state('sponsors', {
     url: '/sponsors',
-    templateUrl: 'templates/sponsors.html',
+    templateUrl: 'templates/sponsorx/sponsors.html',
     controller: 'SponsorsCtrl'
   });
 

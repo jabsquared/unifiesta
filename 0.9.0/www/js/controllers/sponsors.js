@@ -1,19 +1,19 @@
-app.controller('SponsorsCtrl', function($scope, $ionicHistory) {
+app.controller('SponsorsCtrl', function($scope, $ionicHistory, sponsorData) {
   console.log('CTRL: Sponsors');
 
-  $scope.sps = [];
-  for (var i = 0; i < 9; ++i) {
-    $scope.sps[i] = 'img/sps/s' + -~i + '.jpg';
-  }
+  $scope.sps = sponsorData.all();
+
 
   $scope.toggle = function() {
     // Bring the thing down.
+
   };
 
-  $scope.spsBack = function () {
-
-
+  $scope.spsBack = function() {
     $ionicHistory.goBack();
   };
 
+  $scope.slideChanged = function(currSlide) {
+    $scope.currentSlide = currSlide;
+  };
 });
