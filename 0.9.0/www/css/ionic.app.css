@@ -7773,10 +7773,9 @@ ion-content {
 
 .event {
   /* single event page styling */ }
-  .event ion-content {
-    background-image: url(../img/eimg/event-bg.png); }
   .event .event-title {
-    padding-top: 0.4em;
+    font-family: 'blair_bold';
+    padding-top: 0.45em;
     text-align: center; }
   .event .event-description {
     margin: 1.3em 1em; }
@@ -7787,3 +7786,7 @@ ion-content {
 .boothmap .map {
   height: 54vh; }
 
+.sponsors .slider {
+  height: 100%; }
+.sponsors .slider-slide img {
+  height: 100%; }

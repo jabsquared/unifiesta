@@ -61,11 +61,16 @@
   </ion-nav-view>
 
   <ion-footer-bar ng-controller="SponsorsCtrl" class="sponsors">
-    <a href="#/sponsors" nav-direction="forward" ng-click="toggle()">
+    <a href="#/sponsors"
+      nav-direction="forward" ng-click="toggle()">
 
-      <ion-slide-box>
+      <ion-slide-box
+        show-pager="false"
+        does-continue="true"
+        auto-play="true"
+        slide-interval="2700">
         <ion-slide ng-repeat="s in sps">
-          <img ng-src="s" alt="Sps{{$index}}" />
+          <img ng-src="{{s}}" alt="Sps{{$index}}"/>
         </ion-slide>
       </ion-slide-box>
 

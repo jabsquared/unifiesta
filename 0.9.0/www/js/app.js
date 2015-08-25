@@ -47,10 +47,6 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
 
   $ionicPlatform.ready(function() {
 
-    $("#scroller").simplyScroll({
-      pauseOnHover: false,
-      pauseOnTouch: false
-    });
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     //ios8 permission handler

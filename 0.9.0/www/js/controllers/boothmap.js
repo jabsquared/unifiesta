@@ -13,60 +13,55 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
   $scope.iconColor = {
     color: '#DDDDDDFF'
   };
-  $scope.focus = false;
 
   var watchID;
-
+  // Fetching frequency, every sec...
   var watchOptions = {
     frequency: 1000,
     timeout: 3000,
     enableHighAccuracy: false // may cause errors if true
   };
 
-  $scope.markers = [
-      {
-        lat: 47.307492,
-        lng: -122.230582,
-        focus: false,
-        draggable: false,
-        message: "Main Stage!",
-        icon: {
-          type: 'extraMarker',
-          icon: 'fa-music',
-          markerColor: '#f00',
-          prefix: 'fa',
-          shape: 'circle'
-        }
-      },
-      {
-        lat: 47.307263,
-        lng: -122.231312,
-        focus: false,
-        draggable: false,
-        message: "Parking Lot!",
-        icon: {
-          type: 'extraMarker',
-          icon: 'fa-car',
-          markerColor: 'blue',
-          prefix: 'fa',
-          shape: 'circle'
-        }
-      },
-      {
-        lat: 47.307367,
-        lng: -122.229776,
-        focus: false,
-        draggable: false,
-        message: "<div ng-include src=\"'/templates/booths/jabsquared.html'\"></div>",
-        icon: {
-          type: 'extraMarker',
-          icon: 'fa-diamond',
-          markerColor: 'green',
-          prefix: 'fa',
-          shape: 'circle'
-        }
-      }
-  ];
+  $scope.markers = [{
+    lat: 47.307492,
+    lng: -122.230582,
+    focus: false,
+    draggable: false,
+    message: "Main Stage!",
+    icon: {
+      type: 'extraMarker',
+      icon: 'fa-music',
+      markerColor: '#f00',
+      prefix: 'fa',
+      shape: 'circle'
+    }
+  }, {
+    lat: 47.307263,
+    lng: -122.231312,
+    focus: false,
+    draggable: false,
+    message: "Parking Lot!",
+    icon: {
+      type: 'extraMarker',
+      icon: 'fa-car',
+      markerColor: 'blue',
+      prefix: 'fa',
+      shape: 'circle'
+    }
+  }, {
+    lat: 47.307367,
+    lng: -122.229776,
+    focus: false,
+    draggable: false,
+    message: "<div ng-include src=\"'/templates/booths/jabsquared.html'\"></div>",
+    icon: {
+      type: 'extraMarker',
+      icon: 'fa-diamond',
+      markerColor: 'green',
+      prefix: 'fa',
+      shape: 'circle'
+    }
+  }];
 
   // onSuccess Callback
   // This method accepts a Position object, which contains the
@@ -77,9 +72,16 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
     $scope.long = position.coords.longitude;
     console.log('marker lat: ' + $scope.lat);
     console.log('marker long: ' + $scope.long);
+
+    // Since Watching fetch data many time, this call will just stack up marker over and over again...
+
+    if($scope.markers.length >= 4){
+      $scope.markers.pop();
+    }
+
     $scope.markers.push({
-      lat: $scope.lat,
-      lng: $scope.long,
+      lat: position.coords.latitude,
+      lng: position.coords.longitude,
       focus: true,
       // TODO: Fix auto focus. Only works with message.
       message: 'You are Here!',
@@ -93,10 +95,10 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
   };
 
   // onError Callback receives a PositionError object
-  function onError(error) {
+  var onError = function(error) {
     alert('code: ' + error.code + '\n' +
       'message: ' + error.message + '\n');
-  }
+  };
 
   $scope.toggleGeoLocation = function() {
     $scope.findMe = !$scope.findMe;
@@ -105,21 +107,24 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
       $scope.iconColor = {
         color: '#387EF5'
       };
-      watchID = navigator.geolocation.watchPosition(onSuccess, onError, {
-        enableHighAccuracy: false
-      });
-      $scope.markers.user.focus = true;
-    } else {
-      console.log('Clearing watchID');
-      $scope.iconColor = {
-        color: '#DDDDDDFF'
-      };
-      navigator.geolocation.clearWatch(watchID);
-      // TODO: Fix bug. Marker shows after being popped.
-      $scope.markers.pop();
-      $scope.auburn.lat = 47.307492;
-      $scope.auburn.lng = -122.230582;
+      watchID = navigator.geolocation.watchPosition(
+        onSuccess,
+        onError, {
+          enableHighAccuracy: false
+        });
+      return;
     }
+    console.log('Clearing watchID');
+    $scope.iconColor = {
+      color: '#DDDDDDFF'
+    };
+    navigator.geolocation.clearWatch(watchID);
+    // TODO: Fix bug. Marker shows after being popped.
+    $scope.markers.pop();
+    // $scope.$apply();
+    console.log($scope.markers);
+    $scope.auburn.lat = 47.307492;
+    $scope.auburn.lng = -122.230582;
   };
 
   angular.extend($scope, {

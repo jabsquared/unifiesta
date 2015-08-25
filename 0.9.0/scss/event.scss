@@ -1,13 +1,17 @@
 .event {
   ion-content {
-    background-image: url(../img/eimg/event-bg.png);
+    // background-image: url(../img/eimg/event-bg.png);
   }
 
   /* single event page styling */
   .event-title {
-    padding-top: 0.4em;
+    font-family: 'blair_bold';
+    padding-top: 0.45em;
     text-align: center;
+
   }
+
+
 
   .event-description {
     margin: 1.3em 1em;
