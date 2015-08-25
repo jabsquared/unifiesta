@@ -1,7 +1,7 @@
 .events {
   ion-content {
-    background: url("../img/bg/needle_test.png") no-repeat center center fixed;
-    background-color: RGBA(212,178,54,255);
+    background: url("../img/bg/rsn.png") no-repeat center center fixed;
+    background-color: rgba(212,178,54,1);
 
     // -webkit-background-size: cover;
     // -moz-background-size: cover;
@@ -28,17 +28,13 @@ a {
   }
 
 ion-item {
-    color: RGBA(254,252,252,255);
-
-    // background-color: RGBA(183,39,12,255);
-    // border-color: RGBA(183,39,12,255);
     border-color: transparent;
   }
 
 .item {
     background-color: rgba(183,39,12,0.81);
     padding-right: 0;
-    color: RGBA(254,252,252,255);
+    color: rgba(254,252,252,1);
   }
 
 .list {
@@ -47,22 +43,19 @@ ion-item {
 
 .card {
     background-color: transparent;
+    margin-bottom: 0.9px !important;
   }
 
-.item h2 {
+.item * {
     font-family: 'blair_bold';
-    color: RGBA(254,252,252,255);
+    color: rgba(254,252,252,1);
 
     // margin-bottom: 2px;
   }
 
 .item p {
-    font-family: 'blair_bold';
+    font-family: 'blair_med';
     font-size: 0.72em;
-    color: RGBA(225,225,225,255);
-  }
-
-.card {
-    margin-bottom: 0.9px !important;
+    color: rgba(225,225,225,1);
   }
 }

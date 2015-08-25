@@ -1,60 +1,39 @@
 .sponsors {
-  /* Container DIV - automatically generated */
-  .simply-scroll-container {
-    position: relative;
+  .slider {
+    height: 100%;
   }
 
+.slider-slide {
 
-  /* Clip DIV - automatically generated */
-  .simply-scroll-clip {
-    position: relative;
-    overflow: hidden;
+    // padding-left: 18vw;
+    // padding-right: 18vw;
   }
 
-
-  /* UL/OL/DIV - the element that simplyScroll is inited on
-Class name automatically added to element */
-  .simply-scroll-list {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.slider-slide .sgroup {
+    text-align: center;
+    height: 33px;
+    width: 99vw;
+    display: inline-block;
   }
 
-.simply-scroll-list li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.sgroup img {
+    height: 33px;
   }
 
-.simply-scroll-list li img {
-    border: block;
-    display: block;
-  }
+.box {
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
 
+    // vertical-align: baseline;
+    height: 100%;
+    background-color: white;
 
-  /* Custom class modifications - adds to / overrides above
-
-.simply-scroll is default base class */
-  /* Container DIV */
-  .simply-scroll {
-
-    // width: inherit;
-    // height: 200px;
-  }
-
-
-  /* Clip DIV */
-  .simply-scroll .simply-scroll-clip {
-    width: 100vw;
-  }
-
-
-  /* Explicitly set height/width of each list item */
-  .simply-scroll .simply-scroll-list li {
-    float: left;
-    /* Horizontal scroll only */
-    // width: 45px;
-    height: inherit;
+    img {
+      width: 100%;
+      position: relative;
+      top: 50%;
+      transform: 			translateY(-50%);
+    }
   }
 }

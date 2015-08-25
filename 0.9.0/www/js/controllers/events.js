@@ -1,10 +1,11 @@
-app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, $ionicPlatform, event_data) {
+app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, $ionicPlatform, eventData, $ionicModal) {
 
   console.log("CTRL: Events");
 
-  $scope.events = event_data.all();
+  $scope.events = eventData.all();
   $scope.shouldShowDelete = false;
   $scope.listCanSwipe = true;
+
 
   //Local Notification Shit
 
@@ -17,11 +18,11 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
     // date_obj = new Date(date_obj);
     // prompt user for reminder options
     var alarmPopup = $ionicPopup.show({
-      title: '<font size="5" color="black">Set Reminder</font>',
+      title: '<font size="5" class="bold" color="gray">Set Reminder</font>',
       // template: "",
       cssClass: 'oneline',
       buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
-        text: '<font size="5" color="white">5 minutes</font>',
+        text: '<font size="4" color="white">5 minutes</font>',
         type: 'button-energized',
         onTap: function(e) {
           // Returning a value will cause the promise to resolve with the given value.
@@ -29,7 +30,7 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
           return 10;
         }
       }, {
-        text: '<font size="5" color="white">10 minutes</font>',
+        text: '<font size="4" color="white">10 minutes</font>',
         type: 'button-energized',
         onTap: function(e) {
           // Returning a value will cause the promise to resolve with the given value.
@@ -37,7 +38,7 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
           return 15;
         }
       }, {
-        text: '<font size="5" color="white">15 minutes</font>',
+        text: '<font size="4" color="white">15 minutes</font>',
         type: 'button-energized',
         onTap: function(e) {
           // Returning a value will cause the promise to resolve with the given value.

@@ -1,5 +1,11 @@
 .boothmap {
-  .map{
+  .map {
     height: 54vh;
+  }
+
+.card * {
+    padding: 3.6px;
+    font-family: 'blair_bold';
+    color: rgba(254,252,252,1);
   }
 }

@@ -1,15 +1,37 @@
 .event {
   ion-content {
-    background-image: url(../img/eimg/event-bg.png);
+    // background-image: url(../img/eimg/event-bg.png);
+    // background-color: transparent;
+  }
+
+  .card {
+    text-align: center;
   }
 
   /* single event page styling */
   .event-title {
-    padding-top: 0.4em;
+    font-family: 'blair_bold';
+    padding: 0.45em;
     text-align: center;
+    color: white;
   }
 
   .event-description {
+    font-family: 'blair_med';
     margin: 1.3em 1em;
+    color: rgba(225,225,225,1);
   }
+
+  .card img {
+    height: 45vh;
+    padding: 3.6px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+
+    // -webkit-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
+    // -moz-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
+    // box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
+  }
+
 }

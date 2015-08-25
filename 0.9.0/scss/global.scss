@@ -1,5 +1,12 @@
 /* Header */
 
+* {
+  font-family: 'blair_med';
+}
+
+.bold {
+  font-family: 'blair_bold';
+}
 
 .logo {
   clear: both;
@@ -30,10 +37,17 @@
 }
 
 ion-content {
-  background-color:RGBA(212,178,54,255);
+  background-color:rgba(212,178,54,1);
 }
 
-.map .leaflet-container{
+.card {
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px;
+  background-color: rgba(183,39,12,0.81);
+}
+
+.map .leaflet-container {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;

@@ -11,31 +11,31 @@ app.config(function($stateProvider, $urlRouterProvider) {
   // setup state for login page
     .state('events', {
     url: '/events',
-    templateUrl: 'templates/events.html',
+    templateUrl: 'templates/eventx/events.html',
     controller: 'EventsCtrl'
   })
 
   .state('event', {
     url: '/events/:id',
-    templateUrl: 'templates/event.html',
+    templateUrl: 'templates/eventx/event.html',
     controller: 'EventCtrl'
   })
 
   .state('boothmap', {
     url: '/boothmap',
-    templateUrl: 'templates/boothmap.html',
+    templateUrl: 'templates/mapx/boothmap.html',
     controller: 'BoothMapCtrl'
   })
 
   .state('pnp', {
     url: '/pnp',
-    templateUrl: 'templates/pnp.html',
+    templateUrl: 'templates/mapx/pnp.html',
     controller: 'PnPCtrl'
   })
 
   .state('sponsors', {
     url: '/sponsors',
-    templateUrl: 'templates/sponsors.html',
+    templateUrl: 'templates/sponsorx/sponsors.html',
     controller: 'SponsorsCtrl'
   });
 
@@ -47,10 +47,6 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
 
   $ionicPlatform.ready(function() {
 
-    $("#scroller").simplyScroll({
-      pauseOnHover: false,
-      pauseOnTouch: false
-    });
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     //ios8 permission handler

@@ -1,5 +1,31 @@
-app.factory('event_data', function() {
+app.factory('sponsorData',function () {
+  console.log('SERV: Sponsor Data');
+  var sps = [];
+  for (var i = 0; i < 32; ++i) {
+    sps[i] = {
+      id: 'p'+i,
+      src: 'img/sps/sponsor' + -~i + '.jpg',
+    };
+  }
+  var sf = true;
+
+  return {
+    all : function () {
+      return sps;
+    },
+    getSf : function () {
+      return sf;
+    },
+    setSf : function (val) {
+      sf = val;
+    }
+
+  };
+});
+
+app.factory('eventData', function() {
   console.log('SERV: Event Data');
+
   var events = [{
       id: 1,
       name: "Zumba con Gaby",
@@ -7,7 +33,10 @@ app.factory('event_data', function() {
       start: new Date('2015-08-13T10:45:00-08:00'),
       end: new Date('2015-08-13T10:55:00-08:00'),
       desc: "Solo mueve tu cuerpo y sígueme. ¡Es fácil! Ven pruébalo, te garantizo que va a tener una explosión!",
-      img: 'String goes here',
+      img: [
+        "event-bg-0",
+        "event-bg-1"
+      ],
       reminder: false
     }, {
       id: 2,
