@@ -28,10 +28,6 @@ a {
   }
 
 ion-item {
-    color: rgba(254,252,252,1);
-
-    // background-color: RGBA(183,39,12,255);
-    // border-color: RGBA(183,39,12,255);
     border-color: transparent;
   }
 
@@ -47,9 +43,10 @@ ion-item {
 
 .card {
     background-color: transparent;
+    margin-bottom: 0.9px !important;
   }
 
-.item h2 {
+.item * {
     font-family: 'blair_bold';
     color: rgba(254,252,252,1);
 
@@ -57,12 +54,8 @@ ion-item {
   }
 
 .item p {
-    font-family: 'blair_bold';
+    font-family: 'blair_med';
     font-size: 0.72em;
     color: rgba(225,225,225,1);
-  }
-
-.card {
-    margin-bottom: 0.9px !important;
   }
 }

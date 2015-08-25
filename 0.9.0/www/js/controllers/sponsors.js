@@ -7,10 +7,12 @@ app.controller('SponsorsCtrl', function($scope, $ionicHistory) {
   }
 
   $scope.toggle = function() {
-
+    // Bring the thing down.
   };
 
   $scope.spsBack = function () {
+
+
     $ionicHistory.goBack();
   };
 

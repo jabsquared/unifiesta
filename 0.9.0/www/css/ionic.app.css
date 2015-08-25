@@ -17,7 +17,7 @@ $dark:                            #444 !default;
 */
 @font-face {
   font-family: 'blair_med';
-  src: url(../font/blair_itc_medium1.tff); }
+  src: url(../font/blair_itc_medium1.ttf); }
 
 @font-face {
   font-family: 'blair_bold';
@@ -7727,6 +7727,12 @@ a.button {
 ion-content {
   background-color: RGBA(212, 178, 54, 255); }
 
+.card {
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px;
+  background-color: rgba(183, 39, 12, 0.81); }
+
 .map .leaflet-container {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
@@ -7751,7 +7757,6 @@ ion-content {
   color: inherit;
   text-decoration: none; }
 .events ion-item {
-  color: #fefcfc;
   border-color: transparent; }
 .events .item {
   background-color: rgba(183, 39, 12, 0.81);
@@ -7760,21 +7765,19 @@ ion-content {
 .events .list {
   background-color: transparent; }
 .events .card {
-  background-color: transparent; }
-.events .item h2 {
+  background-color: transparent;
+  margin-bottom: 0.9px !important; }
+.events .item * {
   font-family: 'blair_bold';
   color: #fefcfc; }
 .events .item p {
-  font-family: 'blair_bold';
+  font-family: 'blair_med';
   font-size: 0.72em;
   color: #e1e1e1; }
-.events .card {
-  margin-bottom: 0.9px !important; }
 
 .event {
   /* single event page styling */ }
   .event .card {
-    background-color: rgba(183, 39, 12, 0.81);
     text-align: center; }
   .event .event-title {
     font-family: 'blair_bold';
@@ -7782,7 +7785,7 @@ ion-content {
     text-align: center;
     color: white; }
   .event .event-description {
-    font-family: 'blair_bold';
+    font-family: 'blair_med';
     margin: 1.3em 1em;
     color: #e1e1e1; }
   .event .card img {
@@ -7797,6 +7800,10 @@ ion-content {
 
 .boothmap .map {
   height: 54vh; }
+.boothmap .card * {
+  padding: 3.6px;
+  font-family: 'blair_bold';
+  color: #fefcfc; }
 
 .sponsors .slider {
   height: 100%; }
