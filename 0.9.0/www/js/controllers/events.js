@@ -6,29 +6,6 @@ app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification,
   $scope.shouldShowDelete = false;
   $scope.listCanSwipe = true;
 
-  // Event Description Modal:
-  $ionicModal.fromTemplateUrl('templates/event.html', {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  $scope.openModal = function() {
-    $scope.modal.show();
-  };
-
-  $scope.closeModal = function() {
-    $scope.modal.hide();
-  };
-
-  $scope.$on('$destroy', function() {
-    $scope.modal.remove();
-  });
-
-  $scope.openEventDescription = function() {
-
-  };
 
   //Local Notification Shit
 

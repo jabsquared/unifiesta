@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<ion-modal-view name="event" class="event" title="{{event.name}}">
+<ion-view name="event" class="event" title="{{event.name}}">
+
   <ion-nav-buttons side="left">
     <a nav-direction="back" ng-href="#/events">
       <button class="button icon-left button-clear ion-ios-arrow-left">
@@ -18,18 +19,20 @@
     </button>
   </ion-nav-buttons>
 
-  <ion-content class="has-header has-footer">
+  <ion-content class="has-header has-footer" padding="true">
 
-  <div class="card">
-    <h3 class="event-title">
-      {{event.name}}
-    </h3>
+    <div class="card">
+      <h3 class="event-title">
+        {{event.name}}
+      </h3>
+      <p class="event-description">
+        {{event.desc}}
+      </p>
+    </div>
 
-    <p class="event-description">
-      {{event.desc}}
-    </p>
-  </div>
-
+    <div class="card">
+      <img src="img/eimg/event-bg.png" alt="" />
+    </div>
   </ion-content>
 
-</ion-modal-view>
+</ion-view>

@@ -1,7 +1,7 @@
 .events {
   ion-content {
     background: url("../img/bg/rsn.png") no-repeat center center fixed;
-    background-color: RGBA(212,178,54,255);
+    background-color: rgba(212,178,54,1);
 
     // -webkit-background-size: cover;
     // -moz-background-size: cover;
@@ -28,7 +28,7 @@ a {
   }
 
 ion-item {
-    color: RGBA(254,252,252,255);
+    color: rgba(254,252,252,1);
 
     // background-color: RGBA(183,39,12,255);
     // border-color: RGBA(183,39,12,255);
@@ -38,7 +38,7 @@ ion-item {
 .item {
     background-color: rgba(183,39,12,0.81);
     padding-right: 0;
-    color: RGBA(254,252,252,255);
+    color: rgba(254,252,252,1);
   }
 
 .list {
@@ -51,7 +51,7 @@ ion-item {
 
 .item h2 {
     font-family: 'blair_bold';
-    color: RGBA(254,252,252,255);
+    color: rgba(254,252,252,1);
 
     // margin-bottom: 2px;
   }
@@ -59,7 +59,7 @@ ion-item {
 .item p {
     font-family: 'blair_bold';
     font-size: 0.72em;
-    color: RGBA(225,225,225,255);
+    color: rgba(225,225,225,1);
   }
 
 .card {
