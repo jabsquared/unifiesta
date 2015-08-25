@@ -31,7 +31,12 @@
     </div>
 
     <div class="card">
-      <img src="img/eimg/event-bg.png" alt="" />
+      <ion-slide-box>
+        <ion-slide ng-repeat="ei in event.img">
+          <img ng-src="img/eimg/{{ei}}.png" alt="Event #{{$index}}" />
+        </ion-slide>
+      </ion-slide-box>
+
     </div>
   </ion-content>
 

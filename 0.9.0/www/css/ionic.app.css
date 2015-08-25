@@ -7774,7 +7774,8 @@ ion-content {
 .event {
   /* single event page styling */ }
   .event .card {
-    background-color: rgba(183, 39, 12, 0.81); }
+    background-color: rgba(183, 39, 12, 0.81);
+    text-align: center; }
   .event .event-title {
     font-family: 'blair_bold';
     padding: 0.45em;
@@ -7785,7 +7786,11 @@ ion-content {
     margin: 1.3em 1em;
     color: #e1e1e1; }
   .event .card img {
-    height: 45vh; }
+    height: 45vh;
+    padding: 3.6px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px; }
 
 .pnp .map {
   height: 54vh; }
@@ -7795,5 +7800,7 @@ ion-content {
 
 .sponsors .slider {
   height: 100%; }
+.sponsors .slider-slide {
+  text-align: center; }
 .sponsors .slider-slide img {
   height: 100%; }

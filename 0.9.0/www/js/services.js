@@ -7,7 +7,10 @@ app.factory('event_data', function() {
       start: new Date('2015-08-13T10:45:00-08:00'),
       end: new Date('2015-08-13T10:55:00-08:00'),
       desc: "Solo mueve tu cuerpo y sígueme. ¡Es fácil! Ven pruébalo, te garantizo que va a tener una explosión!",
-      img: 'String goes here',
+      img: [
+        "event-bg-0",
+        "event-bg-1"
+      ],
       reminder: false
     }, {
       id: 2,
