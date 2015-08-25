@@ -8,13 +8,16 @@ app.factory('sponsorData',function () {
     };
   }
   var sf = true;
+
   return {
     all : function () {
       return sps;
     },
-    sf : function (val) {
-      sf = val;
+    getSf : function () {
       return sf;
+    },
+    setSf : function (val) {
+      sf = val;
     }
 
   };

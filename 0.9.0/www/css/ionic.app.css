@@ -7820,3 +7820,11 @@ ion-content {
   display: inline-block; }
 .sponsors .sgroup img {
   height: 33px; }
+.sponsors .box {
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px;
+  height: 100%;
+  background-color: white; }
+  .sponsors .box img {
+    width: 100%; }

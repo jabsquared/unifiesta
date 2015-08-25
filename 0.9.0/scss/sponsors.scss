@@ -4,12 +4,12 @@
   }
 
 .slider-slide {
+
     // padding-left: 18vw;
     // padding-right: 18vw;
   }
 
 .slider-slide .sgroup {
-
     text-align: center;
     height: 33px;
     width: 99vw;
@@ -18,5 +18,18 @@
 
 .sgroup img {
     height: 33px;
+  }
+
+.box {
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
+
+    // vertical-align: baseline;
+    height: 100%;
+    background-color: white;
+    img {
+      width: 100%;
+    }
   }
 }

@@ -3,11 +3,13 @@ app.controller('SponsorsCtrl', function($scope, $state,$ionicHistory, sponsorDat
 
   $scope.sps = sponsorData.all();
 
-  $scope.sf = true;
+  $scope.sf = sponsorData.getSf();
+
+  // console.log($scope.sf);
 
   $scope.toggle = function() {
     // Bring the thing down.
-    sponsorData.sf = true;
+    sponsorData.setSf(false);
     $state.go('sponsors');
   };
 
