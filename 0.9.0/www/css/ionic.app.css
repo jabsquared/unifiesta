@@ -7811,13 +7811,15 @@ ion-content {
   font-family: 'blair_bold';
   color: #fefcfc; }
 
-.sponsors ion-footer-bar a {
-  width: 100%; }
 .sponsors .slider {
   height: 100%; }
 .sponsors .slider-slide {
+  padding-left: 18vw;
+  padding-right: 18vw; }
+.sponsors .slider-slide .sgroup {
+  height: 100%;
   text-align: center; }
-.sponsors .slider-slide img {
+.sponsors .sgroup img {
   height: 100%; }
 .sponsors .slider-slides {
   width: 100%; }

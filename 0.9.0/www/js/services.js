@@ -1,16 +1,22 @@
 app.factory('sponsorData',function () {
   console.log('SERV: Sponsor Data');
-  var sps = [{}];
+  var sps = [];
   for (var i = 0; i < 9; ++i) {
     sps[i] = {
       id: 'p'+i,
       src: 'img/sps/s' + -~i + '.jpg',
     };
   }
+  var sf = true;
   return {
     all : function () {
       return sps;
+    },
+    sf : function (val) {
+      sf = val;
+      return sf;
     }
+
   };
 });
 

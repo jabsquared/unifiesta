@@ -1,22 +1,26 @@
-.sponsors{
-  ion-footer-bar {
-    a {
-      width: 100%;
-    }
-  }
-  .slider {
+.sponsors {
+
+.slider {
     height: 100%;
   }
 
-  .slider-slide {
-    text-align: center;
+.slider-slide {
+
+    padding-left: 18vw;
+    padding-right: 18vw;
   }
 
-  .slider-slide img {
+.slider-slide .sgroup{
+  height: 100%;
+  text-align: center;
+
+}
+
+.sgroup img {
     height: 100%;
   }
 
-  .slider-slides{
+.slider-slides {
     width: 100%;
   }
 }
