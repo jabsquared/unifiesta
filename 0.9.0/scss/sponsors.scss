@@ -1,31 +1,22 @@
 .sponsors {
-
-.slider {
+  .slider {
     height: 100%;
   }
 
 .slider-slide {
-
-
     // padding-left: 18vw;
     // padding-right: 18vw;
   }
 
-.slider-slide .sgroup{
-  // text-align: center;
-  height: 100%;
-  width: -webkit-fit-content;
-  height: -webkit-fit-content;
-  width: -moz-fit-content;
-  height: -moz-fit-content;
+.slider-slide .sgroup {
 
-}
-
-.sgroup img {
-    height: 100%;
+    text-align: center;
+    height: 33px;
+    width: 99vw;
     display: inline-block;
   }
 
-
-
+.sgroup img {
+    height: 33px;
+  }
 }
