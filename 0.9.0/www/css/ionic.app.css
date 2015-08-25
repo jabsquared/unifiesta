@@ -7773,6 +7773,8 @@ ion-content {
 
 .event {
   /* single event page styling */ }
+  .event ion-content {
+    background-color: transparent; }
   .event .event-title {
     font-family: 'blair_bold';
     color: RGBA(254, 252, 252, 255);

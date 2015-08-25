@@ -1,10 +1,34 @@
-app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, $ionicPlatform, event_data) {
+app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, $ionicPlatform, event_data, $ionicModal) {
 
   console.log("CTRL: Events");
 
   $scope.events = event_data.all();
   $scope.shouldShowDelete = false;
   $scope.listCanSwipe = true;
+
+  // Event Description Modal:
+  $ionicModal.fromTemplateUrl('templates/event.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+
+  $scope.openEventDescription = function() {
+
+  };
 
   //Local Notification Shit
 
