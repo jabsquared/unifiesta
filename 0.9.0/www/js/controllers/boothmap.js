@@ -75,7 +75,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
 
     // Since Watching fetch data many time, this call will just stack up marker over and over again...
 
-    if($scope.markers.length >= 4){
+    if($scope.markers.length > 3){
       $scope.markers.pop();
     }
 
@@ -100,6 +100,23 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
       'message: ' + error.message + '\n');
   };
 
+  $scope.dissableGeoLocation = function () {
+    $scope.findMe = false;
+    console.log('Clearing watchID');
+    $scope.iconColor = {
+      color: '#DDDDDDFF'
+    };
+    navigator.geolocation.clearWatch(watchID);
+    // TODO: Fix bug. Marker shows after being popped.
+    // $scope.markers.pop();
+    if($scope.markers.length > 3){
+      $scope.markers.pop();
+    }
+    console.log($scope.markers);
+    $scope.auburn.lat = 47.307492;
+    $scope.auburn.lng = -122.230582;
+  };
+
   $scope.toggleGeoLocation = function() {
     $scope.findMe = !$scope.findMe;
     if ($scope.findMe) {
@@ -114,17 +131,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, event_data
         });
       return;
     }
-    console.log('Clearing watchID');
-    $scope.iconColor = {
-      color: '#DDDDDDFF'
-    };
-    navigator.geolocation.clearWatch(watchID);
-    // TODO: Fix bug. Marker shows after being popped.
-    $scope.markers.pop();
-    // $scope.$apply();
-    console.log($scope.markers);
-    $scope.auburn.lat = 47.307492;
-    $scope.auburn.lng = -122.230582;
+    $scope.dissableGeoLocation();
   };
 
   angular.extend($scope, {
