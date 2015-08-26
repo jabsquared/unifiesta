@@ -56,7 +56,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletDat
     lng: -122.229776,
     focus: false,
     draggable: false,
-    message: "<div ng-include src=\"'/templates/booths/jabsquared.html'\"></div>",
+    message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
     info: {
       name: 'jabSquared',
       website: 'jabsquared.ninja',

@@ -7815,6 +7815,7 @@ ion-content {
   font-family: 'blair_bold';
   color: #fefcfc; }
 .boothmap .card h3 {
+  margin-top: 17px;
   text-align: center; }
 .boothmap .card .website {
   text-align: center;
