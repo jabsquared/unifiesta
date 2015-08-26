@@ -2,10 +2,16 @@
   .map {
     height: 54vh;
   }
-
-.card * {
+  .card * {
     padding: 3.6px;
     font-family: 'blair_bold';
     color: rgba(254,252,252,1);
+  }
+  .card h3 {
+    text-align: center;
+  }
+  .card .website {
+    text-align: center;
+    color: rgba(254,252,252, 0.8);
   }
 }
