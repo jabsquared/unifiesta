@@ -13,10 +13,27 @@
     <i class="icon ion-map"></i> Parking
   </ion-nav-title>
 
+  <ion-nav-buttons side="right">
+    <button ng-style="iconColor" class="button icon-right ion-ios-navigate-outline button-clear" ng-click="toggleGeoLocation()">
+      Locate
+    </button>
+  </ion-nav-buttons>
+
   <ion-content class="has-header has-footer" has-bouncing="false" padding="true">
     <div class="map">
       <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="100%" markers="markers" width="100%">
       </leaflet>
     </div>
+
+    <div ng-if="showCard" class="card">
+        <h3>Parking Lot {{info.number}}</h3>
+        <p>
+          {{info.address}}
+        </p>
+        <button class="button button-block bold button-energized">
+          Get Directions
+        </button>
+    </div>
+
   </ion-content>
 </ion-view>

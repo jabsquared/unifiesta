@@ -7807,6 +7807,18 @@ ion-content {
 
 .pnp .map {
   height: 54vh; }
+.pnp .card * {
+  padding: 3.6px;
+  font-family: 'blair_bold';
+  color: #fefcfc; }
+.pnp .card h3 {
+  margin-top: 17px;
+  text-align: center; }
+.pnp .card p {
+  text-align: center;
+  color: black; }
+.pnp .card .button.button-block, .pnp .button.button-full {
+  margin-bottom: 0px; }
 
 .boothmap .map {
   height: 54vh; }

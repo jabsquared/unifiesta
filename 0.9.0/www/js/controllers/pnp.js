@@ -1,32 +1,15 @@
-app.controller('PnPCtrl', function($scope, $state, $stateParams, $ionicHistory) {
+app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
 
-  $scope.goBack = function() {
-    $ionicHistory.goBack();
+  $scope.findMe = false;
+  $scope.lat = 0;
+  $scope.long = 0;
+  $scope.markers = mapService.pnp;
+  $scope.iconColor = {
+    color: '#DDDDDDFF'
   };
-
-  $scope.goToSchedule = function() {
-    $state.go('schedule');
-  };
-
-  $scope.markers = [{
-    lat: 47.307263,
-    lng: -122.231312,
-    focus: false,
-    draggable: false,
-    message: "Parking Lot!",
-    icon: {
-      type: 'extraMarker',
-      icon: 'fa-car',
-      markerColor: 'blue',
-      prefix: 'fa',
-      shape: 'circle'
-    }
-  }];
 
   angular.extend($scope, {
-    tiles: {
-      url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-    },
+    tiles: mapService.tiles,
     auburn: {
       lat: 47.307492,
       lng: -122.230582,
@@ -38,10 +21,97 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, $ionicHistory) 
         enable: ['click']
           //logic: 'emit'
       }
-    }
+    },
+    controls: {
+      scale: false
+    },
   });
 
-  $scope.$on("leafletDirectiveMarker.click", function(event, args) {
-    console.log('Parking marker clicked!');
+  $scope.info = {};
+  $scope.showCard = false;
+
+  $scope.watchID = 9;
+  // Fetching frequency, every sec...
+  $scope.watchOptions = {
+    frequency: 1000,
+    timeout: 3000,
+    enableHighAccuracy: false // may cause errors if true
+  };
+
+  $scope.dissableGeoLocation = function () {
+    mapService.dissableGeoLocation($scope, "pnp");
+  };
+
+  $scope.toggleGeoLocation = function() {
+    $scope.findMe = !$scope.findMe;
+    if ($scope.findMe) {
+      console.log('About to get location');
+      $scope.iconColor = {
+        color: '#387EF5'
+      };
+      $scope.watchID = navigator.geolocation.watchPosition(
+        $scope.onSuccess,
+        $scope.onError, {
+          enableHighAccuracy: false
+        });
+      return;
+    }
+    $scope.dissableGeoLocation();
+  };
+
+  $scope.onSuccess = function(position) {
+    console.log('rending location!');
+    $scope.lat = position.coords.latitude;
+    $scope.long = position.coords.longitude;
+    console.log('marker lat: ' + $scope.lat);
+    console.log('marker long: ' + $scope.long);
+
+    // Since Watching fetch data many time, this call will just stack up marker over and over again...
+
+    if ($scope.markers.length > 3) {
+      $scope.markers.pop();
+    }
+
+    $scope.markers.push({
+      lat: position.coords.latitude,
+      lng: position.coords.longitude,
+      focus: true,
+      // TODO: Fix auto focus. Only works with message.
+      message: 'You are Here!',
+      draggable: false,
+      icon: {
+        iconUrl: '/img/location.png'
+      }
+    });
+    $scope.auburn.lat = $scope.lat;
+    $scope.auburn.lng = $scope.long;
+  };
+
+  // onError Callback receives a PositionError object
+  var onError = function(error) {
+    alert('code: ' + error.code + '\n' +
+      'message: ' + error.message + '\n');
+  };
+
+
+  // Map Data:
+
+  $scope.$on('leafletDirectiveMarker.click', function(e, args) {
+    console.log('Parking lot clicked!');
+    if (args.leafletEvent.target.options.info) {
+      console.log(args.leafletEvent.target.options.info);
+      $scope.info = args.leafletEvent.target.options.info;
+      $scope.showCard = true;
+    } else {
+      $scope.info = {};
+      $scope.showCard = false;
+    }
+    console.log("Show Card = " + $scope.showCard);
   });
+
+  $scope.goBack = function() {
+    $scope.dissableGeoLocation();
+    $ionicHistory.goBack();
+  };
+
 });

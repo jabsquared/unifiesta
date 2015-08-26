@@ -1,26 +1,23 @@
 # Issues:
 
-* Home page is not very responsive... (Width will be squashed) (edited)
+1 Home page is not very responsive... (Width will be squashed) (edited)
 
-* Color of the raffle is too dark, might blend into background.
+2 Color of the raffle is too dark, might blend into background.
 
-* Links to Sponsor
+3 Links to Sponsor
 
-* Sorting out Images directory
+4 Sorting out Images directory
 
-* Update Event information
+5 Update Event information
 
-* Binding the parking lot information (Also in order to navigate from native map app), which will be shown on a card below
+6 Binding the parking lot information (Also in order to navigate from native map app), which will be shown on a card below
 
 
 # Done:
 
 * Font on the homepage is wrong
-
 * The header is scrollable <- will be very unstable, need different scroll div
-
 * Return of Native Back button
-
 * Binding the Booth's information into the info Card (Boothmap). OnEvent: On click, assign $scope
 
 
