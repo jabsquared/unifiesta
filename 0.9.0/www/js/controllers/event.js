@@ -1,4 +1,4 @@
-app.controller('EventCtrl', function($scope, $state, eventData, scheduleReminder) {
+app.controller('EventCtrl', function($scope, $state, $stateParams, eventData, scheduleReminder) {
   $scope.event = eventData.get($stateParams.id);
 
   $scope.schedule = function (single_event) {
