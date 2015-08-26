@@ -7836,10 +7836,8 @@ ion-content {
     top: 50%;
     transform: translateY(-50%); }
 
-.home ion-header-bar {
-  background: transparent; }
 .home ion-content {
-  background: url("../img/bg/home.jpg") no-repeat center center fixed;
+  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover; }

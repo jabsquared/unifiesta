@@ -1,3 +1,26 @@
+# Issues:
+
+
+* Font on the homepage is wrong
+
+* Home page is not very responsive... (Width will be squashed) (edited)
+
+* Color of the raffle is too dark, might blend into background.
+
+* The header is scrollable <- will be very unstable, need different scroll div
+
+* Return of Native Back button
+
+* Links to Sponsor
+
+* Sorting out Images directory
+
+* Update Event information
+
+* Binding the Booth's information into the info Card (Boothmap). OnEvent: On click, assign $scope
+
+* Binding the parking lot information (Also in order to navigate from native map app), which will be shown on a card below
+
 # Parking and Parade
   |---> 1 Special Marker for Parade location
   |---> Marker for each parking lot
