@@ -9,11 +9,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
   // setup state for login page
+
+    .state('home', {
+      url: '/home',
+      templateUrl: 'templates/homescreen/homescreen.html',
+      controller: 'HomeCtrl'
+    })
+
     .state('events', {
-    url: '/events',
-    templateUrl: 'templates/eventx/events.html',
-    controller: 'EventsCtrl'
-  })
+      url: '/events',
+      templateUrl: 'templates/eventx/events.html',
+      controller: 'EventsCtrl'
+    })
 
   .state('event', {
     url: '/events/:id',
@@ -40,7 +47,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/events');
+  $urlRouterProvider.otherwise('/home');
 });
 
 app.run(function($ionicPlatform, $timeout, $cordovaDevice) {

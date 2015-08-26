@@ -5380,6 +5380,13 @@ a.item-content {
 .padding-right > .list .item {
   margin-right: 0; }
 
+.homeimg {
+    background-image: url('/img/homescreen.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+
 /**
  * Badges
  * --------------------------------------------------
