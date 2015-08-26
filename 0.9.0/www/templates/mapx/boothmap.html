@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 
 <ion-view name="boothmap" title="Booth Map" class="boothmap">
-  <ion-nav-buttons side="left">
-    <button ng-style="iconColor" class="button button-icon icon ion-ios-location button-clear" ng-click="toggleGeoLocation()">
-      Locate
-    </button>
-  </ion-nav-buttons>
+  <ion-nav-back-button class="button-clear" ng-click="dissableGeoLocation()">
+    <i class="ion-ios-arrow-back"></i> Back
+  </ion-nav-back-button>
 
   <ion-nav-title>
     <i class="icon ion-location"></i> Booth
   </ion-nav-title>
 
-  <ion-nav-buttons side="right" >
-    <a nav-direction="forward" ng-click="dissableGeoLocation()" ng-href="#/events">
-      <button class="button icon-right button-clear ion-ios-arrow-right">
-        Back
-      </button>
-    </a>
-  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
 
+    <button ng-style="iconColor" class="button icon-right ion-ios-navigate-outline button-clear" ng-click="toggleGeoLocation()">
+      Locate
+    </button>
+  </ion-nav-buttons>
 
   <ion-content class="has-header has-footer" scroll="false" has-bouncing="false" padding="true">
     <!-- <a href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic" ,target="_blank">Click here for map</a> -->

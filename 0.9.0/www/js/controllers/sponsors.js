@@ -4,7 +4,7 @@ app.controller('SponsorsCtrl', function($scope, $state,$ionicHistory, sponsorDat
   $scope.sps = sponsorData.all();
 
 
-  // console.log($scope.sf);
+  console.log($rootScope.showFooter);
 
   $scope.toggle = function() {
     // Bring the thing down.

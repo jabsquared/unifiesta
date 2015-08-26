@@ -1,23 +1,10 @@
 <!DOCTYPE html>
 <ion-view name="event" class="event" title="{{event.name}}">
 
-  <ion-nav-buttons side="left">
-    <a nav-direction="back" ng-href="#/events">
-      <button class="button icon-left button-clear ion-ios-arrow-left">
-        Back
-      </button>
-    </a>
-  </ion-nav-buttons>
-
   <ion-nav-title>
     <i class="icon ion-play"></i>
     {{event.start | date:'HH:mm a'}}
   </ion-nav-title>
-
-  <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-ios-bell" ng-click="schedule({{event}})">
-    </button>
-  </ion-nav-buttons>
 
   <ion-content class="has-header has-footer" padding="true">
 
