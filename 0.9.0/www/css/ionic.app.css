@@ -7839,3 +7839,7 @@ ion-content {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover; }
+.home ion-content img {
+  width: 90vw; }
+.home ion-content div {
+  padding-top: 3em; }
