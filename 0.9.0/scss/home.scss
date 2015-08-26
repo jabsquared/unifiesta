@@ -20,4 +20,29 @@
     padding-top: 3em;
   }
 
+  ion-content .button.button-block, .button.button-full {
+    margin-bottom: 1.7em;
+    color: #FFF;
+  }
+
+  ion-content .button {
+    background-color: rgba(189, 65, 19, 0.81);
+    border-color: rgb(189, 65, 19);
+    min-height: 55px;
+  }
+
+  ion-content .raffle {
+    margin: 1em auto;
+    text-align: center;
+  }
+
+  ion-content .raffle h3{
+    // color: #0099FF;
+    color: #009933;
+    // color: #fff;
+    font-weight: 600;
+    width: 90vw;
+    text-shadow: 2px 2px 1px #001C09;
+  }
+
 }
