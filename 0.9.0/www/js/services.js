@@ -7,19 +7,10 @@ app.factory('sponsorData',function () {
       src: 'img/sps/sponsor' + -~i + '.jpg',
     };
   }
-  var sf = true;
-
   return {
     all : function () {
       return sps;
     },
-    getSf : function () {
-      return sf;
-    },
-    setSf : function (val) {
-      sf = val;
-    }
-
   };
 });
 
