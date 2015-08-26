@@ -1,39 +1,46 @@
-app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapData) {
+app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
 
   $scope.findMe = false;
   $scope.lat = 0;
   $scope.long = 0;
-  $scope.markers = mapData.pnp;
+  $scope.markers = mapService.pnp;
   $scope.iconColor = {
     color: '#DDDDDDFF'
   };
 
+
+  angular.extend($scope, {
+    tiles: mapService.tiles,
+    auburn: {
+      lat: 47.307492,
+      lng: -122.230582,
+      zoom: 17,
+      bounceAtZoomLimits: true
+    },
+    events: {
+      markers: {
+        enable: ['click']
+          //logic: 'emit'
+      }
+    },
+    controls: {
+      scale: false
+    },
+  });
+
   $scope.info = {};
   $scope.showCard = false;
 
-  var watchID;
+  $scope.watchID = 9;
   // Fetching frequency, every sec...
-  var watchOptions = {
+  $scope.watchOptions = {
     frequency: 1000,
     timeout: 3000,
     enableHighAccuracy: false // may cause errors if true
   };
 
-  $scope.dissableGeoLocation = function() {
-    $scope.findMe = false;
-    console.log('Clearing watchID');
-    $scope.iconColor = {
-      color: '#DDDDDDFF'
-    };
-
-    navigator.geolocation.clearWatch(watchID);
-
-    if ($scope.markers.length > 3) {
-      $scope.markers.pop();
-    }
-    console.log($scope.markers);
-    $scope.auburn.lat = 47.307492;
-    $scope.auburn.lng = -122.230582;
+  $scope.dissableGeoLocation = function () {
+    mapService.dissableGeoLocation($scope, "pnp");
   };
 
   $scope.toggleGeoLocation = function() {
@@ -43,9 +50,9 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
       $scope.iconColor = {
         color: '#387EF5'
       };
-      watchID = navigator.geolocation.watchPosition(
-        onSuccess,
-        onError, {
+      $scope.watchID = navigator.geolocation.watchPosition(
+        $scope.onSuccess,
+        $scope.onError, {
           enableHighAccuracy: false
         });
       return;
@@ -53,7 +60,7 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
     $scope.dissableGeoLocation();
   };
 
-  var onSuccess = function(position) {
+  $scope.onSuccess = function(position) {
     console.log('rending location!');
     $scope.lat = position.coords.latitude;
     $scope.long = position.coords.longitude;
@@ -89,25 +96,6 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
 
 
   // Map Data:
-
-  angular.extend($scope, {
-    tiles: mapData.tiles,
-    auburn: {
-      lat: 47.307492,
-      lng: -122.230582,
-      zoom: 17,
-      bounceAtZoomLimits: true
-    },
-    events: {
-      markers: {
-        enable: ['click']
-          //logic: 'emit'
-      }
-    },
-    controls: {
-      scale: false
-    },
-  });
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
     if (args.leafletEvent.target.options.info) {
