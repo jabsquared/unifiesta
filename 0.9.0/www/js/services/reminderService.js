@@ -1,4 +1,4 @@
-app.factory('scheduleReminder', function($cordovaLocalNotification, $ionicPopup) {
+app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) {
   function add(minutes, single_event) {
     console.log("entered add function");
 

@@ -1,5 +1,5 @@
 
-app.controller('EventCtrl', function($scope, $state, $stateParams, eventData, $ionicHistory, scheduleReminder) {
+app.controller('EventCtrl', function($scope, $state, $stateParams, eventData, $ionicHistory, reminderService) {
   console.log('CTRL: Event');
 
   $scope.goBack = function() {
@@ -9,7 +9,7 @@ app.controller('EventCtrl', function($scope, $state, $stateParams, eventData, $i
   $scope.event = eventData.get($stateParams.id);
 
   $scope.schedule = function (single_event) {
-    scheduleReminder.schedule(single_event);
+    reminderService.schedule(single_event);
   };
 
   $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
