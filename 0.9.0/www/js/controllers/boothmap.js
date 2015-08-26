@@ -95,7 +95,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletDat
       message: 'You are Here!',
       draggable: false,
       icon: {
-        iconUrl: '/img/location.png'
+        iconUrl: 'img/location.png'
       }
     });
     $scope.auburn.lat = $scope.lat;
