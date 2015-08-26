@@ -12,7 +12,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     .state('home', {
       url: '/home',
-      templateUrl: 'templates/homescreen/homescreen.html',
+      templateUrl: 'templates/homex/home.html',
       controller: 'HomeCtrl'
     })
 
@@ -50,7 +50,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home');
 });
 
-app.run(function($ionicPlatform, $timeout, $cordovaDevice) {
+app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope) {
+
+  $rootScope.showFooter = true;
 
   $ionicPlatform.ready(function() {
 

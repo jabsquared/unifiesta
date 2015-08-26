@@ -1,19 +1,21 @@
-app.controller('SponsorsCtrl', function($scope, $state,$ionicHistory, sponsorData) {
+app.controller('SponsorsCtrl', function($scope, $state,$ionicHistory, sponsorData, $rootScope) {
   console.log('CTRL: Sponsors');
 
   $scope.sps = sponsorData.all();
 
-  $scope.sf = sponsorData.getSf();
 
   // console.log($scope.sf);
 
   $scope.toggle = function() {
     // Bring the thing down.
-    sponsorData.setSf(false);
+    $rootScope.showFooter = false;
+
     $state.go('sponsors');
   };
 
   $scope.spsBack = function() {
+    $rootScope.showFooter = true;
+
     $ionicHistory.goBack();
   };
 
