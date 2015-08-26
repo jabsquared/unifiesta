@@ -1,4 +1,10 @@
-app.controller('EventCtrl', function($scope, $state, $cordovaLocalNotification, $stateParams, $ionicPopup, eventData) {
+app.controller('EventCtrl', function($scope, $state, $cordovaLocalNotification, $stateParams, $ionicPopup, eventData, $ionicHistory) {
+  console.log('CTRL: Event');
+
+  $scope.goBack = function() {
+    $ionicHistory.goBack();
+  };
+
   $scope.event = eventData.get($stateParams.id);
   $scope.schedule = function(single_event) {
     // convert date string back into date object

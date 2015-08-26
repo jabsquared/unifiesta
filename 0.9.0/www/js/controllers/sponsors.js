@@ -13,10 +13,10 @@ app.controller('SponsorsCtrl', function($scope, $state,$ionicHistory, sponsorDat
     $state.go('sponsors');
   };
 
-  $scope.spsBack = function() {
+  $scope.goBack = function() {
     $rootScope.showFooter = true;
 
     $ionicHistory.goBack();
-  };
 
+  };
 });

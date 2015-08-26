@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <ion-view title="Sponsors" class="sponsors">
-	<ion-nav-bar class="bar-energized" align-title="center">
-		<ion-nav-back-button class="button-clear" ng-click="spsBack()">
-			<i class="ion-chevron-left"></i> Back
-		</ion-nav-back-button>
-	</ion-nav-bar>
+	<ion-nav-buttons side="left">
+		<a nav-direction="back" ng-click="goBack()">
+			<button class="button icon-left button-clear ion-ios-arrow-left">
+				Back
+			</button>
+		</a>
+	</ion-nav-buttons>
+
 	<ion-content class="has-header" has-bouncing="true" padding="true">
 		<div class="row" ng-repeat="s in sps" ng-if="$index % 4 === 0">
 			<div class="col col-25" ng-if="$index < sps.length">

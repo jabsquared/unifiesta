@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 
 <ion-view name="boothmap" title="Booth Map" class="boothmap">
-  <ion-nav-back-button class="button-clear" ng-click="dissableGeoLocation()">
-    <i class="ion-ios-arrow-back"></i> Back
-  </ion-nav-back-button>
+
+  <ion-nav-buttons side="left">
+    <a nav-direction="back" ng-click="goBack()">
+      <button class="button icon-left button-clear ion-ios-arrow-left">
+        Back
+      </button>
+    </a>
+  </ion-nav-buttons>
 
   <ion-nav-title>
     <i class="icon ion-location"></i> Booth
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
-
     <button ng-style="iconColor" class="button icon-right ion-ios-navigate-outline button-clear" ng-click="toggleGeoLocation()">
       Locate
     </button>
   </ion-nav-buttons>
+
+
 
   <ion-content class="has-header has-footer" scroll="false" has-bouncing="false" padding="true">
     <!-- <a href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic" ,target="_blank">Click here for map</a> -->
@@ -23,10 +29,12 @@
       </leaflet>
     </div>
 
-    <div class="card">
-      <h3>Booth Detail: {{booth.detail}}</h3>
+    <div ng-if="showCard" class="card">
+        <h3>{{info.name}}</h3>
+        <p class="website">{{info.website}}</p>
+        <p>{{info.desc}}</p>
     </div>
     <!-- <h4>Longitude: {{long}}</h4>
-  <h4>Laditude: {{lat}}</h4> -->
+    <h4>Laditude: {{lat}}</h4> -->
   </ion-content>
 </ion-view>

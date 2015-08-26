@@ -1,4 +1,8 @@
-app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, $ionicPlatform, eventData, $ionicModal) {
+app.controller('EventsCtrl', function($scope, $state, $cordovaLocalNotification, $ionicPopup, $ionicPlatform, eventData, $ionicModal, $ionicHistory) {
+
+  $scope.goBack = function() {
+    $ionicHistory.goBack();
+  };
 
   console.log("CTRL: Events");
 

@@ -7748,8 +7748,12 @@ ion-content {
   box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9); }
 
 .events ion-content {
-  background: url("../img/bg/rsn.png") no-repeat center center fixed;
-  background-color: #d4b236; }
+  background: url("../img/bg/home1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-color: #d4b236;
+  width: 100vw; }
 .events .item-avatar i:first-child, .events .item-avatar .item-img {
   position: absolute;
   top: 16px;
@@ -7810,6 +7814,11 @@ ion-content {
   padding: 3.6px;
   font-family: 'blair_bold';
   color: #fefcfc; }
+.boothmap .card h3 {
+  text-align: center; }
+.boothmap .card .website {
+  text-align: center;
+  color: rgba(254, 252, 252, 0.8); }
 
 .sponsors .slider {
   height: 100%; }

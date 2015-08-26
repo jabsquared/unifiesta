@@ -1,8 +1,12 @@
 .events {
   ion-content {
-    background: url("../img/bg/rsn.png") no-repeat center center fixed;
+    // background: url("../img/bg/rsn.png") no-repeat center center fixed;
+    background: url("../img/bg/home1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-color: rgba(212,178,54,1);
-
+    width: 100vw;
     // -webkit-background-size: cover;
     // -moz-background-size: cover;
     // background-size: cover;

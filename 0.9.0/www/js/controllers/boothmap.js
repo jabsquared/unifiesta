@@ -1,4 +1,5 @@
-app.controller('BoothMapCtrl', function($scope, $state, $stateParams) {
+app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory) {
+  console.log('CTRL: BoothMap');
 
   document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -13,6 +14,8 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams) {
   $scope.iconColor = {
     color: '#DDDDDDFF'
   };
+  $scope.info = {};
+  $scope.showCard = false;
 
   var watchID;
   // Fetching frequency, every sec...
@@ -54,6 +57,11 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams) {
     focus: false,
     draggable: false,
     message: "<div ng-include src=\"'/templates/booths/jabsquared.html'\"></div>",
+    info: {
+      name: 'jabSquared',
+      website: 'jabsquared.ninja',
+      desc: 'We build website and mobile apps that help your business grow!'
+    },
     icon: {
       type: 'extraMarker',
       icon: 'fa-diamond',
@@ -75,7 +83,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams) {
 
     // Since Watching fetch data many time, this call will just stack up marker over and over again...
 
-    if($scope.markers.length > 3){
+    if ($scope.markers.length > 3) {
       $scope.markers.pop();
     }
 
@@ -100,7 +108,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams) {
       'message: ' + error.message + '\n');
   };
 
-  $scope.dissableGeoLocation = function () {
+  $scope.dissableGeoLocation = function() {
     $scope.findMe = false;
     console.log('Clearing watchID');
     $scope.iconColor = {
@@ -109,7 +117,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams) {
     navigator.geolocation.clearWatch(watchID);
     // TODO: Fix bug. Marker shows after being popped.
     // $scope.markers.pop();
-    if($scope.markers.length > 3){
+    if ($scope.markers.length > 3) {
       $scope.markers.pop();
     }
     console.log($scope.markers);
@@ -149,19 +157,29 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams) {
     },
     events: {
       markers: {
-        enable: ['dragend']
+        enable: ['click']
           //logic: 'emit'
       }
     },
     controls: {
       scale: false
+    },
+  });
+
+  $scope.$on('leafletDirectiveMarker.click', function(e, args) {
+    if (args.leafletEvent.target.options.info) {
+      console.log(args.leafletEvent.target.options.info);
+      $scope.info = args.leafletEvent.target.options.info;
+      $scope.showCard = true;
+    } else {
+      $scope.info = {};
+      $scope.showCard = false;
     }
   });
 
-  $scope.$on("leafletDirectiveMarker.dragend", function(event, args) {
-    console.log('hola');
-    $scope.markers.m1.lat = args.model.lat;
-    $scope.markers.m1.lng = args.model.lng;
-  });
+  $scope.goBack = function() {
+    $scope.dissableGeoLocation();
+    $ionicHistory.goBack();
+  };
 
 });

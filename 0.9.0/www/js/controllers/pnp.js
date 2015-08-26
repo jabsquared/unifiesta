@@ -1,4 +1,8 @@
-app.controller('PnPCtrl', function($scope, $state, $stateParams) {
+app.controller('PnPCtrl', function($scope, $state, $stateParams, $ionicHistory) {
+
+  $scope.goBack = function() {
+    $ionicHistory.goBack();
+  };
 
   angular.extend($scope, {
     tiles: {
