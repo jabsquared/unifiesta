@@ -1,6 +1,5 @@
 # Issues:
 
-
 * Font on the homepage is wrong
 
 * Home page is not very responsive... (Width will be squashed) (edited)
