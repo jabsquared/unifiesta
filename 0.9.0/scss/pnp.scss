@@ -11,8 +11,13 @@
     margin-top: 17px;
     text-align: center;
   }
-  .card .website {
+  .card p {
     text-align: center;
     color: black;
   }
+
+  .card .button.button-block, .button.button-full{
+    margin-bottom: 0px;
+  }
+
 }

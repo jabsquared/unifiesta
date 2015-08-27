@@ -7814,9 +7814,11 @@ ion-content {
 .pnp .card h3 {
   margin-top: 17px;
   text-align: center; }
-.pnp .card .website {
+.pnp .card p {
   text-align: center;
   color: black; }
+.pnp .card .button.button-block, .pnp .button.button-full {
+  margin-bottom: 0px; }
 
 .boothmap .map {
   height: 54vh; }

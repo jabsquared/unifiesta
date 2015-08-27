@@ -1,7 +1,7 @@
 app.factory('mapService', function() {
   console.log('SERV: Map ');
 
-  var pnp = [{
+  var booth = [{
     lat: 47.307492,
     lng: -122.230582,
     focus: false,
@@ -47,10 +47,30 @@ app.factory('mapService', function() {
     }
   }];
 
+  var pnp = [{ // PARKING #1
+    lat: 47.307263,
+    lng: -122.231312,
+    focus: false,
+    draggable: false,
+    message: "Parking Lot!",
+    info: {
+      number: 1,
+      address: '32450 122nd ave se auburn wa 98092'
+    },
+    icon: {
+      type: 'extraMarker',
+      icon: 'fa-car',
+      markerColor: 'blue',
+      prefix: 'fa',
+      shape: 'circle'
+    }
+  }];
+
   return {
     tiles: {
       url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     },
+    booth : booth,
     pnp: pnp,
     dissableGeoLocation: function($scope, mapTitle) {
       $scope.findMe = false;
@@ -63,7 +83,7 @@ app.factory('mapService', function() {
 
       // Check which map is it
       if ((mapTitle === "pnp" && $scope.markers.length > pnp.length) ||
-        (mapTitle === "vendor" && $scope.markers.length > vendor.length)) {
+        (mapTitle === "booth" && $scope.markers.length > booth.length)) {
         $scope.markers.pop();
       }
 
@@ -87,6 +107,8 @@ app.factory('mapService', function() {
       }
       $scope.dissableGeoLocation();
     },
+    // onSuccess Callback, accepts a Position object, which contains the
+    // current GPS coordinates
     onSuccess: function($scope, position) {
       console.log('Marking location...');
 
@@ -109,6 +131,7 @@ app.factory('mapService', function() {
       $scope.auburn.lat = position.coords.latitude;
       $scope.auburn.lng = position.coords.longitude;
     },
+    // onError Callback receives a PositionError object
     onError: function(error) {
       alert('code: ' + error.code + '\n' +
         'message: ' + error.message + '\n');

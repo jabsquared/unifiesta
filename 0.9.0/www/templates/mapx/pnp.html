@@ -24,8 +24,16 @@
       <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="100%" markers="markers" width="100%">
       </leaflet>
     </div>
-    <div class="card">
-      <h3>Booth Detail: {{booth.detail}}</h3>
+
+    <div ng-if="showCard" class="card">
+        <h3>Parking Lot {{info.number}}</h3>
+        <p>
+          {{info.address}}
+        </p>
+        <button class="button button-block bold button-energized">
+          Get Directions
+        </button>
     </div>
+
   </ion-content>
 </ion-view>
