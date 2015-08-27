@@ -18,6 +18,23 @@ app.factory('mapService', function() {
       prefix: 'fa',
       shape: 'circle'
     }
+  }, {
+    lat: 47.307367,
+    lng: -122.229776,
+    focus: false,
+    draggable: false,
+    message: "Parking Lot!",
+    info: {
+      number: 2,
+      address: '123 L st auburn wa'
+    },
+    icon: {
+      type: 'extraMarker',
+      icon: 'fa-car',
+      markerColor: 'blue',
+      prefix: 'fa',
+      shape: 'circle'
+    }
   }];
 
   return {
@@ -44,7 +61,7 @@ app.factory('mapService', function() {
       $scope.auburn.lat = 47.307492;
       $scope.auburn.lng = -122.230582;
     },
-    toggleGeoLocation : function ($scope, watchID) {
+    toggleGeoLocation: function($scope, watchID) {
       $scope.findMe = !$scope.findMe;
       if ($scope.findMe) {
         console.log('About to get location');

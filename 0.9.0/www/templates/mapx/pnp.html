@@ -10,12 +10,11 @@
   </ion-nav-buttons>
 
   <ion-nav-title>
-    <i class="icon ion-map"></i> Parking
+    Parking
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
-    <button ng-style="iconColor" class="button icon-right ion-ios-navigate-outline button-clear" ng-click="toggleGeoLocation()">
-      Locate
+    <button ng-style="iconColor" class="button icon-right ion-location button-clear" ng-click="toggleGeoLocation()">
     </button>
   </ion-nav-buttons>
 
@@ -26,13 +25,13 @@
     </div>
 
     <div ng-if="showCard" class="card">
-        <h3>Parking Lot {{info.number}}</h3>
-        <p>
-          {{info.address}}
-        </p>
-        <button class="button button-block bold button-energized">
-          Get Directions
-        </button>
+      <h3>Parking Lot {{info.number}}</h3>
+      <p>
+        {{info.address}}
+      </p>
+      <button class="button button-block bold button-energized">
+        Get Directions
+      </button>
     </div>
 
   </ion-content>

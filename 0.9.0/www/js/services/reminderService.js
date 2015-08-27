@@ -42,11 +42,11 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
   return {
     schedule: function(single_event) {
       var alarmPopup = $ionicPopup.show({
-        title: '<font size="5" color="black">Set Reminder</font>',
+        title: '<font size="4" color="black">Set Reminder</font>',
         // template: "",
         cssClass: 'oneline',
         buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
-          text: '<font size="5" color="white">5 minutes</font>',
+          text: '<font size="3" color="white">5 minutes</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -54,7 +54,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
             return 10;
           }
         }, {
-          text: '<font size="5" color="white">10 minutes</font>',
+          text: '<font size="3" color="white">10 minutes</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -62,7 +62,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
             return 15;
           }
         }, {
-          text: '<font size="5" color="white">15 minutes</font>',
+          text: '<font size="3" color="white">15 minutes</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -70,7 +70,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
             return 30;
           }
         }, {
-          text: '<font size="4" color="white">Cancel</font>',
+          text: '<font size="2" color="white">Cancel</font>',
           type: 'button-assertive',
           cssClass: 'oneline',
           onTap: function(e) {
