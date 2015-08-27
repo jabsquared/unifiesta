@@ -20,20 +20,20 @@
     height: 33px;
   }
 
-.box {
-    -webkit-border-radius: 3.6px;
-    -moz-border-radius: 3.6px;
-    border-radius: 3.6px;
+.card {
 
-    // vertical-align: baseline;
-    height: 100%;
-    background-color: white;
+    margin: 0px !important;
+    .box {
+      -webkit-border-radius: 3.6px;
+      -moz-border-radius: 3.6px;
+      border-radius: 3.6px;
 
-    img {
-      width: 100%;
-      position: relative;
-      top: 50%;
-      transform: 			translateY(-50%);
+      height: 100%;
+      background-color: white;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }

@@ -11,7 +11,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   // setup state for login page
 
     .state('home', {
-      url: '/home',
+      url: '/',
       templateUrl: 'templates/homex/home.html',
       controller: 'HomeCtrl'
     })
@@ -47,7 +47,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/');
 });
 
 app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope) {

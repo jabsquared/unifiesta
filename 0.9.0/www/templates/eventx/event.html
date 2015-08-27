@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<ion-view name="event" class="event" title="{{event.name}}">
+<ion-view name="event" class="event">
+
   <ion-nav-bar class="bar-energized" align-title="center">
+
     <ion-nav-buttons side="left">
       <a nav-direction="back" ng-click="goBack()">
         <button class="button icon-left button-clear ion-ios-arrow-left">
@@ -21,7 +23,7 @@
 
   </ion-nav-bar>
 
-  <ion-content class="has-header has-footer" padding="true">
+  <ion-content class="has-header has-footer" has-bouncing="true" padding="true">
 
     <div class="card">
       <h3 class="event-title">
@@ -32,7 +34,7 @@
       </p>
     </div>
 
-    <div class="card">
+    <div class="card" ng-show="hasImage">
       <ion-slide-box>
         <ion-slide ng-repeat="ei in event.img">
           <img ng-src="img/eimg/{{ei}}.png" alt="Event #{{$index}}" />

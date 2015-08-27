@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <ion-view name="events" class="events">
+
   <ion-nav-bar class="bar-energized" align-title="center">
+
     <ion-nav-buttons side="left">
       <a nav-direction="back" ng-click="goBack()">
         <button class="button icon-left button-clear ion-ios-arrow-left">
@@ -9,9 +11,9 @@
       </a>
     </ion-nav-buttons>
 
-  <ion-nav-title>
-    <univision-logo></univision-logo>
-  </ion-nav-title>
+    <ion-nav-title>
+      <univision-logo></univision-logo>
+    </ion-nav-title>
 
   </ion-nav-bar>
 
@@ -30,7 +32,7 @@
             </div>
           </a>
 
-          <a href="#/events/{{event.id}}">
+          <a ng-href="#/events/{{event.id}}">
             <div class="item">
               <h2>{{event.name | limitTo : 27 : 0}}</h2>
               <p>
