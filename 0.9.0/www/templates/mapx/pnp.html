@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <ion-view name="pnp" title="PnP" class="pnp">
+  <ion-nav-bar class="bar-energized" align-title="center">
+
   <ion-nav-buttons side="left">
     <a nav-direction="back" ng-click="goBack()">
       <button class="button icon-left button-clear ion-ios-arrow-left">
@@ -17,6 +19,7 @@
     <button ng-style="iconColor" class="button icon-right ion-location button-clear" ng-click="toggleGeoLocation()">
     </button>
   </ion-nav-buttons>
+  </ion-nav-bar>
 
   <ion-content class="has-header has-footer" has-bouncing="false" padding="true">
     <div class="map" data-tap-disabled="true">

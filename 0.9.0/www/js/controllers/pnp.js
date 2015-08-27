@@ -7,8 +7,7 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
   }
 
   $scope.findMe = false;
-  $scope.lat = 0;
-  $scope.long = 0;
+
   $scope.markers = mapService.pnp;
   $scope.iconColor = {
     color: '#DDDDDDFF'
@@ -17,12 +16,20 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
   $scope.info = {};
   $scope.showCard = false;
 
+  $scope.watchID = 9;
+  // Fetching frequency, every sec...
+  $scope.watchOptions = {
+    frequency: 1000,
+    timeout: 3000,
+    enableHighAccuracy: false // may cause errors if true
+  };
+
   angular.extend($scope, {
     tiles: mapService.tiles,
     auburn: {
       lat: 47.307492,
       lng: -122.230582,
-      zoom: 16,
+      zoom: 17,
       bounceAtZoomLimits: true
     },
     events: {
@@ -36,69 +43,22 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
     },
   });
 
-  $scope.watchID = 9;
-  // Fetching frequency, every sec...
-  $scope.watchOptions = {
-    frequency: 1000,
-    timeout: 3000,
-    enableHighAccuracy: false // may cause errors if true
+  $scope.toggleGeoLocation = function() {
+    mapService.toggleGeoLocation($scope);
   };
 
-  $scope.dissableGeoLocation = function () {
+  $scope.dissableGeoLocation = function() {
     mapService.dissableGeoLocation($scope, "pnp");
   };
 
-  $scope.toggleGeoLocation = function() {
-    $scope.findMe = !$scope.findMe;
-    if ($scope.findMe) {
-      console.log('About to get location');
-      $scope.iconColor = {
-        color: '#387EF5'
-      };
-      $scope.watchID = navigator.geolocation.watchPosition(
-        $scope.onSuccess,
-        $scope.onError, {
-          enableHighAccuracy: false
-        });
-      return;
-    }
-    $scope.dissableGeoLocation();
-  };
-
   $scope.onSuccess = function(position) {
-    console.log('rending location!');
-    $scope.lat = position.coords.latitude;
-    $scope.long = position.coords.longitude;
-    console.log('marker lat: ' + $scope.lat);
-    console.log('marker long: ' + $scope.long);
-
-    // Since Watching fetch data many time, this call will just stack up marker over and over again...
-
-    if ($scope.markers.length > 3) {
-      $scope.markers.pop();
-    }
-
-    $scope.markers.push({
-      lat: position.coords.latitude,
-      lng: position.coords.longitude,
-      focus: true,
-      // TODO: Fix auto focus. Only works with message.
-      message: 'You are Here!',
-      draggable: false,
-      icon: {
-        iconUrl: '/img/location.png'
-      }
-    });
-    $scope.auburn.lat = $scope.lat;
-    $scope.auburn.lng = $scope.long;
+    mapService.onSuccess($scope, position);
   };
 
   // onError Callback receives a PositionError object
-  var onError = function(error) {
-    alert('code: ' + error.code + '\n' +
-      'message: ' + error.message + '\n');
+  $scope.onError = function(error) {
+    mapService.onError(error);
   };
-
 
   // Map Data:
 
@@ -118,5 +78,4 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
     $scope.dissableGeoLocation();
     $ionicHistory.goBack();
   };
-
 });

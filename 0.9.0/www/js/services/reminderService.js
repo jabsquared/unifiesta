@@ -42,7 +42,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
   return {
     schedule: function(single_event) {
       var alarmPopup = $ionicPopup.show({
-        title: '<font size="4" color="black">Set Reminder</font>',
+        title: '<font size="3" color="black">Set Reminder</font>',
         // template: "",
         cssClass: 'oneline',
         buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.

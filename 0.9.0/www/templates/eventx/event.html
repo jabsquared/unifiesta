@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <ion-view name="event" class="event" title="{{event.name}}">
-  <ion-nav-buttons side="left">
-    <a nav-direction="back" ng-click="goBack()">
-      <button class="button icon-left button-clear ion-ios-arrow-left">
-        Back
-      </button>
-    </a>
-  </ion-nav-buttons>
+  <ion-nav-bar class="bar-energized" align-title="center">
+    <ion-nav-buttons side="left">
+      <a nav-direction="back" ng-click="goBack()">
+        <button class="button icon-left button-clear ion-ios-arrow-left">
+          Back
+        </button>
+      </a>
+    </ion-nav-buttons>
 
   <ion-nav-title>
     {{event.start | date:'HH:mm a'}}
@@ -18,6 +19,7 @@
     </button>
   </ion-nav-buttons>
 
+  </ion-nav-bar>
 
   <ion-content class="has-header has-footer" padding="true">
 
