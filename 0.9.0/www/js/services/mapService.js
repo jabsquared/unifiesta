@@ -71,21 +71,47 @@ app.factory('mapService', function() {
       $scope.auburn.lat = 47.307492;
       $scope.auburn.lng = -122.230582;
     },
-    toggleGeoLocation : function ($scope, watchID) {
+    toggleGeoLocation: function($scope) {
       $scope.findMe = !$scope.findMe;
       if ($scope.findMe) {
         console.log('About to get location');
         $scope.iconColor = {
           color: '#387EF5'
         };
-        watchID = navigator.geolocation.watchPosition(
-          onSuccess,
-          onError, {
+        $scope.watchID = navigator.geolocation.watchPosition(
+          $scope.onSuccess,
+          $scope.onError, {
             enableHighAccuracy: false
           });
         return;
       }
       $scope.dissableGeoLocation();
+    },
+    onSuccess: function($scope, position) {
+      console.log('Marking location...');
+
+      if ($scope.markers.length > 3) {
+        $scope.markers.pop();
+      }
+
+      $scope.markers.push({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+        focus: true,
+        // TODO: Fix auto focus. Only works with message.
+        message: 'You are Here!',
+        draggable: false,
+        icon: {
+          iconUrl: '/img/location.png'
+        }
+      });
+
+      $scope.auburn.lat = position.coords.latitude;
+      $scope.auburn.lng = position.coords.longitude;
+    },
+    onError: function(error) {
+      alert('code: ' + error.code + '\n' +
+        'message: ' + error.message + '\n');
     }
   };
 });
