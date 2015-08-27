@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <ion-view name="events" class="events">
+  <ion-nav-bar class="bar-energized" align-title="center">
+    <ion-nav-buttons side="left">
+      <a nav-direction="back" ng-click="goBack()">
+        <button class="button icon-left button-clear ion-ios-arrow-left">
+          Back
+        </button>
+      </a>
+    </ion-nav-buttons>
 
-  <ion-nav-buttons side="left">
-    <a nav-direction="back" ng-click="goBack()">
-      <button class="button icon-left button-clear ion-ios-arrow-left">
-        Back
-      </button>
-    </a>
-  </ion-nav-buttons>
+
+    `<univision-logo></univision-logo>`
 
   <ion-nav-title>
-    <univision-logo></univision-logo>
   </ion-nav-title>
+
+  </ion-nav-bar>
 
   <ion-content class="has-header has-footer" has-bouncing="true">
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">

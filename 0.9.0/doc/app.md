@@ -1,6 +1,6 @@
 # Issues:
 
-1 Home page is not very responsive... (Width will be squashed) (edited)
+1 Home page is not very responsive... (Height will be squashed)
 
 2 Color of the raffle is too dark, might blend into background.
 
@@ -10,6 +10,11 @@
 
 5 Update Event information
 
+6 Sponsor page style does not work on the phone
+
+7 Android build | publish
+
+8 iOS build | publish
 
 # Done:
 
