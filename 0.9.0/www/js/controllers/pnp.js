@@ -1,5 +1,11 @@
 app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
 
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+  function onDeviceReady() {
+    console.log("navigator.geolocation works well");
+  }
+
   $scope.findMe = false;
 
   $scope.markers = mapService.pnp;
@@ -57,6 +63,7 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
   // Map Data:
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
+    console.log('Clicked Parking Lot!');
     if (args.leafletEvent.target.options.info) {
       console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;

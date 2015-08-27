@@ -19,56 +19,6 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletDat
 
   $scope.markers = mapService.booth;
 
-  $scope.toggleGeoLocation = function() {
-    mapService.toggleGeoLocation($scope);
-  };
-
-  $scope.dissableGeoLocation = function() {
-    mapService.dissableGeoLocation($scope, "booth");
-  };
-
-  $scope.onSuccess = function(position) {
-    mapService.onSuccess($scope, position);
-  };
-
-  // onError Callback receives a PositionError object
-  $scope.onError = function(error) {
-    mapService.onError(error);
-  };
-
-  $scope.dissableGeoLocation = function() {
-    $scope.findMe = false;
-    console.log('Clearing watchID');
-    $scope.iconColor = {
-      color: '#DDDDDDFF'
-    };
-    navigator.geolocation.clearWatch(watchID);
-    // TODO: Fix bug. Marker shows after being popped.
-    // $scope.markers.pop();
-    if ($scope.markers.length > 3) {
-      $scope.markers.pop();
-    }
-    console.log($scope.markers);
-    $scope.auburn.lat = 47.307492;
-    $scope.auburn.lng = -122.230582;
-  };
-
-  $scope.toggleGeoLocation = function() {
-    $scope.findMe = !$scope.findMe;
-    if ($scope.findMe) {
-      console.log('About to get location');
-      $scope.iconColor = {
-        color: '#387EF5'
-      };
-      watchID = navigator.geolocation.watchPosition(
-        onSuccess,
-        onError, {
-          enableHighAccuracy: false
-        });
-      return;
-    }
-    $scope.dissableGeoLocation();
-  };
 
   angular.extend($scope, {
     tiles: {
@@ -93,6 +43,23 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletDat
       scale: false
     },
   });
+
+  $scope.toggleGeoLocation = function() {
+    mapService.toggleGeoLocation($scope);
+  };
+
+  $scope.dissableGeoLocation = function() {
+    mapService.dissableGeoLocation($scope, "booth");
+  };
+
+  $scope.onSuccess = function(position) {
+    mapService.onSuccess($scope, position);
+  };
+
+  // onError Callback receives a PositionError object
+  $scope.onError = function(error) {
+    mapService.onError(error);
+  };
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
     if (args.leafletEvent.target.options.info) {

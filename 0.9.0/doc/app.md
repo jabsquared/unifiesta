@@ -10,11 +10,10 @@
 
 5 Update Event information
 
-6 Binding the parking lot information (Also in order to navigate from native map app), which will be shown on a card below
-
 
 # Done:
 
+* Binding the parking lot information (Also in order to navigate from native map app), which will be shown on a card below
 * Font on the homepage is wrong
 * The header is scrollable <- will be very unstable, need different scroll div
 * Return of Native Back button
