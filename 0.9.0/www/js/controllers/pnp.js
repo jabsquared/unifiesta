@@ -1,5 +1,11 @@
 app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
 
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+  function onDeviceReady() {
+    console.log("navigator.geolocation works well");
+  }
+
   $scope.findMe = false;
   $scope.lat = 0;
   $scope.long = 0;
@@ -7,6 +13,9 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
   $scope.iconColor = {
     color: '#DDDDDDFF'
   };
+
+  $scope.info = {};
+  $scope.showCard = false;
 
   angular.extend($scope, {
     tiles: mapService.tiles,
@@ -26,9 +35,6 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
       scale: false
     },
   });
-
-  $scope.info = {};
-  $scope.showCard = false;
 
   $scope.watchID = 9;
   // Fetching frequency, every sec...
@@ -97,7 +103,7 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
   // Map Data:
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
-    console.log('Parking lot clicked!');
+    console.log('Clicked Parking Lot!');
     if (args.leafletEvent.target.options.info) {
       console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;
@@ -106,7 +112,6 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
       $scope.info = {};
       $scope.showCard = false;
     }
-    console.log("Show Card = " + $scope.showCard);
   });
 
   $scope.goBack = function() {
