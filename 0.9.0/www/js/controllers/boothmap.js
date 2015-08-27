@@ -1,16 +1,8 @@
 app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory) {
   console.log('CTRL: BoothMap');
 
-  document.addEventListener("deviceready", onDeviceReady, false);
-
-  function onDeviceReady() {
-    console.log("navigator.geolocation works well");
-  }
-
   // Feilds
   $scope.findMe = false;
-  $scope.lat = 0;
-  $scope.long = 0;
   $scope.iconColor = {
     color: '#DDDDDDFF'
   };

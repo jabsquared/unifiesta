@@ -7,6 +7,17 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
     color: '#DDDDDDFF'
   };
 
+  $scope.info = {};
+  $scope.showCard = false;
+
+  $scope.watchID = 9;
+  // Fetching frequency, every sec...
+  $scope.watchOptions = {
+    frequency: 1000,
+    timeout: 3000,
+    enableHighAccuracy: false // may cause errors if true
+  };
+
   angular.extend($scope, {
     tiles: mapService.tiles,
     auburn: {
@@ -26,22 +37,11 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
     },
   });
 
-  $scope.info = {};
-  $scope.showCard = false;
-
-  $scope.watchID = 9;
-  // Fetching frequency, every sec...
-  $scope.watchOptions = {
-    frequency: 1000,
-    timeout: 3000,
-    enableHighAccuracy: false // may cause errors if true
-  };
-
   $scope.toggleGeoLocation = function() {
     mapService.toggleGeoLocation($scope);
   };
 
-  $scope.dissableGeoLocation = function () {
+  $scope.dissableGeoLocation = function() {
     mapService.dissableGeoLocation($scope, "pnp");
   };
 
