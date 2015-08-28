@@ -21,10 +21,10 @@ app.controller('SponsorsCtrl', function($scope, $state, $ionicHistory, sponsorDa
   };
 
   $scope.currentSlide = 0;
-  console.log('Active Slide=' + $scope.currentSlide);
+  // console.log('Active Slide=' + $scope.currentSlide);
 
   $scope.slideChanged = function(slide) {
     $scope.currentSlide = $ionicSlideBoxDelegate.currentIndex();
-    console.log('Active Slide=' + $scope.currentSlide);
+    // console.log('Active Slide=' + $scope.currentSlide);
   };
 });
