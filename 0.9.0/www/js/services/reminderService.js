@@ -70,7 +70,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
             return 30;
           }
         }, {
-          text: '<font size="4" color="white">Cancel</font>',
+          text: '<font size="2" color="white">Cancel</font>',
           type: 'button-assertive',
           cssClass: 'oneline',
           onTap: function(e) {

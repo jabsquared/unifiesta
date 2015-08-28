@@ -64,6 +64,23 @@ app.factory('mapService', function() {
       prefix: 'fa',
       shape: 'circle'
     }
+  }, {
+    lat: 47.307367,
+    lng: -122.229776,
+    focus: false,
+    draggable: false,
+    message: "Parking Lot!",
+    info: {
+      number: 2,
+      address: '123 L st auburn wa'
+    },
+    icon: {
+      type: 'extraMarker',
+      icon: 'fa-car',
+      markerColor: 'blue',
+      prefix: 'fa',
+      shape: 'circle'
+    }
   }];
 
   return {
