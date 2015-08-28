@@ -17,32 +17,31 @@
 
   </ion-nav-bar>
 
-  <ion-content class="has-header has-footer" has-bouncing="true">
-    <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
-      <ion-item class="list" collection-repeat="event in events">
-        <div class="card">
+  <ion-content class="has-header has-footer" has-bouncing="true" overflow-scroll="true">
+    <ion-item class="list" collection-repeat="event in events">
+      <div class="card">
 
-          <a ng-click="schedule(event)">
-            <div class="item item-avatar">
-              <i class="icon ion-android-time"></i>
-              <h2>Start : {{event.start | date:'HH:mm a'}}</h2>
-              <p>
-                End: {{event.end | date:'HH:mm a'}}
-              </p>
-            </div>
-          </a>
+        <a ng-click="schedule(event)">
+          <div class="item item-avatar">
+            <i class="icon ion-android-time"></i>
+            <h2>Start : {{event.start | date:'h:mm a'}}</h2>
+            <p>
+              End: {{event.end | date:'h:mm a'}}
+            </p>
+          </div>
+        </a>
 
-          <a ng-href="#/events/{{event.id}}">
-            <div class="item">
-              <h2>{{event.name | limitTo : 27 : 0}}</h2>
-              <p>
-                {{event.desc | limitTo : 27 : 0}}
-              </p>
-            </div>
-          </a>
+        <a ng-href="#/events/{{event.id}}">
+          <div class="item">
+            <h2>{{event.name | limitTo : 27 : 0}}</h2>
+            <p>
+              {{event.desc | limitTo : 27 : 0}}
+            </p>
+          </div>
+        </a>
 
-        </div>
-      </ion-item>
-    </ion-list>
+      </div>
+    </ion-item>
+
   </ion-content>
 </ion-view>

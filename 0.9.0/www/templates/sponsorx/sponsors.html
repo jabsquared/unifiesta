@@ -13,31 +13,31 @@
 	</ion-nav-bar>
 
 	<ion-content class="has-header" has-bouncing="true" padding="true">
-		<div class="row" ng-repeat="s in sps" ng-if="$index % 4 === 0">
+		<div class="row" ng-repeat="i in img" ng-if="$index % 4 === 0">
 
-			<div class="col col-25 card" ng-if="$index < sps.length">
+			<div class="col col-25 card" ng-if="$index < img.length">
 				<div class="box">
 					<!-- Put image into a white box, with rounded corner etc.. -->
-					<img ng-src="{{sps[$index].src}}" />
+					<img ng-src="{{img[$index]}}" />
 				</div>
 			</div>
 
-			<div class="col col-25 card" ng-if="$index + 1 < sps.length">
+			<div class="col col-25 card" ng-if="$index + 1 < img.length">
 				<div class="box">
 
-					<img ng-src="{{sps[$index + 1].src}}"/>
+					<img ng-src="{{img[$index + 1]}}"/>
 				</div>
 			</div>
 
-			<div class="col col-25 card" ng-if="$index + 2 < sps.length">
+			<div class="col col-25 card" ng-if="$index + 2 < img.length">
 				<div class="box">
-					<img ng-src="{{sps[$index + 2].src}}"/>
+					<img ng-src="{{img[$index + 2]}}"/>
 				</div>
 			</div>
 
-			<div class="col col-25 card" ng-if="$index + 3 < sps.length">
+			<div class="col col-25 card" ng-if="$index + 3 < img.length">
 				<div class="box">
-					<img ng-src="{{sps[$index + 3].src}}" />
+					<img ng-src="{{img[$index + 3]}}" />
 				</div>
 			</div>
 
