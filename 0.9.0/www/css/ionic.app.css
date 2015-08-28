@@ -7846,7 +7846,10 @@ ion-content {
   width: 99vw;
   display: inline-block; }
 .sponsors .sgroup img {
-  height: 33px; }
+  height: 33px;
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px; }
 .sponsors .card {
   margin: 0px !important; }
   .sponsors .card .box {
