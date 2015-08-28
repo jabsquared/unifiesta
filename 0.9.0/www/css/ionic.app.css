@@ -7766,13 +7766,17 @@ ion-content {
 .events a {
   color: inherit;
   text-decoration: none; }
+.events ion-item {
+  border-color: transparent; }
 .events .item {
   background-color: rgba(183, 39, 12, 0.81);
+  padding-right: 0;
   color: #fefcfc; }
 .events .list {
   background-color: transparent; }
 .events .card {
-  margin-bottom: 1.8px !important; }
+  background-color: transparent;
+  margin-bottom: 0.9px !important; }
 .events .item * {
   font-family: 'blair_bold';
   color: #fefcfc; }
