@@ -66,7 +66,7 @@
 
       <ion-slide-box show-pager="false" does-continue="true" auto-play="3600" on-slide-changed="slideChanged(index)">
         <ion-slide ng-repeat="i in img" ng-if="$index % 4 === 0">
-          <div class="sgroup" ng-show="($index/4) >= (currentSlide-1) && ($index/4) <= (currentSlide+1)">
+          <div class="sgroup" >
             <img ng-src="{{img[$index]}}" alt="img{{$index}}" />
             <img ng-src="{{img[$index + 1]}}" alt="img{{$index+1}}" />
             <img ng-src="{{img[$index + 2]}}" alt="img{{$index+2}}" />

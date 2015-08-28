@@ -8,6 +8,13 @@
   font-family: 'blair_bold';
 }
 
+ion-nav-view {
+  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+
 .logo {
   clear: both;
   width: fixed;
