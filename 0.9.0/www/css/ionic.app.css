@@ -7847,6 +7847,8 @@ ion-content {
   display: inline-block; }
 .sponsors .sgroup img {
   height: 33px;
+  width: 18vw;
+  max-width: 100%;
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
   border-radius: 3.6px; }
@@ -7859,7 +7861,12 @@ ion-content {
     height: 100%;
     background-color: white; }
     .sponsors .card .box img {
-      width: 100%; }
+      top: 18%;
+      width: 100%;
+      position: relative;
+      -webkit-border-radius: 3.6px;
+      -moz-border-radius: 3.6px;
+      border-radius: 3.6px; }
 
 .home ion-content {
   background: url("../img/bg/home0.jpg") no-repeat center center fixed;
