@@ -1,11 +1,8 @@
 app.factory('sponsorData', function() {
   console.log('SERV: Sponsor Data');
-  var sps = [];
+  var img = [];
   for (var i = 0; i < 32; ++i) {
-    sps[i] = {
-      id: 'p' + i,
-      src: 'img/sps/sponsor' + -~i + '.jpg',
-    };
+    img[i] = 'img/sps/sponsor' + -~i + '.jpg';
   }
 
   var url = [
@@ -42,8 +39,7 @@ app.factory('sponsorData', function() {
     "http://www.komonews.com/"
   ];
   return {
-    all: function() {
-      return sps;
-    },
+    img: img,
+    url: url
   };
 });

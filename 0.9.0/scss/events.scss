@@ -31,13 +31,10 @@ a {
     text-decoration: none;
   }
 
-ion-item {
-    border-color: transparent;
-  }
 
 .item {
     background-color: rgba(183,39,12,0.81);
-    padding-right: 0;
+    // padding-right: 0;
     color: rgba(254,252,252,1);
   }
 
@@ -46,8 +43,8 @@ ion-item {
   }
 
 .card {
-    background-color: transparent;
-    margin-bottom: 0.9px !important;
+    // background-color: transparent;
+    margin-bottom: 1.8px !important;
   }
 
 .item * {
