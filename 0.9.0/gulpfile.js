@@ -6,12 +6,22 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+// gulp-angular-templatecache
+var templateCache = require('gulp-angular-templatecache');
+// gulp-ng-annotate
+// var ngAnnotate = require('gulp-ng-annotate');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./scss/**/*.scss'],
+  // gulp-angular-templatecache
+  templatecache: ['./www/templates/**/*.html'],
+  // gulp-ng-annotate
+  ng_annotate: ['./www/js/**/*.js']
 };
 
-gulp.task('default', ['sass']);
+// gulp-angular-templatecache
+// gulp-ng-annotate
+gulp.task('default', ['sass', 'templatecache']);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -22,13 +32,37 @@ gulp.task('sass', function(done) {
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))
-    .pipe(rename({ extname: '.min.css' }))
+    .pipe(rename({
+      extname: '.min.css'
+    }))
     .pipe(gulp.dest('./www/css/'))
     .on('end', done);
 });
 
+// gulp-angular-templatecache
+gulp.task('templatecache', function(done) {
+  gulp.src('./www/templates/**/*.html')
+    .pipe(templateCache({
+      standalone: true
+    }))
+    .pipe(gulp.dest('./www/js'))
+    .on('end', done);
+});
+
+// gulp-ng-annotate
+// gulp.task('ng_annotate', function(done) {
+//   gulp.src('./www/js/**/*.js')
+//     .pipe(ngAnnotate({
+//       single_quotes: true
+//     }))
+//     .pipe(gulp.dest('./www/dist/dist_js/app'))
+//     .on('end', done);
+// });
+
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.templatecache, ['templatecache']);
+  // gulp.watch(paths.ng_annotate, ['ng_annotate']);
 });
 
 gulp.task('install', ['git-check'], function() {

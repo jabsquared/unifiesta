@@ -141,7 +141,11 @@ app.factory('mapService', function() {
         message: 'You are Here!',
         draggable: false,
         icon: {
-          iconUrl: '/img/location.png'
+          type: 'extraMarker',
+          icon: 'fa-user',
+          markerColor: 'orange',
+          prefix: 'fa',
+          shape: 'square'
         }
       });
 

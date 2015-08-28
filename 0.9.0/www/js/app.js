@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive']);
+var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive', 'templates']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -12,37 +12,37 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     .state('home', {
       url: '/',
-      templateUrl: 'templates/homex/home.html',
+      templateUrl: 'homex/home.html',
       controller: 'HomeCtrl'
     })
 
     .state('events', {
       url: '/events',
-      templateUrl: 'templates/eventx/events.html',
+      templateUrl: 'eventx/events.html',
       controller: 'EventsCtrl'
     })
 
   .state('event', {
     url: '/events/:id',
-    templateUrl: 'templates/eventx/event.html',
+    templateUrl: 'eventx/event.html',
     controller: 'EventCtrl'
   })
 
   .state('boothmap', {
     url: '/boothmap',
-    templateUrl: 'templates/mapx/boothmap.html',
+    templateUrl: 'mapx/boothmap.html',
     controller: 'BoothMapCtrl'
   })
 
   .state('pnp', {
     url: '/pnp',
-    templateUrl: 'templates/mapx/pnp.html',
+    templateUrl: 'mapx/pnp.html',
     controller: 'PnPCtrl'
   })
 
   .state('sponsors', {
     url: '/sponsors',
-    templateUrl: 'templates/sponsorx/sponsors.html',
+    templateUrl: 'sponsorx/sponsors.html',
     controller: 'SponsorsCtrl'
   });
 
