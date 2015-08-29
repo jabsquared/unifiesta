@@ -261,7 +261,6 @@ app.factory('mapService', function() {
       $scope.auburn.lat = 47.307492;
       $scope.auburn.lng = -122.230582;
 
-      $scope.markers.pop();
     },
     toggleGeoLocation: function($scope) {
       $scope.findMe = !$scope.findMe;
@@ -276,6 +275,8 @@ app.factory('mapService', function() {
             enableHighAccuracy: false
           });
         return;
+      } else {
+        $scope.markers.pop();
       }
       $scope.dissableGeoLocation();
     },
