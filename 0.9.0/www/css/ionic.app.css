@@ -7790,6 +7790,8 @@ ion-content {
   font-family: 'blair_med';
   font-size: 0.72em;
   color: #e1e1e1; }
+.events .scheduled {
+  color: #FDD804; }
 
 .event {
   /* single event page styling */ }
