@@ -24,4 +24,12 @@ app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPla
     alert("Added a notification");
   });
 
+  $scope.getScrollPosition = function() {
+      $timeout(function () {
+       $scope.data = $ionicScrollDelegate.getScrollPosition().top;
+
+    });
+   console.log($scope.data);
+  };
+
 });

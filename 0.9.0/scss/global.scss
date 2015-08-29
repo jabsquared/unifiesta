@@ -67,3 +67,13 @@ ion-content {
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
 }
+
+.bar.bar-header,
+.bar.bar-footer{
+  transition: 0.45s all linear !important;
+}
+
+.bar.bar-header.ng-hide,
+.bar.bar-footer.ng-hide{
+  height: 0px !important;
+}

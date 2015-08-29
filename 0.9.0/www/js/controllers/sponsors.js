@@ -16,7 +16,8 @@ app.controller('SponsorsCtrl', function($scope, $state, $ionicHistory, sponsorDa
 
   $scope.goBack = function() {
     $rootScope.showFooter = true;
-    console.log($rootScope.showFooter);
+    // $ionicSlideBoxDelegate.update();
+    // console.log($rootScope.showFooter);
     $ionicHistory.goBack();
   };
 

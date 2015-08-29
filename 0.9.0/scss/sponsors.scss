@@ -12,6 +12,7 @@
 
 .sgroup img {
     height: 33px;
+
     // width: 18vw;
     max-width: 100%;
     -webkit-border-radius: 3.6px;
@@ -19,18 +20,31 @@
     border-radius: 3.6px;
   }
 
+.center {
+    display: inline-block;
+  }
+
+.padding {
+    text-align: center;
+  }
+
 .card {
     margin: 0.9px;
+    max-width: 90px;
     .box {
       -webkit-border-radius: 3.6px !important;
       -moz-border-radius: 3.6px;
       border-radius: 3.6px;
+
       // height: 63px;
       height: 9vh;
       max-height: 90px;
+      max-width: 90px;
+      min-height: 45px;
+      min-width: 45px;
       background-color: white;
-
       img {
+
         // margin: 0 auto;
         width: 100%;
         height: 100%;
