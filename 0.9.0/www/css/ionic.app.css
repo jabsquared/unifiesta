@@ -7708,6 +7708,12 @@ a.button {
 .bold {
   font-family: 'blair_bold'; }
 
+ion-nav-view {
+  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover; }
+
 .logo {
   clear: both;
   width: fixed;
@@ -7867,11 +7873,6 @@ ion-content {
       -moz-border-radius: 3.6px;
       border-radius: 3.6px; }
 
-.home ion-content {
-  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover; }
 .home ion-content img {
   width: 90vw; }
 .home ion-content div {
