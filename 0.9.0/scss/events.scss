@@ -8,11 +8,16 @@
     -moz-background-size: cover;
     background-color: rgba(212,178,54,1);
     width: 100vw;
-
+    align-items: center;
     // -webkit-background-size: cover;
     // -moz-background-size: cover;
     // background-size: cover;
   }
+  ion-content * {
+	   margin: 0 auto;
+    //  text-align: center;
+  }
+
   .item-avatar {
     i:first-child,
     .item-img {
@@ -59,4 +64,5 @@
   .scheduled {
     color: #FDD804;
   }
+
 }

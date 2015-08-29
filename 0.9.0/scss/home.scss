@@ -4,6 +4,7 @@
     -moz-border-radius: 3.6px;
     border-radius: 3.6px;
     max-width: 450px;
+    margin: 0 auto;
 
   }
 
@@ -16,12 +17,7 @@
   }
 
   ion-content * {
-	   margin: 0 auto;
-     text-align: center;
-  }
-
-  div {
-    align-items: center;
+    text-align: center;
   }
 
   img {

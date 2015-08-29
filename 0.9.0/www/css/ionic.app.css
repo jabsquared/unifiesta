@@ -7748,7 +7748,8 @@ ion-content {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
-  background-color: rgba(183, 39, 12, 0.81); }
+  background-color: rgba(183, 39, 12, 0.81);
+  max-width: 450px; }
 
 .map .leaflet-container {
   -webkit-border-radius: 3.6px;
@@ -7761,7 +7762,10 @@ ion-content {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-color: #d4b236;
-  width: 100vw; }
+  width: 100vw;
+  align-items: center; }
+.events ion-content * {
+  margin: 0 auto; }
 .events .item-avatar i:first-child, .events .item-avatar .item-img {
   position: absolute;
   top: 16px;
@@ -7803,6 +7807,7 @@ ion-content {
     -webkit-background-size: cover;
     -moz-background-size: cover; }
   .event .card {
+    margin: 0 auto;
     text-align: center; }
   .event .event-title {
     font-family: 'blair_bold';
@@ -7881,17 +7886,15 @@ ion-content {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
-  max-width: 450px; }
+  max-width: 450px;
+  margin: 0 auto; }
 .home ion-content {
   background: url("../img/bg/home0.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover; }
 .home ion-content * {
-  margin: 0 auto;
   text-align: center; }
-.home div {
-  align-items: center; }
 .home img {
   width: 90vw;
   max-width: 450px; }
