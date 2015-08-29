@@ -7722,6 +7722,11 @@ ion-nav-view {
   max-width: 135px;
   margin-top: 4.5px; }
 
+.unilogo {
+  clear: both;
+  width: fixed;
+  margin-top: 9px; }
+
 /* Popup button styling */
 .oneline .popup {
   width: 70%; }
@@ -7748,10 +7753,7 @@ ion-content {
 .map .leaflet-container {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
-  border-radius: 3.6px;
-  -webkit-box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9);
-  -moz-box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9);
-  box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9); }
+  border-radius: 3.6px; }
 
 .events ion-content {
   background: url("../img/bg/home1.jpg") no-repeat fixed;
@@ -7790,6 +7792,8 @@ ion-content {
   font-family: 'blair_med';
   font-size: 0.72em;
   color: #e1e1e1; }
+.events .scheduled {
+  color: #FDD804; }
 
 .event {
   /* single event page styling */ }
@@ -7873,24 +7877,29 @@ ion-content {
       -moz-border-radius: 3.6px;
       border-radius: 3.6px; }
 
-.home .unilogo {
-  clear: both;
-  width: fixed;
-  height: 36px;
-  max-width: 135px;
-  margin-top: 4.5px; }
+.home button {
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px;
+  max-width: 450px; }
 .home ion-content {
   background: url("../img/bg/home0.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover; }
+.home ion-content * {
+  margin: 0 auto;
+  text-align: center; }
+.home div {
+  align-items: center; }
 .home img {
-  width: 90vw; }
+  width: 90vw;
+  max-width: 450px; }
 .home div {
   padding-top: 3em; }
 .home ion-content .button.button-block, .home .button.button-full {
   margin-bottom: 1.7em;
-  color: #FFF; }
+  color: #fff; }
 .home ion-content .button {
   background-color: rgba(183, 39, 12, 0.81);
   border-color: rgba(189, 65, 19, 0.45);
@@ -7899,7 +7908,7 @@ ion-content {
   margin: 1em auto;
   text-align: center; }
 .home ion-content .raffle h3 {
-  color: #009933;
+  color: #093;
   font-weight: 600;
   width: 90vw;
-  text-shadow: 2px 2px 1px #001C09; }
+  text-shadow: 2px 2px 1px #001c09; }

@@ -1,11 +1,10 @@
 .home {
+  button {
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
+    max-width: 450px;
 
-  .unilogo{
-    clear: both;
-    width: fixed;
-    height: 36px;
-    max-width: 135px;
-    margin-top: 4.5px;
   }
 
   ion-content {
@@ -16,8 +15,18 @@
     // background-color: red;
   }
 
+  ion-content * {
+	   margin: 0 auto;
+     text-align: center;
+  }
+
+  div {
+    align-items: center;
+  }
+
   img {
     width: 90vw;
+    max-width: 450px;
   }
 
   div {
@@ -26,7 +35,7 @@
 
   ion-content .button.button-block, .button.button-full {
     margin-bottom: 1.7em;
-    color: #FFF;
+    color: #fff;
   }
 
   ion-content .button {
@@ -40,13 +49,14 @@
     text-align: center;
   }
 
-  ion-content .raffle h3{
+  ion-content .raffle h3 {
+
     // color: #0099FF;
-    color: #009933;
+    color: #093;
+
     // color: #fff;
     font-weight: 600;
     width: 90vw;
-    text-shadow: 2px 2px 1px #001C09;
+    text-shadow: 2px 2px 1px #001c09;
   }
-
 }

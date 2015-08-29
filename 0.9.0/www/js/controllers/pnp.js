@@ -27,9 +27,9 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
   angular.extend($scope, {
     tiles: mapService.tiles,
     auburn: {
-      lat: 47.307492,
-      lng: -122.230582,
-      zoom: 17,
+      lat: 47.307701,
+      lng:  -122.228734,
+      zoom: 16,
       bounceAtZoomLimits: true
     },
     events: {
