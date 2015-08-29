@@ -15,7 +15,7 @@
 
 
   <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-ios-bell" ng-click="schedule({{event}})">
+  <button ng-class="event.reminder ? 'button button-icon icon ion-ios-star scheduled' : 'button button-icon icon ion-ios-star-outline'" ng-click="schedule({{event}})">
     </button>
   </ion-nav-buttons>
 

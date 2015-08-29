@@ -18,7 +18,11 @@ app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPla
   };
 
   $scope.schedule = function (single_event) {
-    reminderService.schedule(single_event);
+    if (!single_event.reminder){
+      reminderService.schedule(single_event);
+    } else {
+      reminderService.cancel(single_event.id);
+    }
   };
 
   $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
