@@ -1,5 +1,13 @@
 .home {
 
+  .unilogo{
+    clear: both;
+    width: fixed;
+    height: 36px;
+    max-width: 135px;
+    margin-top: 4.5px;
+  }
+
   ion-content {
     background: url("../img/bg/home0.jpg") no-repeat center center fixed;
     background-size: cover;

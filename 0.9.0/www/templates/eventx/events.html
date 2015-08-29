@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <ion-view name="events" class="events">
-
-  <ion-nav-bar class="bar-energized" align-title="center">
-
     <ion-nav-buttons side="left">
       <a nav-direction="back" ng-click="goBack()">
         <button class="button icon-left button-clear ion-ios-arrow-left">
@@ -12,10 +9,9 @@
     </ion-nav-buttons>
 
     <ion-nav-title>
-      <univision-logo></univision-logo>
+      <img alt="Independent de Mexico" class="logo" ng-src="img/main/header.png"/>
     </ion-nav-title>
 
-  </ion-nav-bar>
 
   <ion-content class="has-header has-footer" has-bouncing="true" overflow-scroll="true">
     <ion-item class="list" collection-repeat="event in events">

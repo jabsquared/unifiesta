@@ -7863,7 +7863,7 @@ ion-content {
     -webkit-border-radius: 3.6px !important;
     -moz-border-radius: 3.6px;
     border-radius: 3.6px;
-    height: 63px;
+    height: 9vh;
     max-height: 90px;
     background-color: white; }
     .sponsors .card .box img {
@@ -7873,6 +7873,12 @@ ion-content {
       -moz-border-radius: 3.6px;
       border-radius: 3.6px; }
 
+.home .unilogo {
+  clear: both;
+  width: fixed;
+  height: 36px;
+  max-width: 135px;
+  margin-top: 4.5px; }
 .home ion-content {
   background: url("../img/bg/home0.jpg") no-repeat center center fixed;
   background-size: cover;
