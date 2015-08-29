@@ -77,3 +77,8 @@ ion-content {
 .bar.bar-footer.ng-hide{
   height: 0px !important;
 }
+
+.bar.bar-header.ng-show,
+.bar.bar-footer.ng-show{
+  height: 0px !important;
+}

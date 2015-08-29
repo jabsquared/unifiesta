@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ion-view name="events" class="events">
+<ion-view name="events" class="events" hide-nav-bar="scrolling">
     <ion-nav-buttons side="left">
       <a nav-direction="back" ng-click="goBack()">
         <button class="button icon-left button-clear ion-ios-arrow-left">
@@ -12,7 +12,7 @@
       <img alt="Independent de Mexico" class="logo" ng-src="img/main/header.png"/>
     </ion-nav-title>
 
-  <ion-content class="has-header has-footer" has-bouncing="true"  >
+  <ion-content class="has-header has-footer" has-bouncing="true" on-scroll="scroll()" on-scroll-complete="scrollb()" >
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
       <ion-item class="list" collection-repeat="event in events">
         <div class="card">
