@@ -24,7 +24,7 @@
 
           <a ng-click="schedule(event)">
             <div class="item item-avatar">
-              <i class="icon ion-android-time"></i>
+              <i ng-class="event.reminder ? 'icon ion-ios-star scheduled' : 'icon ion-ios-star-outline'"></i>
               <h2>Start : {{event.start | date:'HH:mm a'}}</h2>
               <p>
                 End: {{event.end | date:'HH:mm a'}}

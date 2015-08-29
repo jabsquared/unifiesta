@@ -404,6 +404,9 @@ app.factory('eventData', function() {
     get: function(id) {
       return events[+(~-id)];
       // return null;
+    },
+    reminder: function (id, value) {
+      events[+(~-id)].reminder = value;
     }
   };
 });

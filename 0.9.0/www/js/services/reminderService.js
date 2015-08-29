@@ -1,4 +1,4 @@
-app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) {
+app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, eventData) {
   function add(minutes, single_event) {
     console.log("entered add function");
 
@@ -35,7 +35,10 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
         title: "Alert has been Set",
         template: "Thanks!"
       });
-      alertPopup.then(function(res) {});
+      alertPopup.then(function(res) {
+        eventData.reminder(single_event.id, true);
+        console.log('Changed reminder to true!');
+      });
     });
   }
 
