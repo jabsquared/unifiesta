@@ -8,6 +8,13 @@
   font-family: 'blair_bold';
 }
 
+ion-nav-view {
+  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+
 .logo {
   clear: both;
   width: fixed;
@@ -15,6 +22,12 @@
   width: 36vw;
   max-width: 135px;
   margin-top: 4.5px;
+}
+
+.unilogo {
+  clear: both;
+  width: fixed;
+  margin-top: 9px;
 }
 
 /* Popup button styling */
@@ -45,13 +58,31 @@ ion-content {
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
   background-color: rgba(183,39,12,0.81);
+  max-width: 450px;
+
 }
 
 .map .leaflet-container {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
-  -webkit-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
-  -moz-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
-  box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
+}
+
+.bar.bar-header,
+.bar.bar-footer{
+  transition: 0.45s all linear !important;
+}
+
+.bar.bar-header.ng-hide,
+.bar.bar-footer.ng-hide{
+  height: 0px !important;
+}
+
+.bar.bar-header.ng-show,
+.bar.bar-footer.ng-show{
+  height: 0px !important;
+}
+
+.signature{
+  visibility: hidden;
 }

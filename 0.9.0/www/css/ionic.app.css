@@ -7753,7 +7753,11 @@ ion-content {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-color: #d4b236;
-  width: 100vw; }
+  width: 100vw;
+  align-items: center;
+  padding: 9px; }
+.events ion-content * {
+  margin: 0 auto; }
 .events .item-avatar i:first-child, .events .item-avatar .item-img {
   position: absolute;
   top: 16px;
@@ -7784,6 +7788,8 @@ ion-content {
   font-family: 'blair_med';
   font-size: 0.72em;
   color: #e1e1e1; }
+.events .scheduled {
+  color: #FDD804; }
 
 .event {
   /* single event page styling */ }
@@ -7793,6 +7799,7 @@ ion-content {
     -webkit-background-size: cover;
     -moz-background-size: cover; }
   .event .card {
+    margin: 0 auto;
     text-align: center; }
   .event .event-title {
     font-family: 'blair_bold';
@@ -7805,10 +7812,13 @@ ion-content {
     color: #e1e1e1; }
   .event .card img {
     height: 45vh;
+    width: 100%;
     padding: 3.6px;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px; }
+  .event .scheduled {
+    color: #FDD804; }
 
 .pnp .map {
   height: 54vh; }
@@ -7827,6 +7837,8 @@ ion-content {
 
 .boothmap .map {
   height: 54vh; }
+.boothmap .card {
+  margin: 9px auto; }
 .boothmap .card * {
   padding: 3.6px;
   font-family: 'blair_bold';

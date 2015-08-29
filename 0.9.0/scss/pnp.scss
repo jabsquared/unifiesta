@@ -2,13 +2,16 @@
   .map{
     height: 54vh;
   }
+  .card {
+    margin: 9px auto;
+  }
   .card * {
     padding: 3.6px;
     font-family: 'blair_bold';
     color: rgba(254,252,252,1);
   }
   .card h3 {
-    margin-top: 17px;
+    margin-top: 18px;
     text-align: center;
   }
   .card p {

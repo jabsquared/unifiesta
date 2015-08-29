@@ -9,6 +9,7 @@
   }
 
   .card {
+     margin: 0 auto;
     text-align: center;
   }
 
@@ -28,6 +29,7 @@
 
   .card img {
     height: 45vh;
+    width: 100%;
     padding: 3.6px;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
@@ -37,5 +39,7 @@
     // -moz-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
     // box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
   }
-
+  .scheduled {
+    color: #FDD804;
+  }
 }

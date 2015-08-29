@@ -1,12 +1,15 @@
-app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicModal, $ionicHistory) {
+app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicHistory) {
+
+  $scope.reminderStyle = {'background-color' : 'blue'};
 
   $scope.goBack = function() {
     $ionicHistory.goBack();
   };
 
   console.log("CTRL: Events");
+  if (!$scope.events)
+    $scope.events = eventData.all();
 
-  $scope.events = eventData.all();
   $scope.shouldShowDelete = false;
   $scope.listCanSwipe = true;
 
@@ -15,7 +18,11 @@ app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPla
   };
 
   $scope.schedule = function (single_event) {
-    reminderService.schedule(single_event);
+    if (!single_event.reminder){
+      reminderService.schedule(single_event);
+    } else {
+      reminderService.cancel(single_event.id);
+    }
   };
 
   $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {

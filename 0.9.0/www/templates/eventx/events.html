@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <ion-view name="events" class="events">
-
-  <ion-nav-bar class="bar-energized" align-title="center">
-
     <ion-nav-buttons side="left">
       <a nav-direction="back" ng-click="goBack()">
         <button class="button icon-left button-clear ion-ios-arrow-left">
@@ -12,19 +9,17 @@
     </ion-nav-buttons>
 
     <ion-nav-title>
-      <univision-logo></univision-logo>
+      <img alt="Independent de Mexico" class="logo" ng-src="img/main/header.png"/>
     </ion-nav-title>
 
-  </ion-nav-bar>
-
-  <ion-content class="has-header has-footer" has-bouncing="true">
+  <ion-content class="has-header" has-bouncing="true" >
     <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
       <ion-item class="list" collection-repeat="event in events">
         <div class="card">
 
           <a ng-click="schedule(event)">
             <div class="item item-avatar">
-              <i class="icon ion-android-time"></i>
+              <i ng-class="event.reminder ? 'icon ion-ios-star scheduled' : 'icon ion-ios-star-outline'"></i>
               <h2>Start : {{event.start | date:'HH:mm a'}}</h2>
               <p>
                 End: {{event.end | date:'HH:mm a'}}
@@ -44,5 +39,10 @@
         </div>
       </ion-item>
     </ion-list>
+    <div class="signature">
+      <h1>
+        jabSquared
+      </h1>
+    </div>
   </ion-content>
 </ion-view>

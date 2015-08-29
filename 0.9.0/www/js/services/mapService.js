@@ -48,14 +48,14 @@ app.factory('mapService', function() {
   }];
 
   var pnp = [{ // PARKING #1
-    lat: 47.307263,
-    lng: -122.231312,
+    lat: 47.306496,
+    lng: -122.232631,
     focus: false,
     draggable: false,
     message: "Parking Lot!",
     info: {
       number: 1,
-      address: '32450 122nd ave se auburn wa 98092'
+      address: 'Auburn Station (Southbound)'
     },
     icon: {
       type: 'extraMarker',
@@ -65,14 +65,14 @@ app.factory('mapService', function() {
       shape: 'circle'
     }
   }, {
-    lat: 47.307367,
-    lng: -122.229776,
+    lat: 47.306631,
+    lng: -122.231422,
     focus: false,
     draggable: false,
     message: "Parking Lot!",
     info: {
       number: 2,
-      address: '123 L st auburn wa'
+      address: 'Auburn Station (Northbound)'
     },
     icon: {
       type: 'extraMarker',
@@ -81,6 +81,159 @@ app.factory('mapService', function() {
       prefix: 'fa',
       shape: 'circle'
     }
+    }, { // PARKING #3
+      lat: 47.307866,
+      lng: -122.231431,
+      focus: false,
+      draggable: false,
+      message: "Parking Lot!",
+      info: {
+        number: 3,
+        address: '120 1st St NW, Auburn, WA 98001'
+      },
+      icon: {
+        type: 'extraMarker',
+        icon: 'fa-car',
+        markerColor: 'blue',
+        prefix: 'fa',
+        shape: 'circle'
+      }
+      }, { // PARKING #4
+        lat: 47.308252,
+        lng: -122.231476,
+        focus: false,
+        draggable: false,
+        message: "Parking Lot!",
+        info: {
+          number: 4,
+          address: '101-199 1st St NW, Auburn, WA 98001'
+        },
+        icon: {
+          type: 'extraMarker',
+          icon: 'fa-car',
+          markerColor: 'blue',
+          prefix: 'fa',
+          shape: 'circle'
+        }
+    }, { // PARKING #5
+      lat: 47.308301,
+      lng:  -122.230421,
+      focus: false,
+      draggable: false,
+      message: "Parking Lot!",
+      info: {
+        number: 5,
+        address: '101 N Division St, Auburn, WA 98001'
+      },
+      icon: {
+        type: 'extraMarker',
+        icon: 'fa-car',
+        markerColor: 'blue',
+        prefix: 'fa',
+        shape: 'circle'
+      }
+  }, { // PARKING #6
+    lat: 47.306857,
+    lng:  -122.230529,
+    focus: false,
+    draggable: false,
+    message: "Parking Lot!",
+    info: {
+      number: 6,
+      address: '22 A St SW, Auburn, WA 98001'
+    },
+    icon: {
+      type: 'extraMarker',
+      icon: 'fa-car',
+      markerColor: 'blue',
+      prefix: 'fa',
+      shape: 'circle'
+    }
+}, { // PARKING #7
+  lat: 47.306282,
+  lng:  -122.230538,
+  focus: false,
+  draggable: false,
+  message: "Parking Lot!",
+  info: {
+    number: 7,
+    address: '12 1st St SW, Auburn, WA 98001'
+  },
+  icon: {
+    type: 'extraMarker',
+    icon: 'fa-car',
+    markerColor: 'blue',
+    prefix: 'fa',
+    shape: 'circle'
+  }
+}, { // PARKING #8
+  lat: 47.307701,
+  lng:  -122.228734,
+  focus: false,
+  draggable: false,
+  message: "Parking Lot!",
+  info: {
+    number: 8,
+    address: '100 Auburn Ave, Auburn, WA 98001'
+  },
+  icon: {
+    type: 'extraMarker',
+    icon: 'fa-car',
+    markerColor: 'blue',
+    prefix: 'fa',
+    shape: 'circle'
+  }
+}, { // PARKING #9 find address
+  lat: 47.307701,
+  lng:  -122.228734,
+  focus: false,
+  draggable: false,
+  message: "Parking Lot!",
+  info: {
+    number: 9,
+    address: '100 Auburn Ave, Auburn, WA 98001'
+  },
+  icon: {
+    type: 'extraMarker',
+    icon: 'fa-car',
+    markerColor: 'blue',
+    prefix: 'fa',
+    shape: 'circle'
+  }
+}, { // PARKING #10
+  lat: 47.308582,
+  lng:  -122.226938,
+  focus: false,
+  draggable: false,
+  message: "Parking Lot!",
+  info: {
+    number: 10,
+    address: '159-199 1st St NE, Auburn, WA 98001'
+  },
+  icon: {
+    type: 'extraMarker',
+    icon: 'fa-car',
+    markerColor: 'blue',
+    prefix: 'fa',
+    shape: 'circle'
+  }
+}, { // PARKING #11
+  lat: 47.308270,
+  lng:  -122.224944,
+  focus: false,
+  draggable: false,
+  message: "Parking Lot!",
+  info: {
+    number: 11,
+    address: '314-328 1st St NE, Auburn, WA 98001'
+  },
+  icon: {
+    type: 'extraMarker',
+    icon: 'fa-car',
+    markerColor: 'blue',
+    prefix: 'fa',
+    shape: 'circle'
+  }
   }];
 
   return {
@@ -141,7 +294,11 @@ app.factory('mapService', function() {
         message: 'You are Here!',
         draggable: false,
         icon: {
-          iconUrl: '/img/location.png'
+          type: 'extraMarker',
+          icon: 'fa-user',
+          markerColor: 'orange',
+          prefix: 'fa',
+          shape: 'square'
         }
       });
 

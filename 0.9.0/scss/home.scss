@@ -1,6 +1,20 @@
 .home {
+  button {
+    background-color: rgba(183,39,12,0.81);
+    border-color: rgba(189, 65, 19, 0.45);
+    min-height: 54px;
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
+    max-width: 450px;
+    margin: 4.5px auto 0.9px !important;
+  }
 
-  ion-content {
+.option {
+  padding-top: 9vh;
+}
+
+ion-content {
     background: url("../img/bg/home0.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
@@ -8,37 +22,40 @@
     // background-color: red;
   }
 
-  ion-content img {
+ion-content * {
+    text-align: center;
+  }
+
+.content{
+  height: 81vh;
+}
+
+img {
     width: 90vw;
+    max-width: 450px;
   }
 
-  ion-content div {
-    padding-top: 3em;
+.button.button-block,
+  .button.button-full {
+    margin-bottom: 1.8em;
+    color: #fff;
   }
 
-  ion-content .button.button-block, .button.button-full {
-    margin-bottom: 1.7em;
-    color: #FFF;
-  }
-
-  ion-content .button {
-    background-color: rgba(183,39,12,0.81);
-    border-color: rgba(189, 65, 19, 0.45);
-    min-height: 55px;
-  }
-
-  ion-content .raffle {
+.raffle {
     margin: 1em auto;
     text-align: center;
   }
 
-  ion-content .raffle h3{
-    // color: #0099FF;
-    color: #009933;
-    // color: #fff;
-    font-weight: 600;
-    width: 90vw;
-    text-shadow: 2px 2px 1px #001C09;
-  }
+.raffle h3 {
 
+    // color: #0099FF;
+    // color: #fff;
+    color: #093;
+    font-weight: 450;
+    width: 90vw;
+    text-shadow: 2px 2px 1px #001c09;
+  }
+  h1{
+    color: transparent;
+  }
 }

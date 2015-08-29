@@ -1,4 +1,4 @@
-app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) {
+app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, eventData) {
   function add(minutes, single_event) {
     console.log("entered add function");
 
@@ -35,12 +35,17 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
         title: "Alert has been Set",
         template: "Thanks!"
       });
-      alertPopup.then(function(res) {});
+      alertPopup.then(function(res) {
+        // eventData.reminder(single_event.id, true);
+        // console.log('Changed reminder to true!');
+      });
     });
   }
 
   return {
     schedule: function(single_event) {
+      eventData.reminder(single_event.id, true);
+      console.log('Changed reminder to true!');
       var alarmPopup = $ionicPopup.show({
         title: '<font size="3" class="bold" color="black">Set Reminder</font>',
         // template: "",
@@ -81,6 +86,41 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup) 
       });
       console.log("alarmPopup:");
       console.log(alarmPopup);
+    },
+    cancel: function(event_id) {
+      // A confirm dialog
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Cancel Reminder',
+        template: 'Are you sure you want to cancel this reminder?',
+        buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
+          text: '<font size="3" color="white">No</font>',
+          type: 'button-energized',
+          onTap: function(e) {
+            // Returning a value will cause the promise to resolve with the given value.
+            return false;
+          }
+        }, {
+          text: '<font size="3" color="white">Yes</font>',
+          type: 'button-energized',
+          onTap: function(e) {
+            // Returning a value will cause the promise to resolve with the given value.
+            return true;
+          }
+        }]
+      });
+      confirmPopup.then(function(res) {
+        if (res) {
+          $cordovaLocalNotification.cancel(event_id).then(function (result) {
+            console.log(result);
+            eventData.reminder(single_event.id, false);
+            console.log('Changed reminder to false!');
+          });
+          console.log('Yes!');
+        } else {
+          console.log('Nope!');
+        }
+      });
+
     }
   };
 
