@@ -7765,6 +7765,9 @@ ion-content {
 .bar.bar-header.ng-show, .bar.bar-footer.ng-show {
   height: 0px !important; }
 
+.signature {
+  visibility: hidden; }
+
 .events ion-content {
   background: url("../img/bg/home1.jpg") no-repeat fixed;
   background-size: cover;
@@ -7830,6 +7833,7 @@ ion-content {
     color: #e1e1e1; }
   .event .card img {
     height: 45vh;
+    width: 100%;
     padding: 3.6px;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
