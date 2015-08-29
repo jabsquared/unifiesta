@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive', 'templates']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
   // setup state for login page
@@ -48,9 +48,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
-});
+}]);
 
-app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope) {
+app.run(['$ionicPlatform', '$timeout', '$cordovaDevice', '$rootScope', function($ionicPlatform, $timeout, $cordovaDevice, $rootScope) {
 
   $rootScope.showFooter = true;
 
@@ -86,4 +86,4 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope) {
     }
 
   });
-});
+}]);

@@ -1,6 +1,4 @@
-app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicModal, $ionicHistory) {
-
-  $scope.reminderStyle = {'background-color' : 'blue'};
+app.controller('EventsCtrl', ['$scope', '$state', 'reminderService', '$ionicPlatform', 'eventData', '$ionicModal', '$ionicHistory', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicModal, $ionicHistory) {
 
   $scope.goBack = function() {
     $ionicHistory.goBack();
@@ -24,4 +22,4 @@ app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPla
     alert("Added a notification");
   });
 
-});
+}]);

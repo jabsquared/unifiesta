@@ -27,6 +27,13 @@
   <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
   <!-- <script src="lib/ngCordova/dist/ng-cordova-mocks.min.js"></script> -->
 
+  <!-- gulp-angular-templatecache -->
+  <script src="js/templates.js"></script>
+
+  <!-- gulp-ng-annotate -->
+  <!-- <script src="dist/dist_js/app/app.js"></script> -->
+
+
   <!-- leaflet -->
   <script src="lib/leaflet/dist/leaflet.js"></script>
   <script src="lib/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
@@ -57,16 +64,17 @@
 <body ng-app="starter">
 
 
+
   <ion-nav-view>
   </ion-nav-view>
 
   <div ng-controller="SponsorsCtrl" class="bar bar-footer sponsors bar-energized" ng-show="$root.showFooter">
-
+    <h1 class="title bold">Sponsors</h1>
     <a nav-direction="forward" ng-click="toggle()">
 
       <ion-slide-box show-pager="false" does-continue="true" auto-play="3600" on-slide-changed="slideChanged(index)">
         <ion-slide ng-repeat="i in img" ng-if="$index % 4 === 0">
-          <div class="sgroup" >
+          <div class="sgroup">
             <img ng-src="{{img[$index]}}" alt="img{{$index}}" />
             <img ng-src="{{img[$index + 1]}}" alt="img{{$index+1}}" />
             <img ng-src="{{img[$index + 2]}}" alt="img{{$index+2}}" />

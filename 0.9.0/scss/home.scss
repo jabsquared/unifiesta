@@ -1,18 +1,18 @@
 .home {
 
-  // ion-content {
-  //   background: url("../img/bg/home0.jpg") no-repeat center center fixed;
-  //   background-size: cover;
-  //   -webkit-background-size: cover;
-  //   -moz-background-size: cover;
-  //   // background-color: red;
-  // }
+  ion-content {
+    background: url("../img/bg/home0.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    // background-color: red;
+  }
 
-  ion-content img {
+  img {
     width: 90vw;
   }
 
-  ion-content div {
+  div {
     padding-top: 3em;
   }
 

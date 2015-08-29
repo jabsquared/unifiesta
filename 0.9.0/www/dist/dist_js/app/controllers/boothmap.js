@@ -1,36 +1,37 @@
-app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
+app.controller('BoothMapCtrl', ['$scope', '$state', '$stateParams', 'leafletData', '$ionicHistory', 'mapService', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
+  console.log('CTRL: BoothMap');
 
-  document.addEventListener("deviceready", onDeviceReady, false);
-
-  function onDeviceReady() {
-    console.log("navigator.geolocation works well");
-  }
-
+  // Feilds
   $scope.findMe = false;
-
-  $scope.markers = mapService.pnp;
   $scope.iconColor = {
     color: '#DDDDDDFF'
   };
-
   $scope.info = {};
   $scope.showCard = false;
 
-  $scope.watchID = 9;
+  var watchID;
   // Fetching frequency, every sec...
-  $scope.watchOptions = {
+  var watchOptions = {
     frequency: 1000,
     timeout: 3000,
     enableHighAccuracy: false // may cause errors if true
   };
 
+  $scope.markers = mapService.booth;
+
+
   angular.extend($scope, {
-    tiles: mapService.tiles,
+    tiles: {
+      url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    },
     auburn: {
-      lat: 47.307701,
-      lng:  -122.228734,
-      zoom: 16,
+      lat: 47.307492,
+      lng: -122.230582,
+      zoom: 17,
       bounceAtZoomLimits: true
+    },
+    center: {
+      autoDiscover: true
     },
     events: {
       markers: {
@@ -48,7 +49,7 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
   };
 
   $scope.dissableGeoLocation = function() {
-    mapService.dissableGeoLocation($scope, "pnp");
+    mapService.dissableGeoLocation($scope, "booth");
   };
 
   $scope.onSuccess = function(position) {
@@ -60,10 +61,7 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
     mapService.onError(error);
   };
 
-  // Map Data:
-
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
-    console.log('Clicked Parking Lot!');
     if (args.leafletEvent.target.options.info) {
       console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;
@@ -78,4 +76,5 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
     $scope.dissableGeoLocation();
     $ionicHistory.goBack();
   };
-});
+
+}]);

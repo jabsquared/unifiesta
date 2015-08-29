@@ -9,7 +9,8 @@ app.factory('eventData', function() {
       end: new Date('2015-08-13T10:55:00-08:00'),
       desc: "Zumba",
       img: [
-        "event"
+        "event-bg-0",
+        "event-bg-1"
       ],
       reminder: false
     }, {
@@ -403,9 +404,6 @@ app.factory('eventData', function() {
     get: function(id) {
       return events[+(~-id)];
       // return null;
-    },
-    reminder: function (id, value) {
-      events[+(~-id)].reminder = value;
     }
   };
 });
