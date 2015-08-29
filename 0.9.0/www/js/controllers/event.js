@@ -14,13 +14,15 @@ app.controller('EventCtrl', function($scope, $state, $stateParams, eventData, $i
   console.log($scope.hasImage);
 
   $scope.schedule = function (single_event) {
-    reminderService.schedule(single_event);
+    if (!single_event.reminder){
+      reminderService.schedule(single_event);
+    } else {
+      reminderService.cancel(single_event.id);
+    }
   };
 
   $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
     alert("Added a notification");
   });
-
-
 
 });

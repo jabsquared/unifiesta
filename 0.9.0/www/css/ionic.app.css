@@ -7817,6 +7817,8 @@ ion-content {
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px; }
+  .event .scheduled {
+    color: #FDD804; }
 
 .pnp .map {
   height: 54vh; }
