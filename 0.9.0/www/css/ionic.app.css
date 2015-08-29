@@ -7708,6 +7708,12 @@ a.button {
 .bold {
   font-family: 'blair_bold'; }
 
+ion-nav-view {
+  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover; }
+
 .logo {
   clear: both;
   width: fixed;
@@ -7715,6 +7721,11 @@ a.button {
   width: 36vw;
   max-width: 135px;
   margin-top: 4.5px; }
+
+.unilogo {
+  clear: both;
+  width: fixed;
+  margin-top: 9px; }
 
 /* Popup button styling */
 .oneline .popup {
@@ -7737,15 +7748,25 @@ ion-content {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
-  background-color: rgba(183, 39, 12, 0.81); }
+  background-color: rgba(183, 39, 12, 0.81);
+  max-width: 450px; }
 
 .map .leaflet-container {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
-  border-radius: 3.6px;
-  -webkit-box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9);
-  -moz-box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9);
-  box-shadow: 9px 9px 9px -9px rgba(0, 0, 0, 0.9); }
+  border-radius: 3.6px; }
+
+.bar.bar-header, .bar.bar-footer {
+  transition: 0.45s all linear !important; }
+
+.bar.bar-header.ng-hide, .bar.bar-footer.ng-hide {
+  height: 0px !important; }
+
+.bar.bar-header.ng-show, .bar.bar-footer.ng-show {
+  height: 0px !important; }
+
+.signature {
+  visibility: hidden; }
 
 .events ion-content {
   background: url("../img/bg/home1.jpg") no-repeat fixed;
@@ -7822,12 +7843,14 @@ ion-content {
 
 .pnp .map {
   height: 54vh; }
+.pnp .card {
+  margin: 9px auto; }
 .pnp .card * {
   padding: 3.6px;
   font-family: 'blair_bold';
   color: #fefcfc; }
 .pnp .card h3 {
-  margin-top: 17px;
+  margin-top: 18px;
   text-align: center; }
 .pnp .card p {
   text-align: center;
@@ -7858,39 +7881,68 @@ ion-content {
   width: 99vw;
   display: inline-block; }
 .sponsors .sgroup img {
-  height: 33px; }
+  height: 33px;
+  max-width: 100%;
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px; }
+.sponsors .center {
+  display: inline-block; }
+.sponsors .padding {
+  text-align: center; }
 .sponsors .card {
-  margin: 0px !important; }
+  margin: 0.9px;
+  max-width: 90px; }
   .sponsors .card .box {
-    -webkit-border-radius: 3.6px;
+    -webkit-border-radius: 3.6px !important;
     -moz-border-radius: 3.6px;
     border-radius: 3.6px;
-    height: 100%;
+    height: 9vh;
+    max-height: 90px;
+    max-width: 90px;
+    min-height: 45px;
+    min-width: 45px;
     background-color: white; }
     .sponsors .card .box img {
-      width: 100%; }
+      width: 100%;
+      height: 100%;
+      -webkit-border-radius: 3.6px;
+      -moz-border-radius: 3.6px;
+      border-radius: 3.6px; }
 
+.home button {
+  background-color: rgba(183, 39, 12, 0.81);
+  border-color: rgba(189, 65, 19, 0.45);
+  min-height: 54px;
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px;
+  max-width: 450px;
+  margin: 4.5px auto 0.9px !important; }
+.home .option {
+  padding-top: 9vh; }
 .home ion-content {
   background: url("../img/bg/home0.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover; }
-.home ion-content img {
-  width: 90vw; }
-.home ion-content div {
-  padding-top: 3em; }
-.home ion-content .button.button-block, .home .button.button-full {
-  margin-bottom: 1.7em;
-  color: #FFF; }
-.home ion-content .button {
-  background-color: rgba(183, 39, 12, 0.81);
-  border-color: rgba(189, 65, 19, 0.45);
-  min-height: 55px; }
-.home ion-content .raffle {
+.home ion-content * {
+  text-align: center; }
+.home .content {
+  height: 81vh; }
+.home img {
+  width: 90vw;
+  max-width: 450px; }
+.home .button.button-block, .home .button.button-full {
+  margin-bottom: 1.8em;
+  color: #fff; }
+.home .raffle {
   margin: 1em auto;
   text-align: center; }
-.home ion-content .raffle h3 {
-  color: #009933;
-  font-weight: 600;
+.home .raffle h3 {
+  color: #093;
+  font-weight: 450;
   width: 90vw;
-  text-shadow: 2px 2px 1px #001C09; }
+  text-shadow: 2px 2px 1px #001c09; }
+.home h1 {
+  color: transparent; }
