@@ -10,9 +10,6 @@ app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPla
   if (!$scope.events)
     $scope.events = eventData.all();
 
-  $scope.shouldShowDelete = false;
-  $scope.listCanSwipe = true;
-
   $scope.go = function(path) {
     $state.go(path);
   };
