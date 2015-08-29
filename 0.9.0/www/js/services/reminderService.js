@@ -112,7 +112,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
         if (res) {
           $cordovaLocalNotification.cancel(event_id).then(function (result) {
             console.log(result);
-            eventData.reminder(single_event.id, false);
+            eventData.reminder(event_id, false);
             console.log('Changed reminder to false!');
           });
           console.log('Yes!');
