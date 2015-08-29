@@ -1,44 +1,52 @@
 .home {
+  button {
+    -webkit-border-radius: 3.6px;
+    -moz-border-radius: 3.6px;
+    border-radius: 3.6px;
+  }
 
-  ion-content {
+ion-content {
     background: url("../img/bg/home0.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
+
     // background-color: red;
   }
 
-  img {
+img {
     width: 90vw;
   }
 
-  div {
+div {
     padding-top: 3em;
   }
 
-  ion-content .button.button-block, .button.button-full {
+ion-content .button.button-block,
+  .button.button-full {
     margin-bottom: 1.7em;
-    color: #FFF;
+    color: #fff;
   }
 
-  ion-content .button {
+ion-content .button {
     background-color: rgba(183,39,12,0.81);
     border-color: rgba(189, 65, 19, 0.45);
     min-height: 55px;
   }
 
-  ion-content .raffle {
+ion-content .raffle {
     margin: 1em auto;
     text-align: center;
   }
 
-  ion-content .raffle h3{
+ion-content .raffle h3 {
+
     // color: #0099FF;
-    color: #009933;
+    color: #093;
+
     // color: #fff;
     font-weight: 600;
     width: 90vw;
-    text-shadow: 2px 2px 1px #001C09;
+    text-shadow: 2px 2px 1px #001c09;
   }
-
 }
