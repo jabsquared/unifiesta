@@ -23,18 +23,18 @@
               <i ng-class="event.reminder ?
                 'icon ion-ios-star scheduled' :
                 'icon ion-ios-star-outline'"></i>
-              <h2>Start : {{event.start | date:'HH:mm a'}}</h2>
+              <h2>Start: {{event.start | date:'hh:mm a'}}</h2>
               <p>
-                End: {{event.end | date:'HH:mm a'}}
+                End: {{event.end | date:'hh:mm a'}}
               </p>
             </div>
           </a>
 
           <a ng-href="#/events/{{event.id}}">
             <div class="item">
-              <h2>{{event.name | limitTo : 27 : 0}}</h2>
+              <h2>{{event.name | limitTo : 18 : 0}}</h2>
               <p>
-                {{event.desc | limitTo : 27 : 0}}
+                {{event.desc | limitTo : 18 : 0}}
               </p>
             </div>
           </a>
