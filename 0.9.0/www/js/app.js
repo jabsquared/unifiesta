@@ -5,7 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive', 'templates']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+
+  $ionicConfigProvider.views.forwardCache(true);
 
   $stateProvider
   // setup state for login page

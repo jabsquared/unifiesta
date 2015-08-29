@@ -1,4 +1,4 @@
-app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicModal, $ionicHistory) {
+app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicHistory) {
 
   $scope.reminderStyle = {'background-color' : 'blue'};
 
@@ -7,8 +7,9 @@ app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPla
   };
 
   console.log("CTRL: Events");
+  if (!$scope.events)
+    $scope.events = eventData.all();
 
-  $scope.events = eventData.all();
   $scope.shouldShowDelete = false;
   $scope.listCanSwipe = true;
 
