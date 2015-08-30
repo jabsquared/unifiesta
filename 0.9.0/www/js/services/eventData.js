@@ -9,7 +9,7 @@ app.factory('eventData', function() {
       end: new Date('2015-08-13T10:55:00-08:00'),
       desc: "Zumba",
       img: [
-        "event"
+        "1"
       ],
       reminder: false
     }, {
@@ -19,7 +19,9 @@ app.factory('eventData', function() {
       start: new Date('2015-08-13T10:55:00-08:00'),
       end: new Date('2015-08-13T11:00:00-08:00'),
       desc: "Bienvenida",
-      img: [],
+      img: [
+
+      ],
       reminder: false
     }, {
       id: 3,
@@ -28,7 +30,9 @@ app.factory('eventData', function() {
       start: new Date('2015-08-13T11:00:00-08:00'),
       end: new Date('2015-08-13T11:15:00-08:00'),
       desc: "Zumba",
-      img: [],
+      img: [
+
+      ],
       reminder: false
     }, {
       id: 4,
@@ -37,7 +41,9 @@ app.factory('eventData', function() {
       start: new Date('2015-08-13T11:15:00-08:00'),
       end: new Date('2015-08-13T11:20:00-08:00'),
       desc: 'Ranchera',
-      img: [],
+      img: [
+
+      ],
       reminder: false
     }, {
       id: 5,
@@ -46,7 +52,9 @@ app.factory('eventData', function() {
       start: new Date('2015-08-13T11:20:00-08:00'),
       end: new Date('2015-08-13T11:25:00-08:00'),
       desc: 'Ranchera',
-      img: [],
+      img: [
+
+      ],
       reminder: false
     }, {
       id: 6,
@@ -55,7 +63,9 @@ app.factory('eventData', function() {
       start: new Date('2015-08-13T11:25:00-08:00'),
       end: new Date('2015-08-13T11:30:00-08:00'),
       desc: 'Bachata',
-      img: [],
+      img: [
+
+      ],
       reminder: false
     }, {
       id: 7,

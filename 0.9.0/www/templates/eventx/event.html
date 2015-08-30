@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <ion-view name="event" class="event">
 
-    <ion-nav-buttons side="left">
-        <button class="button icon-left button-clear ion-ios-arrow-left"  ng-click="goBack()">
-          Back
-        </button>
-    </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <button class="button icon-left button-clear ion-ios-arrow-left" ng-click="goBack()">
+      Back
+    </button>
+  </ion-nav-buttons>
 
   <ion-nav-title>
     {{::event.start | date:'HH:mm a'}}
@@ -13,7 +13,7 @@
 
 
   <ion-nav-buttons side="right">
-  <button ng-class="event.reminder ? 'button button-icon icon ion-ios-star scheduled' : 'button button-icon icon ion-ios-star-outline'" ng-click="schedule({{event}})">
+    <button ng-class="event.reminder ? 'button button-icon icon ion-ios-star scheduled' : 'button button-icon icon ion-ios-star-outline'" ng-click="schedule({{event}})">
     </button>
   </ion-nav-buttons>
 
@@ -28,11 +28,22 @@
       </p>
     </div>
 
-    <div class="card" ng-show="hasImage">
+    <div class="card">
       <ion-slide-box>
-        <ion-slide ng-repeat="ei in event.img">
-          <img ng-src="img/eimg/{{ei}}.jpg" alt="Event #{{$index}}" />
+        <!-- https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/x.jpg | png
+          -->
+        <!-- Single Image || Using event id -->
+        <ion-slide>
+          <img ng-src="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/{{event.id}}.jpg" alt="Event #{{event.id}}" />
         </ion-slide>
+
+        <!-- Multiple images || Using img arrays -->
+        <!--
+          <ion-slide ng-repeat="ei in event.img">
+          <img ng-src="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/{{ei}}.jpg" alt="Event #{{$index}}" />
+        </ion-slide>
+        -->
+
       </ion-slide-box>
 
     </div>

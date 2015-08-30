@@ -7835,8 +7835,8 @@ ion-content {
     margin: 1.3em 1em;
     color: #e1e1e1; }
   .event .card img {
-    height: 45vh;
-    width: 100%;
+    max-height: 45vh;
+    max-width: 100%;
     padding: 3.6px;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
