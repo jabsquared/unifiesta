@@ -1,8 +1,7 @@
 app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicHistory) {
 
-  $scope.reminderStyle = {'background-color' : 'blue'};
-
   $scope.goBack = function() {
+
     $ionicHistory.goBack();
   };
 

@@ -70,8 +70,8 @@
   </ion-nav-view>
 
   <div ng-controller="SponsorsCtrl" class="bar bar-footer sponsors bar-energized" ng-show="$root.showFooter">
-    <h1 class="title bold">Sponsors</h1>
     <a ng-click="toggle()">
+      <h1 class="title bold">Sponsors</h1>
 
       <ion-slide-box show-pager="false" does-continue="true" auto-play="3600" on-slide-changed="slideChanged(index)">
         <ion-slide ng-repeat="i in img" ng-if="$index % 4 === 0">

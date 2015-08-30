@@ -7777,7 +7777,6 @@ ion-content {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-color: #d4b236;
   width: 100vw;
   align-items: center;
   padding: 9px; }
@@ -7878,7 +7877,8 @@ ion-content {
   color: black; }
 
 .sponsors .slider {
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 .sponsors .slider-slide .sgroup {
   text-align: center;
   height: 33px;
@@ -7915,9 +7915,7 @@ ion-content {
       border-radius: 3.6px; }
 
 .home button {
-  background-color: rgba(183, 39, 12, 0.81);
-  border-color: rgba(189, 65, 19, 0.45);
-  min-height: 54px;
+  min-height: 9vh;
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
@@ -7946,7 +7944,6 @@ ion-content {
 .home .raffle h3 {
   color: #093;
   font-weight: 450;
-  width: 90vw;
-  text-shadow: 2px 2px 1px #001c09; }
+  width: 90vw; }
 .home h1 {
   color: transparent; }
