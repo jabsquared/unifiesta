@@ -7703,7 +7703,8 @@ a.button {
 
 /* Header */
 * {
-  font-family: 'blair_med'; }
+  font-family: 'blair_med';
+  box-shadow: none !important; }
 
 .bold {
   font-family: 'blair_bold'; }
