@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <ion-view title="Sponsors" class="sponsors">
 
-		<ion-nav-buttons side="left">
-			<a nav-direction="back" ng-click="goBack()">
-				<button class="button icon-left button-clear ion-ios-arrow-left">
-					Back
-				</button>
-			</a>
-		</ion-nav-buttons>
+	<ion-nav-buttons side="left">
+		<button class="button icon-left button-clear ion-ios-arrow-left" ng-click="goBack()">
+			Back
+		</button>
+	</ion-nav-buttons>
 
 
 	<ion-content class="has-header" has-bouncing="true" padding="true">
@@ -24,13 +22,13 @@
 				<div class="col col-25 card" ng-if="$index + 1 < img.length">
 					<div class="box">
 
-						<img ng-src="{{img[$index + 1]}}"/>
+						<img ng-src="{{img[$index + 1]}}" />
 					</div>
 				</div>
 
 				<div class="col col-25 card" ng-if="$index + 2 < img.length">
 					<div class="box">
-						<img ng-src="{{img[$index + 2]}}"/>
+						<img ng-src="{{img[$index + 2]}}" />
 					</div>
 				</div>
 
