@@ -4,18 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com *.ionic.io *.openstreetmap.org; style-src 'self' 'unsafe-inline'; media-src *; img-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+  <meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: gap: https://ssl.gstatic.com *.ionic.io *.openstreetmap.org; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; img-src *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos;">
 
   <title>Unifiesta</title>
 
   <!-- compiled css output -->
-  <link href="css/ionic.app.min.css" rel="stylesheet" />
+  <link href="css/ionic.app.min.css" rel="stylesheet">
 
   <!-- font awesome (needed for leaflet extra markers) -->
-  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="lib/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/leaflet/dist/leaflet.css">
   <!-- Leaflet Extra Markers -->
-  <link rel="stylesheet" href="lib/Leaflet.extra-markers/src/leaflet.extra-markers.css" />
+  <link rel="stylesheet" href="lib/Leaflet.extra-markers/src/leaflet.extra-markers.css">
 
   <!-- ionic/angularjs js -->
   <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -63,7 +63,7 @@
 
 <body ng-app="starter">
 
-  <ion-nav-bar class="bar bar-energized" align-title="center" >
+  <ion-nav-bar class="bar bar-energized" align-title="center">
   </ion-nav-bar>
 
   <ion-nav-view>
@@ -76,10 +76,10 @@
       <ion-slide-box show-pager="false" does-continue="true" auto-play="3600" on-slide-changed="slideChanged(index)">
         <ion-slide ng-repeat="i in img" ng-if="$index % 4 === 0">
           <div class="sgroup">
-            <img ng-src="{{img[$index]}}" alt="img{{$index}}" />
-            <img ng-src="{{img[$index + 1]}}" alt="img{{$index+1}}" />
-            <img ng-src="{{img[$index + 2]}}" alt="img{{$index+2}}" />
-            <img ng-src="{{img[$index + 3]}}" alt="img{{$index+3}}" />
+            <img ng-src="{{::img[$index]}}" alt="img{{$index}}">
+            <img ng-src="{{::img[$index + 1]}}" alt="img{{$index+1}}">
+            <img ng-src="{{::img[$index + 2]}}" alt="img{{$index+2}}">
+            <img ng-src="{{::img[$index + 3]}}" alt="img{{$index+3}}">
           </div>
         </ion-slide>
       </ion-slide-box>

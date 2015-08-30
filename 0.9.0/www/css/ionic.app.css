@@ -7769,6 +7769,9 @@ ion-content {
 .signature {
   visibility: hidden; }
 
+.platform-ios.platform-cordova:not(.fullscreen) .search-bar {
+  margin-top: 20px; }
+
 .events ion-content {
   background: url("../img/bg/home1.jpg") no-repeat fixed;
   background-size: cover;

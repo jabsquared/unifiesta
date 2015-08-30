@@ -1,17 +1,13 @@
 {
   "name": "unifiesta",
-  "app_id": "124b6f25",
+  "app_id": "0e6ee9f4",
   "gulpStartupTasks": [
     "sass",
+    "templatecache",
     "watch"
   ],
   "watchPatterns": [
     "www/**/*",
     "!www/lib/**/*"
-  ],
-  "gulpStartupTasks": [
-    "sass",
-    "templatecache",
-    "watch"
   ]
 }
