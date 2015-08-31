@@ -12,7 +12,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
 
   $scope.center = {
     lat: 47.307701,
-    lng:  -122.228734,
+    lng: -122.228734,
   };
 
   $scope.watchID = 9;
@@ -21,7 +21,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     tiles: mapService.tiles,
     auburn: {
       lat: $scope.center.lat,
-      lng:  $scope.center.lng,
+      lng: $scope.center.lng,
       zoom: 16,
       bounceAtZoomLimits: true
     },
@@ -57,13 +57,18 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
     // console.log('Clicked Parking Lot!');
+    if ($scope.info === args.leafletEvent.target.options.info){
+      $scope.showCard = false;
+      $scope.info = 0;
+      return;
+    }
     if (args.leafletEvent.target.options.info) {
       // console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;
-      $scope.showCard = true;
-    } else {
-      $scope.showCard = false;
     }
+
+    $scope.showCard = true;
+
   });
 
   $scope.goBack = function() {
