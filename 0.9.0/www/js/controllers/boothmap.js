@@ -1,4 +1,4 @@
-app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
+app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
   console.log('CTRL: BoothMap');
 
   // Feilds
@@ -74,6 +74,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletDat
 
   $scope.goBack = function() {
     $scope.dissableGeoLocation();
+    $rootScope.showFooter = true;
     $ionicHistory.goBack();
   };
 

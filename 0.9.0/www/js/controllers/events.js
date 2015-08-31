@@ -1,7 +1,7 @@
-app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicHistory) {
+app.controller('EventsCtrl', function($scope, $rootScope, $state, reminderService, $ionicPlatform, eventData, $ionicHistory) {
 
   $scope.goBack = function() {
-
+    $rootScope.showFooter = true;
     $ionicHistory.goBack();
   };
 

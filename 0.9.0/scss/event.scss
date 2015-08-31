@@ -8,8 +8,13 @@
     // background-color: transparent;
   }
 
+  .icon {
+    color: white;
+  }
+
   .card {
-     margin: 0 auto;
+    min-height: 9vh;
+    margin: 0 auto;
     text-align: center;
   }
 
@@ -28,6 +33,7 @@
   }
 
   .card img {
+
     max-height: 45vh;
     // width: 100%;
     max-width: 100%;
@@ -35,7 +41,7 @@
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
-
+    color: white;
     // -webkit-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
     // -moz-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
     // box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);

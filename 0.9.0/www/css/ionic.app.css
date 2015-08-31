@@ -7822,7 +7822,10 @@ ion-content {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover; }
+  .event .icon {
+    color: white; }
   .event .card {
+    min-height: 9vh;
     margin: 0 auto;
     text-align: center; }
   .event .event-title {
@@ -7840,7 +7843,8 @@ ion-content {
     padding: 3.6px;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
-    border-radius: 9px; }
+    border-radius: 9px;
+    color: white; }
   .event .scheduled {
     color: #FDD804; }
 
@@ -7877,8 +7881,7 @@ ion-content {
   color: black; }
 
 .sponsors .slider {
-  height: 100%;
-  width: 100%; }
+  height: 100%; }
 .sponsors .slider-slide .sgroup {
   text-align: center;
   height: 33px;
@@ -7896,23 +7899,26 @@ ion-content {
   text-align: center; }
 .sponsors .card {
   margin: 0.9px;
-  max-width: 90px; }
+  max-width: 90px;
+  min-height: 45px; }
   .sponsors .card .box {
     -webkit-border-radius: 3.6px !important;
     -moz-border-radius: 3.6px;
     border-radius: 3.6px;
+    background-color: white;
     height: 9vh;
     max-height: 90px;
     max-width: 90px;
     min-height: 45px;
-    min-width: 45px;
-    background-color: white; }
+    min-width: 45px; }
     .sponsors .card .box img {
-      width: 100%;
-      height: 100%;
-      -webkit-border-radius: 3.6px;
-      -moz-border-radius: 3.6px;
-      border-radius: 3.6px; }
+      display: block;
+      width: 99%;
+      height: auto;
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%); }
 
 .home button {
   min-height: 9vh;

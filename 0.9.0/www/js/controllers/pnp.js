@@ -1,4 +1,4 @@
-app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
+app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
 
   document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -76,6 +76,7 @@ app.controller('PnPCtrl', function($scope, $state, $stateParams, leafletData, $i
 
   $scope.goBack = function() {
     $scope.dissableGeoLocation();
+    $rootScope.showFooter = true;
     $ionicHistory.goBack();
   };
 });
