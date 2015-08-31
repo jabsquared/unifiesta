@@ -17,7 +17,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
     function subtractMinutes(date_obj, minutes) {
       new_date_obj = new Date();
       return new Date(new_date_obj.getTime() + minutes * 1000);
-      // return new Date(new_date_obj.getTime() + minutes * 6000);
+      // return new Date(new_date_obj.getTime() + minutes * 60000);
     }
 
     $cordovaLocalNotification.schedule({
