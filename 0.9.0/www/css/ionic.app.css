@@ -7848,8 +7848,13 @@ ion-content {
   margin-top: 18px;
   text-align: center; }
 .pnp .card p {
+  padding: 9px;
   text-align: center;
-  color: black; }
+  color: #fefcfc;
+  font-size: 0.81em; }
+.pnp .card .item-divider {
+  background: rgba(0, 0, 0, 0.27);
+  text-align: center; }
 .pnp .card .button.button-block, .pnp .button.button-full {
   margin-bottom: 0px; }
 

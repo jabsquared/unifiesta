@@ -17,10 +17,25 @@
     </button>
   </ion-nav-buttons>
 
-  <ion-content class="has-header" has-bouncing="false" padding="true">
+  <ion-content class="has-header" has-bouncing="true" padding="true">
     <div class="map" data-tap-disabled="true">
       <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="100%" markers="markers" width="100%">
       </leaflet>
+    </div>
+
+    <div ng-if="!showCard" class="card">
+      <p>
+        <b> ALL </b> street parking are <br><b>FREE!</b>
+      </p>
+      <div class="item-divider item-text-wrap">
+        <p>
+          <b>
+            For parking lots,<br>
+          </b>
+          Select a marker on the map above for more detail
+        </p>
+      </div>
+
     </div>
 
     <div ng-if="showCard" class="card">
@@ -32,6 +47,7 @@
         Get Directions
       </button>
     </div>
+
     <div class="signature">
       <h1>
         jabSquared

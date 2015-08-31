@@ -9,7 +9,6 @@ app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams
 
   $scope.showCard = false;
 
-
   $scope.center = {
     lat: 47.307492,
     lng: -122.230582,
@@ -46,7 +45,7 @@ app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams
   };
 
   $scope.onSuccess = function(position) {
-    mapService.onSuccess($scope, position,"booth");
+    mapService.onSuccess($scope, position, "booth");
   };
 
   // onError Callback receives a PositionError object
