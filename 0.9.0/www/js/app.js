@@ -9,10 +9,13 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
   $ionicConfigProvider.views.forwardCache(true);
 
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/');
+
   $stateProvider
   // setup state for login page
 
-    .state('home', {
+  .state('home', {
     url: '/',
     templateUrl: 'homex/home.html',
     controller: 'HomeCtrl'
@@ -47,9 +50,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     templateUrl: 'sponsorx/sponsors.html',
     controller: 'SponsorsCtrl'
   });
-
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
 });
 
 app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $templateCache, $http) {
@@ -58,10 +58,12 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $template
   $rootScope.showFooter = true;
 
   $ionicPlatform.ready(function() {
+
     var templates = [
       "templates/homex/home.html",
       "templates/eventx/events.html"
     ];
+
 
     function cacheT(t) {
       $templateCache.put(template, t);
@@ -103,6 +105,5 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $template
         });
       };
     }
-
   });
 });

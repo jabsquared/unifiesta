@@ -7726,7 +7726,8 @@ ion-content {
 .unilogo {
   clear: both;
   width: fixed;
-  margin-top: 9px; }
+  margin-top: 9px;
+  max-height: 45%; }
 
 /* Popup button styling */
 .oneline .popup {
