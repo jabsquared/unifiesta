@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive', 'templates']);
 
-app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
   $ionicConfigProvider.views.forwardCache(true);
 
@@ -13,16 +13,16 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
   // setup state for login page
 
     .state('home', {
-      url: '/',
-      templateUrl: 'homex/home.html',
-      controller: 'HomeCtrl'
-    })
+    url: '/',
+    templateUrl: 'homex/home.html',
+    controller: 'HomeCtrl'
+  })
 
-    .state('events', {
-      url: '/events',
-      templateUrl: 'eventx/events.html',
-      controller: 'EventsCtrl'
-    })
+  .state('events', {
+    url: '/events',
+    templateUrl: 'eventx/events.html',
+    controller: 'EventsCtrl'
+  })
 
   .state('event', {
     url: '/events/:id',
@@ -52,11 +52,28 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
   $urlRouterProvider.otherwise('/');
 });
 
-app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope) {
+app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $templateCache, $http) {
+  console.log("RUN");
 
   $rootScope.showFooter = true;
 
   $ionicPlatform.ready(function() {
+    var templates = [
+      "templates/homex/home.html",
+      "templates/eventx/events.html"
+    ];
+
+    function cacheT(t) {
+      $templateCache.put(template, t);
+    }
+
+    for (i = 0; i < templates.length; i++) {
+      var template = templates[i];
+      if ($templateCache.get(template)) {
+        return; //prevent the prefetching if the template is already in the cache
+      }
+      $http.get(template).success(cacheT);
+    }
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)

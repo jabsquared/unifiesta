@@ -7709,12 +7709,6 @@ a.button {
 .bold {
   font-family: 'blair_bold'; }
 
-ion-nav-view {
-  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover; }
-
 .logo {
   clear: both;
   width: fixed;
@@ -7773,10 +7767,6 @@ ion-content {
   margin-top: 20px; }
 
 .events ion-content {
-  background: url("../img/bg/home1.jpg") no-repeat fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   width: 100vw;
   align-items: center;
   padding: 9px; }
@@ -7929,11 +7919,6 @@ ion-content {
   margin: 18px auto 0.9px !important; }
 .home .option {
   padding-top: 9vh; }
-.home ion-content {
-  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover; }
 .home ion-content * {
   text-align: center; }
 .home .content {
