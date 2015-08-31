@@ -1,10 +1,5 @@
 app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
-
-  document.addEventListener("deviceready", onDeviceReady, false);
-
-  function onDeviceReady() {
-    console.log("navigator.geolocation works well");
-  }
+  console.log('CTRL: PnP');
 
   $scope.findMe = false;
 
@@ -13,22 +8,20 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     color: '#DDDDDDFF'
   };
 
-  $scope.info = {};
   $scope.showCard = false;
 
-  $scope.watchID = 9;
-  // Fetching frequency, every sec...
-  $scope.watchOptions = {
-    frequency: 1000,
-    timeout: 3000,
-    enableHighAccuracy: false // may cause errors if true
+  $scope.center = {
+    lat: 47.307701,
+    lng:  -122.228734,
   };
+
+  $scope.watchID = 9;
 
   angular.extend($scope, {
     tiles: mapService.tiles,
     auburn: {
-      lat: 47.307701,
-      lng:  -122.228734,
+      lat: $scope.center.lat,
+      lng:  $scope.center.lng,
       zoom: 16,
       bounceAtZoomLimits: true
     },
@@ -52,7 +45,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
   };
 
   $scope.onSuccess = function(position) {
-    mapService.onSuccess($scope, position);
+    mapService.onSuccess($scope, position, "pnp");
   };
 
   // onError Callback receives a PositionError object
@@ -63,13 +56,12 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
   // Map Data:
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
-    console.log('Clicked Parking Lot!');
+    // console.log('Clicked Parking Lot!');
     if (args.leafletEvent.target.options.info) {
-      console.log(args.leafletEvent.target.options.info);
+      // console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;
       $scope.showCard = true;
     } else {
-      $scope.info = {};
       $scope.showCard = false;
     }
   });

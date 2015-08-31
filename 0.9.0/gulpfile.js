@@ -7,6 +7,7 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 // gulp-angular-templatecache
+var minifyHtml    = require('gulp-minify-html');
 var templateCache = require('gulp-angular-templatecache');
 // gulp-ng-annotate
 // var ngAnnotate = require('gulp-ng-annotate');
@@ -42,8 +43,9 @@ gulp.task('sass', function(done) {
 // gulp-angular-templatecache
 gulp.task('templatecache', function(done) {
   gulp.src('./www/templates/**/*.html')
+    .pipe(minifyHtml({empty: true}))
     .pipe(templateCache({
-      standalone: true
+      standalone: true,
     }))
     .pipe(gulp.dest('./www/js'))
     .on('end', done);

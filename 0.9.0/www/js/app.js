@@ -13,8 +13,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-  // setup state for login page
-
   .state('home', {
     url: '/',
     templateUrl: 'homex/home.html',
@@ -58,24 +56,6 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $template
   $rootScope.showFooter = true;
 
   $ionicPlatform.ready(function() {
-
-    var templates = [
-      "templates/homex/home.html",
-      "templates/eventx/events.html"
-    ];
-
-
-    function cacheT(t) {
-      $templateCache.put(template, t);
-    }
-
-    for (i = 0; i < templates.length; i++) {
-      var template = templates[i];
-      if ($templateCache.get(template)) {
-        return; //prevent the prefetching if the template is already in the cache
-      }
-      $http.get(template).success(cacheT);
-    }
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
