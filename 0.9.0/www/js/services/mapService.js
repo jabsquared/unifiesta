@@ -165,7 +165,7 @@ app.factory('mapService', function() {
       number: 10,
       address: '159-199 1st St NE, Auburn, WA 98001'
     },
-    icon: carMarker,
+    icon: JSON.parse(JSON.stringify(carMarker)),//carMarker,
   }, { // PARKING #11
     lat: 47.308270,
     lng: -122.224944,
