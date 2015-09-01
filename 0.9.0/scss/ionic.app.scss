@@ -38,6 +38,7 @@ $energized:                       #D4B236 !default;
 @import "www/lib/ionic/scss/ionic";
 
 // Include our styles
+@import "global.scss";
 @import "events.scss";
 @import "event.scss";
 @import "pnp.scss";
@@ -45,4 +46,3 @@ $energized:                       #D4B236 !default;
 @import "sponsor.scss";
 @import "sponsors.scss";
 @import "home.scss";
-@import "global.scss";
