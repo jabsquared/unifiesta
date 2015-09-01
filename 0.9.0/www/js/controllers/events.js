@@ -15,7 +15,7 @@ app.controller('EventsCtrl', function($scope, $ionicScrollDelegate, $rootScope, 
 
   $scope.schedule = function(single_event) {
 
-    $ionicScrollDelegate.scrollBottom();
+    // $ionicScrollDelegate.scrollBottom();
 
     if (!single_event.reminder) {
       reminderService.schedule(single_event);
