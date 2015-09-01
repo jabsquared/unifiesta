@@ -59,8 +59,6 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     // console.log('Clicked Parking Lot!');
     if ($scope.info === args.leafletEvent.target.options.info){
       $scope.showCard = false;
-      var id = ~-(+$scope.info.number);
-      $scope.markers[id].icon.markerColor = 'red';
       $scope.info = 0;
       return;
     }
@@ -70,14 +68,6 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     }
 
     $scope.showCard = true;
-    var did = ~-(+$scope.info.number);
-    for (var i = 0; i < $scope.markers.length; i++) {
-      if (i === did){
-        $scope.markers[i].icon.markerColor = 'yellow';
-        return;
-      }
-      $scope.markers[i].icon.markerColor = 'red';
-    }
   });
 
   $scope.goBack = function() {
