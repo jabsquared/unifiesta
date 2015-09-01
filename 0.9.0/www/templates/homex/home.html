@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<ion-view name="home" class="home" >
+<ion-view name="home" class="home">
 
   <ion-nav-title>
-      Univision
-    <img class ="unilogo" alt="Univision"  ng-src="img/main/logo-18.png"/>
+    Univision
+    <img class="unilogo" alt="Univision" ng-src="img/main/logo-18.png" />
     <span class="bold">
       Events
     </span>
   </ion-nav-title>
 
-  <ion-content class="has-header" has-bouncing="true" padding="true">
+  <ion-content class="has-header xcentre" has-bouncing="true" padding="true">
 
     <img alt="Univision" ng-src="img/main/header.png" />
 
@@ -25,13 +25,14 @@
       </button>
       <div class="raffle">
         <h3 class="bold">
-          Raffle #: <br> {{raffle | numberFixedLen : 5}}
+          Raffle #:
+          <br> {{raffle | numberFixedLen : 5}}
         </h3>
       </div>
     </div>
 
     <div class="signature">
-        jabSquared
+      jabSquared
     </div>
     <!-- <ion-infinite-scroll distance="0.9%" spinner="ripple">
     </ion-infinite-scroll> -->
@@ -41,12 +42,7 @@
   <a ng-click="toggle()">
     <h1 class="title bold">Sponsors</h1>
 
-    <ion-slide-box
-      show-pager="false"
-      does-continue="true"
-      auto-play="true"
-      slide-interval="2700"
-      on-slide-changed="slideChanged(index)">
+    <ion-slide-box show-pager="false" does-continue="true" auto-play="true" slide-interval="2700" on-slide-changed="slideChanged(index)">
 
       <!-- Single Image -->
       <!-- <ion-slide ng-repeat="i in img">
@@ -57,7 +53,7 @@
 
       <!-- Multiple Images -->
       <ion-slide ng-repeat="i in img" ng-if="$index % 4 === 0">
-        <div class="sgroup" >
+        <div class="sgroup">
           <img ng-src="{{::img[$index]}}" alt="img{{$index}}">
           <img ng-src="{{::img[$index + 1]}}" alt="img{{$index+1}}">
           <img ng-src="{{::img[$index + 2]}}" alt="img{{$index+2}}">

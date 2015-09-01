@@ -22,10 +22,6 @@
     border-radius: 3.6px;
   }
 
-.center {
-    display: inline-block;
-  }
-
 .padding {
     text-align: center;
   }
@@ -55,8 +51,8 @@
         width: 99%;
         height: auto;
         top: 50%;
-        position : relative;
-        transform : translateY(-50%);
+        position: relative;
+        transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
       }
     }
