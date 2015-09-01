@@ -15,6 +15,7 @@
 }
 
 ion-content * {
+    margin: 0 auto;
     text-align: center;
   }
 
@@ -46,8 +47,5 @@ img {
     font-weight: 450;
     width: 90vw;
     // text-shadow: 2px 2px 1px #001c09;
-  }
-  h1{
-    color: transparent;
   }
 }

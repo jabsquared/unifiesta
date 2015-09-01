@@ -7770,6 +7770,8 @@ ion-content {
 
 .signature {
   visibility: hidden; }
+  .signature * {
+    visibility: hidden; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .search-bar {
   margin-top: 20px; }
@@ -7925,6 +7927,7 @@ ion-content {
 .home .option {
   padding-top: 9vh; }
 .home ion-content * {
+  margin: 0 auto;
   text-align: center; }
 .home .content {
   height: 81vh; }
@@ -7941,5 +7944,3 @@ ion-content {
   color: #093;
   font-weight: 450;
   width: 90vw; }
-.home h1 {
-  color: transparent; }

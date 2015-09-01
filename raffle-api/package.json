@@ -1,0 +1,19 @@
+{
+  "name": "raffle-api",
+  "version": "0.0.9",
+  "description": "Yo mama's raffle drawer for Unifiesta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "raffle-api",
+    "unifiesta"
+  ],
+  "author": "jabSquared",
+  "license": "MIT",
+  "dependencies": {
+    "pick-random": "^1.0.1",
+    "restify": "^4.0.0"
+  }
+}

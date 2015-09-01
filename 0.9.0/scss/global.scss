@@ -51,10 +51,6 @@ ion-content {
   width: 100%;
 }
 
-ion-content {
-  // background-color:rgba(212,178,54,1);
-}
-
 .card {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
@@ -90,8 +86,11 @@ ion-content {
   height: 0px !important;
 }
 
-.signature{
+.signature {
   visibility: hidden;
+  * {
+    visibility: hidden;
+  }
 }
 
 .platform-ios.platform-cordova:not(.fullscreen) .search-bar {
