@@ -65,19 +65,37 @@ ion-content {
 
 /* Popup button styling */
 .oneline .popup {
-  width: 70%;
+  width: 72%;
+  max-width: 450px;
+  -webkit-border-radius: 4.5px;
+  -moz-border-radius: 4.5px;
+  border-radius: 4.5px;
+  background: rgba(0,0,0,0.27);
+  // background: rgba(183,39,12,0.81);
+}
+
+.oneline .popup-head {
+  -webkit-border-radius: 3.6px 3.6px 0 0;
+  -moz-border-radius: 3.6px 3.6px 0 0;
+  border-radius: 3.6px 3.6px 0 0;
+  background: rgba(183,39,12,0.81);
 }
 
 .oneline .popup-body {
   text-align: center;
+
 }
 
 .oneline .popup .popup-buttons {
   display: inline-block;
+
 }
 
 .oneline .popup .popup-buttons .button {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.45em;
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px;
   width: 100%;
 }
 
