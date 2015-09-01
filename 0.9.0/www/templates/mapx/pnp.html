@@ -25,27 +25,29 @@
 
     <div ng-if="!showCard" class="card">
       <p>
-        <b> ALL </b> street parking are <br><b>FREE!</b>
+        <b> ALL </b> street parking are
+        <br><b>FREE!</b>
       </p>
       <div class="item-divider item-text-wrap">
         <p>
-          <b>
-            For parking lots,<br>
-          </b>
-          Select a marker on the map above for more detail
+          <b> For parking lots, </b>
+            <br> Select a marker on the map above for more detail
         </p>
       </div>
-
     </div>
 
     <div ng-if="showCard" class="card">
-      <h3>Parking Lot {{info.number}}</h3>
-      <p>
-        {{info.address}}
-      </p>
-      <button class="button button-block bold button-energized">
-        Get Directions
-      </button>
+      <h5 class="bold">
+        Parking Lot <b>#{{info.number}}</b>
+      </h5>
+      <div class="item-divider item-text-wrap">
+        <p>
+          {{info.address}}
+        </p>
+        <button class="button button-block bold button-assertive">
+          Get Directions
+        </button>
+      </div>
     </div>
 
     <div class="signature">

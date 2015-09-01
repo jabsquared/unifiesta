@@ -68,7 +68,6 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     }
 
     $scope.showCard = true;
-
   });
 
   $scope.goBack = function() {

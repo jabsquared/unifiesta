@@ -7842,10 +7842,8 @@ ion-content {
   margin: 9px auto; }
 .pnp .card * {
   padding: 3.6px;
-  font-family: 'blair_bold';
   color: #fefcfc; }
-.pnp .card h3 {
-  margin-top: 18px;
+.pnp .card h3, .pnp .card h4, .pnp .card h5, .pnp .card h6 {
   text-align: center; }
 .pnp .card p {
   padding: 9px;

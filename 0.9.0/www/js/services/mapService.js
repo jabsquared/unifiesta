@@ -51,7 +51,7 @@ app.factory('mapService', function() {
   var carMarker = {
     type: 'extraMarker',
     icon: 'fa-car',
-    markerColor: 'blue',
+    markerColor: 'red',
     prefix: 'fa',
     shape: 'circle'
   };
