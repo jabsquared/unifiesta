@@ -71,7 +71,13 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
 
     $scope.showCard = true;
     var did = ~-(+$scope.info.number);
-    // $scope.markers[did].icon.markerColor = 'yellow';
+    for (var i = 0; i < $scope.markers.length; i++) {
+      if (i === did){
+        $scope.markers[i].icon.markerColor = 'yellow';
+        return;
+      }
+      $scope.markers[i].icon.markerColor = 'red';
+    }
   });
 
   $scope.goBack = function() {
