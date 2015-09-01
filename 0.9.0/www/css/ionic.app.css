@@ -7755,6 +7755,10 @@ ion-content {
   -moz-border-radius: 3.6px;
   border-radius: 3.6px; }
 
+.leaflet-popup-content {
+  font-family: 'blair_med';
+  font-size: 9px; }
+
 .bar.bar-header, .bar.bar-footer {
   transition: 0.45s all linear !important; }
 
