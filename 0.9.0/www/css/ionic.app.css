@@ -7768,19 +7768,37 @@ ion-content {
   border-radius: 4.5px;
   background: rgba(0, 0, 0, 0.27); }
 
-.oneline .popup-head {
+.popup {
+  width: 72%;
+  max-width: 450px;
+  -webkit-border-radius: 4.5px !important;
+  -moz-border-radius: 4.5px !important;
+  border-radius: 4.5px !important;
+  background: rgba(0, 0, 0, 0.27) !important; }
+
+.popup-title {
+  font-family: 'blair_bold';
+  color: white; }
+
+.popup-head {
   -webkit-border-radius: 3.6px 3.6px 0 0;
   -moz-border-radius: 3.6px 3.6px 0 0;
   border-radius: 3.6px 3.6px 0 0;
   background: rgba(183, 39, 12, 0.81); }
 
-.oneline .popup-body {
+.popup-body {
+  font-family: 'blair_med';
+  color: white;
+  -webkit-border-radius: 0 0 3.6px 3.6px;
+  -moz-border-radius: 0 0 3.6px 3.6px;
+  border-radius: 0 0 3.6px 3.6px;
   text-align: center; }
 
-.oneline .popup .popup-buttons {
+.popup .popup-buttons {
   display: inline-block; }
 
-.oneline .popup .popup-buttons .button {
+.popup .popup-buttons .button {
+  font-family: 'blair_med';
   margin-bottom: 0.45em;
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
@@ -7793,6 +7811,11 @@ ion-content {
   border-radius: 3.6px;
   background-color: rgba(183, 39, 12, 0.81);
   max-width: 450px; }
+
+.map {
+  -webkit-border-radius: 3.6px;
+  -moz-border-radius: 3.6px;
+  border-radius: 3.6px; }
 
 .map .leaflet-container {
   -webkit-border-radius: 3.6px;
