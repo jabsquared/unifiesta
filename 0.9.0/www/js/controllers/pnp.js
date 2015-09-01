@@ -65,9 +65,10 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     if (args.leafletEvent.target.options.info) {
       // console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;
+      $scope.showCard = true;
+      return;
     }
-
-    $scope.showCard = true;
+    $scope.showCard = false;
 
   });
 
