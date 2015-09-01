@@ -36,16 +36,14 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
         template: "Thanks!"
       });
       alertPopup.then(function(res) {
-        // eventData.reminder(single_event.id, true);
-        // console.log('Changed reminder to true!');
+        eventData.reminder(single_event.id, true);
+        console.log('Changed reminder to true!');
       });
     });
   }
 
   return {
     schedule: function(single_event) {
-      eventData.reminder(single_event.id, true);
-      console.log('Changed reminder to true!');
       var alarmPopup = $ionicPopup.show({
         title: '<font size="3" class="bold" color="black">Set Reminder</font>',
         // template: "",
