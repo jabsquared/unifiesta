@@ -1,5 +1,5 @@
 
-app.controller('EventCtrl', function($scope, $rootScope, $state, $stateParams, eventData, $ionicHistory, reminderService) {
+app.controller('EventCtrl', function($scope, $sce, $rootScope, $state, $stateParams, eventData, $ionicHistory, reminderService) {
   console.log('CTRL: Event');
 
 
@@ -8,6 +8,10 @@ app.controller('EventCtrl', function($scope, $rootScope, $state, $stateParams, e
   };
 
   $scope.event = eventData.get($stateParams.id);
+
+  $scope.getURL = function (id) {
+    return $sce.trustAsResourceUrl( 'https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/' + id + '-min.jpg');
+  };
 
   $scope.hasImage = ($scope.event.img.length > 0);
 
