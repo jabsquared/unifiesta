@@ -5,6 +5,15 @@ app.factory('mapService', function() {
     type: 'extraMarker',
     icon: 'fa-circle-thin',
     markerColor: 'red',
+    iconSize:[40, 40],
+    prefix: 'fa',
+    shape: 'circle'
+  };
+
+  var carMarker = {
+    type: 'extraMarker',
+    icon: 'ion-model-s',
+    markerColor: 'red',
     prefix: 'fa',
     shape: 'circle'
   };
@@ -542,14 +551,6 @@ app.factory('mapService', function() {
   ];
 
   var boothCount = booth.length;
-
-  var carMarker = {
-    type: 'extraMarker',
-    icon: 'fa-car',
-    markerColor: 'red',
-    prefix: 'fa',
-    shape: 'circle'
-  };
 
   var pnp = [{ // PARKING #1
     lat: 47.306496,
