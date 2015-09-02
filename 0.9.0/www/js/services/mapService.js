@@ -751,6 +751,8 @@ app.factory('mapService', function() {
 
       $scope.auburn.lat = position.coords.latitude;
       $scope.auburn.lng = position.coords.longitude;
+
+      document.getElementById("map").click();
     },
     // onError Callback receives a PositionError object
     onError: function(error) {
