@@ -7,10 +7,11 @@
   <author email="jab2@tuta.io" href="jab2@tuta.io">&#xD;
     jabSquared&#xD;
   </author>
-  <content src="http://10.159.90.83:8100" original-src="index.html"/>
+  <content src="index.html"/>
   <access origin="http://*.openstreetmap.org/*"/>
   <access origin="https://*.openstreetmap.org/*"/>
   <access origin="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/*"/>
+  <access origin="https://maps.google.com/?q=*" launch-external="yes" />
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
