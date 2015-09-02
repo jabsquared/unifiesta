@@ -7905,11 +7905,19 @@ ion-content {
   margin: 9px auto; }
 .boothmap .card * {
   padding: 3.6px;
-  font-family: 'blair_bold';
   color: #fefcfc; }
-.boothmap .card h3 {
-  margin-top: 17px;
+.boothmap .card h3, .boothmap .card h4, .boothmap .card h5, .boothmap .card h6 {
   text-align: center; }
+.boothmap .card p {
+  padding: 9px;
+  text-align: center;
+  color: #fefcfc;
+  font-size: 0.9em; }
+.boothmap .card .item-divider {
+  background: rgba(0, 0, 0, 0.27);
+  text-align: center; }
+.boothmap .card .button.button-block, .boothmap .button.button-full {
+  margin-bottom: 0; }
 .boothmap .card .website {
   text-align: center;
   color: black; }

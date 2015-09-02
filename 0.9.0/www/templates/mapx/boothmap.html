@@ -30,6 +30,35 @@
       <p class="website">{{info.website}}</p>
       <p>{{info.desc}}</p>
     </div>
+
+    <div ng-if="!showCard" class="card">
+      <p>
+        <b>ALL</b> street parking is
+        <br>
+        <b>FREE!</b>
+      </p>
+      <div class="item-divider item-text-wrap">
+        <p>
+          <b> For free parking lots, </b>
+            <br> Select a marker on the map above for more details
+        </p>
+      </div>
+    </div>
+
+    <div ng-if="showCard" class="card">
+      <h5 class="bold">
+        Parking Lot <b>#{{info.number}}</b>
+      </h5>
+      <div class="item-divider item-text-wrap">
+        <p>
+          {{info.address}}
+        </p>
+          <a class="button button-block bold button-assertive" ng-href="https://maps.google.com/?q={{info.address}}&t=m">
+            Get Directions
+          </a>
+      </div>
+    </div>
+
     <!-- <h4>Longitude: {{long}}</h4>
     <h4>Laditude: {{lat}}</h4> -->
 
