@@ -230,8 +230,8 @@ app.factory('mapService', function() {
     onSuccess: function($scope, position, mapTitle) {
       console.log('Marking location...');
 
-      while ((mapTitle === "pnp" && $scope.markers.length > pnp.length) ||
-        (mapTitle === "booth" && $scope.markers.length > booth.length)) {
+      while ((mapTitle === "pnp" && $scope.markers.length > pnpCount) ||
+        (mapTitle === "booth" && $scope.markers.length > boothCount)) {
         $scope.markers.pop();
       }
 
