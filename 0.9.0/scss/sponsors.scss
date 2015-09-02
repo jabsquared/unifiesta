@@ -22,7 +22,12 @@
     border-radius: 3.6px;
   }
 
-.padding {
+.center {
+    display: inline-block;
+  }
+
+ion-content * {
+    margin: 0 auto;
     text-align: center;
   }
 

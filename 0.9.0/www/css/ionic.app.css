@@ -7957,7 +7957,10 @@ ion-content {
   -webkit-border-radius: 3.6px;
   -moz-border-radius: 3.6px;
   border-radius: 3.6px; }
-.sponsors .padding {
+.sponsors .center {
+  display: inline-block; }
+.sponsors ion-content * {
+  margin: 0 auto;
   text-align: center; }
 .sponsors .card {
   margin: 0.9px;

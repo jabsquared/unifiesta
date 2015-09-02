@@ -8,9 +8,10 @@
 	</ion-nav-buttons>
 
 
-	<ion-content class="has-header xcentre" has-bouncing="true" padding="true">
+	<ion-content class="has-header" has-bouncing="true" padding="true">
 
-		<!-- <div class="center"> -->
+		<div class="center">
+
 			<div class="row" ng-repeat="i in img" ng-if="$index % 4 === 0">
 				<div class="col col-25 card" ng-if="$index < img.length">
 					<div class="box">
@@ -37,10 +38,14 @@
 						<img ng-src="{{::img[$index + 3]}}" />
 					</div>
 				</div>
-
 			</div>
+		</div>
 
-		<!-- </div> -->
+
+		<div class="button button-full button-assertive bold">
+			Raffle #:
+			<br> {{raffle | numberFixedLen : 5}} 990909090
+		</div>
 
 	</ion-content>
 
