@@ -1,3 +1,22 @@
+# Raffle
+ |---> get request and loading spinner
+
+# Translation
+
+
+# Homescreen Styling
+
+
+# Adding Vibration on ios
+
+
+# Playing around with booth icon
+
+
+# Add warning to "not park at safeway!"
+
+
+
 # Issues:
 
 1 Home page is not very responsive... (Height will be squashed)
