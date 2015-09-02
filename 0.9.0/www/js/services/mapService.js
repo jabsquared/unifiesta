@@ -762,7 +762,7 @@ app.factory('mapService', function() {
     },
     // onError Callback receives a PositionError object
     onError: function(error) {
-      alert('code: ' + error.code + '\n' +
+      console.log('code: ' + error.code + '\n' +
         'message: ' + error.message + '\n');
     }
   };

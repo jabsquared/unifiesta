@@ -6,6 +6,7 @@
   <author email="jab2@tuta.io" href="jab2@tuta.io">&#xD; jabSquared&#xD;
   </author>
   <content src="index.html"/>
+  <access origin="*"/>
   <access origin="http://*.openstreetmap.org/*"/>
   <access origin="https://*.openstreetmap.org/*"/>
   <access origin="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/*"/>
