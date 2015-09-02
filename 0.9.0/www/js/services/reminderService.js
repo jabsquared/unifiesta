@@ -32,8 +32,8 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
       badge: 1,
     }).then(function() {
       var alertPopup = $ionicPopup.alert({
-        title: "Alert has been Set",
-        template: "Thanks!"
+        title: "Reminder Set,",
+        template: "Enjoy!"
       });
       alertPopup.then(function(res) {
         eventData.reminder(single_event.id, true);
@@ -45,7 +45,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
   return {
     schedule: function(single_event) {
       var alarmPopup = $ionicPopup.show({
-        title: '<font size="3" class="bold" color="black">Set Reminder</font>',
+        title: '<font size="4" class="bold" color="white">Set Reminder</font>',
         // template: "",
         cssClass: 'oneline',
         buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
