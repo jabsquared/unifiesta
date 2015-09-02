@@ -3,8 +3,8 @@ app.factory('mapService', function() {
 
   var boothIcon = {
     type: 'extraMarker',
-    icon: 'fa-diamond',
-    markerColor: 'green',
+    icon: 'fa-circle-thin',
+    markerColor: 'red',
     prefix: 'fa',
     shape: 'circle'
   };

@@ -25,6 +25,25 @@ app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams
       bounceAtZoomLimits: true,
       // autoDiscover: true
     },
+    defaults: {
+      zoomControl : false,
+      maxZoom: 19,
+      minZoom: 18,
+      path: {
+        weight: 9,
+        opacity: 0.9
+      }
+    },
+    maxbounds: {
+      northEast: {
+        lat: 47.308096,
+        lng: -122.228633,
+      },
+      southWest: {
+        lat: 47.306735,
+        lng: -122.231068
+      },
+    },
     events: {
       markers: {
         enable: ['click']
