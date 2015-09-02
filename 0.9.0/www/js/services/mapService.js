@@ -678,6 +678,7 @@ app.factory('mapService', function() {
   }
 
   var pnpCount = pnp.length;
+  var firstTimeLocating = true;
 
   return {
     tiles: {
@@ -704,6 +705,8 @@ app.factory('mapService', function() {
       console.log($scope.markers);
       $scope.auburn.lat = $scope.center.lat;
       $scope.auburn.lng = $scope.center.lng;
+
+      firstTimeLocating = true;
     },
     toggleGeoLocation: function($scope) {
       $scope.findMe = !$scope.findMe;
@@ -736,7 +739,7 @@ app.factory('mapService', function() {
       $scope.markers.push({
         lat: position.coords.latitude,
         lng: position.coords.longitude,
-        focus: true,
+        focus: false,
         // TODO: Fix auto focus. Only works with message.
         message: 'You are Here!',
         draggable: false,
@@ -749,8 +752,11 @@ app.factory('mapService', function() {
         }
       });
 
+      if (firstTimeLocating){
       $scope.auburn.lat = position.coords.latitude;
       $scope.auburn.lng = position.coords.longitude;
+      firstTimeLocating = false;
+      }
 
       document.getElementById("map").click();
     },
