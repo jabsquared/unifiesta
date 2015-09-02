@@ -57,6 +57,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
     // console.log('Clicked Parking Lot!');
+    console.log(args.leafletEvent.target.options);
     if ($scope.info === args.leafletEvent.target.options.info){
       $scope.showCard = false;
       $scope.info = 0;
@@ -65,6 +66,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     if (args.leafletEvent.target.options.info) {
       // console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;
+      $scope.geoInfo = args.leafletEvent.target.options;
       $scope.showCard = true;
       return;
     }
