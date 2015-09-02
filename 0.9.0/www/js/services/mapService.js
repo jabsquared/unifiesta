@@ -3,11 +3,10 @@ app.factory('mapService', function() {
 
   var boothIcon = {
     type: 'extraMarker',
-    icon: 'fa-circle-thin',
+    icon: 'ion-disc',
     markerColor: 'red',
-    iconSize:[40, 40],
     prefix: 'fa',
-    shape: 'circle'
+    shape: 'square',
   };
 
   var carMarker = {
@@ -29,7 +28,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We build website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307491,
       lng: -122.230259,
@@ -41,7 +41,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We build wqebsite and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307491,
       lng: -122.230149,
@@ -53,7 +54,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307491,
       lng: -122.230039,
@@ -65,7 +67,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307546,
       lng: -122.229984,
@@ -77,7 +80,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 300,
     }, {
       lat: 47.307601,
       lng: -122.229929,
@@ -89,7 +93,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307656,
       lng: -122.229929,
@@ -101,7 +106,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307701,
       lng: -122.229929,
@@ -113,7 +119,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307756,
       lng: -122.229929,
@@ -125,7 +132,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307756,
       lng: -122.229819,
@@ -137,7 +145,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307701,
       lng: -122.229819,
@@ -149,7 +158,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307656,
       lng: -122.229819,
@@ -161,7 +171,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307601,
       lng: -122.229819,
@@ -173,7 +184,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307513,
       lng: -122.229819,
@@ -185,7 +197,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307271,
       lng: -122.230314,
@@ -197,7 +210,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.230204,
@@ -209,7 +223,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.230094,
@@ -221,7 +236,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229984,
@@ -233,7 +249,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229874,
@@ -245,7 +262,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229599,
@@ -257,7 +275,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229489,
@@ -269,7 +288,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229379,
@@ -281,7 +301,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229269,
@@ -293,7 +314,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307216,
       lng: -122.230094,
@@ -305,7 +327,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307216,
       lng: -122.229874,
@@ -317,7 +340,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307216,
       lng: -122.229819,
@@ -329,7 +353,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307161,
       lng: -122.230094,
@@ -341,7 +366,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307161,
       lng: -122.229874,
@@ -353,7 +379,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307161,
       lng: -122.229819,
@@ -365,7 +392,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307106,
       lng: -122.230094,
@@ -377,7 +405,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307106,
       lng: -122.229874,
@@ -389,7 +418,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307106,
       lng: -122.229819,
@@ -401,7 +431,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307051,
       lng: -122.230094,
@@ -413,7 +444,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307051,
       lng: -122.229874,
@@ -425,7 +457,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307051,
       lng: -122.229819,
@@ -437,7 +470,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.306949,
       lng: -122.230094,
@@ -449,7 +483,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.306949,
       lng: -122.229874,
@@ -461,7 +496,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.306949,
       lng: -122.229819,
@@ -473,7 +509,8 @@ app.factory('mapService', function() {
         website: 'jabsquared.ninja',
         desc: 'We buird website and mobile apps that help your business grow!'
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }
     //, {
     //   lat: 47.307491,
@@ -486,7 +523,8 @@ app.factory('mapService', function() {
     //     website: 'jabsquared.ninja',
     //     desc: 'We buird website and mobile apps that help your business grow!'
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
@@ -498,7 +536,8 @@ app.factory('mapService', function() {
     //     website: 'jabsquared.ninja',
     //     desc: 'We buird website and mobile apps that help your business grow!'
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
@@ -510,7 +549,8 @@ app.factory('mapService', function() {
     //     website: 'jabsquared.ninja',
     //     desc: 'We buird website and mobile apps that help your business grow!'
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
@@ -522,7 +562,8 @@ app.factory('mapService', function() {
     //     website: 'jabsquared.ninja',
     //     desc: 'We buird website and mobile apps that help your business grow!'
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
@@ -534,7 +575,8 @@ app.factory('mapService', function() {
     //     website: 'jabsquared.ninja',
     //     desc: 'We buird website and mobile apps that help your business grow!'
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
@@ -546,7 +588,8 @@ app.factory('mapService', function() {
     //     website: 'jabsquared.ninja',
     //     desc: 'We buird website and mobile apps that help your business grow!'
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // },
   ];
 
