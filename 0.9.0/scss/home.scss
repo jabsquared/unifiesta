@@ -8,10 +8,14 @@
     margin: 18px auto 0.9px !important;
   }
 
-  ion-content * {
+ion-content * {
     margin: 0 auto;
     text-align: center;
   }
+
+.content {
+  padding-top: 9vh;
+}
 
 .option {
     padding-top: 9vh;
@@ -33,7 +37,7 @@ img {
     // color: #fff;
     // color: #093;
     // color: #BD4113;
-    color: #D4B236;
+    color: #d4b236;
     font-weight: 450;
     width: 90vw;
 
