@@ -672,8 +672,8 @@ app.factory('mapService', function() {
     icon: carMarker,
   }];
 
-  for (var i = 0; i < pnp.length; i++) {
-    pnp[i].message = "#" + -~i;
+  for (var pi = 0; pi < pnp.length; pi++) {
+    pnp[pi].message = "Parking #" + -~pi;
   }
 
   var pnpCount = pnp.length;
