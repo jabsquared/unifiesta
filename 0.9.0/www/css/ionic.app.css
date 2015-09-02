@@ -7780,7 +7780,8 @@ ion-content {
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
   background-color: rgba(183, 39, 12, 0.81);
-  max-width: 450px; }
+  max-width: 450px;
+  color: white; }
 
 .map {
   -webkit-border-radius: 3.6px;

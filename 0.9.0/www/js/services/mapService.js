@@ -2,11 +2,16 @@ app.factory('mapService', function() {
   console.log('SERV: Map ');
 
   var boothIcon = {
-    type: 'extraMarker',
-    icon: 'ion-disc',
-    markerColor: 'red',
-    prefix: 'fa',
-    shape: 'square',
+    type: 'div',
+    iconSize: [18, 18],
+    popupAnchor: [0, 0],
+    className: "card",
+    html: "<i class='icon ion-disc'></i>"
+      // type: 'extraMarker',
+      // icon: 'ion-disc',
+      // markerColor: 'orange-dark',
+      // prefix: 'fa',
+      // shape: 'square',
   };
 
   var carMarker = {
