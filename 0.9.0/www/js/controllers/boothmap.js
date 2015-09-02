@@ -10,8 +10,8 @@ app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams
   $scope.showCard = false;
 
   $scope.center = {
-    lat: 47.307492,
-    lng: -122.230582,
+    lat: 47.307400,
+    lng: -122.229800,
   };
 
   $scope.watchID = 9;
@@ -21,7 +21,7 @@ app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams
     auburn: {
       lat: $scope.center.lat,
       lng: $scope.center.lng,
-      zoom: 17,
+      zoom: 18,
       bounceAtZoomLimits: true,
       // autoDiscover: true
     },
