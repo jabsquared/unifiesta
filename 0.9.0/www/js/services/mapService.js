@@ -2,561 +2,569 @@ app.factory('mapService', function() {
   console.log('SERV: Map ');
 
   var boothIcon = {
+    type: 'div',
+    iconSize: [18, 18],
+    popupAnchor: [0, 0],
+    className: "card",
+    html: "<i class='icon ion-disc'></i>"
+      // type: 'extraMarker',
+      // icon: 'ion-disc',
+      // markerColor: 'orange-dark',
+      // prefix: 'fa',
+      // shape: 'square',
+  };
+
+  var carMarker = {
     type: 'extraMarker',
-    icon: 'fa-circle-thin',
+    icon: 'ion-model-s',
     markerColor: 'red',
     prefix: 'fa',
     shape: 'circle'
   };
 
   var booth = [{
-      lat: 47.307491,
-      lng: -122.230369,
+      lat: 47.307436,
+      lng: -122.230424,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '1',
-        website: 'jabsquared.ninja',
-        desc: 'We build website and mobile apps that help your business grow!'
+        id: '1',
+        name: 'Arte Floral - Gelatina',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
-      lat: 47.307491,
-      lng: -122.230259,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '2',
-        website: 'jabsquared.ninja',
-        desc: 'We build wqebsite and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307491,
-      lng: -122.230149,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '3',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307491,
-      lng: -122.230039,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '4',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307546,
-      lng: -122.229984,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '5',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307601,
-      lng: -122.229929,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '6',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307656,
-      lng: -122.229929,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '7',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307701,
-      lng: -122.229929,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '8',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307756,
-      lng: -122.229929,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '9',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307756,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '10',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307701,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '11',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307656,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '12',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307601,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '13',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307513,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-      info: {
-        name: '14',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
-      },
-      icon: boothIcon
-    }, {
-      lat: 47.307271,
+      lat: 47.307436,
       lng: -122.230314,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '15',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '2',
+        name: 'Phillips Law',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
+    }, {
+      lat: 47.307436,
+      lng: -122.230204,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '3',
+        name: 'Xfinity',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 270,
+    }, {
+      lat: 47.307436,
+      lng: -122.230094,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '4',
+        name: 'Univision',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 270,
+    }, {
+      lat: 47.307436,
+      lng: -122.229984,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '5',
+        name: 'jabSquared',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 300,
+    }, {
+      lat: 47.307496,
+      lng: -122.229879,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '6',
+        name: 'Harris Mitsubishi',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 0,
+    }, {
+      lat: 47.307576,
+      lng: -122.229879,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '7',
+        name: 'Auburn Downtown',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 0,
+    }, {
+      lat: 47.307656,
+      lng: -122.229879,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '8',
+        name: 'Adrys Promotions',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 0,
+    }, {
+      lat: 47.307736,
+      lng: -122.229879,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '9',
+        name: 'Globo Azul',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 0,
+    }, {
+      lat: 47.307816,
+      lng: -122.229879,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '10',
+        name: 'McDonalds',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 90,
+    }, {
+      lat: 47.307773,
+      lng: -122.229819,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '11',
+        name: 'Costco',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 90,
+    }, {
+      lat: 47.307693,
+      lng: -122.229819,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '12',
+        name: 'Salchipulpos Bonilla',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 90,
+    }, {
+      lat: 47.307613,
+      lng: -122.229819,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '13',
+        name: 'Delridge Insurance',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 90,
+    }, {
+      lat: 47.307533,
+      lng: -122.229819,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '14',
+        name: 'Los Agaves',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 90,
+    }, {
+      lat: 47.307453,
+      lng: -122.229819,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '15',
+        name: 'Bontanas Don Nacho',
+        desc: ''
+      },
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.230204,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '16',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '16',
+        name: 'Fruteria Veronica',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.230094,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '17',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '17',
+        name: 'JE Tires',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229984,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '18',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '18',
+        name: 'Studios Fany',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229874,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '19',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '19',
+        name: 'El Lago Mexican R',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229599,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '20',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '20',
+        name: 'Vikay Design',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229489,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '21',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '21',
+        name: 'Pizza Dudes',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229379,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '22',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '22',
+        name: 'Stitchin Mich',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307271,
       lng: -122.229269,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '23',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '23',
+        name: 'El Portal de Sahuayo',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 0,
     }, {
       lat: 47.307216,
       lng: -122.230094,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '24',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '24',
+        name: 'Taco Goal',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307216,
       lng: -122.229874,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '25',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '25',
+        name: 'Chilly Billy Polar Ice',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307216,
       lng: -122.229819,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '26',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '26',
+        name: 'Royal Prestige',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307161,
       lng: -122.230094,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '27',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '27',
+        name: 'Salvadorian Bakery',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307161,
       lng: -122.229874,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '28',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '28',
+        name: 'Blosom Catering',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307161,
       lng: -122.229819,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '29',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '29',
+        name: 'Lets Read',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307106,
       lng: -122.230094,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '30',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '30',
+        name: 'Rainbow',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307106,
       lng: -122.229874,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '31',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '31',
+        name: 'NW Casas',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307106,
       lng: -122.229819,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '32',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '32',
+        name: 'Fruteria Sahuayo',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.307051,
       lng: -122.230094,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '33',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '33',
+        name: 'Antojitos Araceli',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307051,
       lng: -122.229874,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '34',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '34',
+        name: 'Colomiana',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.307051,
       lng: -122.229819,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '35',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '35',
+        name: 'Fritangas Rodriguez',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }, {
       lat: 47.306949,
       lng: -122.230094,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '36',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '36',
+        name: 'Botanas Lucy',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.306949,
       lng: -122.229874,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '37',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '37',
+        name: 'Jump N Jumper',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 270,
     }, {
       lat: 47.306949,
       lng: -122.229819,
       focus: false,
       draggable: false,
-      message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
       info: {
-        name: '38',
-        website: 'jabsquared.ninja',
-        desc: 'We buird website and mobile apps that help your business grow!'
+        id: '38',
+        name: 'Plaza Garibaldi',
+        desc: ''
       },
-      icon: boothIcon
+      icon: boothIcon,
+      iconAngle: 90,
     }
     //, {
     //   lat: 47.307491,
     //   lng: -122.230149,
     //   focus: false,
     //   draggable: false,
-    //   message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-    //   info: {
-    //     name: '39',
-    //     website: 'jabsquared.ninja',
-    //     desc: 'We buird website and mobile apps that help your business grow!'
+    //       //   info: {
+    //     id: '39',
+    //     name: '',
+    //     desc: ''
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
     //   focus: false,
     //   draggable: false,
-    //   message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-    //   info: {
-    //     name: '40',
-    //     website: 'jabsquared.ninja',
-    //     desc: 'We buird website and mobile apps that help your business grow!'
+    //       //   info: {
+    //     id: '40',
+    //     name: '',
+    //     desc: ''
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
     //   focus: false,
     //   draggable: false,
-    //   message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-    //   info: {
-    //     name: '41',
-    //     website: 'jabsquared.ninja',
-    //     desc: 'We buird website and mobile apps that help your business grow!'
+    //       //   info: {
+    //     id: '41',
+    //     name: '',
+    //     desc: ''
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
     //   focus: false,
     //   draggable: false,
-    //   message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-    //   info: {
-    //     name: '42',
-    //     website: 'jabsquared.ninja',
-    //     desc: 'We buird website and mobile apps that help your business grow!'
+    //       //   info: {
+    //     id: '42',
+    //     name: '',
+    //     desc: ''
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
     //   focus: false,
     //   draggable: false,
-    //   message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-    //   info: {
-    //     name: '43',
-    //     website: 'jabsquared.ninja',
-    //     desc: 'We buird website and mobile apps that help your business grow!'
+    //       //   info: {
+    //     id: '43',
+    //     name: '',
+    //     desc: ''
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
     //   focus: false,
     //   draggable: false,
-    //   message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
-    //   info: {
-    //     name: '44',
-    //     website: 'jabsquared.ninja',
-    //     desc: 'We buird website and mobile apps that help your business grow!'
+    //       //   info: {
+    //     id: '44',
+    //     name: '',
+    //     desc: ''
     //   },
-    //   icon: boothIcon
+    //   icon: boothIcon,
+    // iconAngle: 270,
     // },
   ];
 
-  var boothCount = booth.length;
+  for (var i = 0; i < booth.length; i++) {
+    booth[i].message = "Booth " + -~i;
+  }
 
-  var carMarker = {
-    type: 'extraMarker',
-    icon: 'fa-car',
-    markerColor: 'red',
-    prefix: 'fa',
-    shape: 'circle'
-  };
+  var boothCount = booth.length;
 
   var pnp = [{ // PARKING #1
     lat: 47.306496,
     lng: -122.232631,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 1,
       address: 'Auburn Station (Southbound)'
@@ -567,7 +575,6 @@ app.factory('mapService', function() {
     lng: -122.231422,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 2,
       address: 'Auburn Station (Northbound)'
@@ -578,7 +585,6 @@ app.factory('mapService', function() {
     lng: -122.231431,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 3,
       address: '120 1st St NW, Auburn, WA 98001'
@@ -589,7 +595,6 @@ app.factory('mapService', function() {
     lng: -122.231476,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 4,
       address: '101-199 1st St NW, Auburn, WA 98001'
@@ -600,7 +605,6 @@ app.factory('mapService', function() {
     lng: -122.230421,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 5,
       address: '101 N Division St, Auburn, WA 98001'
@@ -611,7 +615,6 @@ app.factory('mapService', function() {
     lng: -122.230529,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 6,
       address: '22 A St SW, Auburn, WA 98001'
@@ -622,7 +625,6 @@ app.factory('mapService', function() {
     lng: -122.230538,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 7,
       address: '12 1st St SW, Auburn, WA 98001'
@@ -633,7 +635,6 @@ app.factory('mapService', function() {
     lng: -122.228734,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 8,
       address: '100 Auburn Ave, Auburn, WA 98001'
@@ -644,7 +645,6 @@ app.factory('mapService', function() {
     lng: -122.228734,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 9,
       address: '100 Auburn Ave, Auburn, WA 98001'
@@ -655,7 +655,6 @@ app.factory('mapService', function() {
     lng: -122.226938,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 10,
       address: '159-199 1st St NE, Auburn, WA 98001'
@@ -666,13 +665,16 @@ app.factory('mapService', function() {
     lng: -122.224944,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 11,
       address: '314-328 1st St NE, Auburn, WA 98001'
     },
     icon: carMarker,
   }];
+
+  for (var i = 0; i < pnp.length; i++) {
+    pnp[i].message = "#" + -~i;
+  }
 
   var pnpCount = pnp.length;
 

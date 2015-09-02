@@ -2,19 +2,45 @@
   .map {
     height: 54vh;
   }
-  .card {
+
+.card {
     margin: 9px auto;
   }
-  .card * {
+
+.card * {
     padding: 3.6px;
-    font-family: 'blair_bold';
     color: rgba(254,252,252,1);
   }
-  .card h3 {
-    margin-top: 17px;
+
+.card {
+    h3,
+    h4,
+    h5,
+    h6 {
+
+      // margin-top: 18px;
+      text-align: center;
+    }
+  }
+
+.card p {
+    padding: 9px;
+    text-align: center;
+    color: rgba(254,252,252,1);
+    font-size: 1.08em;
+  }
+
+.card .item-divider {
+    background: rgba(0,0,0,0.27);
     text-align: center;
   }
-  .card .website {
+
+.card .button.button-block,
+  .button.button-full {
+    margin-bottom: 0;
+  }
+
+.card .website {
     text-align: center;
     color: black;
   }

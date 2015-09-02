@@ -9,7 +9,10 @@
   </ion-nav-buttons>
 
   <ion-nav-title>
-    Booth
+    <!-- <img class="unilogo" alt="Univision" ng-src="img/main/logo-18.png" /> -->
+    <span class="bold">
+			Booth
+		</span>
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
@@ -18,18 +21,43 @@
   </ion-nav-buttons>
 
 
-  <ion-content class="has-header" scroll="false" has-bouncing="false" padding="true">
+  <ion-content class="has-header" scroll="true" has-bouncing="true" padding="true">
     <!-- <a href="comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic" ,target="_blank">Click here for map</a> -->
     <div class="map" data-tap-disabled="true">
       <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" defaults="defaults" maxbounds="maxbounds" markers="markers" width="100%" height="100%">
       </leaflet>
     </div>
 
-    <div ng-if="showCard" class="card">
-      <h3>{{info.name}}</h3>
-      <p class="website">{{info.website}}</p>
-      <p>{{info.desc}}</p>
+    <!-- Instruction -->
+    <div ng-if="!showCard" class="card">
+      <p>
+        To <b>locate</b> where you are,
+        <br>press the <i class="ion-android-locate"></i> icon on the <b>right</b>
+      </p>
+      <div class="item-divider item-text-wrap">
+        <p>
+          To <b>checkout</b> a booth, <i class="ion-android-compass"></i>
+          <br> Touch it on the map
+          <br> for more detail.
+        </p>
+      </div>
+      <p>
+        <i class="ion-pinpoint"></i> <b> To zoom in, </b>
+        <br> pinch the map
+      </p>
     </div>
+
+    <div ng-if="showCard" class="card">
+      <h5 class="bold">
+        <b>{{info.name}}</b>
+      </h5>
+      <div class="item-divider item-text-wrap">
+        <p>
+          {{info.desc}}
+        </p>
+      </div>
+    </div>
+
     <!-- <h4>Longitude: {{long}}</h4>
     <h4>Laditude: {{lat}}</h4> -->
 

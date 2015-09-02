@@ -27,7 +27,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     },
     events: {
       markers: {
-        enable: ['click']
+        enable: ['click','popupclose']
           //logic: 'emit'
       }
     },
@@ -70,6 +70,10 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     }
     $scope.showCard = false;
 
+  });
+
+  $scope.$on('leafletDirectiveMarker.popupclose', function (e, args) {
+    $scope.showCard = false;
   });
 
   $scope.goBack = function() {
