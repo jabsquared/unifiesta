@@ -144,7 +144,7 @@ app.factory('mapService', function() {
       iconAngle: 90,
     }, {
       lat: 47.307773,
-      lng: -122.229799,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -156,7 +156,7 @@ app.factory('mapService', function() {
       iconAngle: 90,
     }, {
       lat: 47.307693,
-      lng: -122.229799,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -168,7 +168,7 @@ app.factory('mapService', function() {
       iconAngle: 90,
     }, {
       lat: 47.307613,
-      lng: -122.229799,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -180,7 +180,7 @@ app.factory('mapService', function() {
       iconAngle: 90,
     }, {
       lat: 47.307533,
-      lng: -122.229799,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -192,7 +192,7 @@ app.factory('mapService', function() {
       iconAngle: 90,
     }, {
       lat: 47.307453,
-      lng: -122.229799,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -203,8 +203,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 0,
     }, {
-      lat: 47.307386,
-      lng: -122.229739,
+      lat: 47.307271,
+      lng: -122.230204,
       focus: false,
       draggable: false,
       info: {
@@ -216,7 +216,7 @@ app.factory('mapService', function() {
       iconAngle: 0,
     }, {
       lat: 47.307271,
-      lng: -122.230259,
+      lng: -122.230094,
       focus: false,
       draggable: false,
       info: {
@@ -228,7 +228,7 @@ app.factory('mapService', function() {
       iconAngle: 0,
     }, {
       lat: 47.307271,
-      lng: -122.230039,
+      lng: -122.229984,
       focus: false,
       draggable: false,
       info: {
@@ -252,7 +252,7 @@ app.factory('mapService', function() {
       iconAngle: 0,
     }, {
       lat: 47.307271,
-      lng: -122.229799,
+      lng: -122.229599,
       focus: false,
       draggable: false,
       info: {
@@ -263,8 +263,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 0,
     }, {
-      lat: 47.307216,
-      lng: -122.230259,
+      lat: 47.307271,
+      lng: -122.229489,
       focus: false,
       draggable: false,
       info: {
@@ -275,8 +275,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 0,
     }, {
-      lat: 47.307216,
-      lng: -122.230039,
+      lat: 47.307271,
+      lng: -122.229379,
       focus: false,
       draggable: false,
       info: {
@@ -287,8 +287,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 0,
     }, {
-      lat: 47.307216,
-      lng: -122.229874,
+      lat: 47.307271,
+      lng: -122.229269,
       focus: false,
       draggable: false,
       info: {
@@ -300,7 +300,7 @@ app.factory('mapService', function() {
       iconAngle: 0,
     }, {
       lat: 47.307216,
-      lng: -122.229799,
+      lng: -122.230094,
       focus: false,
       draggable: false,
       info: {
@@ -311,8 +311,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 270,
     }, {
-      lat: 47.307161,
-      lng: -122.230259,
+      lat: 47.307216,
+      lng: -122.229874,
       focus: false,
       draggable: false,
       info: {
@@ -323,8 +323,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 270,
     }, {
-      lat: 47.307161,
-      lng: -122.230039,
+      lat: 47.307216,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -336,7 +336,7 @@ app.factory('mapService', function() {
       iconAngle: 90,
     }, {
       lat: 47.307161,
-      lng: -122.229874,
+      lng: -122.230094,
       focus: false,
       draggable: false,
       info: {
@@ -348,7 +348,7 @@ app.factory('mapService', function() {
       iconAngle: 270,
     }, {
       lat: 47.307161,
-      lng: -122.229799,
+      lng: -122.229874,
       focus: false,
       draggable: false,
       info: {
@@ -359,8 +359,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 270,
     }, {
-      lat: 47.307106,
-      lng: -122.230259,
+      lat: 47.307161,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -372,7 +372,7 @@ app.factory('mapService', function() {
       iconAngle: 90,
     }, {
       lat: 47.307106,
-      lng: -122.230039,
+      lng: -122.230094,
       focus: false,
       draggable: false,
       info: {
@@ -396,7 +396,7 @@ app.factory('mapService', function() {
       iconAngle: 270,
     }, {
       lat: 47.307106,
-      lng: -122.229799,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -408,7 +408,7 @@ app.factory('mapService', function() {
       iconAngle: 90,
     }, {
       lat: 47.307051,
-      lng: -122.230259,
+      lng: -122.230094,
       focus: false,
       draggable: false,
       info: {
@@ -420,7 +420,7 @@ app.factory('mapService', function() {
       iconAngle: 270,
     }, {
       lat: 47.307051,
-      lng: -122.230039,
+      lng: -122.229874,
       focus: false,
       draggable: false,
       info: {
@@ -432,7 +432,7 @@ app.factory('mapService', function() {
       iconAngle: 270,
     }, {
       lat: 47.307051,
-      lng: -122.229874,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -443,8 +443,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 90,
     }, {
-      lat: 47.307051,
-      lng: -122.229799,
+      lat: 47.306949,
+      lng: -122.230094,
       focus: false,
       draggable: false,
       info: {
@@ -455,8 +455,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 270,
     }, {
-      lat: 47.307106,
-      lng: -122.230424,
+      lat: 47.306949,
+      lng: -122.229874,
       focus: false,
       draggable: false,
       info: {
@@ -467,8 +467,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 270,
     }, {
-      lat: 47.307386,
-      lng: -122.229649,
+      lat: 47.306949,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       info: {
@@ -478,32 +478,32 @@ app.factory('mapService', function() {
       },
       icon: boothIcon,
       iconAngle: 90,
-    }, {
-      lat: 47.307693,
-      lng: -122.230424,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '39',
-        name: 'Main Stage',
-        desc: ''
-      },
-      icon: boothIcon,
-    iconAngle: 270,
-    }, {
-      lat: 47.306941,
-      lng: -122.229799,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '40',
-        name: 'Restrooms	',
-        desc: ''
-      },
-      icon: boothIcon,
-    iconAngle: 270,
     }
     //, {
+    //   lat: 47.307491,
+    //   lng: -122.230149,
+    //   focus: false,
+    //   draggable: false,
+    //       //   info: {
+    //     id: '39',
+    //     name: '',
+    //     desc: ''
+    //   },
+    //   icon: boothIcon,
+    // iconAngle: 270,
+    // }, {
+    //   lat: 47.307491,
+    //   lng: -122.230149,
+    //   focus: false,
+    //   draggable: false,
+    //       //   info: {
+    //     id: '40',
+    //     name: '',
+    //     desc: ''
+    //   },
+    //   icon: boothIcon,
+    // iconAngle: 270,
+    // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
     //   focus: false,
@@ -555,7 +555,8 @@ app.factory('mapService', function() {
   ];
 
   for (var i = 0; i < booth.length; i++) {
-    booth[i].message = "Booth " + -~i;
+    // booth[i].message = "Booth " + -~i;
+    booth[i].message = booth[i].info.name;
   }
 
   var boothCount = booth.length;
@@ -641,13 +642,13 @@ app.factory('mapService', function() {
     },
     icon: carMarker,
   }, { // PARKING #9 find address
-    lat: 47.307701,
-    lng: -122.228734,
+    lat: 47.306735,
+    lng: -122.228364,
     focus: false,
     draggable: false,
     info: {
       number: 9,
-      address: '100 Auburn Ave, Auburn, WA 98001'
+      address: '24 A St SE, Auburn, WA 98002'
     },
     icon: carMarker,
   }, { // PARKING #10
