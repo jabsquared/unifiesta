@@ -555,7 +555,8 @@ app.factory('mapService', function() {
   ];
 
   for (var i = 0; i < booth.length; i++) {
-    booth[i].message = "Booth " + -~i;
+    // booth[i].message = "Booth " + -~i;
+    booth[i].message = booth[i].info.name;
   }
 
   var boothCount = booth.length;
@@ -641,13 +642,13 @@ app.factory('mapService', function() {
     },
     icon: carMarker,
   }, { // PARKING #9 find address
-    lat: 47.307701,
-    lng: -122.228734,
+    lat: 47.306735,
+    lng: -122.228364,
     focus: false,
     draggable: false,
     info: {
       number: 9,
-      address: '100 Auburn Ave, Auburn, WA 98001'
+      address: '24 A St SE, Auburn, WA 98002'
     },
     icon: carMarker,
   }, { // PARKING #10
