@@ -13,9 +13,6 @@
 # Playing around with booth icon
 
 
-# Fix Iphone event images not loading
-
-
 # Add warning to "not park at safeway!"
 
 
@@ -47,6 +44,8 @@
 * The header is scrollable <- will be very unstable, need different scroll div
 * Return of Native Back button
 * Binding the Booth's information into the info Card (Boothmap). OnEvent: On click, assign $scope
+* Fix Iphone event images not loading
+
 
 # Parking and Parade
   |---> 1 Special Marker for Parade location

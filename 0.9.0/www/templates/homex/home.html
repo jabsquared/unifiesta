@@ -30,8 +30,17 @@
         <div class="raffle">
           <h3 class="bold">
             Raffle #:
-            <br> {{raffle | numberFixedLen : 5}}
+            <br>
+            <i ng-show="$storage.gotRaffle">
+            {{$storage.raffle | numberFixedLen : 5}}
+            <i>
+              <i ng-hide="$storage.gotRaffle">
+              Loading...
+              <i>
           </h3>
+          <br>
+          <ion-spinner class="center spinner-energized" icon="lines" ng-hide="$storage.gotRaffle">
+          </ion-spinner>
         </div>
       </div>
     </div>
