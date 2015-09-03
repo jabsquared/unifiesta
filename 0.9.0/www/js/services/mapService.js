@@ -279,11 +279,6 @@ app.factory('mapService', function() {
     lng: -122.230424,
     focus: false,
     draggable: false,
-    info: {
-      id: '37',
-      name: 'Jump N Jumper',
-      desc: ''
-    },
     icon: boothIcon,
     iconAngle: 270,
   }, {
@@ -291,11 +286,6 @@ app.factory('mapService', function() {
     lng: -122.229649,
     focus: false,
     draggable: false,
-    info: {
-      id: '38',
-      name: 'Plaza Garibaldi',
-      desc: ''
-    },
     icon: boothIcon,
     iconAngle: 90,
   }, {
@@ -303,11 +293,6 @@ app.factory('mapService', function() {
     lng: -122.230424,
     focus: false,
     draggable: false,
-    info: {
-      id: '39',
-      name: 'Main Stage',
-      desc: ''
-    },
     icon: boothIcon,
     iconAngle: 270,
   }, {
@@ -315,13 +300,212 @@ app.factory('mapService', function() {
     lng: -122.229799,
     focus: false,
     draggable: false,
-    info: {
-      id: '40',
-      name: 'Restrooms	',
-      desc: ''
-    },
     icon: boothIcon,
     iconAngle: 270,
+  }];
+
+
+  var info = [{
+    id: '1',
+    name: 'Arte Floral - Gelatina',
+    desc: '',
+    img: ['v1']
+  }, {
+    id: '2',
+    name: 'Phillips Law',
+    desc: '',
+    img: ['v2']
+  }, {
+    id: '3',
+    name: 'Xfinity',
+    desc: '',
+    img: ['v3']
+  }, {
+    id: '4',
+    name: 'Univision',
+    desc: '',
+    img: ['v4']
+  }, {
+    id: '5',
+    name: 'jabSquared/CodeDay',
+    desc: '',
+    img: [
+      'v5a',
+      'v5b'
+    ]
+  }, {
+    id: '6',
+    name: 'Harris Mitsubishi',
+    desc: '',
+    img: ['v6']
+  }, {
+    id: '7',
+    name: 'Auburn Downtown',
+    desc: '',
+    img: ['v7']
+  }, {
+    id: '8',
+    name: 'Adrys Promotions',
+    desc: '',
+    img: ['v8']
+  }, {
+    id: '9',
+    name: 'Globo Azul',
+    desc: '',
+    img: ['v9']
+  }, {
+    id: '10',
+    name: 'McDonalds',
+    desc: '',
+    img: ['v10']
+  }, {
+    id: '11',
+    name: 'Costco',
+    desc: '',
+    img: ['v11']
+  }, {
+    id: '12',
+    name: 'Salchipulpos Bonilla',
+    desc: '',
+    img: ['v12']
+  }, {
+    id: '13',
+    name: 'Delridge Insurance',
+    desc: '',
+    img: ['v13']
+  }, {
+    id: '14',
+    name: 'Los Agaves',
+    desc: '',
+    img: ['v14']
+  }, {
+    id: '15',
+    name: 'Bontanas Don Nacho',
+    desc: '',
+    img: ['v15']
+  }, {
+    id: '16',
+    name: 'Fruteria Veronica',
+    desc: '',
+    img: ['v16']
+  }, {
+    id: '17',
+    name: 'JE Tires',
+    desc: '',
+    img: ['v17']
+  }, {
+    id: '18',
+    name: 'Studios Fany',
+    desc: '',
+    img: ['v18']
+  }, {
+    id: '19',
+    name: 'El Lago Mexican R',
+    desc: '',
+    img: ['v19']
+  }, {
+    id: '20',
+    name: 'Vikay Design',
+    desc: '',
+    img: ['v20']
+  }, {
+    id: '21',
+    name: 'Pizza Dudes',
+    desc: '',
+    img: ['v21']
+  }, {
+    id: '22',
+    name: 'Stitchin Mich',
+    desc: '',
+    img: ['v22']
+  }, {
+    id: '23',
+    name: 'El Portal de Sahuayo',
+    desc: '',
+    img: ['v23']
+  }, {
+    id: '24',
+    name: 'Taco Goal',
+    desc: '',
+    img: ['v24']
+  }, {
+    id: '25',
+    name: 'Chilly Billy Polar Ice',
+    desc: '',
+    img: ['v25']
+  }, {
+    id: '26',
+    name: 'Royal Prestige',
+    desc: '',
+    img: ['v26']
+  }, {
+    id: '27',
+    name: 'Salvadorian Bakery',
+    desc: '',
+    img: ['v27']
+  }, {
+    id: '28',
+    name: 'Blosom Catering',
+    desc: '',
+    img: ['v28']
+  }, {
+    id: '29',
+    name: 'Lets Read',
+    desc: '',
+    img: ['v29']
+  }, {
+    id: '30',
+    name: 'Rainbow',
+    desc: '',
+    img: ['v30']
+  }, {
+    id: '31',
+    name: 'NW Casas',
+    desc: '',
+    img: ['v31']
+  }, {
+    id: '32',
+    name: 'Fruteria Sahuayo',
+    desc: '',
+    img: ['v32']
+  }, {
+    id: '33',
+    name: 'Antojitos Araceli',
+    desc: '',
+    img: ['v33']
+  }, {
+    id: '34',
+    name: 'Colomiana',
+    desc: '',
+    img: ['v34']
+  }, {
+    id: '35',
+    name: 'Fritangas Rodriguez',
+    desc: '',
+    img: ['v35']
+  }, {
+    id: '36',
+    name: 'Botanas Lucy',
+    desc: '',
+    img: ['v36']
+  }, {
+    id: '37',
+    name: 'Jump N Jumper',
+    desc: '',
+    img: ['v37']
+  }, {
+    id: '38',
+    name: 'Plaza Garibaldi',
+    desc: '',
+    img: ['v38']
+  }, {
+    id: '39',
+    name: 'Main Stage',
+    desc: ''
+  }, {
+    id: '40',
+    name: 'Restrooms	',
+    desc: ''
   }];
 
   for (var i = 0; i < booth.length; i++) {
