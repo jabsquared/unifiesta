@@ -25,7 +25,7 @@ app.controller('EventsCtrl', function($scope, $ionicScrollDelegate, $rootScope, 
   };
 
   $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
-    alert("Added a notification");
+    console.log("Added a notification");
   });
 
 });
