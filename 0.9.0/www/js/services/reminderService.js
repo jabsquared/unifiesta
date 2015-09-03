@@ -45,11 +45,11 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
   return {
     schedule: function(single_event) {
       var alarmPopup = $ionicPopup.show({
-        title: '<font size="4" class="bold" color="white">Set Reminder</font>',
+        title: '<font size="4" class="bold" color="white">establecer notificación</font>',
         // template: "",
         cssClass: 'oneline',
         buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
-          text: '<font size="3" color="white">5 minutes</font>',
+          text: '<font size="3" color="white">5 minutos</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -57,7 +57,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
             return 10;
           }
         }, {
-          text: '<font size="3" color="white">10 minutes</font>',
+          text: '<font size="3" color="white">10 minutos</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -65,7 +65,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
             return 15;
           }
         }, {
-          text: '<font size="3" color="white">15 minutes</font>',
+          text: '<font size="3" color="white">15 minutos</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -73,7 +73,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
             return 30;
           }
         }, {
-          text: '<font size="2" color="white">Cancel</font>',
+          text: '<font size="2" color="white">cancelar</font>',
           type: 'button-assertive',
           cssClass: 'oneline',
           onTap: function(e) {
@@ -88,17 +88,17 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
     cancel: function(event_id) {
       // A confirm dialog
       var confirmPopup = $ionicPopup.confirm({
-        title: 'Cancel Reminder',
-        template: 'Are you sure you want to cancel this reminder?',
+        title: 'cancelar notificación',
+        template: 'seguro que desea cancelar esta notificación?',
         buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
-          text: '<font size="3" color="white">No</font>',
+          text: '<font size="3" color="white">no</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
             return false;
           }
         }, {
-          text: '<font size="3" color="white">Yes</font>',
+          text: '<font size="3" color="white">sí</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
