@@ -74,14 +74,14 @@ app.factory('mapService', function() {
       },
       icon: boothIcon,
       iconAngle: 270,
-    }, { 
+    }, {
       lat: 47.307436,
       lng: -122.229984,
       focus: false,
       draggable: false,
       info: {
         id: '5',
-        name: 'jabSquared/CodeDay',
+        name: 'jabSquared & CodeDay',
         desc: '',
         img: [
           'v5a',

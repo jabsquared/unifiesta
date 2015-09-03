@@ -47,22 +47,20 @@
       </p>
     </div>
 
-    <div ng-if="showCard" class="card">
+    <div class="card" ng-if="showCard">
       <h5 class="bold">
         <b>{{info.name}}</b>
       </h5>
       <!-- <div class="item-divider "> -->
-        <!-- single image -->
-        <!-- <img ng-src="{{getURL(info.id)}}" alt="Loading..."
+      <!-- single image -->
+      <!-- <img ng-src="{{getURL(info.id)}}" alt="Loading..."
         imageonload="spinner='true'" />
         <br>
         <ion-spinner class="center spinner-energized" icon="lines" ng-hide="spinner">
         </ion-spinner> -->
-      </div>
-      <div ng-if="showCard" class="card">
 
-        <ion-slide-box show-pager="false">
-
+      <div class="item-divider">
+        <ion-slide-box>
           <ion-slide ng-repeat="vi in info.img">
             <img ng-src="{{getURL(vi)}}" alt="Loading..." imageonload="spinner='true'" />
             <br>
@@ -71,7 +69,7 @@
           </ion-slide>
         </ion-slide-box>
       </div>
-    <!-- </div> -->
+    </div>
 
     <!-- <h4>Longitude: {{long}}</h4>
     <h4>Laditude: {{lat}}</h4> -->
