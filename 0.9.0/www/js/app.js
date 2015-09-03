@@ -13,11 +13,11 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-  .state('home', {
-    url: '/',
-    templateUrl: 'homex/home.html',
-    controller: 'HomeCtrl'
-  })
+    .state('home', {
+      url: '/',
+      templateUrl: 'homex/home.html',
+      controller: 'HomeCtrl'
+    })
 
   .state('events', {
     url: '/events',
