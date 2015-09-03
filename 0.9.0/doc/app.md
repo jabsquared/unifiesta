@@ -1,8 +1,3 @@
-# Raffle
- |---> get request and loading spinner
-
-# Translation
-
 
 # Homescreen Styling
 
@@ -14,7 +9,6 @@
 
 
 # Add warning to "not park at safeway!"
-
 
 
 # Issues:
@@ -45,7 +39,9 @@
 * Return of Native Back button
 * Binding the Booth's information into the info Card (Boothmap). OnEvent: On click, assign $scope
 * Fix Iphone event images not loading
-
+* Raffle
+  |---> get request and loading spinner
+* Translation
 
 # Parking and Parade
   |---> 1 Special Marker for Parade location
