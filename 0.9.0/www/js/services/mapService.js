@@ -43,14 +43,14 @@ app.factory('mapService', function() {
     draggable: false,
     icon: boothIcon,
     iconAngle: 270,
-  }, {
+  }, {//4 Univision
     lat: 47.307436,
     lng: -122.230094,
     focus: false,
     draggable: false,
     icon: boothIcon,
     iconAngle: 270,
-  }, {
+  }, {//5 jabSquared
     lat: 47.307436,
     lng: -122.229984,
     focus: false,
@@ -288,14 +288,14 @@ app.factory('mapService', function() {
     draggable: false,
     icon: boothIcon,
     iconAngle: 90,
-  }, {
+  }, { //39
     lat: 47.307693,
     lng: -122.230424,
     focus: false,
     draggable: false,
     icon: boothIcon,
     iconAngle: 270,
-  }, {
+  }, { //40
     lat: 47.306941,
     lng: -122.229799,
     focus: false,
@@ -303,7 +303,6 @@ app.factory('mapService', function() {
     icon: boothIcon,
     iconAngle: 270,
   }];
-
 
   var info = [{
     id: '1',
@@ -510,7 +509,8 @@ app.factory('mapService', function() {
 
   for (var i = 0; i < booth.length; i++) {
     // booth[i].message = "Booth " + -~i;
-    booth[i].message = booth[i].info.name;
+    booth[i].info = info[i];
+    booth[i].message = info[i].name;
   }
 
   var boothCount = booth.length;
