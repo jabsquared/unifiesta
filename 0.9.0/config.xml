@@ -1,27 +1,27 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.jabSquared.unifiesta" version="0.0.9" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns="http://www.w3.org/ns/widgets">
   <name>Unifiesta</name>
-  <description>
-    Schedule app for Univision Seattle Event.
+  <description>&#xD;
+    Schedule app for Univision Seattle Event.&#xD;
   </description>
-  <author email="jab2@tuta.io" href="jab2@tuta.io">
-    jabSquared
+  <author email="jab2@tuta.io" href="jab2@tuta.io">&#xD;
+    jabSquared&#xD;
   </author>
   <content src="index.html"/>
   <access origin="*"/>
   <access origin="http://*.openstreetmap.org/*"/>
   <access origin="https://*.openstreetmap.org/*"/>
   <access origin="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/*"/>
-  <allow-navigation origin="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/*"/>
   <access launch-external="yes" origin="https://maps.google.com/*"/>
   <access origin="http://unifiesta.mybluemix.net/*"/>
   <access origin="https://unifiesta.mybluemix.net/*"/>
+  <allow-navigation origin="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/*"/>
   <allow-navigation origin="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/*"/>
   <allow-navigation href="http://unifiesta.mybluemix.net/*"/>
   <allow-navigation href="https://unifiesta.mybluemix.net/*"/>
   <allow-navigation href="*"/>
   <allow-navigation href="http://*.openstreetmap.org/*"/>
-
+  <allow-navigation href="http://*.openstreetmap.org/*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -84,7 +84,6 @@
     <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640"/>
     <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320"/>
   </platform>
-  <allow-navigation href="http://*.openstreetmap.org/*"/>
   <allow-intent href="http://*.openstreetmap.org/*"/>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
   <plugin name="cordova-plugin-inappbrowser" spec="~1.0.1"/>
