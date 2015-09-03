@@ -7903,7 +7903,8 @@ ion-content {
 .boothmap .map {
   height: 54vh; }
 .boothmap .card {
-  margin: 9px auto; }
+  text-align: center;
+  margin: 0 auto; }
 .boothmap .card * {
   padding: 3.6px;
   color: #fefcfc; }
@@ -7915,13 +7916,17 @@ ion-content {
   color: #fefcfc;
   font-size: 1.08em; }
 .boothmap .card .item-divider {
-  background: rgba(0, 0, 0, 0.27);
-  text-align: center; }
+  background: rgba(0, 0, 0, 0.27); }
 .boothmap .card .button.button-block, .boothmap .button.button-full {
   margin-bottom: 0; }
-.boothmap .card .website {
-  text-align: center;
-  color: black; }
+.boothmap .card img {
+  max-height: 45vh;
+  max-width: 100%;
+  padding: 3.6px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  color: white; }
 
 .sponsors .slider {
   height: 100%; }
