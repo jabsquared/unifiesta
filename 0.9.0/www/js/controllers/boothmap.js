@@ -1,5 +1,9 @@
-app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
+app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
   console.log('CTRL: BoothMap');
+
+  $scope.getURL = function (id) {
+    return $sce.trustAsResourceUrl( 'https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/vendors/' + id + '.jpg');
+  };
 
   $scope.findMe = false;
   $scope.markers = mapService.booth;

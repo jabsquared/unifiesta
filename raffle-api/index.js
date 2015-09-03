@@ -45,6 +45,6 @@ function getRaffle(req, res, next) {
 
 server.get('/gr', getRaffle);
 
-server.listen(8080, function() {
+server.listen(process.env.VCAP_APP_PORT || 8080, function() {
   console.log('%s listening at %s', server.name, server.url);
 });

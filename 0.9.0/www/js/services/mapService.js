@@ -30,7 +30,8 @@ app.factory('mapService', function() {
       info: {
         id: '1',
         name: 'Arte Floral - Gelatina',
-        desc: ''
+        desc: '',
+        img: ['v1']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -42,7 +43,8 @@ app.factory('mapService', function() {
       info: {
         id: '2',
         name: 'Phillips Law',
-        desc: ''
+        desc: '',
+        img: ['v2']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -54,7 +56,8 @@ app.factory('mapService', function() {
       info: {
         id: '3',
         name: 'Xfinity',
-        desc: ''
+        desc: '',
+        img: ['v3']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -66,19 +69,24 @@ app.factory('mapService', function() {
       info: {
         id: '4',
         name: 'Univision',
-        desc: ''
+        desc: '',
+        img: ['v4']
       },
       icon: boothIcon,
       iconAngle: 270,
-    }, {
+    }, { 
       lat: 47.307436,
       lng: -122.229984,
       focus: false,
       draggable: false,
       info: {
         id: '5',
-        name: 'jabSquared',
-        desc: ''
+        name: 'jabSquared/CodeDay',
+        desc: '',
+        img: [
+          'v5a',
+          'v5b'
+        ]
       },
       icon: boothIcon,
       iconAngle: 300,
@@ -90,7 +98,8 @@ app.factory('mapService', function() {
       info: {
         id: '6',
         name: 'Harris Mitsubishi',
-        desc: ''
+        desc: '',
+        img: ['v6']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -102,7 +111,8 @@ app.factory('mapService', function() {
       info: {
         id: '7',
         name: 'Auburn Downtown',
-        desc: ''
+        desc: '',
+        img: ['v7']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -114,7 +124,8 @@ app.factory('mapService', function() {
       info: {
         id: '8',
         name: 'Adrys Promotions',
-        desc: ''
+        desc: '',
+        img: ['v8']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -126,7 +137,8 @@ app.factory('mapService', function() {
       info: {
         id: '9',
         name: 'Globo Azul',
-        desc: ''
+        desc: '',
+        img: ['v9']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -138,7 +150,8 @@ app.factory('mapService', function() {
       info: {
         id: '10',
         name: 'McDonalds',
-        desc: ''
+        desc: '',
+        img: ['v10']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -150,7 +163,8 @@ app.factory('mapService', function() {
       info: {
         id: '11',
         name: 'Costco',
-        desc: ''
+        desc: '',
+        img: ['v11']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -162,7 +176,8 @@ app.factory('mapService', function() {
       info: {
         id: '12',
         name: 'Salchipulpos Bonilla',
-        desc: ''
+        desc: '',
+        img: ['v12']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -174,7 +189,8 @@ app.factory('mapService', function() {
       info: {
         id: '13',
         name: 'Delridge Insurance',
-        desc: ''
+        desc: '',
+        img: ['v13']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -186,7 +202,8 @@ app.factory('mapService', function() {
       info: {
         id: '14',
         name: 'Los Agaves',
-        desc: ''
+        desc: '',
+        img: ['v14']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -198,7 +215,8 @@ app.factory('mapService', function() {
       info: {
         id: '15',
         name: 'Bontanas Don Nacho',
-        desc: ''
+        desc: '',
+        img: ['v15']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -210,7 +228,8 @@ app.factory('mapService', function() {
       info: {
         id: '16',
         name: 'Fruteria Veronica',
-        desc: ''
+        desc: '',
+        img: ['v16']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -222,7 +241,8 @@ app.factory('mapService', function() {
       info: {
         id: '17',
         name: 'JE Tires',
-        desc: ''
+        desc: '',
+        img: ['v17']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -234,7 +254,8 @@ app.factory('mapService', function() {
       info: {
         id: '18',
         name: 'Studios Fany',
-        desc: ''
+        desc: '',
+        img: ['v18']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -246,7 +267,8 @@ app.factory('mapService', function() {
       info: {
         id: '19',
         name: 'El Lago Mexican R',
-        desc: ''
+        desc: '',
+        img: ['v19']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -258,7 +280,8 @@ app.factory('mapService', function() {
       info: {
         id: '20',
         name: 'Vikay Design',
-        desc: ''
+        desc: '',
+        img: ['v20']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -270,7 +293,8 @@ app.factory('mapService', function() {
       info: {
         id: '21',
         name: 'Pizza Dudes',
-        desc: ''
+        desc: '',
+        img: ['v21']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -282,7 +306,8 @@ app.factory('mapService', function() {
       info: {
         id: '22',
         name: 'Stitchin Mich',
-        desc: ''
+        desc: '',
+        img: ['v22']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -294,7 +319,8 @@ app.factory('mapService', function() {
       info: {
         id: '23',
         name: 'El Portal de Sahuayo',
-        desc: ''
+        desc: '',
+        img: ['v23']
       },
       icon: boothIcon,
       iconAngle: 0,
@@ -306,7 +332,8 @@ app.factory('mapService', function() {
       info: {
         id: '24',
         name: 'Taco Goal',
-        desc: ''
+        desc: '',
+        img: ['v24']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -318,7 +345,8 @@ app.factory('mapService', function() {
       info: {
         id: '25',
         name: 'Chilly Billy Polar Ice',
-        desc: ''
+        desc: '',
+        img: ['v25']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -330,7 +358,8 @@ app.factory('mapService', function() {
       info: {
         id: '26',
         name: 'Royal Prestige',
-        desc: ''
+        desc: '',
+        img: ['v26']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -342,7 +371,8 @@ app.factory('mapService', function() {
       info: {
         id: '27',
         name: 'Salvadorian Bakery',
-        desc: ''
+        desc: '',
+        img: ['v27']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -354,7 +384,8 @@ app.factory('mapService', function() {
       info: {
         id: '28',
         name: 'Blosom Catering',
-        desc: ''
+        desc: '',
+        img: ['v28']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -366,7 +397,8 @@ app.factory('mapService', function() {
       info: {
         id: '29',
         name: 'Lets Read',
-        desc: ''
+        desc: '',
+        img: ['v29']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -378,7 +410,8 @@ app.factory('mapService', function() {
       info: {
         id: '30',
         name: 'Rainbow',
-        desc: ''
+        desc: '',
+        img: ['v30']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -390,7 +423,8 @@ app.factory('mapService', function() {
       info: {
         id: '31',
         name: 'NW Casas',
-        desc: ''
+        desc: '',
+        img: ['v31']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -402,7 +436,8 @@ app.factory('mapService', function() {
       info: {
         id: '32',
         name: 'Fruteria Sahuayo',
-        desc: ''
+        desc: '',
+        img: ['v32']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -414,7 +449,8 @@ app.factory('mapService', function() {
       info: {
         id: '33',
         name: 'Antojitos Araceli',
-        desc: ''
+        desc: '',
+        img: ['v33']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -426,7 +462,8 @@ app.factory('mapService', function() {
       info: {
         id: '34',
         name: 'Colomiana',
-        desc: ''
+        desc: '',
+        img: ['v34']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -438,7 +475,8 @@ app.factory('mapService', function() {
       info: {
         id: '35',
         name: 'Fritangas Rodriguez',
-        desc: ''
+        desc: '',
+        img: ['v35']
       },
       icon: boothIcon,
       iconAngle: 90,
@@ -450,7 +488,8 @@ app.factory('mapService', function() {
       info: {
         id: '36',
         name: 'Botanas Lucy',
-        desc: ''
+        desc: '',
+        img: ['v36']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -462,7 +501,8 @@ app.factory('mapService', function() {
       info: {
         id: '37',
         name: 'Jump N Jumper',
-        desc: ''
+        desc: '',
+        img: ['v37']
       },
       icon: boothIcon,
       iconAngle: 270,
@@ -474,7 +514,8 @@ app.factory('mapService', function() {
       info: {
         id: '38',
         name: 'Plaza Garibaldi',
-        desc: ''
+        desc: '',
+        img: ['v38']
       },
       icon: boothIcon,
       iconAngle: 90,

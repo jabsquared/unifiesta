@@ -9,16 +9,15 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
     var newDate = subtractMinutes(single_event.start, minutes);
 
     // Real funtion
-    // function subtractMinutes(date_obj, minutes) {
-    //   date_obj = new Date(date_obj);
-    //   return new Date(date_obj.getTime() - minutes * 60000);
-    // }
-
     function subtractMinutes(date_obj, minutes) {
-      new_date_obj = new Date();
-      return new Date(new_date_obj.getTime() + minutes * 1000);
-      // return new Date(new_date_obj.getTime() + minutes * 60000);
+      date_obj = new Date(date_obj);
+      return new Date(date_obj.getTime() - minutes * 60000);
     }
+
+    // function subtractMinutes(date_obj, minutes) {
+    //   new_date_obj = new Date();
+    //   return new Date(new_date_obj.getTime() + minutes * 1000);
+    // }
 
     $cordovaLocalNotification.schedule({
       id: single_event.id,
