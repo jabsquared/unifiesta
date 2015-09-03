@@ -15,7 +15,7 @@
 
     <div class="content">
 
-      <img alt="Univision" ng-src="img/main/header.png" />
+      <img alt="Univision" ng-src="img/main/header-shadow.png" />
 
       <div class="option">
         <button class="button button-block button-assertive bold" ng-click="navigate('events')">
@@ -32,11 +32,11 @@
             Raffle #:
             <br>
             <i ng-show="$storage.gotRaffle">
-            {{$storage.raffle | numberFixedLen : 5}}
-            <i>
-              <i ng-hide="$storage.gotRaffle">
+              {{$storage.raffle | numberFixedLen : 5}}
+            </i>
+            <i ng-hide="$storage.gotRaffle">
               Loading...
-              <i>
+            </i>
           </h3>
           <br>
           <ion-spinner class="center spinner-energized" icon="lines" ng-hide="$storage.gotRaffle">

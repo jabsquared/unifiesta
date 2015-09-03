@@ -1,6 +1,5 @@
 
-# Homescreen Styling
-
+#
 
 # Adding Vibration on ios
 
@@ -8,10 +7,11 @@
 # Playing around with booth icon
 
 
-# Add warning to "not park at safeway!"
-
 
 # Issues:
+
+# Homescreen Styling
+# Add warning to "not park at safeway!"
 
 1 Home page is not very responsive... (Height will be squashed)
 
