@@ -23,703 +23,494 @@ app.factory('mapService', function() {
   };
 
   var booth = [{
-      lat: 47.307436,
-      lng: -122.230424,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '1',
-        name: 'Arte Floral - Gelatina',
-        desc: '',
-        img: ['v1']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307436,
-      lng: -122.230314,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '2',
-        name: 'Phillips Law',
-        desc: '',
-        img: ['v2']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307436,
-      lng: -122.230204,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '3',
-        name: 'Xfinity',
-        desc: '',
-        img: ['v3']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307436,
-      lng: -122.230094,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '4',
-        name: 'Univision',
-        desc: '',
-        img: ['v4']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307436,
-      lng: -122.229984,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '5',
-        name: 'jabSquared & CodeDay',
-        desc: '',
-        img: [
-          'v5a',
-          'v5b'
-        ]
-      },
-      icon: boothIcon,
-      iconAngle: 300,
-    }, {
-      lat: 47.307496,
-      lng: -122.229879,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '6',
-        name: 'Harris Mitsubishi',
-        desc: '',
-        img: ['v6']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307576,
-      lng: -122.229879,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '7',
-        name: 'Auburn Downtown',
-        desc: '',
-        img: ['v7']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307656,
-      lng: -122.229879,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '8',
-        name: 'Adrys Promotions',
-        desc: '',
-        img: ['v8']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307736,
-      lng: -122.229879,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '9',
-        name: 'Globo Azul',
-        desc: '',
-        img: ['v9']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307816,
-      lng: -122.229879,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '10',
-        name: 'McDonalds',
-        desc: '',
-        img: ['v10']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.307773,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '11',
-        name: 'Costco',
-        desc: '',
-        img: ['v11']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.307693,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '12',
-        name: 'Salchipulpos Bonilla',
-        desc: '',
-        img: ['v12']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.307613,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '13',
-        name: 'Delridge Insurance',
-        desc: '',
-        img: ['v13']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.307533,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '14',
-        name: 'Los Agaves',
-        desc: '',
-        img: ['v14']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.307453,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '15',
-        name: 'Bontanas Don Nacho',
-        desc: '',
-        img: ['v15']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307271,
-      lng: -122.230204,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '16',
-        name: 'Fruteria Veronica',
-        desc: '',
-        img: ['v16']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307271,
-      lng: -122.230094,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '17',
-        name: 'JE Tires',
-        desc: '',
-        img: ['v17']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307271,
-      lng: -122.229984,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '18',
-        name: 'Studios Fany',
-        desc: '',
-        img: ['v18']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307271,
-      lng: -122.229874,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '19',
-        name: 'El Lago Mexican R',
-        desc: '',
-        img: ['v19']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307271,
-      lng: -122.229599,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '20',
-        name: 'Vikay Design',
-        desc: '',
-        img: ['v20']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307271,
-      lng: -122.229489,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '21',
-        name: 'Pizza Dudes',
-        desc: '',
-        img: ['v21']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307271,
-      lng: -122.229379,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '22',
-        name: 'Stitchin Mich',
-        desc: '',
-        img: ['v22']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307271,
-      lng: -122.229269,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '23',
-        name: 'El Portal de Sahuayo',
-        desc: '',
-        img: ['v23']
-      },
-      icon: boothIcon,
-      iconAngle: 0,
-    }, {
-      lat: 47.307216,
-      lng: -122.230094,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '24',
-        name: 'Taco Goal',
-        desc: '',
-        img: ['v24']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307216,
-      lng: -122.229874,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '25',
-        name: 'Chilly Billy Polar Ice',
-        desc: '',
-        img: ['v25']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307216,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '26',
-        name: 'Royal Prestige',
-        desc: '',
-        img: ['v26']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.307161,
-      lng: -122.230094,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '27',
-        name: 'Salvadorian Bakery',
-        desc: '',
-        img: ['v27']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307161,
-      lng: -122.229874,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '28',
-        name: 'Blosom Catering',
-        desc: '',
-        img: ['v28']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307161,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '29',
-        name: 'Lets Read',
-        desc: '',
-        img: ['v29']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.307106,
-      lng: -122.230094,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '30',
-        name: 'Rainbow',
-        desc: '',
-        img: ['v30']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307106,
-      lng: -122.229874,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '31',
-        name: 'NW Casas',
-        desc: '',
-        img: ['v31']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307106,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '32',
-        name: 'Fruteria Sahuayo',
-        desc: '',
-        img: ['v32']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.307051,
-      lng: -122.230094,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '33',
-        name: 'Antojitos Araceli',
-        desc: '',
-        img: ['v33']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307051,
-      lng: -122.229874,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '34',
-        name: 'Colomiana',
-        desc: '',
-        img: ['v34']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.307051,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '35',
-        name: 'Fritangas Rodriguez',
-        desc: '',
-        img: ['v35']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }, {
-      lat: 47.306949,
-      lng: -122.230094,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '36',
-        name: 'Botanas Lucy',
-        desc: '',
-        img: ['v36']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.306949,
-      lng: -122.229874,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '37',
-        name: 'Jump N Jumper',
-        desc: '',
-        img: ['v37']
-      },
-      icon: boothIcon,
-      iconAngle: 270,
-    }, {
-      lat: 47.306949,
-      lng: -122.229819,
-      focus: false,
-      draggable: false,
-      info: {
-        id: '38',
-        name: 'Plaza Garibaldi',
-        desc: '',
-        img: ['v38']
-      },
-      icon: boothIcon,
-      iconAngle: 90,
-    }
-  ];
-  var info = [
-    {
-      id: '1',
-      name: 'Arte Floral - Gelatina',
-      desc: '',
-      img: ['v1']
-    },{
-      id: '2',
-      name: 'Phillips Law',
-      desc: '',
-      img: ['v2']
-    },{
-        id: '3',
-        name: 'Xfinity',
-        desc: '',
-        img: ['v3']
-      },{
-        id: '4',
-        name: 'Univision',
-        desc: '',
-        img: ['v4']
-      },{
-        id: '5',
-        name: 'jabSquared/CodeDay',
-        desc: '',
-        img: [
-          'v5a',
-          'v5b'
-          ]
-        },{
-        id: '6',
-        name: 'Harris Mitsubishi',
-        desc: '',
-        img: ['v6']
-      },{
-        id: '7',
-        name: 'Auburn Downtown',
-        desc: '',
-        img: ['v7']
-      },
-        id: '8',
-        name: 'Adrys Promotions',
-        desc: '',
-        img: ['v8']
-      },{
-        id: '9',
-        name: 'Globo Azul',
-        desc: '',
-        img: ['v9']
-      },{
-        id: '10',
-        name: 'McDonalds',
-        desc: '',
-        img: ['v10']
-      },{
-        id: '11',
-        name: 'Costco',
-        desc: '',
-        img: ['v11']
-      },{
-        id: '12',
-        name: 'Salchipulpos Bonilla',
-        desc: '',
-        img: ['v12']
-      },{
-        id: '13',
-        name: 'Delridge Insurance',
-        desc: '',
-        img: ['v13']
-      },{
-        id: '14',
-        name: 'Los Agaves',
-        desc: '',
-        img: ['v14']
-      },{
-        id: '15',
-        name: 'Bontanas Don Nacho',
-        desc: '',
-        img: ['v15']
-      },{
-        id: '16',
-        name: 'Fruteria Veronica',
-        desc: '',
-        img: ['v16']
-      },{
-        id: '17',
-        name: 'JE Tires',
-        desc: '',
-        img: ['v17']
-      },{
-        id: '18',
-        name: 'Studios Fany',
-        desc: '',
-        img: ['v18']
-      },{
-        id: '19',
-        name: 'El Lago Mexican R',
-        desc: '',
-        img: ['v19']
-      },{
-        id: '20',
-        name: 'Vikay Design',
-        desc: '',
-        img: ['v20']
-      },{
-        id: '21',
-        name: 'Pizza Dudes',
-        desc: '',
-        img: ['v21']
-      },{
-        id: '22',
-        name: 'Stitchin Mich',
-        desc: '',
-        img: ['v22']
-      },{
-        id: '23',
-        name: 'El Portal de Sahuayo',
-        desc: '',
-        img: ['v23']
-      },{
-          id: '24',
-          name: 'Taco Goal',
-          desc: '',
-          img: ['v24']
-        },{
-        id: '25',
-        name: 'Chilly Billy Polar Ice',
-        desc: '',
-        img: ['v25']
-      },{
-        id: '26',
-        name: 'Royal Prestige',
-        desc: '',
-        img: ['v26']
-      },{
-        id: '27',
-        name: 'Salvadorian Bakery',
-        desc: '',
-        img: ['v27']
-      },{
-        id: '28',
-        name: 'Blosom Catering',
-        desc: '',
-        img: ['v28']
-      },{
-        id: '29',
-        name: 'Lets Read',
-        desc: '',
-        img: ['v29']
-      },{
-        id: '30',
-        name: 'Rainbow',
-        desc: '',
-        img: ['v30']
-      },{
-        id: '31',
-        name: 'NW Casas',
-        desc: '',
-        img: ['v31']
-      },{
-        id: '32',
-        name: 'Fruteria Sahuayo',
-        desc: '',
-        img: ['v32']
-      },{
-        id: '33',
-        name: 'Antojitos Araceli',
-        desc: '',
-        img: ['v33']
-      },{
-        id: '34',
-        name: 'Colomiana',
-        desc: '',
-        img: ['v34']
-      },{
-        id: '35',
-        name: 'Fritangas Rodriguez',
-        desc: '',
-        img: ['v35']
-      },{
-        id: '36',
-        name: 'Botanas Lucy',
-        desc: '',
-        img: ['v36']
-      },{
-        id: '37',
-        name: 'Jump N Jumper',
-        desc: '',
-        img: ['v37']
-      },{
-        id: '38',
-        name: 'Plaza Garibaldi',
-        desc: '',
-        img: ['v38']
-      }];
+    lat: 47.307436,
+    lng: -122.230424,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307436,
+    lng: -122.230314,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307436,
+    lng: -122.230204,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {//4 Univision
+    lat: 47.307436,
+    lng: -122.230094,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {//5 jabSquared
+    lat: 47.307436,
+    lng: -122.229984,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 300,
+  }, {
+    lat: 47.307496,
+    lng: -122.229879,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307576,
+    lng: -122.229879,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307656,
+    lng: -122.229879,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307736,
+    lng: -122.229879,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307816,
+    lng: -122.229879,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307773,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307693,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307613,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307533,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307453,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307386,
+    lng: -122.229739,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307271,
+    lng: -122.230259,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307271,
+    lng: -122.230039,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307271,
+    lng: -122.229874,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307271,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307216,
+    lng: -122.230259,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307216,
+    lng: -122.230039,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307216,
+    lng: -122.229874,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 0,
+  }, {
+    lat: 47.307216,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307161,
+    lng: -122.230259,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307161,
+    lng: -122.230039,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307161,
+    lng: -122.229874,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307161,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307106,
+    lng: -122.230259,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307106,
+    lng: -122.230039,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307106,
+    lng: -122.229874,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307106,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307051,
+    lng: -122.230259,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307051,
+    lng: -122.230039,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307051,
+    lng: -122.229874,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, {
+    lat: 47.307051,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307106,
+    lng: -122.230424,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307386,
+    lng: -122.229649,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 90,
+  }, { //39
+    lat: 47.307693,
+    lng: -122.230424,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, { //40
+    lat: 47.306941,
+    lng: -122.229799,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }];
+
+  var info = [{
+    id: '1',
+    name: 'Arte Floral - Gelatina',
+    desc: '',
+    img: ['v1']
+  }, {
+    id: '2',
+    name: 'Phillips Law',
+    desc: '',
+    img: ['v2']
+  }, {
+    id: '3',
+    name: 'Xfinity',
+    desc: '',
+    img: ['v3']
+  }, {
+    id: '4',
+    name: 'Univision',
+    desc: '',
+    img: ['v4']
+  }, {
+    id: '5',
+    name: 'jabSquared/CodeDay',
+    desc: '',
+    img: [
+      'v5a',
+      'v5b'
+    ]
+  }, {
+    id: '6',
+    name: 'Harris Mitsubishi',
+    desc: '',
+    img: ['v6']
+  }, {
+    id: '7',
+    name: 'Auburn Downtown',
+    desc: '',
+    img: ['v7']
+  }, {
+    id: '8',
+    name: 'Adrys Promotions',
+    desc: '',
+    img: ['v8']
+  }, {
+    id: '9',
+    name: 'Globo Azul',
+    desc: '',
+    img: ['v9']
+  }, {
+    id: '10',
+    name: 'McDonalds',
+    desc: '',
+    img: ['v10']
+  }, {
+    id: '11',
+    name: 'Costco',
+    desc: '',
+    img: ['v11']
+  }, {
+    id: '12',
+    name: 'Salchipulpos Bonilla',
+    desc: '',
+    img: ['v12']
+  }, {
+    id: '13',
+    name: 'Delridge Insurance',
+    desc: '',
+    img: ['v13']
+  }, {
+    id: '14',
+    name: 'Los Agaves',
+    desc: '',
+    img: ['v14']
+  }, {
+    id: '15',
+    name: 'Bontanas Don Nacho',
+    desc: '',
+    img: ['v15']
+  }, {
+    id: '16',
+    name: 'Fruteria Veronica',
+    desc: '',
+    img: ['v16']
+  }, {
+    id: '17',
+    name: 'JE Tires',
+    desc: '',
+    img: ['v17']
+  }, {
+    id: '18',
+    name: 'Studios Fany',
+    desc: '',
+    img: ['v18']
+  }, {
+    id: '19',
+    name: 'El Lago Mexican R',
+    desc: '',
+    img: ['v19']
+  }, {
+    id: '20',
+    name: 'Vikay Design',
+    desc: '',
+    img: ['v20']
+  }, {
+    id: '21',
+    name: 'Pizza Dudes',
+    desc: '',
+    img: ['v21']
+  }, {
+    id: '22',
+    name: 'Stitchin Mich',
+    desc: '',
+    img: ['v22']
+  }, {
+    id: '23',
+    name: 'El Portal de Sahuayo',
+    desc: '',
+    img: ['v23']
+  }, {
+    id: '24',
+    name: 'Taco Goal',
+    desc: '',
+    img: ['v24']
+  }, {
+    id: '25',
+    name: 'Chilly Billy Polar Ice',
+    desc: '',
+    img: ['v25']
+  }, {
+    id: '26',
+    name: 'Royal Prestige',
+    desc: '',
+    img: ['v26']
+  }, {
+    id: '27',
+    name: 'Salvadorian Bakery',
+    desc: '',
+    img: ['v27']
+  }, {
+    id: '28',
+    name: 'Blosom Catering',
+    desc: '',
+    img: ['v28']
+  }, {
+    id: '29',
+    name: 'Lets Read',
+    desc: '',
+    img: ['v29']
+  }, {
+    id: '30',
+    name: 'Rainbow',
+    desc: '',
+    img: ['v30']
+  }, {
+    id: '31',
+    name: 'NW Casas',
+    desc: '',
+    img: ['v31']
+  }, {
+    id: '32',
+    name: 'Fruteria Sahuayo',
+    desc: '',
+    img: ['v32']
+  }, {
+    id: '33',
+    name: 'Antojitos Araceli',
+    desc: '',
+    img: ['v33']
+  }, {
+    id: '34',
+    name: 'Colomiana',
+    desc: '',
+    img: ['v34']
+  }, {
+    id: '35',
+    name: 'Fritangas Rodriguez',
+    desc: '',
+    img: ['v35']
+  }, {
+    id: '36',
+    name: 'Botanas Lucy',
+    desc: '',
+    img: ['v36']
+  }, {
+    id: '37',
+    name: 'Jump N Jumper',
+    desc: '',
+    img: ['v37']
+  }, {
+    id: '38',
+    name: 'Plaza Garibaldi',
+    desc: '',
+    img: ['v38']
+  }, {
+    id: '39',
+    name: 'Main Stage',
+    desc: ''
+  }, {
+    id: '40',
+    name: 'Restrooms	',
+    desc: ''
+  }];
 
   for (var i = 0; i < booth.length; i++) {
     // booth[i].message = "Booth " + -~i;
-    booth[i].message = booth[i].info.name;
+    booth[i].info = info[i];
+    booth[i].message = info[i].name;
   }
 
   var boothCount = booth.length;
@@ -915,10 +706,10 @@ app.factory('mapService', function() {
         }
       });
 
-      if (firstTimeLocating){
-      $scope.auburn.lat = position.coords.latitude;
-      $scope.auburn.lng = position.coords.longitude;
-      firstTimeLocating = false;
+      if (firstTimeLocating) {
+        $scope.auburn.lat = position.coords.latitude;
+        $scope.auburn.lng = position.coords.longitude;
+        firstTimeLocating = false;
       }
 
       document.getElementById("map").click();
