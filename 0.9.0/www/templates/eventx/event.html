@@ -44,10 +44,10 @@
         <!-- Multiple images || Using img arrays -->
 
           <ion-slide ng-repeat="ei in event.img">
-          <img ng-src="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/{{ei}}-min.jpg" alt="Loading..."
+            <img ng-src="{{getURL(ei)}}" alt="Loading..."
           imageonload="spinner='true'" />
-          <br>
-          <ion-spinner class="center spinner-energized" icon="lines" ng-hide="spinner">
+            <br>
+            <ion-spinner class="center spinner-energized" icon="lines" ng-hide="spinner">
           </ion-spinner>
         </ion-slide>
 

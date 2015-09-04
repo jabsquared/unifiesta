@@ -1,0 +1,11 @@
+applications:
+- services:
+  - Cloudant NoSQL DB-9q
+  disk_quota: 512M
+  host: unifiesta
+  name: unifiesta
+  command: node index.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M

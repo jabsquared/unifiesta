@@ -7903,10 +7903,12 @@ ion-content {
 .boothmap .map {
   height: 54vh; }
 .boothmap .card {
+  text-align: center;
   margin: 9px auto; }
 .boothmap .card * {
   padding: 3.6px;
-  color: #fefcfc; }
+  color: #fefcfc;
+  text-align: center; }
 .boothmap .card h3, .boothmap .card h4, .boothmap .card h5, .boothmap .card h6 {
   text-align: center; }
 .boothmap .card p {
@@ -7915,13 +7917,14 @@ ion-content {
   color: #fefcfc;
   font-size: 1.08em; }
 .boothmap .card .item-divider {
-  background: rgba(0, 0, 0, 0.27);
-  text-align: center; }
-.boothmap .card .button.button-block, .boothmap .button.button-full {
-  margin-bottom: 0; }
-.boothmap .card .website {
-  text-align: center;
-  color: black; }
+  background: rgba(0, 0, 0, 0.27); }
+.boothmap .card img {
+  max-height: 45vh;
+  max-width: 90%;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  color: white; }
 
 .sponsors .slider {
   height: 100%; }
@@ -7975,9 +7978,9 @@ ion-content {
   margin: 0 auto;
   text-align: center; }
 .home .content {
-  padding-top: 9vh; }
+  padding-top: 5vh; }
 .home .option {
-  padding-top: 9vh; }
+  padding-top: 5vh; }
 .home img {
   width: 90vw;
   max-width: 450px; }
@@ -7985,7 +7988,7 @@ ion-content {
   margin: 1em auto;
   text-align: center; }
 .home .raffle h3 {
-  color: rgba(183, 39, 12, 0.81);
+  color: #fff;
   text-shadow: 2px 2px 1px #001c09;
   font-weight: 450;
   width: 90vw; }

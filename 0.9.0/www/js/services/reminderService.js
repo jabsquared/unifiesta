@@ -2,23 +2,20 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
   function add(minutes, single_event) {
     console.log("entered add function");
 
-    // create var for current time
-    // var now = new Date().getTime();
-    // var _5SecondsFromNow = new Date(now + sec * 1000);
-
     var newDate = subtractMinutes(single_event.start, minutes);
 
     // Real funtion
-    // function subtractMinutes(date_obj, minutes) {
-    //   date_obj = new Date(date_obj);
-    //   return new Date(date_obj.getTime() - minutes * 60000);
-    // }
-
     function subtractMinutes(date_obj, minutes) {
-      new_date_obj = new Date();
-      return new Date(new_date_obj.getTime() + minutes * 1000);
-      // return new Date(new_date_obj.getTime() + minutes * 60000);
+      date_obj = new Date(date_obj);
+      console.log(new Date(date_obj.getTime() - minutes * 60000));
+      return new Date(date_obj.getTime() - minutes * 60000);
     }
+
+    // function subtractMinutes(date_obj, minutes) {
+    //   date_obj = new Date();
+    //   console.log(new Date(date_obj.getTime() + 1 * 60000));
+    //   return new Date(date_obj.getTime() + 1 * 60000);
+    // }
 
     $cordovaLocalNotification.schedule({
       id: single_event.id,
@@ -29,7 +26,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
       icon: 'file://img/main/logo.png',
       smallIcon: 'file://img/small.png',
       led: 'FBA50A',
-      badge: 1,
+      badge: 1
     }).then(function() {
       var alertPopup = $ionicPopup.alert({
         title: "Reminder Set,",
@@ -45,11 +42,11 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
   return {
     schedule: function(single_event) {
       var alarmPopup = $ionicPopup.show({
-        title: '<font size="4" class="bold" color="white">Set Reminder</font>',
+        title: '<font size="4" class="bold" color="white">establecer notificación</font>',
         // template: "",
         cssClass: 'oneline',
         buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
-          text: '<font size="3" color="white">5 minutes</font>',
+          text: '<font size="3" color="white">5 minutos</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -57,7 +54,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
             return 10;
           }
         }, {
-          text: '<font size="3" color="white">10 minutes</font>',
+          text: '<font size="3" color="white">10 minutos</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -65,7 +62,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
             return 15;
           }
         }, {
-          text: '<font size="3" color="white">15 minutes</font>',
+          text: '<font size="3" color="white">15 minutos</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -73,7 +70,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
             return 30;
           }
         }, {
-          text: '<font size="2" color="white">Cancel</font>',
+          text: '<font size="2" color="white">cancelar</font>',
           type: 'button-assertive',
           cssClass: 'oneline',
           onTap: function(e) {
@@ -88,17 +85,17 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
     cancel: function(event_id) {
       // A confirm dialog
       var confirmPopup = $ionicPopup.confirm({
-        title: 'Cancel Reminder',
-        template: 'Are you sure you want to cancel this reminder?',
+        title: 'cancelar notificación',
+        template: 'seguro que desea cancelar esta notificación?',
         buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
-          text: '<font size="3" color="white">No</font>',
+          text: '<font size="3" color="white">no</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
             return false;
           }
         }, {
-          text: '<font size="3" color="white">Yes</font>',
+          text: '<font size="3" color="white">sí</font>',
           type: 'button-energized',
           onTap: function(e) {
             // Returning a value will cause the promise to resolve with the given value.
@@ -123,6 +120,6 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
   };
 
   // $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
-  //   alert("Added a notification");
+  //   console.log("Added a notification");
   // });
 });

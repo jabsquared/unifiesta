@@ -4,14 +4,14 @@
 
   <ion-nav-buttons side="left">
     <button class="button icon-left button-clear ion-ios-arrow-left" ng-click="goBack()">
-      Back
+      Regresar
     </button>
   </ion-nav-buttons>
 
   <ion-nav-title>
     <!-- <img class="unilogo" alt="Univision" ng-src="img/main/logo-18.png" /> -->
     <span class="bold">
-      Parking
+      estacionamiento
     </span>
   </ion-nav-title>
 
@@ -28,28 +28,35 @@
 
     <div ng-if="!showCard" class="card">
       <p>
-        <b> ALL </b> street parking is
-        <br><b>FREE!</b>
+        <b> TODO</b> el estacionamiento de calle es
+        <br><b>GRATIS!</b>
       </p>
       <div class="item-divider item-text-wrap">
         <p>
-          <b> For free parking lots, </b>
-          <br> Select a marker (<i class="ion-model-s"></i>) on the map
-          <br> for more details
+          <b> Para lotes de estacionamiento gratis, </b>
+          <br> seleccioné un marcador (<i class="ion-model-s"></i>) en el mapa
+          <br> para mas detalles
         </p>
       </div>
+      <p>
+        Por favor de <b>NO</b> estacionarse en <b>SAFEWAY</b>
+      </p>
     </div>
 
     <div ng-if="showCard" class="card">
       <h5 class="bold">
-        Parking Lot <b>#{{info.number}}</b>
+        lote <b>#{{info.number}}</b>
       </h5>
       <div class="item-divider item-text-wrap">
         <p>
           {{info.address}}
         </p>
-        <a class="button button-block bold button-assertive" ng-href="https://maps.google.com/?q={{geoInfo.lat}},{{geoInfo.lng}}&t=m">
-          <i class="ion-android-navigate"></i> Get Directionsss
+        <!-- <a class="button button-block bold button-assertive" ng-href="https://maps.google.com/?q={{geoInfo.lat}},{{geoInfo.lng}}&t=m" target="_blank">
+          <i class="ion-android-navigate"></i> navegar
+        </a> -->
+        <a class="button button-block bold button-assertive" ng-click="
+        openGMap({{geoInfo}})" target="_blank">
+          <i class="ion-android-navigate"></i> navegar
         </a>
       </div>
     </div>
