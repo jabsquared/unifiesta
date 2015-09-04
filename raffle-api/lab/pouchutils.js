@@ -6,7 +6,7 @@ var PouchDB = require('pouchdb');
 
 var raffleDB = (secret.cloudantAuth.url === "lab") ?
   new PouchDB("http://127.0.0.1:5984/vote") : // Local testing
-  new PouchDB(secret.cloudantAuth.url + "/vote", {
+  new PouchDB(secret.cloudantAuth.url + "/raffle", {
     auth: {
       username: secret.cloudantAuth.user,
       password: secret.cloudantAuth.pass,

@@ -13,7 +13,7 @@ var init = function Init() {
   }
 };
 
-var pickP = function PickP() {
+var pick = function Pick() {
   var p = [0];
   if (R.length !== N.length) {
     p = pickRandom(N, {
@@ -36,5 +36,6 @@ var vote = function Vote (id) {
 
 exports.init = init;
 exports.vote = vote;
+exports.pick = pick;
 
 module.exports = exports;

@@ -6,13 +6,14 @@ server.use(restify.bodyParser());
 
 var raffle = require('./lab/raffle');
 
+raffle.init();
 
 function getRaffle(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
   // console.log(p[0]);
-  var p = raffle.pickP();
+  var p = raffle.pick();
 
   res.send(p);
   // res.send(N);
@@ -20,6 +21,6 @@ function getRaffle(req, res, next) {
 
 server.get('/gr', getRaffle);
 
-server.listen(process.env.VCAP_APP_PORT || 8080, function() {
+server.listen(process.env.VCAP_APP_PORT || 1314, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
