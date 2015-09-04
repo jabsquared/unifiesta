@@ -6,16 +6,16 @@ server.use(restify.bodyParser());
 
 var raffle = require('./lab/raffle');
 
-raffle.init();
-
 function getRaffle(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
   // console.log(p[0]);
-  var p = raffle.pick();
+  raffle.pick("unifiesta-9-13-2015", 4, function (p) {
+    res.send(p);
+  });
 
-  res.send(p);
+
   // res.send(N);
 }
 
