@@ -1,46 +1,21 @@
 var restify = require('restify');
-var fs = require('fs');
-
-var pickRandom = require('pick-random');
 
 var server = restify.createServer();
 server.use(restify.bodyParser());
 // Initialize raffle number, this should sit still...
-// var N = [99999];
-var N = [3];
-var R = [];
 
-for (var i = 0; i < 3; i++) {
-  N[i] = -~i;
-}
+var raffle = require('./lab/raffle');
 
-function pickP() {
-  var p = [0];
-  if (R.length !== N.length) {
-    p = pickRandom(N, {
-      count: 1
-    });
-    while (p[0] === (0)) {
-      p = pickRandom(N, {
-        count: 1
-      });
-    }
-  }
-  return p;
-}
 
 function getRaffle(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
-  var p = pickP();
-  N[p[0]] = 0;
-  R.push(p[0]);
+  // console.log(p[0]);
+  var p = raffle.pickP();
 
-  console.log(p[0]);
-
-  // res.send(p);
-  res.send(N);
+  res.send(p);
+  // res.send(N);
 }
 
 server.get('/gr', getRaffle);
