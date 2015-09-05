@@ -1,11 +1,11 @@
 app.factory('mapService', function() {
   console.log('SERV: Map ');
 
-  var iS = [18, 18];
+  var iBs = { wh : [18, 18]};
 
   var boothIcon = {
     type: 'div',
-    iconSize: iS,
+    iconSize: iBs.wh,
     popupAnchor: [0, 0],
     className: "card",
     html: "<i class='icon ion-disc'></i>"
@@ -57,18 +57,7 @@ app.factory('mapService', function() {
     lng: -122.229984,
     focus: false,
     draggable: false,
-    icon: {
-      type: 'div',
-      iconSize: iS,
-      popupAnchor: [0, 0],
-      className: "card",
-      html: "jS"
-      // type: 'extraMarker',
-      // html: 'js',
-      // markerColor: 'black',
-      // prefix: 'fa',
-      // shape: 'circle',
-    },
+    icon: boothIcon,
     iconAngle: 300,
   }, {
     lat: 47.307496,
@@ -651,6 +640,7 @@ app.factory('mapService', function() {
     tiles: {
       url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     },
+    boothIcon : boothIcon,
     booth: booth,
     pnp: pnp,
     dissableGeoLocation: function($scope, mapTitle) {
