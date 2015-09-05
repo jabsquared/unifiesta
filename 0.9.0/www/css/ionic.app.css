@@ -7715,6 +7715,9 @@ ion-content {
   -webkit-background-size: cover;
   -moz-background-size: cover; }
 
+.nav-bar-title {
+  font-size: 9px; }
+
 .logo {
   clear: both;
   width: fixed;
@@ -7901,7 +7904,7 @@ ion-content {
   margin-bottom: 0; }
 
 .boothmap .map {
-  height: 54vh; }
+  height: 45vh; }
 .boothmap .card {
   text-align: center;
   margin: 9px auto; }

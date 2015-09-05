@@ -11,7 +11,7 @@ function getRaffle(req, res, next) {
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
   // console.log(p[0]);
-  raffle.pick("unifiesta-9-13-2015", 4, function (p) {
+  raffle.pick("unifiesta-9-13-2015", 99999, function (p) {
     res.send(p);
   });
 
