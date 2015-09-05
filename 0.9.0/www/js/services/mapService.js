@@ -2,16 +2,16 @@ app.factory('mapService', function() {
   console.log('SERV: Map ');
 
   var boothIcon = {
-    type: 'div',
-    iconSize: [18, 18],
-    popupAnchor: [0, 0],
-    className: "card",
-    html: "<i class='icon ion-disc'></i>"
-      // type: 'extraMarker',
-      // icon: 'ion-disc',
-      // markerColor: 'orange-dark',
-      // prefix: 'fa',
-      // shape: 'square',
+    // type: 'div',
+    // iconSize: [36, 36],
+    // popupAnchor: [0, 0],
+    // className: "card",
+    // html: "<i class='icon ion-disc'></i>"
+      type: 'extraMarker',
+      icon: 'ion-disc',
+      markerColor: 'orange-dark',
+      prefix: 'fa',
+      shape: 'square',
   };
 
   var carMarker = {
@@ -326,7 +326,7 @@ app.factory('mapService', function() {
     img: ['v4']
   }, {
     id: '5',
-    name: 'jabSquared/CodeDay',
+    name: 'jabSquared & CodeDay',
     desc: '',
     img: [
       'v5a',
