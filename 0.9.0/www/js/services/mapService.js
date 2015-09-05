@@ -1,17 +1,19 @@
 app.factory('mapService', function() {
   console.log('SERV: Map ');
 
+  var iS = [18, 18];
+
   var boothIcon = {
-    // type: 'div',
-    // iconSize: [36, 36],
-    // popupAnchor: [0, 0],
-    // className: "card",
-    // html: "<i class='icon ion-disc'></i>"
-      type: 'extraMarker',
-      icon: 'ion-disc',
-      markerColor: 'orange-dark',
-      prefix: 'fa',
-      shape: 'square',
+    type: 'div',
+    iconSize: iS,
+    popupAnchor: [0, 0],
+    className: "card",
+    html: "<i class='icon ion-disc'></i>"
+      // type: 'extraMarker',
+      // icon: 'ion-disc',
+      // markerColor: 'orange-dark',
+      // prefix: 'fa',
+      // shape: 'square',
   };
 
   var carMarker = {
@@ -55,7 +57,18 @@ app.factory('mapService', function() {
     lng: -122.229984,
     focus: false,
     draggable: false,
-    icon: boothIcon,
+    icon: {
+      type: 'div',
+      iconSize: iS,
+      popupAnchor: [0, 0],
+      className: "card",
+      html: "jS"
+      // type: 'extraMarker',
+      // html: 'js',
+      // markerColor: 'black',
+      // prefix: 'fa',
+      // shape: 'circle',
+    },
     iconAngle: 300,
   }, {
     lat: 47.307496,
