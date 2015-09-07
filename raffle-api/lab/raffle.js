@@ -20,6 +20,17 @@ var pick = function Pick(id, size, callback) {
   });
 };
 
+var draw = function Draw (id, size, winnerCount, callback) {
+  PouchUtils.fetch(id, size, function(doc) {
+
+    var p = pickRandom (doc.R, {
+      count: winnerCount
+    });
+
+    callback(p);
+  });
+};
+
 exports.pick = pick;
 
 module.exports = exports;
