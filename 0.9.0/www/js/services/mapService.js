@@ -234,42 +234,7 @@ app.factory('mapService', function() {
     iconAngle: 270,
   }, {
     lat: 47.307106,
-    lng: -122.229874,
-    focus: false,
-    draggable: false,
-    icon: boothIcon,
-    iconAngle: 270,
-  }, {
-    lat: 47.307106,
-    lng: -122.229799,
-    focus: false,
-    draggable: false,
-    icon: boothIcon,
-    iconAngle: 90,
-  }, {
-    lat: 47.307051,
-    lng: -122.230259,
-    focus: false,
-    draggable: false,
-    icon: boothIcon,
-    iconAngle: 270,
-  }, {
-    lat: 47.307051,
-    lng: -122.230039,
-    focus: false,
-    draggable: false,
-    icon: boothIcon,
-    iconAngle: 270,
-  }, {
-    lat: 47.307051,
-    lng: -122.229874,
-    focus: false,
-    draggable: false,
-    icon: boothIcon,
-    iconAngle: 90,
-  }, {
-    lat: 47.307051,
-    lng: -122.229799,
+    lng: -122.229834,
     focus: false,
     draggable: false,
     icon: boothIcon,
@@ -302,27 +267,48 @@ app.factory('mapService', function() {
     draggable: false,
     icon: boothIcon,
     iconAngle: 270,
+  }, { //33
+    lat: 47.307386,
+    lng: -122.230424,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307026,
+    lng: -122.229834,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
+  }, {
+    lat: 47.307896,
+    lng: -122.229834,
+    focus: false,
+    draggable: false,
+    icon: boothIcon,
+    iconAngle: 270,
   }];
 
   var info = [{
     id: '1',
-    name: 'Arte Floral - Gelatina',
-    desc: '',
+    name: 'Arte Floral en Gelatina',
+    desc: 'Artesania manual en gelatina',
     img: ['v1']
   }, {
     id: '2',
     name: 'Phillips Law',
-    desc: '',
+    desc: 'Abogados de Lesiones Personales ',
     img: ['v2']
   }, {
     id: '3',
     name: 'Xfinity',
-    desc: '',
+    desc: 'Television Interactiva y el WiFi mas rapido en el Hogar',
     img: ['v3']
   }, {
     id: '4',
     name: 'Univision',
-    desc: '',
+    desc: 'Organizador del Evento, Cadena de Television, entretenimiento y servicios de publicidad',
     img: ['v4']
   }, {
     id: '5',
@@ -335,176 +321,168 @@ app.factory('mapService', function() {
   }, {
     id: '6',
     name: 'Harris Mitsubishi',
-    desc: '',
+    desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }, {
     id: '7',
     name: 'Auburn Downtown',
-    desc: '',
+    desc: 'Asociacion del Centro de la Ciudad de Auburn',
     img: ['v7']
   }, {
     id: '8',
     name: 'Adrys Promotions',
-    desc: '',
+    desc: 'Contrataciones de grupos y planeacion de eventos',
     img: ['v8']
   }, {
     id: '9',
     name: 'Globo Azul',
-    desc: '',
+    desc: 'Planeacion y decoracion de Eventos, Organizador Expo Quinceañera ',
     img: ['v9']
   }, {
     id: '10',
     name: 'McDonalds',
-    desc: '',
+    desc: 'Comida: Strawberry Banana Smoothies & Mango Pineapple Smoothies',
     img: ['v10']
   }, {
     id: '11',
     name: 'Costco',
-    desc: '',
+    desc: 'Tienda de compra al por mayor, Membresias Disponibles',
     img: ['v11']
   }, {
     id: '12',
     name: 'Salchipulpos Bonilla',
-    desc: '',
+    desc: 'Comida - Antojitos: Salchipulpos, Elotes, Papas Fritas, Chicharrones, y Aguas Frescas',
     img: ['v12']
   }, {
     id: '13',
     name: 'Delridge Insurance',
-    desc: '',
+    desc: 'Seguros de Auto',
     img: ['v13']
   }, {
     id: '14',
     name: 'Los Agaves',
-    desc: '',
+    desc: 'Comida Mexicana: Tacos, Tortas, and Burritos',
     img: ['v14']
   }, {
     id: '15',
     name: 'Bontanas Don Nacho',
-    desc: '',
+    desc: 'Comida - Botanas: Raspados, Fruta, Elotes, Tostilocos, Chicharrones, y Aguas Frescas',
     img: ['v15']
   }, {
     id: '16',
     name: 'Fruteria Veronica',
-    desc: '',
+    desc: 'Comida – Antojitos: Raspados, Fruta, Elotes, Chicharrones, y Dulces',
     img: ['v16']
   }, {
     id: '17',
     name: 'JE Tires',
-    desc: '',
+    desc: 'Llantas nuevas y usadas, Rines nuevos y usados, Accesorios para tu Auto',
     img: ['v17']
   }, {
     id: '18',
     name: 'Studios Fany',
-    desc: '',
+    desc: 'Fotografia y Video Multiservicios: Tarjetas, Flyers, Banners, Posters, Magnetos, y Paginas Web',
     img: ['v18']
   }, {
     id: '19',
-    name: 'El Lago Mexican R',
-    desc: '',
+    name: 'Pizza Dudes',
+    desc: 'Comida: Pizza',
     img: ['v19']
   }, {
     id: '20',
     name: 'Vikay Design',
-    desc: '',
+    desc: 'Servicios de Bordado e impresion: Tarjetas, Banners, Camisetas, Menus',
     img: ['v20']
   }, {
     id: '21',
-    name: 'Pizza Dudes',
-    desc: '',
+    name: 'Stitchin Mich',
+    desc: 'Productos Tejidos hecho a mano, Seahawks Fan Gear',
     img: ['v21']
   }, {
     id: '22',
-    name: 'Stitchin Mich',
-    desc: '',
+    name: 'El Portal de Sahuayo',
+    desc: 'Comida: Raspados, Fruta, Elotes, Chicharrones, Aguas Frescas',
     img: ['v22']
   }, {
     id: '23',
-    name: 'El Portal de Sahuayo',
-    desc: '',
+    name: 'NW Casas',
+    desc: 'Agente de Bienes Raices',
     img: ['v23']
   }, {
     id: '24',
     name: 'Taco Goal',
-    desc: '',
+    desc: 'Comida Mexicana: Tacos, Burritos, Tortas',
     img: ['v24']
   }, {
     id: '25',
     name: 'Chilly Billy Polar Ice',
-    desc: '',
+    desc: 'Comida: Raspados',
     img: ['v25']
   }, {
     id: '26',
-    name: 'Royal Prestige',
-    desc: '',
+    name: 'Salvadorian Bakery',
+    desc: 'Comida: Popusas',
     img: ['v26']
   }, {
     id: '27',
-    name: 'Salvadorian Bakery',
-    desc: '',
+    name: 'Royal Prestige',
+    desc: 'Productos para la cocina: Utensilios, Accesorios, Ollas de Presion',
     img: ['v27']
   }, {
     id: '28',
-    name: 'Blosom Catering',
-    desc: '',
+    name: 'Rainbow Mexican Food',
+    desc: 'Comida- Antojitos: Raspados, Aguas, Fruta, Elotes, Chicharrones, y Tejuino',
     img: ['v28']
   }, {
     id: '29',
-    name: 'Lets Read',
-    desc: '',
+    name: 'St.Vincent de Paul',
+    desc: 'Servicios Comunitarios',
     img: ['v29']
   }, {
     id: '30',
-    name: 'Rainbow',
-    desc: '',
+    name: 'Fruteria Sahuayo',
+    desc: 'Comida: Fruta',
     img: ['v30']
   }, {
     id: '31',
-    name: 'NW Casas',
-    desc: '',
+    name: 'Antojitos Araceli',
+    desc: 'Comida - Antojitos: Fruta, Tacos, Birria, y Elotes',
     img: ['v31']
   }, {
     id: '32',
-    name: 'Fruteria Sahuayo',
-    desc: '',
+    name: 'Jump N Jumper',
+    desc: 'Renta de Brincolines',
     img: ['v32']
   }, {
     id: '33',
-    name: 'Antojitos Araceli',
+    name: 'Harrison Mitsubishi',
     desc: '',
-    img: ['v33']
+    img: ['v6']
   }, {
     id: '34',
-    name: 'Colomiana',
+    name: 'Main Stage',
     desc: '',
     img: ['v34']
   }, {
     id: '35',
-    name: 'Fritangas Rodriguez',
+    name: 'Restrooms',
     desc: '',
     img: ['v35']
   }, {
     id: '36',
-    name: 'Botanas Lucy',
-    desc: '',
-    img: ['v36']
+    name: 'Harrison Mitsubishi',
+    desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
+    img: ['v6']
   }, {
     id: '37',
-    name: 'Jump N Jumper',
-    desc: '',
-    img: ['v37']
+    name: 'Harrison Mitsubishi',
+    desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
+    img: ['v6']
   }, {
     id: '38',
-    name: 'Plaza Garibaldi',
-    desc: '',
-    img: ['v38']
-  }, {
-    id: '39',
-    name: 'Main Stage',
-    desc: ''
-  }, {
-    id: '40',
-    name: 'Restrooms	',
-    desc: ''
+    name: 'Harrison Mitsubishi',
+    desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
+    img: ['v6']
   }];
 
   for (var i = 0; i < booth.length; i++) {
