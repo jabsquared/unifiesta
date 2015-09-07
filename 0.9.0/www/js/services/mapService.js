@@ -1,9 +1,11 @@
 app.factory('mapService', function() {
   console.log('SERV: Map ');
 
+  var iBs = { wh : [18, 18]};
+
   var boothIcon = {
     type: 'div',
-    iconSize: [18, 18],
+    iconSize: iBs.wh,
     popupAnchor: [0, 0],
     className: "card",
     html: "<i class='icon ion-disc'></i>"
@@ -312,7 +314,7 @@ app.factory('mapService', function() {
     img: ['v4']
   }, {
     id: '5',
-    name: 'jabSquared/CodeDay',
+    name: 'jabSquared & CodeDay',
     desc: '',
     img: [
       'v5a',
@@ -456,13 +458,13 @@ app.factory('mapService', function() {
   }, {
     id: '33',
     name: 'Harrison Mitsubishi',
-    desc: '',
+    desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }, {
     id: '34',
     name: 'Main Stage',
     desc: '',
-    img: ['v34']
+    img: ['v4']
   }, {
     id: '35',
     name: 'Restrooms',
@@ -616,6 +618,7 @@ app.factory('mapService', function() {
     tiles: {
       url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     },
+    boothIcon : boothIcon,
     booth: booth,
     pnp: pnp,
     dissableGeoLocation: function($scope, mapTitle) {
