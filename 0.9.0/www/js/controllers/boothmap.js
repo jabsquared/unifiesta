@@ -88,13 +88,23 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
   });
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
+    console.log(args.leafletEvent.target.options);
+
+    if ($scope.info === args.leafletEvent.target.options.info) {
+      $scope.showCard = false;
+      $scope.info = 0;
+      return;
+    }
+
     if (args.leafletEvent.target.options.info) {
       // console.log(args.leafletEvent.target.options.info);
-      $scope.info = args.leafletEvent.target.options.info;
       $scope.showCard = true;
-    } else {
-      $scope.showCard = false;
+      $scope.info = args.leafletEvent.target.options.info;
+      return;
     }
+
+    $scope.showCard = false;
+
   });
 
   $scope.$on('leafletDirectiveMarker.popupclose', function(e, args) {
