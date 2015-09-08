@@ -7711,12 +7711,13 @@ a.button {
 
 ion-content {
   background: url("../img/bg/home0.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover; }
+  background-size: cover; }
 
 .nav-bar-title {
-  font-size: 9px; }
+  font-size: 11px; }
+
+.nav-bar-title .main-title {
+  font-size: 16px; }
 
 .logo {
   clear: both;
