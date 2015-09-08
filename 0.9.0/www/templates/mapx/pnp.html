@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<ion-view name="pnp" class="pnp">
+<ion-view name="pnp" class="pnp" ng-cloak>
 
   <ion-nav-buttons side="left">
     <button class="button icon-left button-clear ion-ios-arrow-left" ng-click="goBack()">
@@ -13,6 +13,7 @@
     <!-- <span class="bold item-text-wrap">
       estacionamientos
     </span> -->
+    <!-- Estacionamientos -->
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
@@ -45,7 +46,7 @@
 
     <div ng-if="showCard" class="card">
       <h5 class="bold">
-        lote <b>#{{info.number}}</b>
+        Lote <b>#{{info.number}}</b>
       </h5>
       <div class="item-divider item-text-wrap">
         <p>
