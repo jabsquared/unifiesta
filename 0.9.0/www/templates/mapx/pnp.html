@@ -10,8 +10,8 @@
 
   <ion-nav-title>
     <!-- <img class="unilogo" alt="Univision" ng-src="img/main/logo-18.png" /> -->
-    <span class="bold">
-      estacionamiento
+    <span class="bold item-text-wrap">
+      estacionamientos
     </span>
   </ion-nav-title>
 
@@ -51,7 +51,11 @@
         <p>
           {{info.address}}
         </p>
-        <a class="button button-block bold button-assertive" ng-href="https://maps.google.com/?q={{geoInfo.lat}},{{geoInfo.lng}}&t=m" target="_blank">
+        <!-- <a class="button button-block bold button-assertive" ng-href="https://maps.google.com/?q={{geoInfo.lat}},{{geoInfo.lng}}&t=m" target="_blank">
+          <i class="ion-android-navigate"></i> navegar
+        </a> -->
+        <a class="button button-block bold button-assertive" ng-click="
+        openGMap({{geoInfo}})" target="_blank">
           <i class="ion-android-navigate"></i> navegar
         </a>
       </div>

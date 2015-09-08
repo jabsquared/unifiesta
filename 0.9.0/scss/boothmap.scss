@@ -1,6 +1,7 @@
 .boothmap {
+
   .map {
-    height: 54vh;
+    height: 45vh;
   }
 
 .card {
@@ -14,7 +15,7 @@
     text-align: center;
   }
 
-  .card {
+.card {
     h3,
     h4,
     h5,
@@ -24,24 +25,25 @@
       text-align: center;
     }
 
-    p {
+p {
       padding: 9px;
       text-align: center;
       color: rgba(254,252,252,1);
       font-size: 1.08em;
     }
 
-    .item-divider {
+.item-divider {
       background: rgba(0,0,0,0.27);
 
       // text-align: center;
     }
 
-    img {
-
+img {
       max-height: 45vh;
+
       // width: 100%;
       max-width: 90%;
+
       // padding: 3.6px;
       -webkit-border-radius: 9px;
       -moz-border-radius: 9px;
