@@ -21,9 +21,11 @@ app.controller('SponsorsCtrl', function($scope, $state, $ionicHistory, sponsorDa
   };
 
   $scope.currentSlide = 0;
+
   // console.log('Active Slide=' + $scope.currentSlide);
   $scope.slideChanged = function(index) {
     $scope.currentSlide = $ionicSlideBoxDelegate.currentIndex();
+
     // console.log('Active Slide=' + $scope.currentSlide);
     // $scope.$apply();
 

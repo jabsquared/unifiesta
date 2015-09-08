@@ -16,42 +16,42 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     .state('home', {
       url: '/',
       templateUrl: 'homex/home.html',
-      controller: 'HomeCtrl'
+      controller: 'HomeCtrl',
     })
 
   .state('events', {
     url: '/events',
     templateUrl: 'eventx/events.html',
-    controller: 'EventsCtrl'
+    controller: 'EventsCtrl',
   })
 
   .state('event', {
     url: '/events/:id',
     templateUrl: 'eventx/event.html',
-    controller: 'EventCtrl'
+    controller: 'EventCtrl',
   })
 
   .state('boothmap', {
     url: '/boothmap',
     templateUrl: 'mapx/boothmap.html',
-    controller: 'BoothMapCtrl'
+    controller: 'BoothMapCtrl',
   })
 
   .state('pnp', {
     url: '/pnp',
     templateUrl: 'mapx/pnp.html',
-    controller: 'PnPCtrl'
+    controller: 'PnPCtrl',
   })
 
   .state('sponsors', {
     url: '/sponsors',
     templateUrl: 'sponsorx/sponsors.html',
-    controller: 'SponsorsCtrl'
+    controller: 'SponsorsCtrl',
   });
 });
 
 app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $templateCache, $http) {
-  console.log("RUN");
+  console.log('RUN');
 
   $rootScope.showFooter = true;
 
@@ -68,9 +68,10 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $template
       StatusBar.styleDefault();
     }
 
-    if (typeof(device) !== 'undefined') {
+    if (typeof (device) !== 'undefined') {
+
       //mode code here give a hard coded value,
-      if (device.platform === "iOS") {
+      if (device.platform === 'iOS') {
         window.plugin.notification.local.promptForPermission();
       }
 
@@ -78,10 +79,10 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $template
         var notification = {
           id: id,
           state: state,
-          json: json
+          json: json,
         };
         $timeout(function() {
-          $rootScope.$broadcast("$cordovaLocalNotification:added", notification);
+          $rootScope.$broadcast('$cordovaLocalNotification:added', notification);
         });
       };
     }

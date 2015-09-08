@@ -1,12 +1,12 @@
 'use strict';
 
 var cloudantAuth = {
-  url: "lab"
+  url: 'lab',
 };
 
 // Check if ENV from BLUEMIX exist
 if (process.env.VCAP_SERVICES) {
-  var vcapServices = JSON.parse(process.env.VCAP_SERVICES || "{}");
+  var vcapServices = JSON.parse(process.env.VCAP_SERVICES || '{}');
 
   // Get the 1st Cloudant credential
   var cred = vcapServices.cloudantNoSQLDB[0].credentials;

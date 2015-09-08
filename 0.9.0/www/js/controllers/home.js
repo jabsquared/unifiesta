@@ -1,11 +1,11 @@
-app.controller('HomeCtrl', function($scope, $http, $rootScope, $state, $ionicHistory, $localStorage){
+app.controller('HomeCtrl', function($scope, $http, $rootScope, $state, $ionicHistory, $localStorage) {
   console.log('CTRL: Home');
 
   $scope.$storage = $localStorage.$default({
-    gotRaffle: false
- });
+    gotRaffle: false,
+  });
 
- console.log($scope.$storage.raffle);
+  console.log($scope.$storage.raffle);
 
   if (!$scope.$storage.gotRaffle) {
     $http.get('http://unifiesta.mybluemix.net/gr').
@@ -22,7 +22,7 @@ app.controller('HomeCtrl', function($scope, $http, $rootScope, $state, $ionicHis
     });
   }
 
-  $scope.navigate = function (title) {
+  $scope.navigate = function(title) {
     $rootScope.showFooter = false;
     $state.go(title);
   };
