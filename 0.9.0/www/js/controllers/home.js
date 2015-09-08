@@ -26,4 +26,22 @@ app.controller('HomeCtrl', function($scope, $http, $rootScope, $state, $ionicHis
     $rootScope.showFooter = false;
     $state.go(title);
   };
+
+  var options = {
+    location: 'yes',
+    clearcache: 'yes',
+    toolbar: 'yes',
+  };
+
+  $scope.openGMap = function(geoInfo) {
+    var url = 'https://maps.google.com/?q=' + geoInfo.lat + ',' + geoInfo.lng + '&t=m';
+    $cordovaInAppBrowser
+      .open(url, '_blank', options)
+      .then(function(event) {
+        // success
+      }, function(event) {
+        // error
+      });
+  };
+
 });

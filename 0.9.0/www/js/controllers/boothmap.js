@@ -105,7 +105,6 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
     $scope.showCard = false;
   });
 
-
   $scope.goBack = function() {
     $scope.dissableGeoLocation();
     $rootScope.showFooter = true;
