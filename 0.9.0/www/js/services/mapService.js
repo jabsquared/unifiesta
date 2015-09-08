@@ -457,7 +457,7 @@ app.factory('mapService', function() {
     img: ['v32']
   }, {
     id: '33',
-    name: 'Harrison Mitsubishi',
+    name: 'Harris Mitsubishi',
     desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }, {
@@ -472,17 +472,17 @@ app.factory('mapService', function() {
     img: ['v35']
   }, {
     id: '36',
-    name: 'Harrison Mitsubishi',
+    name: 'Harris Mitsubishi',
     desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }, {
     id: '37',
-    name: 'Harrison Mitsubishi',
+    name: 'Harris Mitsubishi',
     desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }, {
     id: '38',
-    name: 'Harrison Mitsubishi',
+    name: 'Harris Mitsubishi',
     desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }];
