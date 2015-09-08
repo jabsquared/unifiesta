@@ -7710,7 +7710,10 @@ a.button {
   font-family: 'blair_bold'; }
 
 ion-content {
-  background: url("../img/bg/home0.jpg") no-repeat center center fixed; }
+  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover; }
 
 .nav-bar-title {
   font-size: 10.8px; }
