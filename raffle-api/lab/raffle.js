@@ -4,38 +4,33 @@ var PouchUtils = require('./pouchutils');
 
 var pickRandom = require('pick-random');
 
-var N = [99999];
-var R = [];
-
-var init = function Init() {
-  for (var i = 1; i <= 9999; i++) {
-    N[i] = i;
-  }
-};
-
-var pick = function Pick() {
+var pick = function Pick(id, size, callback) {
   var p = [0];
-  if (R.length !== N.length) {
-    p = pickRandom(N, {
-      count: 1
-    });
-    while (p[0] === (0)) {
-      p = pickRandom(N, {
-        count: 1
-      });
+  // get doc at id, and size
+  PouchUtils.fetch(id, size, function(doc) {
+    if (doc.N.length > 1 ) {
+      while (p[0] === (0)) {
+        p = pickRandom(doc.N, {
+          count: 1
+        });
+      }
     }
-  }
-  N[p] = 0;
-  R.push(p[0]);
-  return p;
+    PouchUtils.update(id, p[0]);
+    callback(p);
+  });
 };
 
-var vote = function Vote (id) {
-  PouchUtils.update(id.toString());
+var draw = function Draw (id, size, winnerCount, callback) {
+  PouchUtils.fetch(id, size, function(doc) {
+
+    var p = pickRandom (doc.R, {
+      count: winnerCount
+    });
+
+    callback(p);
+  });
 };
 
-exports.init = init;
-exports.vote = vote;
 exports.pick = pick;
 
 module.exports = exports;

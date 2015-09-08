@@ -10,9 +10,7 @@
 
   <ion-nav-title>
     <!-- <img class="unilogo" alt="Univision" ng-src="img/main/logo-18.png" /> -->
-    <span class="bold">
       vendedores
-    </span>
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
@@ -59,6 +57,9 @@
         <ion-spinner class="center spinner-energized" icon="lines" ng-hide="spinner">
         </ion-spinner> -->
 
+        <p>
+          {{info.desc}}
+        </p>
       <div class="item-divider">
         <ion-slide-box>
           <ion-slide ng-repeat="vi in info.img">
@@ -66,6 +67,7 @@
             <br>
             <ion-spinner class="center spinner-energized" icon="lines" ng-hide="spinner">
             </ion-spinner>
+
           </ion-slide>
         </ion-slide-box>
       </div>
