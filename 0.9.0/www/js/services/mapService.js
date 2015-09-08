@@ -315,7 +315,7 @@ app.factory('mapService', function() {
   }, {
     id: '5',
     name: 'jabSquared & CodeDay',
-    desc: '',
+    desc: 'jabSquared es el creador de la aplicación que está utilizando ! Venga a visitarnos si desea trascender su negocio. CodeDay es una serie de eventos de programación para estudiantes realizados en todo el mundo.',
     img: [
       'v5a',
       'v5b'
