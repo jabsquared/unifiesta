@@ -95,10 +95,6 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
     } else {
       $scope.showCard = false;
     }
-
-    // mapService.iBs.wh = [27, 27];
-    // $scope.markers[0].icon.iconSize = [27,27];
-    mapService.boothIcon.iconSize = [27, 27];
   });
 
   $scope.$on('leafletDirectiveMarker.popupclose', function(e, args) {
