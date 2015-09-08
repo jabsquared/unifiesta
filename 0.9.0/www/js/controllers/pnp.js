@@ -5,7 +5,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
 
   $scope.markers = mapService.pnp;
   $scope.iconColor = {
-    color: '#DDDDDDFF'
+    color: '#DDDDDDFF',
   };
 
   $scope.showCard = false;
@@ -23,16 +23,17 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
       lat: $scope.center.lat,
       lng: $scope.center.lng,
       zoom: 16,
-      bounceAtZoomLimits: true
+      bounceAtZoomLimits: true,
     },
     events: {
       markers: {
-        enable: ['click', 'popupclose']
-          //logic: 'emit'
-      }
+        enable: ['click', 'popupclose'],
+
+        //logic: 'emit'
+      },
     },
     controls: {
-      scale: false
+      scale: false,
     },
   });
 
@@ -41,11 +42,11 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
   };
 
   $scope.dissableGeoLocation = function() {
-    mapService.dissableGeoLocation($scope, "pnp");
+    mapService.dissableGeoLocation($scope, 'pnp');
   };
 
   $scope.onSuccess = function(position) {
-    mapService.onSuccess($scope, position, "pnp");
+    mapService.onSuccess($scope, position, 'pnp');
   };
 
   // onError Callback receives a PositionError object
@@ -63,6 +64,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
       $scope.info = 0;
       return;
     }
+
     if (args.leafletEvent.target.options.info) {
       // console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;
@@ -70,6 +72,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
       $scope.showCard = true;
       return;
     }
+
     $scope.showCard = false;
 
   });
@@ -81,11 +84,11 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
   var options = {
     location: 'yes',
     clearcache: 'yes',
-    toolbar: 'yes'
+    toolbar: 'yes',
   };
 
   $scope.openGMap = function(geoInfo) {
-    var url = "https://maps.google.com/?q=" + geoInfo.lat + "," + geoInfo.lng + "&t=m";
+    var url = 'https://maps.google.com/?q=' + geoInfo.lat + ',' + geoInfo.lng + '&t=m';
     $cordovaInAppBrowser
       .open(url, '_blank', options)
       .then(function(event) {

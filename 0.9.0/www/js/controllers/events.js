@@ -5,7 +5,7 @@ app.controller('EventsCtrl', function($scope, $ionicScrollDelegate, $rootScope, 
     $ionicHistory.goBack();
   };
 
-  console.log("CTRL: Events");
+  console.log('CTRL: Events');
   if (!$scope.events)
     $scope.events = eventData.all();
 
@@ -13,19 +13,19 @@ app.controller('EventsCtrl', function($scope, $ionicScrollDelegate, $rootScope, 
     $state.go(path);
   };
 
-  $scope.schedule = function(single_event) {
+  $scope.schedule = function(singleEvent) {
 
     // $ionicScrollDelegate.scrollBottom();
 
-    if (!single_event.reminder) {
-      reminderService.schedule(single_event);
+    if (!singleEvent.reminder) {
+      reminderService.schedule(singleEvent);
     } else {
-      reminderService.cancel(single_event.id);
+      reminderService.cancel(singleEvent.id);
     }
   };
 
-  $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
-    console.log("Added a notification");
+  $scope.$on('$cordovaLocalNotification:added', function(id, state, json) {
+    console.log('Added a notification');
   });
 
 });
