@@ -92,7 +92,7 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
 
     if ($scope.info === args.leafletEvent.target.options.info) {
       $scope.showCard = false;
-      $scope.info = 0;
+      $scope.info = 9;
       return;
     }
 
@@ -108,6 +108,7 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
   });
 
   $scope.$on('leafletDirectiveMarker.popupclose', function(e, args) {
+    $scope.info = 9;
     $scope.showCard = false;
   });
 
