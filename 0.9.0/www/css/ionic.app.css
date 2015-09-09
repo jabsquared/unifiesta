@@ -7710,10 +7710,10 @@ a.button {
   font-family: 'blair_bold'; }
 
 ion-content {
-  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover; }
+  background: url("../img/bg/home0.jpg") no-repeat center center fixed !important;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important; }
 
 .nav-bar-title {
   font-size: 10.8px; }
@@ -7733,7 +7733,7 @@ ion-content {
   clear: both;
   width: fixed;
   height: 100%;
-  max-height: 75%;
+  max-height: 70%;
   margin-top: 5px;
   margin-bottom: 10px;
   margin-left: 1vw;
