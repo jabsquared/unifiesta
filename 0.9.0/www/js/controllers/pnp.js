@@ -61,7 +61,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
     console.log(args.leafletEvent.target.options);
     if ($scope.info === args.leafletEvent.target.options.info) {
       $scope.showCard = false;
-      $scope.info = 0;
+      $scope.info = 9;
       return;
     }
 
@@ -78,6 +78,7 @@ app.controller('PnPCtrl', function($scope, $rootScope, $state, $stateParams, lea
   });
 
   $scope.$on('leafletDirectiveMarker.popupclose', function(e, args) {
+    $scope.info = 9;
     $scope.showCard = false;
   });
 

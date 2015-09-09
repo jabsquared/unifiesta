@@ -88,23 +88,29 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
   });
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
-    if (args.leafletEvent.target.options.info) {
-      // console.log(args.leafletEvent.target.options.info);
-      $scope.info = args.leafletEvent.target.options.info;
-      $scope.showCard = true;
-    } else {
+    console.log(args.leafletEvent.target.options);
+
+    if ($scope.info === args.leafletEvent.target.options.info) {
       $scope.showCard = false;
+      $scope.info = 9;
+      return;
     }
 
-    // mapService.iBs.wh = [27, 27];
-    // $scope.markers[0].icon.iconSize = [27,27];
-    mapService.boothIcon.iconSize = [27, 27];
+    if (args.leafletEvent.target.options.info) {
+      // console.log(args.leafletEvent.target.options.info);
+      $scope.showCard = true;
+      $scope.info = args.leafletEvent.target.options.info;
+      return;
+    }
+
+    $scope.showCard = false;
+
   });
 
   $scope.$on('leafletDirectiveMarker.popupclose', function(e, args) {
+    $scope.info = 9;
     $scope.showCard = false;
   });
-
 
   $scope.goBack = function() {
     $scope.dissableGeoLocation();

@@ -10,7 +10,7 @@
 
   <ion-nav-title>
     <!-- <img class="unilogo" alt="Univision" ng-src="img/main/logo-18.png" /> -->
-      <!-- vendedores -->
+    <!-- Vendedores -->
   </ion-nav-title>
 
   <ion-nav-buttons side="right">
@@ -45,7 +45,7 @@
       </p>
     </div>
 
-    <div class="card" ng-if="showCard">
+    <div ng-if="showCard" class="card">
       <h5 class="bold">
         <b>{{info.name}}</b>
       </h5>
@@ -61,15 +61,12 @@
         {{info.desc}}
       </p>
       <div class="item-divider">
-        <ion-slide-box>
-          <ion-slide ng-repeat="vi in info.img">
-            <img ng-src="{{getURL(vi)}}" alt="Loading..." imageonload="spinner='true'" />
-            <br>
-            <ion-spinner class="center spinner-energized" icon="lines" ng-hide="spinner">
-            </ion-spinner>
-
-          </ion-slide>
-        </ion-slide-box>
+        <ion-slide ng-repeat="vi in info.img">
+          <img ng-src="{{getURL(vi)}}" alt="Loading..." imageonload="spinner='true'" />
+          <br>
+          <ion-spinner class="center spinner-energized" icon="lines" ng-hide="spinner">
+          </ion-spinner>
+        </ion-slide>
       </div>
     </div>
 
