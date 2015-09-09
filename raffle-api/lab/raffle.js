@@ -24,6 +24,9 @@ var pick = function Pick(id, size, callback) {
 
 var draw = function Draw(id, size, winnerCount, callback) {
   PouchUtils.fetch(id, size, function(doc) {
+    if (winnerCount >= doc.R.length) {
+      return doc.R;
+    }
 
     var p = pickRandom(doc.R, {
       count: winnerCount,
