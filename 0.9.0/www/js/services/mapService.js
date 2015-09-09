@@ -315,7 +315,7 @@ app.factory('mapService', function() {
   }, {
     id: '5',
     name: 'jabSquared & CodeDay',
-    desc: '',
+    desc: 'jabSquared es el creador de la aplicación que está utilizando ! Venga a visitarnos si desea trascender su negocio. CodeDay es una serie de eventos de programación para estudiantes realizados en todo el mundo.',
     img: [
       'v5a',
       'v5b'
@@ -457,7 +457,7 @@ app.factory('mapService', function() {
     img: ['v32']
   }, {
     id: '33',
-    name: 'Harrison Mitsubishi',
+    name: 'Harris Mitsubishi',
     desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }, {
@@ -472,17 +472,17 @@ app.factory('mapService', function() {
     img: ['v35']
   }, {
     id: '36',
-    name: 'Harrison Mitsubishi',
+    name: 'Harris Mitsubishi',
     desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }, {
     id: '37',
-    name: 'Harrison Mitsubishi',
+    name: 'Harris Mitsubishi',
     desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }, {
     id: '38',
-    name: 'Harrison Mitsubishi',
+    name: 'Harris Mitsubishi',
     desc: 'Patrocinador Oficial del Evento, Concesionario de autos nuevos y usados',
     img: ['v6']
   }];

@@ -7710,13 +7710,16 @@ a.button {
   font-family: 'blair_bold'; }
 
 ion-content {
-  background: url("../img/bg/home0.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover; }
+  background: url("../img/bg/home0.jpg") no-repeat center center fixed !important;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important; }
 
 .nav-bar-title {
-  font-size: 9px; }
+  font-size: 10.8px; }
+
+.nav-bar-title .main-title {
+  font-size: 16px; }
 
 .logo {
   clear: both;
@@ -7729,8 +7732,13 @@ ion-content {
 .unilogo {
   clear: both;
   width: fixed;
-  margin-top: 9px;
-  max-height: 45%; }
+  height: 100%;
+  max-height: 70%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  vertical-align: bottom; }
 
 /* Popup button styling */
 .oneline .popup {

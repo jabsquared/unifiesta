@@ -8,7 +8,7 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
   $scope.findMe = false;
   $scope.markers = mapService.booth;
   $scope.iconColor = {
-    color: '#DDDDDDFF'
+    color: '#DDDDDDFF',
   };
 
   $scope.showCard = false;
@@ -27,6 +27,7 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
       lng: $scope.center.lng,
       zoom: 18,
       bounceAtZoomLimits: true,
+
       // autoDiscover: true
     },
     defaults: {
@@ -35,8 +36,8 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
       minZoom: 18,
       path: {
         weight: 9,
-        opacity: 0.9
-      }
+        opacity: 0.9,
+      },
     },
     maxbounds: {
       northEast: {
@@ -45,17 +46,18 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
       },
       southWest: {
         lat: 47.306735,
-        lng: -122.231068
+        lng: -122.231068,
       },
     },
     events: {
       markers: {
-        enable: ['click', 'popupclose']
-          //logic: 'emit'
-      }
+        enable: ['click', 'popupclose'],
+
+        //logic: 'emit'
+      },
     },
     controls: {
-      scale: false
+      scale: false,
     },
   });
 
@@ -64,11 +66,11 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
   };
 
   $scope.dissableGeoLocation = function() {
-    mapService.dissableGeoLocation($scope, "booth");
+    mapService.dissableGeoLocation($scope, 'booth');
   };
 
   $scope.onSuccess = function(position) {
-    mapService.onSuccess($scope, position, "booth");
+    mapService.onSuccess($scope, position, 'booth');
   };
 
   // onError Callback receives a PositionError object
@@ -86,22 +88,29 @@ app.controller('BoothMapCtrl', function($scope, $sce, $rootScope, $state, $state
   });
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
+    console.log(args.leafletEvent.target.options);
+
+    if ($scope.info === args.leafletEvent.target.options.info) {
+      $scope.showCard = false;
+      $scope.info = 9;
+      return;
+    }
+
     if (args.leafletEvent.target.options.info) {
       // console.log(args.leafletEvent.target.options.info);
-      $scope.info = args.leafletEvent.target.options.info;
       $scope.showCard = true;
-    } else {
-      $scope.showCard = false;
+      $scope.info = args.leafletEvent.target.options.info;
+      return;
     }
-    // mapService.iBs.wh = [27, 27];
-    // $scope.markers[0].icon.iconSize = [27,27];
-    mapService.boothIcon.iconSize = [27, 27];
+
+    $scope.showCard = false;
+
   });
 
   $scope.$on('leafletDirectiveMarker.popupclose', function(e, args) {
+    $scope.info = 9;
     $scope.showCard = false;
   });
-
 
   $scope.goBack = function() {
     $scope.dissableGeoLocation();

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.jabSquared.unifiesta" version="0.9.9" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns="http://www.w3.org/ns/widgets">
+<widget id="com.jabSquared.unifiesta" version="1.0.8" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns="http://www.w3.org/ns/widgets">
   <name>Unifiesta</name>
-  <description>
-    Schedule app for Univision Seattle Event.
+  <description>&#xD;
+    Schedule app for Univision Seattle Event.&#xD;
   </description>
-  <author email="jab2@tuta.io" href="jab2@tuta.io">
-    jabSquared
+  <author email="jab2@tuta.io" href="jab2@tuta.io">&#xD;
+    jabSquared&#xD;
   </author>
   <content src="index.html"/>
   <access origin="*"/>
