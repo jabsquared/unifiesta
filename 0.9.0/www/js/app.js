@@ -18,36 +18,31 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
       templateUrl: 'homex/home.html',
       controller: 'HomeCtrl',
     })
-
-  .state('events', {
-    url: '/events',
-    templateUrl: 'eventx/events.html',
-    controller: 'EventsCtrl',
-  })
-
-  .state('event', {
-    url: '/events/:id',
-    templateUrl: 'eventx/event.html',
-    controller: 'EventCtrl',
-  })
-
-  .state('boothmap', {
-    url: '/boothmap',
-    templateUrl: 'mapx/boothmap.html',
-    controller: 'BoothMapCtrl',
-  })
-
-  .state('pnp', {
-    url: '/pnp',
-    templateUrl: 'mapx/pnp.html',
-    controller: 'PnPCtrl',
-  })
-
-  .state('sponsors', {
-    url: '/sponsors',
-    templateUrl: 'sponsorx/sponsors.html',
-    controller: 'SponsorsCtrl',
-  });
+    .state('events', {
+      url: '/events',
+      templateUrl: 'eventx/events.html',
+      controller: 'EventsCtrl',
+    })
+    .state('event', {
+      url: '/events/:id',
+      templateUrl: 'eventx/event.html',
+      controller: 'EventCtrl',
+    })
+    .state('boothmap', {
+      url: '/boothmap',
+      templateUrl: 'mapx/boothmap.html',
+      controller: 'BoothMapCtrl',
+    })
+    .state('pnp', {
+      url: '/pnp',
+      templateUrl: 'mapx/pnp.html',
+      controller: 'PnPCtrl',
+    })
+    .state('sponsors', {
+      url: '/sponsors',
+      templateUrl: 'sponsorx/sponsors.html',
+      controller: 'SponsorsCtrl',
+    });
 });
 
 app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $templateCache, $http) {
@@ -68,7 +63,7 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $template
       StatusBar.styleDefault();
     }
 
-    if (typeof (device) !== 'undefined') {
+    if (typeof(device) !== 'undefined') {
 
       //mode code here give a hard coded value,
       if (device.platform === 'iOS') {
