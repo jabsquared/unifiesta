@@ -185,7 +185,7 @@ app.factory('mapService', function() {
   }
 }, { // PARKING #9 find address
   lat: 47.307701,
-  lng:  -122.228734,
+  lng:  -122.228734,	
   focus: false,
   draggable: false,
   message: "Parking Lot!",

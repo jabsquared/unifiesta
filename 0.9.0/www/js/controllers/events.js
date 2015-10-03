@@ -1,17 +1,13 @@
-app.controller('EventsCtrl', function($scope, $state, reminderService, $ionicPlatform, eventData, $ionicHistory) {
-
-  $scope.reminderStyle = {'background-color' : 'blue'};
+app.controller('EventsCtrl', function($scope, $rootScope, $state, reminderService, $ionicPlatform, eventData, $ionicHistory) {
 
   $scope.goBack = function() {
+    $rootScope.showFooter = true;
     $ionicHistory.goBack();
   };
 
   console.log("CTRL: Events");
   if (!$scope.events)
     $scope.events = eventData.all();
-
-  $scope.shouldShowDelete = false;
-  $scope.listCanSwipe = true;
 
   $scope.go = function(path) {
     $state.go(path);

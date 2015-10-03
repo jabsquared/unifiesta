@@ -1,17 +1,7 @@
 .events {
-  ion-content {
 
-    // background: url("../img/bg/rsn.png") no-repeat center center fixed;
-    background: url("../img/bg/home1.jpg") no-repeat fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-color: rgba(212,178,54,1);
-    width: 100vw;
+  ion-content {
     align-items: center;
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // background-size: cover;
     padding: 9px;
   }
   ion-content * {
@@ -49,7 +39,7 @@
   }
   .card {
     background-color: transparent;
-    margin-bottom: 0.9px !important;
+    margin-bottom: 18px !important;
   }
   .item * {
     font-family: 'blair_bold';

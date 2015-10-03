@@ -1,5 +1,5 @@
 
-app.controller('EventCtrl', function($scope, $state, $stateParams, eventData, $ionicHistory, reminderService) {
+app.controller('EventCtrl', function($scope, $rootScope, $state, $stateParams, eventData, $ionicHistory, reminderService) {
   console.log('CTRL: Event');
 
 

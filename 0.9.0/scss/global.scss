@@ -2,13 +2,14 @@
 
 * {
   font-family: 'blair_med';
+  box-shadow: none !important;
 }
 
 .bold {
   font-family: 'blair_bold';
 }
 
-ion-nav-view {
+ion-content {
   background: url("../img/bg/home0.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
@@ -28,6 +29,7 @@ ion-nav-view {
   clear: both;
   width: fixed;
   margin-top: 9px;
+  max-height: 45%;
 }
 
 /* Popup button styling */
@@ -50,7 +52,7 @@ ion-nav-view {
 }
 
 ion-content {
-  background-color:rgba(212,178,54,1);
+  // background-color:rgba(212,178,54,1);
 }
 
 .card {
@@ -85,4 +87,8 @@ ion-content {
 
 .signature{
   visibility: hidden;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .search-bar {
+    margin-top: 20px;
 }

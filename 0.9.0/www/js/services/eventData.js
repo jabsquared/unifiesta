@@ -370,7 +370,7 @@ app.factory('eventData', function() {
       start: new Date('2015-08-13T19:30:00-08:00'),
       end: new Date('2015-08-13T19:45:00-08:00'),
       desc: 'Banda',
-      img: [],
+      img: ["41"],
       reminder: false
     }, {
       id: 42,
@@ -379,7 +379,7 @@ app.factory('eventData', function() {
       start: new Date('2015-08-13T19:45:00-08:00'),
       end: new Date('2015-08-13T20:00:00-08:00'),
       desc: 'Banda',
-      img: [],
+      img: ["42"],
       reminder: false
     }, {
       id: 43,
@@ -388,7 +388,10 @@ app.factory('eventData', function() {
       start: new Date('2015-08-13T20:00:00-08:00'),
       end: new Date('2015-08-13T20:30:00-08:00'),
       desc: 'Edgar Guerrero / Nayelli Valle',
-      img: [],
+      img: [
+        "43a",
+        "43b"
+      ],
       reminder: false
     }
   ];

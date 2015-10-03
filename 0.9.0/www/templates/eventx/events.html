@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <ion-view name="events" class="events">
     <ion-nav-buttons side="left">
-      <a nav-direction="back" ng-click="goBack()">
-        <button class="button icon-left button-clear ion-ios-arrow-left">
+        <button class="button icon-left button-clear ion-ios-arrow-left"  ng-click="goBack()">
           Back
         </button>
-      </a>
     </ion-nav-buttons>
 
     <ion-nav-title>
       <img alt="Independent de Mexico" class="logo" ng-src="img/main/header.png"/>
     </ion-nav-title>
 
-  <ion-content class="has-header" has-bouncing="true" >
-    <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
+  <ion-content class="has-header"  has-bouncing="true" >
+  <!-- on-scroll="$root.showFooter=false" -->
+
+    <ion-list>
       <ion-item class="list" collection-repeat="event in events">
         <div class="card">
 
           <a ng-click="schedule(event)">
             <div class="item item-avatar">
-              <i ng-class="event.reminder ? 'icon ion-ios-star scheduled' : 'icon ion-ios-star-outline'"></i>
-              <h2>Start : {{event.start | date:'HH:mm a'}}</h2>
+              <i ng-class="event.reminder ?
+                'icon ion-ios-star scheduled' :
+                'icon ion-ios-star-outline'"></i>
+              <h2>Start: {{event.start | date:'hh:mm a'}}</h2>
               <p>
-                End: {{event.end | date:'HH:mm a'}}
+                End: {{event.end | date:'hh:mm a'}}
               </p>
             </div>
           </a>
 
           <a ng-href="#/events/{{event.id}}">
             <div class="item">
-              <h2>{{event.name | limitTo : 27 : 0}}</h2>
+              <h2>{{event.name | limitTo : 18 : 0}}</h2>
               <p>
-                {{event.desc | limitTo : 27 : 0}}
+                {{event.desc | limitTo : 18 : 0}}
               </p>
             </div>
           </a>
@@ -39,6 +41,7 @@
         </div>
       </ion-item>
     </ion-list>
+
     <div class="signature">
       <h1>
         jabSquared

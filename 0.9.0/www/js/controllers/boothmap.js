@@ -1,37 +1,29 @@
-app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
+app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams, leafletData, $ionicHistory, mapService) {
   console.log('CTRL: BoothMap');
 
-  // Feilds
   $scope.findMe = false;
+  $scope.markers = mapService.booth;
   $scope.iconColor = {
     color: '#DDDDDDFF'
   };
-  $scope.info = {};
+
   $scope.showCard = false;
 
-  var watchID;
-  // Fetching frequency, every sec...
-  var watchOptions = {
-    frequency: 1000,
-    timeout: 3000,
-    enableHighAccuracy: false // may cause errors if true
+  $scope.center = {
+    lat: 47.307492,
+    lng: -122.230582,
   };
 
-  $scope.markers = mapService.booth;
-
+  $scope.watchID = 9;
 
   angular.extend($scope, {
-    tiles: {
-      url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-    },
+    tiles: mapService.tiles,
     auburn: {
-      lat: 47.307492,
-      lng: -122.230582,
+      lat: $scope.center.lat,
+      lng: $scope.center.lng,
       zoom: 17,
-      bounceAtZoomLimits: true
-    },
-    center: {
-      autoDiscover: true
+      bounceAtZoomLimits: true,
+      // autoDiscover: true
     },
     events: {
       markers: {
@@ -53,7 +45,7 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletDat
   };
 
   $scope.onSuccess = function(position) {
-    mapService.onSuccess($scope, position);
+    mapService.onSuccess($scope, position, "booth");
   };
 
   // onError Callback receives a PositionError object
@@ -63,17 +55,17 @@ app.controller('BoothMapCtrl', function($scope, $state, $stateParams, leafletDat
 
   $scope.$on('leafletDirectiveMarker.click', function(e, args) {
     if (args.leafletEvent.target.options.info) {
-      console.log(args.leafletEvent.target.options.info);
+      // console.log(args.leafletEvent.target.options.info);
       $scope.info = args.leafletEvent.target.options.info;
       $scope.showCard = true;
     } else {
-      $scope.info = {};
       $scope.showCard = false;
     }
   });
 
   $scope.goBack = function() {
     $scope.dissableGeoLocation();
+    $rootScope.showFooter = true;
     $ionicHistory.goBack();
   };
 

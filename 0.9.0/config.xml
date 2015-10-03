@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.events836305" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget
+  id="com.jabSquared.unifiesta"
+  version="0.0.9"
+  xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns="http://www.w3.org/ns/widgets">
   <name>Unifiesta</name>
-  <description>&#xD;
-        Schedule app for Univision Seattle Event.&#xD;
-    </description>
-  <author email="jab2@tuta.io" href="jab2@tuta.io">&#xD;
-      jabSquared team&#xD;
-    </author>
+  <description>
+    Schedule app for Univision Seattle Event.
+  </description>
+  <author email="jab2@tuta.io" href="jab2@tuta.io">
+    jabSquared
+  </author>
   <content src="index.html"/>
-  <access origin="*"/>
+  <!-- <access origin="*"/> -->
   <access origin="http://*.openstreetmap.org/*"/>
   <access origin="https://*.openstreetmap.org/*"/>
+  <access origin="https://googledrive.com/host/0B6cBGXlREHi2flp4RU16VlVFNWdtZ2owQklTTlQzREU3dUZZUUF6c2lRZDYzTG1qaHc5UUE/*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
+
+
   <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="2700"/>
+
+  <preference name="ShowSplashScreenSpinner" value="false" />
+  <preference name="AutoHideSplashScreen" value="false"/>
+  <preference name="FadeSplashScreen" value="false" />
+
+  <preference name="SplashScreenDelay" value="9000"/>
+  <preference name="FadeSplashScreenDuration" value="9000"/>
+
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
+
   <platform name="android">
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png"/>
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png"/>
@@ -69,7 +83,7 @@
     <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640"/>
     <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320"/>
   </platform>
-
   <allow-navigation href="http://*.openstreetmap.org/*"/>
   <allow-intent href="http://*.openstreetmap.org/*"/>
+  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>

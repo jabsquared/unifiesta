@@ -5,24 +5,25 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic', 'ngCordova', 'leaflet-directive', 'templates']);
 
-app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
   $ionicConfigProvider.views.forwardCache(true);
 
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/');
+
   $stateProvider
-  // setup state for login page
+  .state('home', {
+    url: '/',
+    templateUrl: 'homex/home.html',
+    controller: 'HomeCtrl'
+  })
 
-    .state('home', {
-      url: '/',
-      templateUrl: 'homex/home.html',
-      controller: 'HomeCtrl'
-    })
-
-    .state('events', {
-      url: '/events',
-      templateUrl: 'eventx/events.html',
-      controller: 'EventsCtrl'
-    })
+  .state('events', {
+    url: '/events',
+    templateUrl: 'eventx/events.html',
+    controller: 'EventsCtrl'
+  })
 
   .state('event', {
     url: '/events/:id',
@@ -47,12 +48,10 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     templateUrl: 'sponsorx/sponsors.html',
     controller: 'SponsorsCtrl'
   });
-
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
 });
 
-app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope) {
+app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope, $templateCache, $http) {
+  console.log("RUN");
 
   $rootScope.showFooter = true;
 
@@ -86,6 +85,5 @@ app.run(function($ionicPlatform, $timeout, $cordovaDevice, $rootScope) {
         });
       };
     }
-
   });
 });
