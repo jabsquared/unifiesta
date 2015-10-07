@@ -1,38 +1,41 @@
-.pnp{
-  .map{
+.pnp {
+  .map {
     height: 54vh;
   }
 
-  .card {
+.card {
     margin: 9px auto;
   }
 
-  .card * {
+.card * {
     padding: 3.6px;
     color: rgba(254,252,252,1);
   }
 
-  .card{
-    h3, h4, h5, h6{
+.card {
+    h3,
+    h4,
+    h5,
+    h6 {
       // margin-top: 18px;
       text-align: center;
     }
   }
 
-  .card p {
+.card p {
     padding: 9px;
     text-align: center;
     color: rgba(254,252,252,1);
-    font-size: 0.81em;
+    font-size: 0.9em;
   }
 
-  .card .item-divider {
+.card .item-divider {
     background: rgba(0,0,0,0.27);
     text-align: center;
   }
 
-  .card .button.button-block, .button.button-full{
-    margin-bottom: 0px;
+.card .button.button-block,
+  .button.button-full {
+    margin-bottom: 0;
   }
-
 }

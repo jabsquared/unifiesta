@@ -30,7 +30,6 @@
     "org.apache.cordova.geolocation"
   ],
   "cordovaPlatforms": [
-    "ios",
     "android"
   ]
 }
