@@ -10,8 +10,8 @@ app.factory('mapService', function() {
   };
 
   var booth = [{
-      lat: 47.307491,
-      lng: -122.230369,
+      lat: 47.307436,
+      lng: -122.230424,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -22,8 +22,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307491,
-      lng: -122.230259,
+      lat: 47.307436,
+      lng: -122.230314,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -34,8 +34,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307491,
-      lng: -122.230149,
+      lat: 47.307436,
+      lng: -122.230204,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -46,8 +46,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307491,
-      lng: -122.230039,
+      lat: 47.307436,
+      lng: -122.230094,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -58,7 +58,7 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307546,
+      lat: 47.307436,
       lng: -122.229984,
       focus: false,
       draggable: false,
@@ -70,8 +70,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307601,
-      lng: -122.229929,
+      lat: 47.307496,
+      lng: -122.229879,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -82,8 +82,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307656,
-      lng: -122.229929,
+      lat: 47.307576,
+      lng: -122.229879,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -94,8 +94,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307701,
-      lng: -122.229929,
+      lat: 47.307656,
+      lng: -122.229879,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -106,8 +106,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307756,
-      lng: -122.229929,
+      lat: 47.307736,
+      lng: -122.229879,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -118,8 +118,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307756,
-      lng: -122.229819,
+      lat: 47.307816,
+      lng: -122.229879,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
@@ -130,7 +130,7 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307701,
+      lat: 47.307773,
       lng: -122.229819,
       focus: false,
       draggable: false,
@@ -142,7 +142,7 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307656,
+      lat: 47.307693,
       lng: -122.229819,
       focus: false,
       draggable: false,
@@ -154,7 +154,7 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307601,
+      lat: 47.307613,
       lng: -122.229819,
       focus: false,
       draggable: false,
@@ -166,7 +166,7 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307513,
+      lat: 47.307533,
       lng: -122.229819,
       focus: false,
       draggable: false,
@@ -178,8 +178,8 @@ app.factory('mapService', function() {
       },
       icon: boothIcon
     }, {
-      lat: 47.307271,
-      lng: -122.230314,
+      lat: 47.307453,
+      lng: -122.229819,
       focus: false,
       draggable: false,
       message: '<p style="font-size: 14px">jab<i style="color:#fa8405">Squared</i> Booth</p>',
