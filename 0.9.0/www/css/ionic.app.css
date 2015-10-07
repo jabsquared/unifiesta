@@ -7780,7 +7780,8 @@ ion-content {
   -moz-border-radius: 3.6px;
   border-radius: 3.6px;
   background-color: rgba(183, 39, 12, 0.81);
-  max-width: 450px; }
+  max-width: 450px;
+  color: white; }
 
 .map {
   -webkit-border-radius: 3.6px;
@@ -7892,7 +7893,7 @@ ion-content {
   padding: 9px;
   text-align: center;
   color: #fefcfc;
-  font-size: 0.9em; }
+  font-size: 1.08em; }
 .pnp .card .item-divider {
   background: rgba(0, 0, 0, 0.27);
   text-align: center; }
@@ -7905,11 +7906,19 @@ ion-content {
   margin: 9px auto; }
 .boothmap .card * {
   padding: 3.6px;
-  font-family: 'blair_bold';
   color: #fefcfc; }
-.boothmap .card h3 {
-  margin-top: 17px;
+.boothmap .card h3, .boothmap .card h4, .boothmap .card h5, .boothmap .card h6 {
   text-align: center; }
+.boothmap .card p {
+  padding: 9px;
+  text-align: center;
+  color: #fefcfc;
+  font-size: 1.08em; }
+.boothmap .card .item-divider {
+  background: rgba(0, 0, 0, 0.27);
+  text-align: center; }
+.boothmap .card .button.button-block, .boothmap .button.button-full {
+  margin-bottom: 0; }
 .boothmap .card .website {
   text-align: center;
   color: black; }
@@ -7977,6 +7986,6 @@ ion-content {
   text-align: center; }
 .home .raffle h3 {
   color: rgba(183, 39, 12, 0.81);
+  text-shadow: 2px 2px 1px #001c09;
   font-weight: 450;
-  width: 90vw;
-  text-shadow: 2px 2px 1px #001c09; }
+  width: 90vw; }

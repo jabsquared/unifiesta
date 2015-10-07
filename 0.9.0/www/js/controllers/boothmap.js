@@ -46,7 +46,7 @@ app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams
     },
     events: {
       markers: {
-        enable: ['click']
+        enable: ['click','popupclose']
           //logic: 'emit'
       }
     },
@@ -80,6 +80,10 @@ app.controller('BoothMapCtrl', function($scope, $rootScope, $state, $stateParams
     } else {
       $scope.showCard = false;
     }
+  });
+
+  $scope.$on('leafletDirectiveMarker.popupclose', function (e, args) {
+    $scope.showCard = false;
   });
 
   $scope.goBack = function() {
