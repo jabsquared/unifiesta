@@ -555,7 +555,7 @@ app.factory('mapService', function() {
   ];
 
   for (var i = 0; i < booth.length; i++) {
-    booth[i].message="Booth " + i;
+    booth[i].message = "Booth " + -~i;
   }
 
   var boothCount = booth.length;
@@ -565,7 +565,6 @@ app.factory('mapService', function() {
     lng: -122.232631,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 1,
       address: 'Auburn Station (Southbound)'
@@ -576,7 +575,6 @@ app.factory('mapService', function() {
     lng: -122.231422,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 2,
       address: 'Auburn Station (Northbound)'
@@ -587,7 +585,6 @@ app.factory('mapService', function() {
     lng: -122.231431,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 3,
       address: '120 1st St NW, Auburn, WA 98001'
@@ -598,7 +595,6 @@ app.factory('mapService', function() {
     lng: -122.231476,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 4,
       address: '101-199 1st St NW, Auburn, WA 98001'
@@ -609,7 +605,6 @@ app.factory('mapService', function() {
     lng: -122.230421,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 5,
       address: '101 N Division St, Auburn, WA 98001'
@@ -620,7 +615,6 @@ app.factory('mapService', function() {
     lng: -122.230529,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 6,
       address: '22 A St SW, Auburn, WA 98001'
@@ -631,7 +625,6 @@ app.factory('mapService', function() {
     lng: -122.230538,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 7,
       address: '12 1st St SW, Auburn, WA 98001'
@@ -642,7 +635,6 @@ app.factory('mapService', function() {
     lng: -122.228734,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 8,
       address: '100 Auburn Ave, Auburn, WA 98001'
@@ -653,7 +645,6 @@ app.factory('mapService', function() {
     lng: -122.228734,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 9,
       address: '100 Auburn Ave, Auburn, WA 98001'
@@ -664,7 +655,6 @@ app.factory('mapService', function() {
     lng: -122.226938,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 10,
       address: '159-199 1st St NE, Auburn, WA 98001'
@@ -675,13 +665,16 @@ app.factory('mapService', function() {
     lng: -122.224944,
     focus: false,
     draggable: false,
-    message: "Parking Lot!",
     info: {
       number: 11,
       address: '314-328 1st St NE, Auburn, WA 98001'
     },
     icon: carMarker,
   }];
+
+  for (var i = 0; i < pnp.length; i++) {
+    pnp[i].message = "#" + -~i;
+  }
 
   var pnpCount = pnp.length;
 
