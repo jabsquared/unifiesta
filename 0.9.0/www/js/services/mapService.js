@@ -716,7 +716,7 @@ app.factory('mapService', function() {
           $scope.onError, {
             frequency: 9999,
             timeout: 9999,
-            enableHighAccuracy: false
+            enableHighAccuracy: true
           });
         return;
       }
