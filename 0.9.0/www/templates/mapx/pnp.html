@@ -22,7 +22,7 @@
 
   <ion-content class="has-header" has-bouncing="true" padding="true">
     <div class="map" data-tap-disabled="true">
-      <leaflet center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="100%" markers="markers" width="100%">
+      <leaflet id="map" center="auburn" tiles="tiles" url-hash-center="yes" event-broadcast="events" height="100%" markers="markers" width="100%">
       </leaflet>
     </div>
 
@@ -49,9 +49,8 @@ marcador (<i class="ion-model-s"></i>) en el mapa
         <p>
           {{info.address}}
         </p>
-        <a class="button button-block bold button-assertive" ng-href="https://maps.google.com/?q={{geoInfo.lat}},{{geoInfo.lng}}&t=m">
-          <i class="ion-android-navigate"></i>
-navegar
+        <a class="button button-block bold button-assertive" ng-href="https://maps.google.com/?q={{geoInfo.lat}},{{geoInfo.lng}}&t=m" target="_blank">
+          <i class="ion-android-navigate"></i> navegar
         </a>
       </div>
     </div>
