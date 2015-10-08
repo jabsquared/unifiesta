@@ -2,23 +2,20 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
   function add(minutes, single_event) {
     console.log("entered add function");
 
-    // create var for current time
-    // var now = new Date().getTime();
-    // var _5SecondsFromNow = new Date(now + sec * 1000);
-
     var newDate = subtractMinutes(single_event.start, minutes);
 
     // Real funtion
-    // function subtractMinutes(date_obj, minutes) {
-    //   date_obj = new Date(date_obj);
-    //   return new Date(date_obj.getTime() - minutes * 60000);
-    // }
-
     function subtractMinutes(date_obj, minutes) {
-      new_date_obj = new Date();
-      return new Date(new_date_obj.getTime() + minutes * 1000);
-      // return new Date(new_date_obj.getTime() + minutes * 60000);
+      date_obj = new Date(date_obj);
+      console.log(new Date(date_obj.getTime() - minutes * 60000));
+      return new Date(date_obj.getTime() - minutes * 60000);
     }
+
+    // function subtractMinutes(date_obj, minutes) {
+    //   date_obj = new Date();
+    //   console.log(new Date(date_obj.getTime() + 1 * 60000));
+    //   return new Date(date_obj.getTime() + 1 * 60000);
+    // }
 
     $cordovaLocalNotification.schedule({
       id: single_event.id,
@@ -29,7 +26,7 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
       icon: 'file://img/main/logo.png',
       smallIcon: 'file://img/small.png',
       led: 'FBA50A',
-      badge: 1,
+      badge: 1
     }).then(function() {
       var alertPopup = $ionicPopup.alert({
         title: "Reminder Set,",
@@ -123,6 +120,6 @@ app.factory('reminderService', function($cordovaLocalNotification, $ionicPopup, 
   };
 
   // $scope.$on("$cordovaLocalNotification:added", function(id, state, json) {
-  //   alert("Added a notification");
+  //   console.log("Added a notification");
   // });
 });

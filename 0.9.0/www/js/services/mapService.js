@@ -81,7 +81,7 @@ app.factory('mapService', function() {
       draggable: false,
       info: {
         id: '5',
-        name: 'jabSquared/CodeDay',
+        name: 'jabSquared & CodeDay',
         desc: '',
         img: [
           'v5a',

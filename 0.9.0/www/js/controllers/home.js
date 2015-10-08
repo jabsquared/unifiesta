@@ -8,7 +8,7 @@ app.controller('HomeCtrl', function($scope, $http, $rootScope, $state, $ionicHis
  console.log($scope.$storage.raffle);
 
   if (!$scope.$storage.gotRaffle) {
-    $http.get('http://localhost:8080/gr').
+    $http.get('http://unifiesta.mybluemix.net/gr').
     then(function(response) {
       // this callback will be called asynchronously
       // when the response is available
