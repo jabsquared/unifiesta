@@ -455,8 +455,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 270,
     }, {
-      lat: 47.306949,
-      lng: -122.229874,
+      lat: 47.307106,
+      lng: -122.230424,
       focus: false,
       draggable: false,
       info: {
@@ -467,8 +467,8 @@ app.factory('mapService', function() {
       icon: boothIcon,
       iconAngle: 270,
     }, {
-      lat: 47.306949,
-      lng: -122.229819,
+      lat: 47.307386,
+      lng: -122.229649,
       focus: false,
       draggable: false,
       info: {
@@ -478,32 +478,32 @@ app.factory('mapService', function() {
       },
       icon: boothIcon,
       iconAngle: 90,
+    }, {
+      lat: 47.307693,
+      lng: -122.230424,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '39',
+        name: 'Main Stage',
+        desc: ''
+      },
+      icon: boothIcon,
+    iconAngle: 270,
+    }, {
+      lat: 47.306941,
+      lng: -122.229799,
+      focus: false,
+      draggable: false,
+      info: {
+        id: '40',
+        name: 'Restrooms	',
+        desc: ''
+      },
+      icon: boothIcon,
+    iconAngle: 270,
     }
     //, {
-    //   lat: 47.307491,
-    //   lng: -122.230149,
-    //   focus: false,
-    //   draggable: false,
-    //       //   info: {
-    //     id: '39',
-    //     name: '',
-    //     desc: ''
-    //   },
-    //   icon: boothIcon,
-    // iconAngle: 270,
-    // }, {
-    //   lat: 47.307491,
-    //   lng: -122.230149,
-    //   focus: false,
-    //   draggable: false,
-    //       //   info: {
-    //     id: '40',
-    //     name: '',
-    //     desc: ''
-    //   },
-    //   icon: boothIcon,
-    // iconAngle: 270,
-    // }, {
     //   lat: 47.307491,
     //   lng: -122.230149,
     //   focus: false,
