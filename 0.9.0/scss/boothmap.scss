@@ -3,16 +3,18 @@
     height: 54vh;
   }
 
-.card {
-    margin: 9px auto;
+  .card {
+    text-align: center;
+
+    margin: 0 auto;
   }
 
-.card * {
+  .card * {
     padding: 3.6px;
     color: rgba(254,252,252,1);
   }
 
-.card {
+  .card {
     h3,
     h4,
     h5,
@@ -23,25 +25,36 @@
     }
   }
 
-.card p {
+  .card p {
     padding: 9px;
     text-align: center;
     color: rgba(254,252,252,1);
     font-size: 1.08em;
   }
 
-.card .item-divider {
+  .card .item-divider {
     background: rgba(0,0,0,0.27);
-    text-align: center;
+    // text-align: center;
   }
 
-.card .button.button-block,
+  .card .button.button-block,
   .button.button-full {
     margin-bottom: 0;
   }
 
-.card .website {
-    text-align: center;
-    color: black;
+
+  .card img {
+
+    max-height: 45vh;
+    // width: 100%;
+    max-width: 100%;
+    padding: 3.6px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    color: white;
+    // -webkit-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
+    // -moz-box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
+    // box-shadow: 9px 9px 9px -9px rgba(0,0,0,0.90);
   }
 }
